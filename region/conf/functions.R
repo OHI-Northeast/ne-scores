@@ -189,11 +189,6 @@ FIS <- function(layers) {
   trend <-
     CalculateTrend(status_data = status_data, trend_years = trend_years)
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal   = "FIS",
-                method = "Functional relationship (B/Bmsy)",
-                ref_pt = NA)
-  ## Reference Point End
   
   # assemble dimensions
   scores <- rbind(status, trend) %>%
@@ -257,17 +252,6 @@ MAR <- function(layers) {
   # get reference quantile based on argument years
   
   ref_95pct <- quantile(ry$mar_pop, 0.95, na.rm = TRUE)
- 
-  ## Reference Point Accounting
-    ry_ref = ry %>%
-    arrange(mar_pop) %>%
-    filter(mar_pop >= ref_95pct)
-  
-   WriteRefPoint(
-    goal = "MAR",
-    method = "spatial 95th quantile",
-    ref_pt = paste0("region id: ", ry_ref$rgn_id[1], ' value: ', ref_95pct))
-  ## Reference Point End
   
   ry = ry %>%
     mutate(status = ifelse(mar_pop / ref_95pct > 1,
@@ -413,12 +397,6 @@ AO <- function(layers) {
   
   r.trend <- CalculateTrend(status_data = ry, trend_years = trend_years)
   
-## Reference Point Accounting
-    WriteRefPoint(goal   = "AO",
-                method = "XXXXXXXX",
-                ref_pt = NA)
- ## Reference Point End
-    
   # return scores
   scores <- rbind(r.status, r.trend) %>%
     mutate(goal = 'AO')
@@ -715,11 +693,6 @@ NP <- function(scores, layers) {
   np_sust    <- np_calc_sustainability(np_exp, np_risk)
   np_scores  <- np_calc_scores(np_sust)
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal = "NP",
-                method = "Harvest peak within region times 0.65 buffer",
-                ref_pt = "varies for each region")
-  ## Reference Point End  
   
   return(np_scores)
 }
@@ -807,11 +780,6 @@ CS <- function(layers) {
     mutate(goal = 'CS') %>%
     select(goal, dimension, region_id, score)
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal = "CS",
-                method = "Health/condition variable based on current vs. historic extent",
-                ref_pt = "varies for each region/habitat")
-  ## Reference Point End  
   
   ## create weights file for pressures/resilience calculations
   weights <- extent %>%
@@ -962,11 +930,6 @@ CP <- function(layers) {
     mutate(goal = 'CP') %>%
     select(region_id, goal, dimension, score)
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal = "CP",
-                method = "Health/condition variable based on current vs. historic extent",
-                ref_pt = "varies for each region/habitat")
-  ## Reference Point End  
   
   ## create weights file for pressures/resilience calculations
   
@@ -991,103 +954,58 @@ CP <- function(layers) {
 }
 
 TR <- function(layers) {
-  ## formula:
-  ##  E   = Ep                         # Ep: % of direct tourism jobs. tr_jobs_pct_tourism.csv
-  ##  S   = (S_score - 1) / (7 - 1)    # S_score: raw TTCI score, not normalized (1-7). tr_sustainability.csv
-  ##  Xtr = E * S
-  
-  pct_ref <- 90
   
   scen_year <- layers$data$scenario_year
   
+  ## read in layer
   
-  ## read in layers
-  
-  tourism <-
-    AlignDataYears(layer_nm = "tr_jobs_pct_tourism", layers_obj = layers) %>%
-    select(-layer_name)
-  sustain <-
-    AlignDataYears(layer_nm = "tr_sustainability", layers_obj = layers) %>%
-    select(-layer_name)
-  
-  tr_data  <-
-    full_join(tourism, sustain, by = c('rgn_id', 'scenario_year'))
-  
-  tr_model <- tr_data %>%
-    mutate(E   = Ep,
-           S   = (S_score - 1) / (7 - 1),
-           # scale score from 1 to 7.
-           Xtr = E * S)
+  tourism_job_growth <-
+    AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
+    select(-layer_name, -X)
   
   
-  # regions with Travel Warnings
-  rgn_travel_warnings <-
-    AlignDataYears(layer_nm = "tr_travelwarnings", layers_obj = layers) %>%
-    select(-layer_name)
+  # we don't set a specific target of job growth in the T&R sector. As long as regions are not losing jobs
+  # in the sector, they receive a score of 100. We do set a minimum, or lower limit, of 25% job loss, where
+  # loss of 25% or more jobs in this sector are given a 0.
   
-  ## incorporate Travel Warnings
-  tr_model <- tr_model %>%
-    left_join(rgn_travel_warnings, by = c('rgn_id', 'scenario_year')) %>%
-    mutate(Xtr = ifelse(!is.na(multiplier), multiplier * Xtr, Xtr)) %>%
-    select(-multiplier)
+  ## parameters
+  min_jobs = -0.25 #(a loss of 25% of all jobs gets a score of 0)
   
+  tr_score <- tourism_job_growth %>%
+    dplyr::mutate(score =  
+             case_when(
+               tr_job_growth >= 0 ~ 1,
+               tr_job_growth < 0 ~ (tr_job_growth - min_jobs)/(0 - min_jobs)
+             ))
   
-  ### Calculate status based on quantile reference (see function call for pct_ref)
-  tr_model <- tr_model %>%
-    group_by(scenario_year) %>%
-    mutate(Xtr_q = quantile(Xtr, probs = pct_ref / 100, na.rm = TRUE)) %>%
-    mutate(status  = ifelse(Xtr / Xtr_q > 1, 1, Xtr / Xtr_q)) %>% # rescale to qth percentile, cap at 1
-    ungroup()
-  
-  ## Reference Point Accounting
-  ref_point <- tr_model %>%
-    filter(scenario_year == scen_year) %>%
-    select(Xtr_q) %>%
-    unique() %>%
-    data.frame() %>%
-    .$Xtr_q
-  
-  WriteRefPoint(
-    goal = "TR",
-    method = paste0('spatial: ', as.character(pct_ref), "th quantile"),
-    ref_pt = as.character(ref_point)
-  )
-  ## Reference Point End  
   
   # get status
-  tr_status <- tr_model %>%
-    filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, score = status) %>%
-    mutate(score = score * 100) %>%
+  tr_status <- tr_score %>%
+    select(region_id = rgn_id, score, scenario_year) %>%
+    mutate(status = score * 100) %>%
     mutate(dimension = 'status')
   
   
   # calculate trend
   
-  trend_data <- tr_model %>%
+  trend_data <- tr_status %>%
     filter(!is.na(status))
   
   trend_years <- (scen_year - 4):(scen_year)
   
   tr_trend <-
-    CalculateTrend(status_data = trend_data, trend_years = trend_years)
-  
+    CalculateTrend(status_data = trend_data, trend_years = trend_years) 
   
   # bind status and trend by rows
-  tr_score <- bind_rows(tr_status, tr_trend) %>%
-    mutate(goal = 'TR')
-  
-  
-  # assign NA for uninhabitated islands
-  if (conf$config$layer_region_labels == 'rgn_global') {
-    unpopulated = layers$data$le_popn %>%
-      group_by(rgn_id) %>%
-      filter(count == 0) %>%
-      select(region_id = rgn_id)
-    tr_score$score = ifelse(tr_score$region_id %in% unpopulated$region_id,
-                            NA,
-                            tr_score$score)
-  }
+  tr_score <- tr_status %>%
+    filter(scenario_year == scen_year) %>%
+    rename(year = scenario_year) %>%
+    select(region_id, score = status, dimension) %>%
+    bind_rows(tr_trend) %>%
+    mutate(goal = 'TR') %>%
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
   
   # return final scores
   scores <- tr_score %>%
@@ -1097,252 +1015,136 @@ TR <- function(layers) {
 }
 
 LIV <- function(layers){
-
-  ## read in all data: gdp, wages, jobs and workforce_size data
-
-  le_wages = SelectLayersData(layers, layers='le_wage_sector_year') %>%
-    dplyr::select(rgn_id = id_num, year, sector = category, wage_usd = val_num)
-
-  le_jobs  = SelectLayersData(layers, layers='le_jobs_sector_year') %>%
-    dplyr::select(rgn_id = id_num, year, sector = category, jobs = val_num)
-
-  le_workforce_size = SelectLayersData(layers, layers='le_workforcesize_adj') %>%
-    dplyr::select(rgn_id = id_num, year, jobs_all = val_num)
-
-  le_unemployment = SelectLayersData(layers, layers='le_unemployment') %>%
-    dplyr::select(rgn_id = id_num, year, pct_unemployed = val_num)
-
-
-  ## multipliers from Table S10 (Halpern et al 2012 SOM)
-  multipliers_jobs = data.frame('sector' = c('tour','cf', 'mmw', 'wte','mar'),
-                                'multiplier' = c(1, 1.582, 1.915, 1.88, 2.7))
-  ## multipler not listed for tour (=1)
-
-  # calculate employment counts
-  le_employed = le_workforce_size %>%
-    left_join(le_unemployment, by = c('rgn_id', 'year')) %>%
-    mutate(proportion_employed = (100 - pct_unemployed) / 100,
-           employed            = jobs_all * proportion_employed)
-
-  liv =
-    # adjust jobs
-    le_jobs %>%
-    left_join(multipliers_jobs, by = 'sector') %>%
-    mutate(jobs_mult = jobs * multiplier) %>%  # adjust jobs by multipliers
-    left_join(le_employed, by= c('rgn_id', 'year')) %>%
-    mutate(jobs_adj = jobs_mult * proportion_employed) %>% # adjust jobs by proportion employed
-    left_join(le_wages, by=c('rgn_id','year','sector')) %>%
-    arrange(year, sector, rgn_id)
-
+  
+  scen_year <- layers$data$scenario_year
+  
+  # wages
+  le_cst_wages <- AlignDataYears(layer_nm = "le_coast_wages", layers_obj = layers) %>%
+    select(-layer_name, -X)
+  
+  #jobs
+  le_cst_jobs  <- AlignDataYears(layer_nm = "le_job_growth", layers_obj = layers) %>%
+    select(-layer_name, -X)
+  
+  ## Jobs scores
+  
+  #we don't set a specific target of job growth. If national job growth is positive, we want to be at or above that growth rate. If national job growth is negative, we want coastal job growth to be the same or better as the previous 3 yr avg
+  
+  ## parameters
+  min_jobs = -0.25 #(a loss of 25% of all jobs gets a score of 0)
+  
+  jobs_score <- le_cst_jobs %>%
+    mutate(job_score =  
+             case_when(
+               coast_job_growth >= 0 & us_job_growth < 0 ~ 1,
+               coast_job_growth >= 0 & us_job_growth >= 0 ~ coast_job_growth/us_job_growth,
+               coast_job_growth < 0 & us_job_growth < 0 ~ (coast_job_growth - min_jobs)/(0 - min_jobs),
+               coast_job_growth <0 & us_job_growth >= 0 ~ (coast_job_growth - min_jobs)/(us_job_growth - min_jobs)
+             ),
+           job_score = ifelse(job_score > 1, 1, job_score))
+  
+  
+  ## Wage scores
+  
+  ## set parameters for min (what gets a 0) and reference point target (what gets 100)
+  min_wage  = -0.4 #this represents a 40% decrease
+  targ_wage = 0.035 #this represents our target growth rate
+  
+  wages_score <- le_cst_wages %>%
+    mutate(wages_score =
+             case_when(
+               wage_growth_rate >= targ_wage ~ 1, #if the growth rate is about 3.5% it gets a perfect score
+               wage_growth_rate <= targ_wage ~ (wage_growth_rate - min_wage)/(targ_wage-min_wage)))
+  
   # LIV calculations ----
+  
+  # combine jobs and wages scores per region and divide by two
+  
+  ## status
+  liv_status <- jobs_score %>%
+    left_join(wages_score) %>%
+    mutate(status = (job_score + wages_score)/2) %>% 
+    select(year = scenario_year, region_id = rgn_id, status) %>%
+    filter(!is.na(status))
+  
+  ## trend
+  
+  trend_years <- (scen_year-4):(scen_year)
+  
+  liv_trend <- CalculateTrend(status_data = liv_status, trend_years = trend_years) 
+  
+  liv_scores <- liv_status %>%
+    mutate(score = 100 * status,
+           dimension = "status") %>%
+    filter(year == scen_year) %>%
+    select(-year, -status) %>%
+    rbind(liv_trend) %>%
+    mutate(goal = 'LIV') %>%
+    select(region_id, goal, dimension, score) %>%
+    arrange(goal, dimension, region_id) %>%
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
 
-  # LIV status
-  liv_status = liv %>%
-    filter(!is.na(jobs_adj) & !is.na(wage_usd))
-  if (nrow(liv_status)==0){
-    liv_status = liv %>%
-      dplyr::select(region_id=rgn_id) %>%
-      group_by(region_id) %>%
-      summarize(
-        goal      = 'LIV',
-        dimension = 'status',
-        score     = NA)
-    liv_trend = liv %>%
-      dplyr::select(region_id=rgn_id) %>%
-      group_by(region_id) %>%
-      summarize(
-        goal      = 'LIV',
-        dimension = 'trend',
-        score     = NA)
-  } else {
-    liv_status = liv_status %>%
-      filter(year >= max(year, na.rm=T) - 4) %>% # reference point is 5 years ago
-      arrange(rgn_id, year, sector) %>%
-      # summarize across sectors
-      group_by(rgn_id, year) %>%
-      summarize(
-        # across sectors, jobs are summed
-        jobs_sum  = sum(jobs_adj, na.rm=T),
-        # across sectors, wages are averaged
-        wages_avg = mean(wage_usd, na.rm=T)) %>%
-      group_by(rgn_id) %>%
-      arrange(rgn_id, year) %>%
-      mutate(
-        # reference for jobs [j]: value in the current year (or most recent year) [c], relative to the value in a recent moving reference period [r] defined as 5 years prior to [c]
-        jobs_sum_first  = first(jobs_sum),                     # note:  `first(jobs_sum, order_by=year)` caused segfault crash on Linux with dplyr 0.3.0.2, so using arrange above instead
-        # original reference for wages [w]: target value for average annual wages is the highest value observed across all reporting units
-        # new reference for wages [w]: value in the current year (or most recent year) [c], relative to the value in a recent moving reference period [r] defined as 5 years prior to [c]
-        wages_avg_first = first(wages_avg)) %>% # note:  `first(jobs_sum, order_by=year)` caused segfault crash on Linux with dplyr 0.3.0.2, so using arrange above instead
-      # calculate final scores
-      ungroup() %>%
-      mutate(
-        x_jobs  = pmax(-1, pmin(1,  jobs_sum / jobs_sum_first)),
-        x_wages = pmax(-1, pmin(1, wages_avg / wages_avg_first)),
-        score   = mean(c(x_jobs, x_wages), na.rm=T) * 100) %>%
-      # filter for most recent year
-      filter(year == max(year, na.rm=T)) %>%
-      # format
-      dplyr::select(
-        region_id = rgn_id,
-        score) %>%
-      mutate(
-        goal      = 'LIV',
-        dimension = 'status')
+  # return final scores
+  return(liv_scores)
 
-    ## LIV trend ----
-
-    # get trend across years as slope of individual sectors for jobs and wages
-    liv_trend = liv %>%
-      filter(!is.na(jobs_adj) & !is.na(wage_usd)) %>%
-      filter(year >= max(year, na.rm=T) - 4) %>% # reference point is 5 years ago
-      # get sector weight as total jobs across years for given region
-      arrange(rgn_id, year, sector) %>%
-      group_by(rgn_id, sector) %>%
-      mutate(
-        weight = sum(jobs_adj, na.rm=T)) %>%
-      # reshape into jobs and wages columns into single metric to get slope of both
-      reshape2::melt(id=c('rgn_id','year','sector','weight'), variable='metric', value.name='value') %>%
-      mutate(
-        sector = as.character(sector),
-        metric = as.character(metric)) %>%
-      # get linear model coefficient per metric
-      group_by(metric, rgn_id, sector, weight) %>%
-      do(mdl = lm(value ~ year, data=.)) %>%
-      summarize(
-        metric = metric,
-        weight = weight,
-        rgn_id = rgn_id,
-        sector = sector,
-        sector_trend = pmax(-1, pmin(1, coef(mdl)[['year']] * 5))) %>%
-      arrange(rgn_id, metric, sector) %>%
-      # get weighted mean across sectors per region-metric
-      group_by(metric, rgn_id) %>%
-      summarize(
-        metric_trend = weighted.mean(sector_trend, weight, na.rm=T)) %>%
-      # get mean trend across metrics (jobs, wages) per region
-      group_by(rgn_id) %>%
-      summarize(
-        score = mean(metric_trend, na.rm=T)) %>%
-      # format
-      mutate(
-        goal      = 'LIV',
-        dimension = 'trend') %>%
-      dplyr::select(
-        goal, dimension,
-        region_id = rgn_id,
-        score)
-  }
-
-  ## create scores and rbind to other goal scores
-  scores = rbind(liv_status, liv_trend) %>%
-    dplyr::select(region_id,
-                  score,
-                  dimension,
-                  goal)
-
-  return(scores)
-
-}
-
-ECO <- function(layers){
-
-  ## read in data layers
-  le_gdp   = SelectLayersData(layers, layers='le_gdp')  %>%
-    dplyr::select(rgn_id = id_num, year, gdp_usd = val_num)
-
-  le_workforce_size = SelectLayersData(layers, layers='le_workforcesize_adj') %>%
-    dplyr::select(rgn_id = id_num, year, jobs_all = val_num)
-
-  le_unemployment = SelectLayersData(layers, layers='le_unemployment') %>%
-    dplyr::select(rgn_id = id_num, year, pct_unemployed = val_num)
-
-
-  # calculate employment counts
-  le_employed = le_workforce_size %>%
-    left_join(le_unemployment, by = c('rgn_id', 'year')) %>%
-    mutate(proportion_employed = (100 - pct_unemployed) / 100,
-           employed            = jobs_all * proportion_employed)
-
+}  
+ 
+ECO <- function(layers) {   
+  # ECO data layers
+  
+  scen_year <- layers$data$scenario_year
+  
+  #coastal gdp growth rate
+  eco_cst_gdp <- AlignDataYears(layer_nm = "eco_coast_gdp", layers_obj = layers) %>%
+    select(-layer_name, -X)
+  
   # ECO calculations ----
-  eco = le_gdp %>%
-    mutate(
-      rev_adj = gdp_usd,
-      sector = 'gdp') %>%
-    # adjust rev with national GDP rates if available. Example: (rev_adj = gdp_usd / ntl_gdp)
-    dplyr::select(rgn_id, year, sector, rev_adj)
-
+  
   # ECO status
-  eco_status = eco %>%
-    filter(!is.na(rev_adj)) %>%
-    filter(year >= max(year, na.rm=T) - 4) %>% # reference point is 5 years ago
-    # across sectors, revenue is summed
-    group_by(rgn_id, year) %>%
-    summarize(
-      rev_sum  = sum(rev_adj, na.rm=T)) %>%
-    # reference for revenue [e]: value in the current year (or most recent year) [c], relative to the value in a recent moving reference period [r] defined as 5 years prior to [c]
-    arrange(rgn_id, year) %>%
-    group_by(rgn_id) %>%
-    mutate(
-      rev_sum_first  = first(rev_sum)) %>%
-    # calculate final scores
-    ungroup() %>%
-    mutate(
-      score  = pmin(rev_sum / rev_sum_first, 1) * 100) %>%
-    # get most recent year
-    filter(year == max(year, na.rm=T)) %>%
-    # format
-    mutate(
-      goal      = 'ECO',
-      dimension = 'status') %>%
-    dplyr::select(
-      goal, dimension,
-      region_id = rgn_id,
-      score)
-
+  
+  ## set parameters for min (what gets a 0) and reference point target (what gets 100)
+  min_gdp  = -0.3 #this represents the worst case scenario (what gets a 0)
+  targ_gdp = 0.03 #this represents our target gdp growth rate
+  
+  eco_status <- eco_cst_gdp %>%
+    mutate(status =
+             case_when(
+               gdp_growth_rate >= targ_gdp ~ 1, #if the growth rate is about 3.5% it gets a perfect score
+               gdp_growth_rate <= targ_gdp ~ (gdp_growth_rate - min_gdp)/(targ_gdp - min_gdp))) %>%
+    select(year = scenario_year, region_id = rgn_id, status) %>%
+    filter(!is.na(status))
+  
   # ECO trend
-  eco_trend = eco %>%
-    filter(!is.na(rev_adj)) %>%
-    filter(year >= max(year, na.rm=T) - 4 ) %>% # 5 year trend
-    # get sector weight as total revenue across years for given region
-    arrange(rgn_id, year, sector) %>%
-    group_by(rgn_id, sector) %>%
-    mutate(
-      weight = sum(rev_adj, na.rm=T)) %>%
-    # get linear model coefficient per region-sector
-    group_by(rgn_id, sector, weight) %>%
-    do(mdl = lm(rev_adj ~ year, data=.)) %>%
-    summarize(
-      weight = weight,
-      rgn_id = rgn_id,
-      sector = sector,
-      sector_trend = pmax(-1, pmin(1, coef(mdl)[['year']] * 5))) %>%
-    # get weighted mean across sectors per region
-    group_by(rgn_id) %>%
-    summarize(
-      score = weighted.mean(sector_trend, weight, na.rm=T)) %>%
-    # format
-    mutate(
-      goal      = 'ECO',
-      dimension = 'trend') %>%
-    dplyr::select(
-      goal, dimension,
-      region_id = rgn_id,
-      score)
+  
+  trend_years <- (scen_year-4):(scen_year)
+  
+  eco_trend <- CalculateTrend(status_data = eco_status, trend_years = trend_years) 
+  
+  # ECO scores
+  
+  eco_scores <- eco_status %>%
+    filter(year == scen_year) %>%
+    mutate(dimension = "status",
+           score = 100 * status) %>%
+    select(-year, -status) %>%
+    rbind(eco_trend) %>%
+    mutate(goal = 'ECO') %>%
+    select(region_id, goal, dimension, score) %>%
+    arrange(goal, dimension, region_id) %>%
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
 
-  ## create scores and rbind to other goal scores
-  scores = rbind(eco_status, eco_trend) %>%
-    dplyr::select(region_id,
-                  score,
-                  dimension,
-                  goal)
-
-  return(scores)
-
+  # return final scores
+  return(eco_scores)
+  
 }
 
 
 LE <- function(scores, layers){
-
+  
   # calculate LE scores
   scores.LE = scores %>%
     filter(goal %in% c('LIV','ECO') & dimension %in% c('status','trend','score','future')) %>%
@@ -1350,24 +1152,24 @@ LE <- function(scores, layers){
     mutate(score = rowMeans(cbind(ECO, LIV), na.rm=TRUE)) %>%
     select(region_id, dimension, score) %>%
     mutate(goal  = 'LE')
-
+  
   # rbind to all scores
   scores = scores %>%
     rbind(scores.LE)
-
+  
   # return scores
   return(scores)
 }
 
 
 ICO <- function(layers){
-
+  
   scen_year <- layers$data$scenario_year
-
+  
   rk <- AlignDataYears(layer_nm="ico_spp_iucn_status", layers_obj = layers) %>%
     select(region_id = rgn_id, sciname, iucn_cat=category, scenario_year, ico_spp_iucn_status_year) %>%
     mutate(iucn_cat = as.character(iucn_cat))
-
+  
   # lookup for weights status
   #  LC <- "LOWER RISK/LEAST CONCERN (LR/LC)"
   #  NT <- "LOWER RISK/NEAR THREATENED (LR/NT)"
@@ -1383,7 +1185,7 @@ ICO <- function(layers){
                                risk_score = c(0,  0.2,  0.3,  0.4,  0.6,  0.8,  1, NA)) %>%
     mutate(status_score = 1-risk_score) %>%
     mutate(iucn_cat = as.character(iucn_cat))
-
+  
   ####### status
   # STEP 1: take mean of subpopulation scores
   r.status_spp <- rk %>%
@@ -1391,32 +1193,32 @@ ICO <- function(layers){
     group_by(region_id, sciname, scenario_year, ico_spp_iucn_status_year) %>%
     summarize(spp_mean = mean(status_score, na.rm=TRUE)) %>%
     ungroup()
-
+  
   # STEP 2: take mean of populations within regions
   r.status <- r.status_spp %>%
     group_by(region_id, scenario_year, ico_spp_iucn_status_year) %>%
     summarize(status = mean(spp_mean, na.rm=TRUE)) %>%
     ungroup()
-
+  
   ####### status
   status <- r.status %>%
     filter(scenario_year == scen_year) %>%
     mutate(score = status * 100) %>%
     mutate(dimension = "status") %>%
     select(region_id, score, dimension)
-
+  
   ####### trend
   trend_years <- (scen_year-9):(scen_year)
-
+  
   trend <- CalculateTrend(status_data = r.status, trend_years=trend_years)
-
+  
   # return scores
   scores <-  rbind(status, trend) %>%
     mutate('goal'='ICO') %>%
     select(goal, dimension, region_id, score) %>%
     data.frame()
   return(scores)
-
+  
 }
 
 
@@ -1494,18 +1296,6 @@ LSP <- function(layers) {
     CalculateTrend(status_data = status_data, trend_years = trend_years)
   
   
-  ## Reference Point Accounting
-  WriteRefPoint(
-    goal = "LSP",
-    method = paste0(
-      ref_pct_cmpa,
-      "% marine protected area; ",
-      ref_pct_cp,
-      "% coastal protected area"
-    ),
-    ref_pt = "varies by area of region's eez and 1 km inland"
-  )
-  ## Reference Point End  
   
   # return scores
   scores <- bind_rows(r.status, r.trend) %>%
@@ -1590,12 +1380,7 @@ CW <- function(layers) {
     select(region_id, goal, dimension, score) %>%
     data.frame()
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal   = "CW",
-                method = "spatial: pressures scaled from 0-1 at raster level",
-                ref_pt = NA)
-  ## Reference Point End  
-    
+  
   return(scores)
 }
 
@@ -1698,11 +1483,6 @@ HAB <- function(layers) {
     mutate(goal = "HAB") %>%
     select(region_id, goal, dimension, score)
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal = "HAB",
-                method = "Health/condition variable based on current vs. historic extent",
-                ref_pt = "varies for each region/habitat")
-  ## Reference Point End    
   
   ## create weights file for pressures/resilience calculations
   
@@ -1741,11 +1521,6 @@ SPP <- function(layers) {
     mutate(score = ifelse(dimension == 'status', score * 100, score)) %>%
     select(region_id = rgn_id, goal, dimension, score)
   
-  ## Reference Point Accounting
-  WriteRefPoint(goal = "SPP",
-                method = "Average of IUCN risk categories, scaled to historic extinction",
-                ref_pt = NA)
-  ## Reference Point End  
   
   return(scores)
 }
