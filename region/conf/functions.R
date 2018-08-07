@@ -1334,44 +1334,28 @@ CW <- function(layers) {
     }
   }
 
-
   # layers
-  trend_lyrs <-
-    c('cw_chemical_trend',
-      'cw_nutrient_trend',
+  cw_lyrs <-
+    c('cw_wqi',
       'cw_trash',
       'cw_pathogens')
-  prs_lyrs <-
-    c('po_pathogens',
-      'po_nutrients_3nm',
-      'po_chemicals_3nm',
-      'prs_trash')
 
   # get data together:
-  prs_data <- AlignManyDataYears(prs_lyrs) %>%
-    dplyr::filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, value = pressure_score)
 
-  d_pressures <- prs_data %>%
-    mutate(pressure = 1 - value) %>%  # invert pressures
-    group_by(region_id) %>%
-    summarize(score = geometric.mean2(pressure, na.rm = TRUE)) %>% # take geometric mean
-    mutate(score = score * 100) %>%
-    mutate(dimension = "status") %>%
-    ungroup()
+  wqi <- AlignDataYears(layer_nm = "cw_wqi", layers_obj = layers) %>%
+    select(region_id = rgn_id,
+           year = scenario_year,
+           wqi_score = score)
 
+  trash <- AlignDataYears(layer_nm = "cw_trash", layers_obj = layers) %>%
+    select(region_id = rgn_id,
+           year = scenario_year,
+           pounds_pp)
 
-  # get trend data together:
-  trend_data <- AlignManyDataYears(trend_lyrs) %>%
-    dplyr::filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, value = trend)
-
-  d_trends <- trend_data %>%
-    mutate(trend = -1 * value)  %>%  # invert trends
-    group_by(region_id) %>%
-    summarize(score = mean(trend, na.rm = TRUE)) %>%
-    mutate(dimension = "trend") %>%
-    ungroup()
+  path <- AlignDataYears(layer_nm = "cw_pathogens", layers_obj = layers) %>%
+    select(region_id = rgn_id,
+           year = scenario_year,
+           perc_open)
 
 
   # return scores
