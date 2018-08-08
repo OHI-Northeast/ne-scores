@@ -987,7 +987,6 @@ TR <- function(layers) {
 
 
   # calculate trend
-
   trend_data <- tr_status %>%
     filter(!is.na(status))
 
@@ -998,7 +997,7 @@ TR <- function(layers) {
 
   # bind status and trend by rows
   tr_score <- tr_status %>%
-    filter(scenario_year == scen_year) %>%
+    filter(scenario_year == scen_year) %>% ## filter for scenario year after calculating trend
     rename(year = scenario_year) %>%
     select(region_id, score = status, dimension) %>%
     bind_rows(tr_trend) %>%
@@ -1342,28 +1341,64 @@ CW <- function(layers) {
 
   # get data together:
 
+  ## Water quality index. The higher the better
   wqi <- AlignDataYears(layer_nm = "cw_wqi", layers_obj = layers) %>%
+    mutate(wqi_score = score/100) %>%
     select(region_id = rgn_id,
            year = scenario_year,
-           wqi_score = score)
+           wqi_score)
 
+  ## trash calculated from pounds per person. The lower the better so here I inverse the values.
   trash <- AlignDataYears(layer_nm = "cw_trash", layers_obj = layers) %>%
+    mutate(trash_score = 1-score) %>%
     select(region_id = rgn_id,
            year = scenario_year,
-           pounds_pp)
+           trash_score)
 
   path <- AlignDataYears(layer_nm = "cw_pathogens", layers_obj = layers) %>%
     select(region_id = rgn_id,
            year = scenario_year,
            perc_open)
 
+  ## combine layers
+  cw_data <- wqi %>%
+    full_join(trash) %>%
+    full_join(path) %>%
+    gather(key = layer, value = value, -region_id, -year)
 
-  # return scores
-  scores <- rbind(d_pressures, d_trends) %>%
+  ## saving cw_data for dashboard -- CONSIDER DOING THIS IN PREP
+  write.csv(cw_data, file.path(dir_git, 'prep/cw/data/region_layer_scores.csv'))
+
+ ## apply the geometric mean
+  cw_status <- cw_data %>%
+    group_by(region_id, year) %>%
+    summarize(status = geometric.mean2(value, na.rm = TRUE)) %>% # take geometric mean
+    mutate(status = status * 100) %>%
+    mutate(dimension = "status") %>%
+    ungroup()
+
+  ## calculate trend
+    trend_data <- cw_status %>%
+    filter(!is.na(status))
+
+  trend_years <- (scen_year - 4):(scen_year)
+
+  cw_trend <-
+    CalculateTrend(status_data = trend_data, trend_years = trend_years)
+
+  ## calculate scores
+  cw_score <- cw_status %>%
+    filter(year == scen_year) %>%
+    select(region_id, score = status, dimension) %>%
+    bind_rows(cw_trend) %>%
     mutate(goal = "CW") %>%
-    select(region_id, goal, dimension, score) %>%
-    data.frame()
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
 
+  ## return final scores
+  scores <- cw_score %>%
+    select(region_id, goal, dimension, score)
 
   return(scores)
 }
