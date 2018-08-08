@@ -50,7 +50,6 @@ Run this chunk to calculate and save scores as `scores` object and as `scores.cs
 ## select scenario year for the assessment
 scenario_years <- c(2012:2015)
 scores_all_years <- data.frame()
-layers$data$scenario_year <- scenario_years
 
 ## loop through each scenario year
 for (s_year in scenario_years){  # s_year=2015
