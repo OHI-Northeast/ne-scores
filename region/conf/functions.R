@@ -1220,7 +1220,6 @@ ICO <- function(layers){
 
 }
 
-
 LSP <- function(layers) {
   scen_year <- layers$data$scenario_year
 
@@ -1319,7 +1318,6 @@ SP <- function(scores) {
   return(rbind(scores, s))
 }
 
-
 CW <- function(layers) {
   scen_year <- layers$data$scenario_year
 
@@ -1332,12 +1330,6 @@ CW <- function(layers) {
       exp(apply(log(x), 2, mean, na.rm = na.rm))
     }
   }
-
-  # layers
-  cw_lyrs <-
-    c('cw_wqi',
-      'cw_trash',
-      'cw_pathogens')
 
   # get data together:
 
@@ -1367,7 +1359,7 @@ CW <- function(layers) {
     gather(key = layer, value = value, -region_id, -year)
 
   ## saving cw_data for dashboard -- CONSIDER DOING THIS IN PREP
-  write.csv(cw_data, file.path(dir_git, 'prep/cw/data/region_layer_scores.csv'))
+  write.csv(cw_data, "~/github/ne-prep/prep/cw/data/region_layer_scores.csv")
 
  ## apply the geometric mean
   cw_status <- cw_data %>%
