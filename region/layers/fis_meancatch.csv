@@ -1,0 +1,2413 @@
+"","year","common_noaa","state","mean_catch"
+"1",2006,"acadian redfish","Connecticut",406.666666666667
+"2",2007,"acadian redfish","Connecticut",720
+"3",2008,"acadian redfish","Connecticut",1253.33333333333
+"4",2009,"acadian redfish","Connecticut",1172
+"5",2010,"acadian redfish","Connecticut",858.666666666667
+"6",2011,"acadian redfish","Connecticut",97.6666666666667
+"7",2012,"acadian redfish","Connecticut",241
+"8",2013,"acadian redfish","Connecticut",241
+"9",2014,"acadian redfish","Connecticut",143.333333333333
+"10",2015,"acadian redfish","Connecticut",88.6666666666667
+"11",2016,"acadian redfish","Connecticut",88.6666666666667
+"12",2017,"acadian redfish","Connecticut",NA
+"13",2006,"albacore tuna","Connecticut",111.333333333333
+"14",2007,"albacore tuna","Connecticut",196
+"15",2008,"albacore tuna","Connecticut",127.333333333333
+"16",2009,"albacore tuna","Connecticut",230.666666666667
+"17",2010,"albacore tuna","Connecticut",146
+"18",2011,"albacore tuna","Connecticut",136.666666666667
+"19",2012,"albacore tuna","Connecticut",0
+"20",2013,"albacore tuna","Connecticut",0
+"21",2014,"albacore tuna","Connecticut",0
+"22",2015,"albacore tuna","Connecticut",0
+"23",2016,"albacore tuna","Connecticut",0
+"24",2017,"albacore tuna","Connecticut",NA
+"25",2006,"american lobster","Connecticut",691830.333333333
+"26",2007,"american lobster","Connecticut",595960.666666667
+"27",2008,"american lobster","Connecticut",469152.333333333
+"28",2009,"american lobster","Connecticut",426796.333333333
+"29",2010,"american lobster","Connecticut",351010.666666667
+"30",2011,"american lobster","Connecticut",296140.333333333
+"31",2012,"american lobster","Connecticut",191404.333333333
+"32",2013,"american lobster","Connecticut",167563
+"33",2014,"american lobster","Connecticut",153310.666666667
+"34",2015,"american lobster","Connecticut",195619.666666667
+"35",2016,"american lobster","Connecticut",153149.333333333
+"36",2017,"american lobster","Connecticut",NA
+"37",2006,"atlantic cod","Connecticut",3904.33333333333
+"38",2007,"atlantic cod","Connecticut",2824.33333333333
+"39",2008,"atlantic cod","Connecticut",4827.66666666667
+"40",2009,"atlantic cod","Connecticut",4653
+"41",2010,"atlantic cod","Connecticut",4105.33333333333
+"42",2011,"atlantic cod","Connecticut",4310.33333333333
+"43",2012,"atlantic cod","Connecticut",2432.33333333333
+"44",2013,"atlantic cod","Connecticut",2606
+"45",2014,"atlantic cod","Connecticut",843.333333333333
+"46",2015,"atlantic cod","Connecticut",9383.66666666667
+"47",2016,"atlantic cod","Connecticut",9209.33333333333
+"48",2017,"atlantic cod","Connecticut",NA
+"49",2006,"atlantic croaker","Connecticut",0
+"50",2007,"atlantic croaker","Connecticut",0
+"51",2008,"atlantic croaker","Connecticut",0
+"52",2009,"atlantic croaker","Connecticut",0
+"53",2010,"atlantic croaker","Connecticut",0
+"54",2011,"atlantic croaker","Connecticut",0
+"55",2012,"atlantic croaker","Connecticut",0
+"56",2013,"atlantic croaker","Connecticut",0
+"57",2014,"atlantic croaker","Connecticut",19.6666666666667
+"58",2015,"atlantic croaker","Connecticut",19.6666666666667
+"59",2016,"atlantic croaker","Connecticut",19.6666666666667
+"60",2017,"atlantic croaker","Connecticut",NA
+"61",2006,"atlantic halibut","Connecticut",0
+"62",2007,"atlantic halibut","Connecticut",0
+"63",2008,"atlantic halibut","Connecticut",0
+"64",2009,"atlantic halibut","Connecticut",0
+"65",2010,"atlantic halibut","Connecticut",0
+"66",2011,"atlantic halibut","Connecticut",0
+"67",2012,"atlantic halibut","Connecticut",0
+"68",2013,"atlantic halibut","Connecticut",0
+"69",2014,"atlantic halibut","Connecticut",0
+"70",2015,"atlantic halibut","Connecticut",15.3333333333333
+"71",2016,"atlantic halibut","Connecticut",15.3333333333333
+"72",2017,"atlantic halibut","Connecticut",NA
+"73",2006,"atlantic herring","Connecticut",25862.3333333333
+"74",2007,"atlantic herring","Connecticut",29017.3333333333
+"75",2008,"atlantic herring","Connecticut",17765.3333333333
+"76",2009,"atlantic herring","Connecticut",3555
+"77",2010,"atlantic herring","Connecticut",3300
+"78",2011,"atlantic herring","Connecticut",8421.66666666667
+"79",2012,"atlantic herring","Connecticut",9096.66666666667
+"80",2013,"atlantic herring","Connecticut",6231
+"81",2014,"atlantic herring","Connecticut",7574
+"82",2015,"atlantic herring","Connecticut",20996.6666666667
+"83",2016,"atlantic herring","Connecticut",20962.3333333333
+"84",2017,"atlantic herring","Connecticut",NA
+"85",2006,"bigeye tuna","Connecticut",999.333333333333
+"86",2007,"bigeye tuna","Connecticut",1264
+"87",2008,"bigeye tuna","Connecticut",1264
+"88",2009,"bigeye tuna","Connecticut",329.666666666667
+"89",2010,"bigeye tuna","Connecticut",65
+"90",2011,"bigeye tuna","Connecticut",164
+"91",2012,"bigeye tuna","Connecticut",99
+"92",2013,"bigeye tuna","Connecticut",762.333333333333
+"93",2014,"bigeye tuna","Connecticut",663.333333333333
+"94",2015,"bigeye tuna","Connecticut",663.333333333333
+"95",2016,"bigeye tuna","Connecticut",0
+"96",2017,"bigeye tuna","Connecticut",NA
+"97",2006,"black sea bass","Connecticut",12696.6666666667
+"98",2007,"black sea bass","Connecticut",12041
+"99",2008,"black sea bass","Connecticut",13938.6666666667
+"100",2009,"black sea bass","Connecticut",17730.3333333333
+"101",2010,"black sea bass","Connecticut",19377.3333333333
+"102",2011,"black sea bass","Connecticut",20050.6666666667
+"103",2012,"black sea bass","Connecticut",20573.3333333333
+"104",2013,"black sea bass","Connecticut",22727.3333333333
+"105",2014,"black sea bass","Connecticut",24871.6666666667
+"106",2015,"black sea bass","Connecticut",26905.6666666667
+"107",2016,"black sea bass","Connecticut",17919.6666666667
+"108",2017,"black sea bass","Connecticut",NA
+"109",2006,"bluefin tuna","Connecticut",419.333333333333
+"110",2007,"bluefin tuna","Connecticut",0
+"111",2008,"bluefin tuna","Connecticut",0
+"112",2009,"bluefin tuna","Connecticut",0
+"113",2010,"bluefin tuna","Connecticut",0
+"114",2011,"bluefin tuna","Connecticut",0
+"115",2012,"bluefin tuna","Connecticut",433.333333333333
+"116",2013,"bluefin tuna","Connecticut",433.333333333333
+"117",2014,"bluefin tuna","Connecticut",433.333333333333
+"118",2015,"bluefin tuna","Connecticut",0
+"119",2016,"bluefin tuna","Connecticut",0
+"120",2017,"bluefin tuna","Connecticut",NA
+"121",2006,"bluefish","Connecticut",34398.6666666667
+"122",2007,"bluefish","Connecticut",33940.3333333333
+"123",2008,"bluefish","Connecticut",36014
+"124",2009,"bluefish","Connecticut",42358.6666666667
+"125",2010,"bluefish","Connecticut",45266.6666666667
+"126",2011,"bluefish","Connecticut",57855.3333333333
+"127",2012,"bluefish","Connecticut",54552.3333333333
+"128",2013,"bluefish","Connecticut",49483.3333333333
+"129",2014,"bluefish","Connecticut",34436
+"130",2015,"bluefish","Connecticut",46549.3333333333
+"131",2016,"bluefish","Connecticut",36194.6666666667
+"132",2017,"bluefish","Connecticut",NA
+"133",2006,"butterfish","Connecticut",71722
+"134",2007,"butterfish","Connecticut",60474
+"135",2008,"butterfish","Connecticut",53975.3333333333
+"136",2009,"butterfish","Connecticut",63352.3333333333
+"137",2010,"butterfish","Connecticut",82925
+"138",2011,"butterfish","Connecticut",95376.3333333333
+"139",2012,"butterfish","Connecticut",109753
+"140",2013,"butterfish","Connecticut",111631.333333333
+"141",2014,"butterfish","Connecticut",120371.666666667
+"142",2015,"butterfish","Connecticut",141965
+"143",2016,"butterfish","Connecticut",104866.333333333
+"144",2017,"butterfish","Connecticut",NA
+"145",2006,"flounder,atlantic,plaice","Connecticut",152.666666666667
+"146",2007,"flounder,atlantic,plaice","Connecticut",163
+"147",2008,"flounder,atlantic,plaice","Connecticut",63
+"148",2009,"flounder,atlantic,plaice","Connecticut",37.3333333333333
+"149",2010,"flounder,atlantic,plaice","Connecticut",0
+"150",2011,"flounder,atlantic,plaice","Connecticut",0
+"151",2012,"flounder,atlantic,plaice","Connecticut",16.6666666666667
+"152",2013,"flounder,atlantic,plaice","Connecticut",16.6666666666667
+"153",2014,"flounder,atlantic,plaice","Connecticut",16.6666666666667
+"154",2015,"flounder,atlantic,plaice","Connecticut",69.3333333333333
+"155",2016,"flounder,atlantic,plaice","Connecticut",69.3333333333333
+"156",2017,"flounder,atlantic,plaice","Connecticut",NA
+"157",2006,"golden tilefish","Connecticut",2002.33333333333
+"158",2007,"golden tilefish","Connecticut",1723
+"159",2008,"golden tilefish","Connecticut",2195
+"160",2009,"golden tilefish","Connecticut",3838.33333333333
+"161",2010,"golden tilefish","Connecticut",3609.33333333333
+"162",2011,"golden tilefish","Connecticut",3217.66666666667
+"163",2012,"golden tilefish","Connecticut",1853.66666666667
+"164",2013,"golden tilefish","Connecticut",1931
+"165",2014,"golden tilefish","Connecticut",1420
+"166",2015,"golden tilefish","Connecticut",1307.33333333333
+"167",2016,"golden tilefish","Connecticut",567
+"168",2017,"golden tilefish","Connecticut",NA
+"169",2006,"haddock","Connecticut",876
+"170",2007,"haddock","Connecticut",876
+"171",2008,"haddock","Connecticut",1.33333333333333
+"172",2009,"haddock","Connecticut",1.33333333333333
+"173",2010,"haddock","Connecticut",1.33333333333333
+"174",2011,"haddock","Connecticut",0
+"175",2012,"haddock","Connecticut",0
+"176",2013,"haddock","Connecticut",0
+"177",2014,"haddock","Connecticut",0
+"178",2015,"haddock","Connecticut",0
+"179",2016,"haddock","Connecticut",0
+"180",2017,"haddock","Connecticut",NA
+"181",2006,"menhaden","Connecticut",329041.666666667
+"182",2007,"menhaden","Connecticut",353790
+"183",2008,"menhaden","Connecticut",122014
+"184",2009,"menhaden","Connecticut",106092.333333333
+"185",2010,"menhaden","Connecticut",80108.3333333333
+"186",2011,"menhaden","Connecticut",35624
+"187",2012,"menhaden","Connecticut",23695.3333333333
+"188",2013,"menhaden","Connecticut",26903
+"189",2014,"menhaden","Connecticut",41510.6666666667
+"190",2015,"menhaden","Connecticut",61607
+"191",2016,"menhaden","Connecticut",49423
+"192",2017,"menhaden","Connecticut",NA
+"193",2006,"ocean quahog clam","Connecticut",0
+"194",2007,"ocean quahog clam","Connecticut",0
+"195",2008,"ocean quahog clam","Connecticut",0
+"196",2009,"ocean quahog clam","Connecticut",0
+"197",2010,"ocean quahog clam","Connecticut",0
+"198",2011,"ocean quahog clam","Connecticut",0
+"199",2012,"ocean quahog clam","Connecticut",0
+"200",2013,"ocean quahog clam","Connecticut",0
+"201",2014,"ocean quahog clam","Connecticut",0
+"202",2015,"ocean quahog clam","Connecticut",0
+"203",2016,"ocean quahog clam","Connecticut",0
+"204",2017,"ocean quahog clam","Connecticut",NA
+"205",2006,"pollock","Connecticut",2.33333333333333
+"206",2007,"pollock","Connecticut",2.33333333333333
+"207",2008,"pollock","Connecticut",13.6666666666667
+"208",2009,"pollock","Connecticut",12.3333333333333
+"209",2010,"pollock","Connecticut",12.3333333333333
+"210",2011,"pollock","Connecticut",0
+"211",2012,"pollock","Connecticut",0
+"212",2013,"pollock","Connecticut",0
+"213",2014,"pollock","Connecticut",0
+"214",2015,"pollock","Connecticut",0
+"215",2016,"pollock","Connecticut",0
+"216",2017,"pollock","Connecticut",NA
+"217",2006,"scup","Connecticut",184598.666666667
+"218",2007,"scup","Connecticut",278599
+"219",2008,"scup","Connecticut",247164
+"220",2009,"scup","Connecticut",269829.333333333
+"221",2010,"scup","Connecticut",390645
+"222",2011,"scup","Connecticut",625049.666666667
+"223",2012,"scup","Connecticut",915343.333333333
+"224",2013,"scup","Connecticut",970896
+"225",2014,"scup","Connecticut",996303.333333333
+"226",2015,"scup","Connecticut",911793.333333333
+"227",2016,"scup","Connecticut",641424.666666667
+"228",2017,"scup","Connecticut",NA
+"229",2006,"sea scallop","Connecticut",1229558.33333333
+"230",2007,"sea scallop","Connecticut",1274631.66666667
+"231",2008,"sea scallop","Connecticut",1368823
+"232",2009,"sea scallop","Connecticut",1351127.33333333
+"233",2010,"sea scallop","Connecticut",1321419.66666667
+"234",2011,"sea scallop","Connecticut",1269761
+"235",2012,"sea scallop","Connecticut",1063058.66666667
+"236",2013,"sea scallop","Connecticut",826675.666666667
+"237",2014,"sea scallop","Connecticut",608582
+"238",2015,"sea scallop","Connecticut",572095
+"239",2016,"sea scallop","Connecticut",369069.333333333
+"240",2017,"sea scallop","Connecticut",NA
+"241",2006,"spiny dogfish shark","Connecticut",62728.6666666667
+"242",2007,"spiny dogfish shark","Connecticut",35022
+"243",2008,"spiny dogfish shark","Connecticut",37632.3333333333
+"244",2009,"spiny dogfish shark","Connecticut",30054.6666666667
+"245",2010,"spiny dogfish shark","Connecticut",29779.6666666667
+"246",2011,"spiny dogfish shark","Connecticut",32455.6666666667
+"247",2012,"spiny dogfish shark","Connecticut",36799
+"248",2013,"spiny dogfish shark","Connecticut",44139.3333333333
+"249",2014,"spiny dogfish shark","Connecticut",12235.3333333333
+"250",2015,"spiny dogfish shark","Connecticut",10524.6666666667
+"251",2016,"spiny dogfish shark","Connecticut",3176
+"252",2017,"spiny dogfish shark","Connecticut",NA
+"253",2006,"striped bass","Connecticut",0
+"254",2007,"striped bass","Connecticut",0
+"255",2008,"striped bass","Connecticut",0
+"256",2009,"striped bass","Connecticut",0
+"257",2010,"striped bass","Connecticut",0
+"258",2011,"striped bass","Connecticut",0
+"259",2012,"striped bass","Connecticut",0
+"260",2013,"striped bass","Connecticut",0
+"261",2014,"striped bass","Connecticut",0
+"262",2015,"striped bass","Connecticut",0
+"263",2016,"striped bass","Connecticut",0
+"264",2017,"striped bass","Connecticut",NA
+"265",2006,"summer flounder","Connecticut",323414
+"266",2007,"summer flounder","Connecticut",247410.333333333
+"267",2008,"summer flounder","Connecticut",225489.333333333
+"268",2009,"summer flounder","Connecticut",259898
+"269",2010,"summer flounder","Connecticut",320200.333333333
+"270",2011,"summer flounder","Connecticut",341777.333333333
+"271",2012,"summer flounder","Connecticut",333721.666666667
+"272",2013,"summer flounder","Connecticut",284372.333333333
+"273",2014,"summer flounder","Connecticut",274835.333333333
+"274",2015,"summer flounder","Connecticut",243708.333333333
+"275",2016,"summer flounder","Connecticut",159227.666666667
+"276",2017,"summer flounder","Connecticut",NA
+"277",2006,"swordfish","Connecticut",390.666666666667
+"278",2007,"swordfish","Connecticut",26
+"279",2008,"swordfish","Connecticut",0
+"280",2009,"swordfish","Connecticut",261.666666666667
+"281",2010,"swordfish","Connecticut",261.666666666667
+"282",2011,"swordfish","Connecticut",261.666666666667
+"283",2012,"swordfish","Connecticut",0
+"284",2013,"swordfish","Connecticut",58.3333333333333
+"285",2014,"swordfish","Connecticut",58.3333333333333
+"286",2015,"swordfish","Connecticut",58.3333333333333
+"287",2016,"swordfish","Connecticut",0
+"288",2017,"swordfish","Connecticut",NA
+"289",2006,"weakfish","Connecticut",5013.33333333333
+"290",2007,"weakfish","Connecticut",3315.33333333333
+"291",2008,"weakfish","Connecticut",1146.66666666667
+"292",2009,"weakfish","Connecticut",830
+"293",2010,"weakfish","Connecticut",1190.33333333333
+"294",2011,"weakfish","Connecticut",2596
+"295",2012,"weakfish","Connecticut",4262.66666666667
+"296",2013,"weakfish","Connecticut",4675.33333333333
+"297",2014,"weakfish","Connecticut",3656.33333333333
+"298",2015,"weakfish","Connecticut",2580
+"299",2016,"weakfish","Connecticut",1465.66666666667
+"300",2017,"weakfish","Connecticut",NA
+"301",2006,"white hake","Connecticut",27747.6666666667
+"302",2007,"white hake","Connecticut",10307
+"303",2008,"white hake","Connecticut",4040
+"304",2009,"white hake","Connecticut",2160.33333333333
+"305",2010,"white hake","Connecticut",1337
+"306",2011,"white hake","Connecticut",760.333333333333
+"307",2012,"white hake","Connecticut",0
+"308",2013,"white hake","Connecticut",811.333333333333
+"309",2014,"white hake","Connecticut",836
+"310",2015,"white hake","Connecticut",836
+"311",2016,"white hake","Connecticut",24.6666666666667
+"312",2017,"white hake","Connecticut",NA
+"313",2006,"windowpane flounder","Connecticut",4287.66666666667
+"314",2007,"windowpane flounder","Connecticut",3236.33333333333
+"315",2008,"windowpane flounder","Connecticut",3056.66666666667
+"316",2009,"windowpane flounder","Connecticut",1518.66666666667
+"317",2010,"windowpane flounder","Connecticut",5131.66666666667
+"318",2011,"windowpane flounder","Connecticut",5090.33333333333
+"319",2012,"windowpane flounder","Connecticut",6656.66666666667
+"320",2013,"windowpane flounder","Connecticut",4051
+"321",2014,"windowpane flounder","Connecticut",4151
+"322",2015,"windowpane flounder","Connecticut",3637.33333333333
+"323",2016,"windowpane flounder","Connecticut",2594.33333333333
+"324",2017,"windowpane flounder","Connecticut",NA
+"325",2006,"winter flounder","Connecticut",115658.666666667
+"326",2007,"winter flounder","Connecticut",98765.3333333333
+"327",2008,"winter flounder","Connecticut",67208.3333333333
+"328",2009,"winter flounder","Connecticut",30941.6666666667
+"329",2010,"winter flounder","Connecticut",13226
+"330",2011,"winter flounder","Connecticut",9709.66666666667
+"331",2012,"winter flounder","Connecticut",42300.3333333333
+"332",2013,"winter flounder","Connecticut",44913.3333333333
+"333",2014,"winter flounder","Connecticut",53186
+"334",2015,"winter flounder","Connecticut",47231
+"335",2016,"winter flounder","Connecticut",42218
+"336",2017,"winter flounder","Connecticut",NA
+"337",2006,"witch flounder","Connecticut",1367.66666666667
+"338",2007,"witch flounder","Connecticut",1042.33333333333
+"339",2008,"witch flounder","Connecticut",1085.66666666667
+"340",2009,"witch flounder","Connecticut",656.333333333333
+"341",2010,"witch flounder","Connecticut",258.666666666667
+"342",2011,"witch flounder","Connecticut",0
+"343",2012,"witch flounder","Connecticut",204.333333333333
+"344",2013,"witch flounder","Connecticut",204.333333333333
+"345",2014,"witch flounder","Connecticut",204.333333333333
+"346",2015,"witch flounder","Connecticut",278.666666666667
+"347",2016,"witch flounder","Connecticut",278.666666666667
+"348",2017,"witch flounder","Connecticut",NA
+"349",2006,"yellowfin tuna","Connecticut",1460
+"350",2007,"yellowfin tuna","Connecticut",2420.33333333333
+"351",2008,"yellowfin tuna","Connecticut",3012
+"352",2009,"yellowfin tuna","Connecticut",3542
+"353",2010,"yellowfin tuna","Connecticut",2853.66666666667
+"354",2011,"yellowfin tuna","Connecticut",2099.66666666667
+"355",2012,"yellowfin tuna","Connecticut",376.333333333333
+"356",2013,"yellowfin tuna","Connecticut",6363.66666666667
+"357",2014,"yellowfin tuna","Connecticut",6334.33333333333
+"358",2015,"yellowfin tuna","Connecticut",6301
+"359",2016,"yellowfin tuna","Connecticut",41.6666666666667
+"360",2017,"yellowfin tuna","Connecticut",NA
+"361",2006,"yellowtail flounder","Connecticut",15559.6666666667
+"362",2007,"yellowtail flounder","Connecticut",10036
+"363",2008,"yellowtail flounder","Connecticut",14464.3333333333
+"364",2009,"yellowtail flounder","Connecticut",13932.3333333333
+"365",2010,"yellowtail flounder","Connecticut",13883.3333333333
+"366",2011,"yellowtail flounder","Connecticut",8468.66666666667
+"367",2012,"yellowtail flounder","Connecticut",13152.3333333333
+"368",2013,"yellowtail flounder","Connecticut",26210.3333333333
+"369",2014,"yellowtail flounder","Connecticut",35576.6666666667
+"370",2015,"yellowtail flounder","Connecticut",31060.6666666667
+"371",2016,"yellowtail flounder","Connecticut",18002
+"372",2017,"yellowtail flounder","Connecticut",NA
+"373",2006,"acadian redfish","Maine",346904.666666667
+"374",2007,"acadian redfish","Maine",287012.666666667
+"375",2008,"acadian redfish","Maine",227337.666666667
+"376",2009,"acadian redfish","Maine",169952
+"377",2010,"acadian redfish","Maine",137188.333333333
+"378",2011,"acadian redfish","Maine",436634
+"379",2012,"acadian redfish","Maine",479599
+"380",2013,"acadian redfish","Maine",629084.666666667
+"381",2014,"acadian redfish","Maine",461729.333333333
+"382",2015,"acadian redfish","Maine",444403.666666667
+"383",2016,"acadian redfish","Maine",253774.333333333
+"384",2017,"acadian redfish","Maine",NA
+"385",2006,"albacore tuna","Maine",0
+"386",2007,"albacore tuna","Maine",0
+"387",2008,"albacore tuna","Maine",0
+"388",2009,"albacore tuna","Maine",0
+"389",2010,"albacore tuna","Maine",0
+"390",2011,"albacore tuna","Maine",0
+"391",2012,"albacore tuna","Maine",0
+"392",2013,"albacore tuna","Maine",0
+"393",2014,"albacore tuna","Maine",0
+"394",2015,"albacore tuna","Maine",0
+"395",2016,"albacore tuna","Maine",0
+"396",2017,"albacore tuna","Maine",NA
+"397",2006,"american lobster","Maine",69345081
+"398",2007,"american lobster","Maine",69722871.6666667
+"399",2008,"american lobster","Maine",71667259.3333333
+"400",2009,"american lobster","Maine",82429465.3333333
+"401",2010,"american lobster","Maine",94115928
+"402",2011,"american lobster","Maine",109468672
+"403",2012,"american lobster","Maine",119971881.666667
+"404",2013,"american lobster","Maine",126403559.666667
+"405",2014,"american lobster","Maine",124791639
+"406",2015,"american lobster","Maine",126383397.666667
+"407",2016,"american lobster","Maine",84977512.6666667
+"408",2017,"american lobster","Maine",NA
+"409",2006,"atlantic cod","Maine",1583463.66666667
+"410",2007,"atlantic cod","Maine",1372547.33333333
+"411",2008,"atlantic cod","Maine",1312502
+"412",2009,"atlantic cod","Maine",1103831.33333333
+"413",2010,"atlantic cod","Maine",933700.333333333
+"414",2011,"atlantic cod","Maine",684974
+"415",2012,"atlantic cod","Maine",531029.666666667
+"416",2013,"atlantic cod","Maine",394378
+"417",2014,"atlantic cod","Maine",315004.666666667
+"418",2015,"atlantic cod","Maine",274932.333333333
+"419",2016,"atlantic cod","Maine",140225
+"420",2017,"atlantic cod","Maine",NA
+"421",2006,"atlantic halibut","Maine",30010.3333333333
+"422",2007,"atlantic halibut","Maine",37143
+"423",2008,"atlantic halibut","Maine",56274
+"424",2009,"atlantic halibut","Maine",55816
+"425",2010,"atlantic halibut","Maine",54121.3333333333
+"426",2011,"atlantic halibut","Maine",45377.3333333333
+"427",2012,"atlantic halibut","Maine",48724.3333333333
+"428",2013,"atlantic halibut","Maine",57875.3333333333
+"429",2014,"atlantic halibut","Maine",73586.3333333333
+"430",2015,"atlantic halibut","Maine",94429
+"431",2016,"atlantic halibut","Maine",71546.3333333333
+"432",2017,"atlantic halibut","Maine",NA
+"433",2006,"atlantic herring","Maine",57739527
+"434",2007,"atlantic herring","Maine",80130261.6666667
+"435",2008,"atlantic herring","Maine",69051141.6666667
+"436",2009,"atlantic herring","Maine",63297794.3333333
+"437",2010,"atlantic herring","Maine",73093041.3333333
+"438",2011,"atlantic herring","Maine",82393013.3333333
+"439",2012,"atlantic herring","Maine",96160292.3333333
+"440",2013,"atlantic herring","Maine",98298148.6666667
+"441",2014,"atlantic herring","Maine",96291409.6666667
+"442",2015,"atlantic herring","Maine",89448482
+"443",2016,"atlantic herring","Maine",54938519
+"444",2017,"atlantic herring","Maine",NA
+"445",2006,"atlantic surf clam","Maine",5213.33333333333
+"446",2007,"atlantic surf clam","Maine",5213.33333333333
+"447",2008,"atlantic surf clam","Maine",0
+"448",2009,"atlantic surf clam","Maine",0
+"449",2010,"atlantic surf clam","Maine",0
+"450",2011,"atlantic surf clam","Maine",0
+"451",2012,"atlantic surf clam","Maine",17046.6666666667
+"452",2013,"atlantic surf clam","Maine",17046.6666666667
+"453",2014,"atlantic surf clam","Maine",17046.6666666667
+"454",2015,"atlantic surf clam","Maine",0
+"455",2016,"atlantic surf clam","Maine",0
+"456",2017,"atlantic surf clam","Maine",NA
+"457",2006,"bigeye tuna","Maine",0
+"458",2007,"bigeye tuna","Maine",0
+"459",2008,"bigeye tuna","Maine",0
+"460",2009,"bigeye tuna","Maine",0
+"461",2010,"bigeye tuna","Maine",0
+"462",2011,"bigeye tuna","Maine",0
+"463",2012,"bigeye tuna","Maine",0
+"464",2013,"bigeye tuna","Maine",0
+"465",2014,"bigeye tuna","Maine",0
+"466",2015,"bigeye tuna","Maine",0
+"467",2016,"bigeye tuna","Maine",0
+"468",2017,"bigeye tuna","Maine",NA
+"469",2006,"black sea bass","Maine",0
+"470",2007,"black sea bass","Maine",0
+"471",2008,"black sea bass","Maine",0
+"472",2009,"black sea bass","Maine",0
+"473",2010,"black sea bass","Maine",0
+"474",2011,"black sea bass","Maine",0
+"475",2012,"black sea bass","Maine",0
+"476",2013,"black sea bass","Maine",0
+"477",2014,"black sea bass","Maine",0
+"478",2015,"black sea bass","Maine",0
+"479",2016,"black sea bass","Maine",0
+"480",2017,"black sea bass","Maine",NA
+"481",2006,"bluefin tuna","Maine",45181.3333333333
+"482",2007,"bluefin tuna","Maine",33917.3333333333
+"483",2008,"bluefin tuna","Maine",61103.3333333333
+"484",2009,"bluefin tuna","Maine",103179.333333333
+"485",2010,"bluefin tuna","Maine",155094
+"486",2011,"bluefin tuna","Maine",189295
+"487",2012,"bluefin tuna","Maine",179244.333333333
+"488",2013,"bluefin tuna","Maine",207734
+"489",2014,"bluefin tuna","Maine",234666
+"490",2015,"bluefin tuna","Maine",328861
+"491",2016,"bluefin tuna","Maine",234641.333333333
+"492",2017,"bluefin tuna","Maine",NA
+"493",2006,"bluefish","Maine",83.3333333333333
+"494",2007,"bluefish","Maine",290.666666666667
+"495",2008,"bluefish","Maine",290.666666666667
+"496",2009,"bluefish","Maine",290.666666666667
+"497",2010,"bluefish","Maine",0
+"498",2011,"bluefish","Maine",461.333333333333
+"499",2012,"bluefish","Maine",461.333333333333
+"500",2013,"bluefish","Maine",461.333333333333
+"501",2014,"bluefish","Maine",0
+"502",2015,"bluefish","Maine",0
+"503",2016,"bluefish","Maine",0
+"504",2017,"bluefish","Maine",NA
+"505",2006,"butterfish","Maine",13
+"506",2007,"butterfish","Maine",0
+"507",2008,"butterfish","Maine",0
+"508",2009,"butterfish","Maine",0
+"509",2010,"butterfish","Maine",0
+"510",2011,"butterfish","Maine",0
+"511",2012,"butterfish","Maine",0
+"512",2013,"butterfish","Maine",0
+"513",2014,"butterfish","Maine",0
+"514",2015,"butterfish","Maine",0
+"515",2016,"butterfish","Maine",0
+"516",2017,"butterfish","Maine",NA
+"517",2006,"flounder,atlantic,plaice","Maine",871322
+"518",2007,"flounder,atlantic,plaice","Maine",607198
+"519",2008,"flounder,atlantic,plaice","Maine",453632
+"520",2009,"flounder,atlantic,plaice","Maine",323090
+"521",2010,"flounder,atlantic,plaice","Maine",219261.333333333
+"522",2011,"flounder,atlantic,plaice","Maine",196365.666666667
+"523",2012,"flounder,atlantic,plaice","Maine",293610.333333333
+"524",2013,"flounder,atlantic,plaice","Maine",408859
+"525",2014,"flounder,atlantic,plaice","Maine",539656
+"526",2015,"flounder,atlantic,plaice","Maine",501615.666666667
+"527",2016,"flounder,atlantic,plaice","Maine",339021.666666667
+"528",2017,"flounder,atlantic,plaice","Maine",NA
+"529",2006,"golden tilefish","Maine",132.666666666667
+"530",2007,"golden tilefish","Maine",0
+"531",2008,"golden tilefish","Maine",0
+"532",2009,"golden tilefish","Maine",0
+"533",2010,"golden tilefish","Maine",0
+"534",2011,"golden tilefish","Maine",0
+"535",2012,"golden tilefish","Maine",0
+"536",2013,"golden tilefish","Maine",0
+"537",2014,"golden tilefish","Maine",0
+"538",2015,"golden tilefish","Maine",0
+"539",2016,"golden tilefish","Maine",0
+"540",2017,"golden tilefish","Maine",NA
+"541",2006,"haddock","Maine",1362464.33333333
+"542",2007,"haddock","Maine",1043471.66666667
+"543",2008,"haddock","Maine",754716.666666667
+"544",2009,"haddock","Maine",473610.666666667
+"545",2010,"haddock","Maine",106007.333333333
+"546",2011,"haddock","Maine",70562.3333333333
+"547",2012,"haddock","Maine",72022
+"548",2013,"haddock","Maine",156416.666666667
+"549",2014,"haddock","Maine",272195
+"550",2015,"haddock","Maine",335940.333333333
+"551",2016,"haddock","Maine",242246.666666667
+"552",2017,"haddock","Maine",NA
+"553",2006,"menhaden","Maine",0
+"554",2007,"menhaden","Maine",1412071
+"555",2008,"menhaden","Maine",1467718.33333333
+"556",2009,"menhaden","Maine",1467718.33333333
+"557",2010,"menhaden","Maine",55647.3333333333
+"558",2011,"menhaden","Maine",0
+"559",2012,"menhaden","Maine",0
+"560",2013,"menhaden","Maine",0
+"561",2014,"menhaden","Maine",0
+"562",2015,"menhaden","Maine",1457388.66666667
+"563",2016,"menhaden","Maine",1457388.66666667
+"564",2017,"menhaden","Maine",NA
+"565",2006,"ocean quahog clam","Maine",1075066.66666667
+"566",2007,"ocean quahog clam","Maine",964500
+"567",2008,"ocean quahog clam","Maine",745486.666666667
+"568",2009,"ocean quahog clam","Maine",591743.333333333
+"569",2010,"ocean quahog clam","Maine",583700
+"570",2011,"ocean quahog clam","Maine",630950
+"571",2012,"ocean quahog clam","Maine",633670
+"572",2013,"ocean quahog clam","Maine",564666.666666667
+"573",2014,"ocean quahog clam","Maine",470623.333333333
+"574",2015,"ocean quahog clam","Maine",407180
+"575",2016,"ocean quahog clam","Maine",261076.666666667
+"576",2017,"ocean quahog clam","Maine",NA
+"577",2006,"pollock","Maine",4394330.33333333
+"578",2007,"pollock","Maine",3995747
+"579",2008,"pollock","Maine",3783144.66666667
+"580",2009,"pollock","Maine",2914891.33333333
+"581",2010,"pollock","Maine",2335246.66666667
+"582",2011,"pollock","Maine",2210388.66666667
+"583",2012,"pollock","Maine",2405802.33333333
+"584",2013,"pollock","Maine",2403641
+"585",2014,"pollock","Maine",1975390
+"586",2015,"pollock","Maine",1582981.33333333
+"587",2016,"pollock","Maine",810142.666666667
+"588",2017,"pollock","Maine",NA
+"589",2006,"sea scallop","Maine",121123.666666667
+"590",2007,"sea scallop","Maine",156154.333333333
+"591",2008,"sea scallop","Maine",130945
+"592",2009,"sea scallop","Maine",138914.333333333
+"593",2010,"sea scallop","Maine",154182.333333333
+"594",2011,"sea scallop","Maine",226506.333333333
+"595",2012,"sea scallop","Maine",328048.666666667
+"596",2013,"sea scallop","Maine",471623.333333333
+"597",2014,"sea scallop","Maine",543882
+"598",2015,"sea scallop","Maine",562332.666666667
+"599",2016,"sea scallop","Maine",357989.666666667
+"600",2017,"sea scallop","Maine",NA
+"601",2006,"spiny dogfish shark","Maine",93058
+"602",2007,"spiny dogfish shark","Maine",109505.333333333
+"603",2008,"spiny dogfish shark","Maine",247585.333333333
+"604",2009,"spiny dogfish shark","Maine",290656
+"605",2010,"spiny dogfish shark","Maine",391328.666666667
+"606",2011,"spiny dogfish shark","Maine",268925.333333333
+"607",2012,"spiny dogfish shark","Maine",228246.666666667
+"608",2013,"spiny dogfish shark","Maine",182714.333333333
+"609",2014,"spiny dogfish shark","Maine",113709
+"610",2015,"spiny dogfish shark","Maine",78172.3333333333
+"611",2016,"spiny dogfish shark","Maine",6584.66666666667
+"612",2017,"spiny dogfish shark","Maine",NA
+"613",2006,"striped bass","Maine",0
+"614",2007,"striped bass","Maine",0
+"615",2008,"striped bass","Maine",0
+"616",2009,"striped bass","Maine",0
+"617",2010,"striped bass","Maine",0
+"618",2011,"striped bass","Maine",0
+"619",2012,"striped bass","Maine",0
+"620",2013,"striped bass","Maine",0
+"621",2014,"striped bass","Maine",0
+"622",2015,"striped bass","Maine",0
+"623",2016,"striped bass","Maine",0
+"624",2017,"striped bass","Maine",NA
+"625",2006,"summer flounder","Maine",1141.66666666667
+"626",2007,"summer flounder","Maine",0
+"627",2008,"summer flounder","Maine",0
+"628",2009,"summer flounder","Maine",0
+"629",2010,"summer flounder","Maine",0
+"630",2011,"summer flounder","Maine",0
+"631",2012,"summer flounder","Maine",0
+"632",2013,"summer flounder","Maine",0
+"633",2014,"summer flounder","Maine",0
+"634",2015,"summer flounder","Maine",0
+"635",2016,"summer flounder","Maine",0
+"636",2017,"summer flounder","Maine",NA
+"637",2006,"swordfish","Maine",0
+"638",2007,"swordfish","Maine",0
+"639",2008,"swordfish","Maine",0
+"640",2009,"swordfish","Maine",16169.6666666667
+"641",2010,"swordfish","Maine",16169.6666666667
+"642",2011,"swordfish","Maine",16169.6666666667
+"643",2012,"swordfish","Maine",16397
+"644",2013,"swordfish","Maine",21309
+"645",2014,"swordfish","Maine",21309
+"646",2015,"swordfish","Maine",4912
+"647",2016,"swordfish","Maine",0
+"648",2017,"swordfish","Maine",NA
+"649",2006,"weakfish","Maine",0
+"650",2007,"weakfish","Maine",0
+"651",2008,"weakfish","Maine",0
+"652",2009,"weakfish","Maine",0
+"653",2010,"weakfish","Maine",0
+"654",2011,"weakfish","Maine",0
+"655",2012,"weakfish","Maine",0
+"656",2013,"weakfish","Maine",0
+"657",2014,"weakfish","Maine",0
+"658",2015,"weakfish","Maine",0
+"659",2016,"weakfish","Maine",0
+"660",2017,"weakfish","Maine",NA
+"661",2006,"white hake","Maine",2118162
+"662",2007,"white hake","Maine",1260171
+"663",2008,"white hake","Maine",960996
+"664",2009,"white hake","Maine",725588
+"665",2010,"white hake","Maine",750287
+"666",2011,"white hake","Maine",871980.666666667
+"667",2012,"white hake","Maine",1028150
+"668",2013,"white hake","Maine",1013412.66666667
+"669",2014,"white hake","Maine",842307.666666667
+"670",2015,"white hake","Maine",626049.333333333
+"671",2016,"white hake","Maine",353220.666666667
+"672",2017,"white hake","Maine",NA
+"673",2006,"windowpane flounder","Maine",15
+"674",2007,"windowpane flounder","Maine",0
+"675",2008,"windowpane flounder","Maine",0
+"676",2009,"windowpane flounder","Maine",0
+"677",2010,"windowpane flounder","Maine",0
+"678",2011,"windowpane flounder","Maine",0
+"679",2012,"windowpane flounder","Maine",0
+"680",2013,"windowpane flounder","Maine",0
+"681",2014,"windowpane flounder","Maine",0
+"682",2015,"windowpane flounder","Maine",0
+"683",2016,"windowpane flounder","Maine",0
+"684",2017,"windowpane flounder","Maine",NA
+"685",2006,"winter flounder","Maine",74239.6666666667
+"686",2007,"winter flounder","Maine",59247
+"687",2008,"winter flounder","Maine",35176.3333333333
+"688",2009,"winter flounder","Maine",0
+"689",2010,"winter flounder","Maine",0
+"690",2011,"winter flounder","Maine",0
+"691",2012,"winter flounder","Maine",0
+"692",2013,"winter flounder","Maine",0
+"693",2014,"winter flounder","Maine",0
+"694",2015,"winter flounder","Maine",0
+"695",2016,"winter flounder","Maine",0
+"696",2017,"winter flounder","Maine",NA
+"697",2006,"witch flounder","Maine",1111541.66666667
+"698",2007,"witch flounder","Maine",631591.333333333
+"699",2008,"witch flounder","Maine",410588.666666667
+"700",2009,"witch flounder","Maine",255656
+"701",2010,"witch flounder","Maine",186457.666666667
+"702",2011,"witch flounder","Maine",186565.333333333
+"703",2012,"witch flounder","Maine",223141.333333333
+"704",2013,"witch flounder","Maine",224068.333333333
+"705",2014,"witch flounder","Maine",168993.333333333
+"706",2015,"witch flounder","Maine",108156.333333333
+"707",2016,"witch flounder","Maine",60892.6666666667
+"708",2017,"witch flounder","Maine",NA
+"709",2006,"yellowfin tuna","Maine",0
+"710",2007,"yellowfin tuna","Maine",0
+"711",2008,"yellowfin tuna","Maine",0
+"712",2009,"yellowfin tuna","Maine",0
+"713",2010,"yellowfin tuna","Maine",0
+"714",2011,"yellowfin tuna","Maine",0
+"715",2012,"yellowfin tuna","Maine",0
+"716",2013,"yellowfin tuna","Maine",0
+"717",2014,"yellowfin tuna","Maine",0
+"718",2015,"yellowfin tuna","Maine",0
+"719",2016,"yellowfin tuna","Maine",0
+"720",2017,"yellowfin tuna","Maine",NA
+"721",2006,"yellowtail flounder","Maine",20022
+"722",2007,"yellowtail flounder","Maine",27131
+"723",2008,"yellowtail flounder","Maine",17881.3333333333
+"724",2009,"yellowtail flounder","Maine",10097
+"725",2010,"yellowtail flounder","Maine",419.666666666667
+"726",2011,"yellowtail flounder","Maine",0
+"727",2012,"yellowtail flounder","Maine",0
+"728",2013,"yellowtail flounder","Maine",0
+"729",2014,"yellowtail flounder","Maine",0
+"730",2015,"yellowtail flounder","Maine",0
+"731",2016,"yellowtail flounder","Maine",0
+"732",2017,"yellowtail flounder","Maine",NA
+"733",2006,"acadian redfish","Massachusetts",973886
+"734",2007,"acadian redfish","Massachusetts",1491171.66666667
+"735",2008,"acadian redfish","Massachusetts",2235022.66666667
+"736",2009,"acadian redfish","Massachusetts",2924626
+"737",2010,"acadian redfish","Massachusetts",3574488
+"738",2011,"acadian redfish","Massachusetts",5195825.33333333
+"739",2012,"acadian redfish","Massachusetts",6551486
+"740",2013,"acadian redfish","Massachusetts",8288381
+"741",2014,"acadian redfish","Massachusetts",9116767.33333333
+"742",2015,"acadian redfish","Massachusetts",9389925.33333333
+"743",2016,"acadian redfish","Massachusetts",6221774.66666667
+"744",2017,"acadian redfish","Massachusetts",NA
+"745",2006,"albacore tuna","Massachusetts",15022.6666666667
+"746",2007,"albacore tuna","Massachusetts",7392.33333333333
+"747",2008,"albacore tuna","Massachusetts",13238.3333333333
+"748",2009,"albacore tuna","Massachusetts",26856.3333333333
+"749",2010,"albacore tuna","Massachusetts",60439.6666666667
+"750",2011,"albacore tuna","Massachusetts",97293.6666666667
+"751",2012,"albacore tuna","Massachusetts",100090
+"752",2013,"albacore tuna","Massachusetts",96009.6666666667
+"753",2014,"albacore tuna","Massachusetts",63600.3333333333
+"754",2015,"albacore tuna","Massachusetts",52206
+"755",2016,"albacore tuna","Massachusetts",18408.3333333333
+"756",2017,"albacore tuna","Massachusetts",NA
+"757",2006,"american lobster","Massachusetts",10708162.6666667
+"758",2007,"american lobster","Massachusetts",10948279.3333333
+"759",2008,"american lobster","Massachusetts",10842401.3333333
+"760",2009,"american lobster","Massachusetts",11714006.3333333
+"761",2010,"american lobster","Massachusetts",12638075.3333333
+"762",2011,"american lobster","Massachusetts",13539151.6666667
+"763",2012,"american lobster","Massachusetts",14372525.3333333
+"764",2013,"american lobster","Massachusetts",15022642.6666667
+"765",2014,"american lobster","Massachusetts",15677706.3333333
+"766",2015,"american lobster","Massachusetts",16512336
+"767",2016,"american lobster","Massachusetts",11404705.3333333
+"768",2017,"american lobster","Massachusetts",NA
+"769",2006,"atlantic cod","Massachusetts",11346665.6666667
+"770",2007,"atlantic cod","Massachusetts",13220551.6666667
+"771",2008,"atlantic cod","Massachusetts",15245124
+"772",2009,"atlantic cod","Massachusetts",15808478.6666667
+"773",2010,"atlantic cod","Massachusetts",15467537.3333333
+"774",2011,"atlantic cod","Massachusetts",13122611
+"775",2012,"atlantic cod","Massachusetts",9380407.33333333
+"776",2013,"atlantic cod","Massachusetts",5807846
+"777",2014,"atlantic cod","Massachusetts",3784471
+"778",2015,"atlantic cod","Massachusetts",3310624.66666667
+"779",2016,"atlantic cod","Massachusetts",1879127.66666667
+"780",2017,"atlantic cod","Massachusetts",NA
+"781",2006,"atlantic croaker","Massachusetts",0
+"782",2007,"atlantic croaker","Massachusetts",0
+"783",2008,"atlantic croaker","Massachusetts",0
+"784",2009,"atlantic croaker","Massachusetts",0
+"785",2010,"atlantic croaker","Massachusetts",0
+"786",2011,"atlantic croaker","Massachusetts",0
+"787",2012,"atlantic croaker","Massachusetts",0
+"788",2013,"atlantic croaker","Massachusetts",0
+"789",2014,"atlantic croaker","Massachusetts",0
+"790",2015,"atlantic croaker","Massachusetts",0
+"791",2016,"atlantic croaker","Massachusetts",0
+"792",2017,"atlantic croaker","Massachusetts",NA
+"793",2006,"atlantic halibut","Massachusetts",10939
+"794",2007,"atlantic halibut","Massachusetts",11591
+"795",2008,"atlantic halibut","Massachusetts",13616
+"796",2009,"atlantic halibut","Massachusetts",14521
+"797",2010,"atlantic halibut","Massachusetts",14958.3333333333
+"798",2011,"atlantic halibut","Massachusetts",16354.3333333333
+"799",2012,"atlantic halibut","Massachusetts",20235.3333333333
+"800",2013,"atlantic halibut","Massachusetts",25897
+"801",2014,"atlantic halibut","Massachusetts",58516.3333333333
+"802",2015,"atlantic halibut","Massachusetts",107934
+"803",2016,"atlantic halibut","Massachusetts",97343.3333333333
+"804",2017,"atlantic halibut","Massachusetts",NA
+"805",2006,"atlantic herring","Massachusetts",64505030.3333333
+"806",2007,"atlantic herring","Massachusetts",95694016.6666667
+"807",2008,"atlantic herring","Massachusetts",100355117.666667
+"808",2009,"atlantic herring","Massachusetts",99906376
+"809",2010,"atlantic herring","Massachusetts",90807620.6666667
+"810",2011,"atlantic herring","Massachusetts",73557728.3333333
+"811",2012,"atlantic herring","Massachusetts",74581219.6666667
+"812",2013,"atlantic herring","Massachusetts",78215341.6666667
+"813",2014,"atlantic herring","Massachusetts",74584474.6666667
+"814",2015,"atlantic herring","Massachusetts",65304751.3333333
+"815",2016,"atlantic herring","Massachusetts",39347231.6666667
+"816",2017,"atlantic herring","Massachusetts",NA
+"817",2006,"atlantic surf clam","Massachusetts",2807815.66666667
+"818",2007,"atlantic surf clam","Massachusetts",2222663.66666667
+"819",2008,"atlantic surf clam","Massachusetts",2924236
+"820",2009,"atlantic surf clam","Massachusetts",5009468.33333333
+"821",2010,"atlantic surf clam","Massachusetts",8126571.66666667
+"822",2011,"atlantic surf clam","Massachusetts",12664637
+"823",2012,"atlantic surf clam","Massachusetts",16902285
+"824",2013,"atlantic surf clam","Massachusetts",19486685.3333333
+"825",2014,"atlantic surf clam","Massachusetts",19682533.3333333
+"826",2015,"atlantic surf clam","Massachusetts",19349437.6666667
+"827",2016,"atlantic surf clam","Massachusetts",12877363.3333333
+"828",2017,"atlantic surf clam","Massachusetts",NA
+"829",2006,"bigeye tuna","Massachusetts",31843
+"830",2007,"bigeye tuna","Massachusetts",30951.3333333333
+"831",2008,"bigeye tuna","Massachusetts",42268
+"832",2009,"bigeye tuna","Massachusetts",74550
+"833",2010,"bigeye tuna","Massachusetts",117947.333333333
+"834",2011,"bigeye tuna","Massachusetts",167114.333333333
+"835",2012,"bigeye tuna","Massachusetts",163358.333333333
+"836",2013,"bigeye tuna","Massachusetts",164894.666666667
+"837",2014,"bigeye tuna","Massachusetts",157380
+"838",2015,"bigeye tuna","Massachusetts",150048.666666667
+"839",2016,"bigeye tuna","Massachusetts",89099
+"840",2017,"bigeye tuna","Massachusetts",NA
+"841",2006,"black sea bass","Massachusetts",516301
+"842",2007,"black sea bass","Massachusetts",451821
+"843",2008,"black sea bass","Massachusetts",302442.333333333
+"844",2009,"black sea bass","Massachusetts",241790.666666667
+"845",2010,"black sea bass","Massachusetts",232105.333333333
+"846",2011,"black sea bass","Massachusetts",279952.666666667
+"847",2012,"black sea bass","Massachusetts",302691
+"848",2013,"black sea bass","Massachusetts",309152
+"849",2014,"black sea bass","Massachusetts",327755.666666667
+"850",2015,"black sea bass","Massachusetts",336301
+"851",2016,"black sea bass","Massachusetts",233951.333333333
+"852",2017,"black sea bass","Massachusetts",NA
+"853",2006,"bluefin tuna","Massachusetts",396159.666666667
+"854",2007,"bluefin tuna","Massachusetts",288732
+"855",2008,"bluefin tuna","Massachusetts",414878.666666667
+"856",2009,"bluefin tuna","Massachusetts",651570.333333333
+"857",2010,"bluefin tuna","Massachusetts",783703.333333333
+"858",2011,"bluefin tuna","Massachusetts",784943
+"859",2012,"bluefin tuna","Massachusetts",594165
+"860",2013,"bluefin tuna","Massachusetts",540990.333333333
+"861",2014,"bluefin tuna","Massachusetts",699346.666666667
+"862",2015,"bluefin tuna","Massachusetts",937019.333333333
+"863",2016,"bluefin tuna","Massachusetts",724832.333333333
+"864",2017,"bluefin tuna","Massachusetts",NA
+"865",2006,"bluefish","Massachusetts",512336.333333333
+"866",2007,"bluefish","Massachusetts",531561
+"867",2008,"bluefish","Massachusetts",489910
+"868",2009,"bluefish","Massachusetts",493987.666666667
+"869",2010,"bluefish","Massachusetts",516644
+"870",2011,"bluefish","Massachusetts",616915.333333333
+"871",2012,"bluefish","Massachusetts",618792.333333333
+"872",2013,"bluefish","Massachusetts",583088
+"873",2014,"bluefish","Massachusetts",554720.666666667
+"874",2015,"bluefish","Massachusetts",524076.666666667
+"875",2016,"bluefish","Massachusetts",366936
+"876",2017,"bluefish","Massachusetts",NA
+"877",2006,"butterfish","Massachusetts",33092.3333333333
+"878",2007,"butterfish","Massachusetts",38026
+"879",2008,"butterfish","Massachusetts",64328.3333333333
+"880",2009,"butterfish","Massachusetts",110129.666666667
+"881",2010,"butterfish","Massachusetts",146257.333333333
+"882",2011,"butterfish","Massachusetts",163306.666666667
+"883",2012,"butterfish","Massachusetts",148769.666666667
+"884",2013,"butterfish","Massachusetts",167403
+"885",2014,"butterfish","Massachusetts",324588
+"886",2015,"butterfish","Massachusetts",388640.666666667
+"887",2016,"butterfish","Massachusetts",323183.666666667
+"888",2017,"butterfish","Massachusetts",NA
+"889",2006,"flounder,atlantic,plaice","Massachusetts",1571462.33333333
+"890",2007,"flounder,atlantic,plaice","Massachusetts",1666653.66666667
+"891",2008,"flounder,atlantic,plaice","Massachusetts",2012295.66666667
+"892",2009,"flounder,atlantic,plaice","Massachusetts",2473508.66666667
+"893",2010,"flounder,atlantic,plaice","Massachusetts",2776551
+"894",2011,"flounder,atlantic,plaice","Massachusetts",2889229.66666667
+"895",2012,"flounder,atlantic,plaice","Massachusetts",2721490
+"896",2013,"flounder,atlantic,plaice","Massachusetts",2517754
+"897",2014,"flounder,atlantic,plaice","Massachusetts",2235336.33333333
+"898",2015,"flounder,atlantic,plaice","Massachusetts",2056025
+"899",2016,"flounder,atlantic,plaice","Massachusetts",1311636
+"900",2017,"flounder,atlantic,plaice","Massachusetts",NA
+"901",2006,"golden tilefish","Massachusetts",44077.3333333333
+"902",2007,"golden tilefish","Massachusetts",43085
+"903",2008,"golden tilefish","Massachusetts",1377
+"904",2009,"golden tilefish","Massachusetts",1848
+"905",2010,"golden tilefish","Massachusetts",3935.66666666667
+"906",2011,"golden tilefish","Massachusetts",3902.33333333333
+"907",2012,"golden tilefish","Massachusetts",4562.66666666667
+"908",2013,"golden tilefish","Massachusetts",2731
+"909",2014,"golden tilefish","Massachusetts",3020.66666666667
+"910",2015,"golden tilefish","Massachusetts",2189.33333333333
+"911",2016,"golden tilefish","Massachusetts",1502.66666666667
+"912",2017,"golden tilefish","Massachusetts",NA
+"913",2006,"haddock","Massachusetts",8876533
+"914",2007,"haddock","Massachusetts",8335416.33333333
+"915",2008,"haddock","Massachusetts",10538264.6666667
+"916",2009,"haddock","Massachusetts",15362579.3333333
+"917",2010,"haddock","Massachusetts",15245796.3333333
+"918",2011,"haddock","Massachusetts",12473592.6666667
+"919",2012,"haddock","Massachusetts",6769827.33333333
+"920",2013,"haddock","Massachusetts",5946722.33333333
+"921",2014,"haddock","Massachusetts",8379981
+"922",2015,"haddock","Massachusetts",10627860.6666667
+"923",2016,"haddock","Massachusetts",7400437.66666667
+"924",2017,"haddock","Massachusetts",NA
+"925",2006,"menhaden","Massachusetts",3395870.66666667
+"926",2007,"menhaden","Massachusetts",7371916
+"927",2008,"menhaden","Massachusetts",8768976.33333333
+"928",2009,"menhaden","Massachusetts",8580516
+"929",2010,"menhaden","Massachusetts",3910157
+"930",2011,"menhaden","Massachusetts",2221428.33333333
+"931",2012,"menhaden","Massachusetts",1339130
+"932",2013,"menhaden","Massachusetts",2049772.66666667
+"933",2014,"menhaden","Massachusetts",2482847
+"934",2015,"menhaden","Massachusetts",2733313
+"935",2016,"menhaden","Massachusetts",1993789.33333333
+"936",2017,"menhaden","Massachusetts",NA
+"937",2006,"ocean quahog clam","Massachusetts",12329432.6666667
+"938",2007,"ocean quahog clam","Massachusetts",18371396
+"939",2008,"ocean quahog clam","Massachusetts",18991673.3333333
+"940",2009,"ocean quahog clam","Massachusetts",17487454
+"941",2010,"ocean quahog clam","Massachusetts",15605110.6666667
+"942",2011,"ocean quahog clam","Massachusetts",9374880.66666667
+"943",2012,"ocean quahog clam","Massachusetts",8984966.66666667
+"944",2013,"ocean quahog clam","Massachusetts",9299239
+"945",2014,"ocean quahog clam","Massachusetts",13745942.3333333
+"946",2015,"ocean quahog clam","Massachusetts",8920595.66666667
+"947",2016,"ocean quahog clam","Massachusetts",4446703.33333333
+"948",2017,"ocean quahog clam","Massachusetts",NA
+"949",2006,"pollock","Massachusetts",8726033
+"950",2007,"pollock","Massachusetts",11509593.3333333
+"951",2008,"pollock","Massachusetts",12964587.6666667
+"952",2009,"pollock","Massachusetts",11846352
+"953",2010,"pollock","Massachusetts",10638853.3333333
+"954",2011,"pollock","Massachusetts",10541450.3333333
+"955",2012,"pollock","Massachusetts",10292791.6666667
+"956",2013,"pollock","Massachusetts",8718802.33333333
+"957",2014,"pollock","Massachusetts",6690265.66666667
+"958",2015,"pollock","Massachusetts",5558884.66666667
+"959",2016,"pollock","Massachusetts",3202202.66666667
+"960",2017,"pollock","Massachusetts",NA
+"961",2006,"scup","Massachusetts",730308.333333333
+"962",2007,"scup","Massachusetts",906083.333333333
+"963",2008,"scup","Massachusetts",783390.666666667
+"964",2009,"scup","Massachusetts",758921.333333333
+"965",2010,"scup","Massachusetts",997749.666666667
+"966",2011,"scup","Massachusetts",1426588.66666667
+"967",2012,"scup","Massachusetts",1550636.66666667
+"968",2013,"scup","Massachusetts",1531955.66666667
+"969",2014,"scup","Massachusetts",1323621
+"970",2015,"scup","Massachusetts",1367993
+"971",2016,"scup","Massachusetts",972070.666666667
+"972",2017,"scup","Massachusetts",NA
+"973",2006,"sea scallop","Massachusetts",32750573.3333333
+"974",2007,"sea scallop","Massachusetts",32072521.3333333
+"975",2008,"sea scallop","Massachusetts",29777602
+"976",2009,"sea scallop","Massachusetts",29316310.6666667
+"977",2010,"sea scallop","Massachusetts",31343165.6666667
+"978",2011,"sea scallop","Massachusetts",33657681
+"979",2012,"sea scallop","Massachusetts",33034821
+"980",2013,"sea scallop","Massachusetts",29134879.3333333
+"981",2014,"sea scallop","Massachusetts",24064672.3333333
+"982",2015,"sea scallop","Massachusetts",21917469.6666667
+"983",2016,"sea scallop","Massachusetts",14786791.6666667
+"984",2017,"sea scallop","Massachusetts",NA
+"985",2006,"skipjack tuna","Massachusetts",0
+"986",2007,"skipjack tuna","Massachusetts",0
+"987",2008,"skipjack tuna","Massachusetts",0
+"988",2009,"skipjack tuna","Massachusetts",0
+"989",2010,"skipjack tuna","Massachusetts",0
+"990",2011,"skipjack tuna","Massachusetts",0
+"991",2012,"skipjack tuna","Massachusetts",0
+"992",2013,"skipjack tuna","Massachusetts",0
+"993",2014,"skipjack tuna","Massachusetts",0
+"994",2015,"skipjack tuna","Massachusetts",0
+"995",2016,"skipjack tuna","Massachusetts",0
+"996",2017,"skipjack tuna","Massachusetts",NA
+"997",2006,"spiny dogfish shark","Massachusetts",2529203
+"998",2007,"spiny dogfish shark","Massachusetts",3046836.33333333
+"999",2008,"spiny dogfish shark","Massachusetts",3407320.66666667
+"1000",2009,"spiny dogfish shark","Massachusetts",4622808.33333333
+"1001",2010,"spiny dogfish shark","Massachusetts",6464226.66666667
+"1002",2011,"spiny dogfish shark","Massachusetts",9543583.33333333
+"1003",2012,"spiny dogfish shark","Massachusetts",9468262.66666667
+"1004",2013,"spiny dogfish shark","Massachusetts",9590711.33333333
+"1005",2014,"spiny dogfish shark","Massachusetts",7835602.66666667
+"1006",2015,"spiny dogfish shark","Massachusetts",10557948.6666667
+"1007",2016,"spiny dogfish shark","Massachusetts",7411612.66666667
+"1008",2017,"spiny dogfish shark","Massachusetts",NA
+"1009",2006,"striped bass","Massachusetts",1153856.66666667
+"1010",2007,"striped bass","Massachusetts",1173996
+"1011",2008,"striped bass","Massachusetts",1111325.33333333
+"1012",2009,"striped bass","Massachusetts",1171949.33333333
+"1013",2010,"striped bass","Massachusetts",1172639
+"1014",2011,"striped bass","Massachusetts",1200707.66666667
+"1015",2012,"striped bass","Massachusetts",1128460.66666667
+"1016",2013,"striped bass","Massachusetts",1120490.33333333
+"1017",2014,"striped bass","Massachusetts",1002915.33333333
+"1018",2015,"striped bass","Massachusetts",981008.333333333
+"1019",2016,"striped bass","Massachusetts",601502.333333333
+"1020",2017,"striped bass","Massachusetts",NA
+"1021",2006,"summer flounder","Massachusetts",951612.333333333
+"1022",2007,"summer flounder","Massachusetts",741644
+"1023",2008,"summer flounder","Massachusetts",678622
+"1024",2009,"summer flounder","Massachusetts",742587.666666667
+"1025",2010,"summer flounder","Massachusetts",905143.666666667
+"1026",2011,"summer flounder","Massachusetts",958526.333333333
+"1027",2012,"summer flounder","Massachusetts",961024.666666667
+"1028",2013,"summer flounder","Massachusetts",815638.333333333
+"1029",2014,"summer flounder","Massachusetts",767950
+"1030",2015,"summer flounder","Massachusetts",676492.333333333
+"1031",2016,"summer flounder","Massachusetts",444481.333333333
+"1032",2017,"summer flounder","Massachusetts",NA
+"1033",2006,"swordfish","Massachusetts",215075
+"1034",2007,"swordfish","Massachusetts",260454
+"1035",2008,"swordfish","Massachusetts",474926.666666667
+"1036",2009,"swordfish","Massachusetts",584959.666666667
+"1037",2010,"swordfish","Massachusetts",682496
+"1038",2011,"swordfish","Massachusetts",736406
+"1039",2012,"swordfish","Massachusetts",740009
+"1040",2013,"swordfish","Massachusetts",622806
+"1041",2014,"swordfish","Massachusetts",548167
+"1042",2015,"swordfish","Massachusetts",479968.666666667
+"1043",2016,"swordfish","Massachusetts",350293.333333333
+"1044",2017,"swordfish","Massachusetts",NA
+"1045",2006,"weakfish","Massachusetts",2688.66666666667
+"1046",2007,"weakfish","Massachusetts",2713
+"1047",2008,"weakfish","Massachusetts",141
+"1048",2009,"weakfish","Massachusetts",160.333333333333
+"1049",2010,"weakfish","Massachusetts",341
+"1050",2011,"weakfish","Massachusetts",429.666666666667
+"1051",2012,"weakfish","Massachusetts",1543.66666666667
+"1052",2013,"weakfish","Massachusetts",1644.66666666667
+"1053",2014,"weakfish","Massachusetts",1597
+"1054",2015,"weakfish","Massachusetts",757.666666666667
+"1055",2016,"weakfish","Massachusetts",451.666666666667
+"1056",2017,"weakfish","Massachusetts",NA
+"1057",2006,"white hake","Massachusetts",1938079.66666667
+"1058",2007,"white hake","Massachusetts",1901215
+"1059",2008,"white hake","Massachusetts",2215269
+"1060",2009,"white hake","Massachusetts",2677462.33333333
+"1061",2010,"white hake","Massachusetts",3765479.33333333
+"1062",2011,"white hake","Massachusetts",4437760.66666667
+"1063",2012,"white hake","Massachusetts",4599129.33333333
+"1064",2013,"white hake","Massachusetts",3937581.66666667
+"1065",2014,"white hake","Massachusetts",3326830.66666667
+"1066",2015,"white hake","Massachusetts",2943331.66666667
+"1067",2016,"white hake","Massachusetts",1843672
+"1068",2017,"white hake","Massachusetts",NA
+"1069",2006,"white marlin","Massachusetts",0
+"1070",2007,"white marlin","Massachusetts",0
+"1071",2008,"white marlin","Massachusetts",0
+"1072",2009,"white marlin","Massachusetts",0
+"1073",2010,"white marlin","Massachusetts",0
+"1074",2011,"white marlin","Massachusetts",0
+"1075",2012,"white marlin","Massachusetts",0
+"1076",2013,"white marlin","Massachusetts",0
+"1077",2014,"white marlin","Massachusetts",0
+"1078",2015,"white marlin","Massachusetts",0
+"1079",2016,"white marlin","Massachusetts",0
+"1080",2017,"white marlin","Massachusetts",NA
+"1081",2006,"windowpane flounder","Massachusetts",147768
+"1082",2007,"windowpane flounder","Massachusetts",140183.666666667
+"1083",2008,"windowpane flounder","Massachusetts",126340.666666667
+"1084",2009,"windowpane flounder","Massachusetts",48612
+"1085",2010,"windowpane flounder","Massachusetts",18096
+"1086",2011,"windowpane flounder","Massachusetts",316.333333333333
+"1087",2012,"windowpane flounder","Massachusetts",0
+"1088",2013,"windowpane flounder","Massachusetts",0
+"1089",2014,"windowpane flounder","Massachusetts",0
+"1090",2015,"windowpane flounder","Massachusetts",0
+"1091",2016,"windowpane flounder","Massachusetts",0
+"1092",2017,"windowpane flounder","Massachusetts",NA
+"1093",2006,"winter flounder","Massachusetts",4781776.33333333
+"1094",2007,"winter flounder","Massachusetts",3815183.33333333
+"1095",2008,"winter flounder","Massachusetts",4006681.33333333
+"1096",2009,"winter flounder","Massachusetts",3891663.66666667
+"1097",2010,"winter flounder","Massachusetts",4056541.33333333
+"1098",2011,"winter flounder","Massachusetts",4322929.66666667
+"1099",2012,"winter flounder","Massachusetts",5001182.33333333
+"1100",2013,"winter flounder","Massachusetts",4781469.33333333
+"1101",2014,"winter flounder","Massachusetts",4131320
+"1102",2015,"winter flounder","Massachusetts",3024868.33333333
+"1103",2016,"winter flounder","Massachusetts",1752066.66666667
+"1104",2017,"winter flounder","Massachusetts",NA
+"1105",2006,"witch flounder","Massachusetts",2740991.33333333
+"1106",2007,"witch flounder","Massachusetts",2098890.33333333
+"1107",2008,"witch flounder","Massachusetts",1679692.33333333
+"1108",2009,"witch flounder","Massachusetts",1649987.33333333
+"1109",2010,"witch flounder","Massachusetts",1634899.66666667
+"1110",2011,"witch flounder","Massachusetts",1723491.66666667
+"1111",2012,"witch flounder","Massachusetts",1637688.66666667
+"1112",2013,"witch flounder","Massachusetts",1424918.66666667
+"1113",2014,"witch flounder","Massachusetts",1085197
+"1114",2015,"witch flounder","Massachusetts",937483
+"1115",2016,"witch flounder","Massachusetts",576454
+"1116",2017,"witch flounder","Massachusetts",NA
+"1117",2006,"yellowfin tuna","Massachusetts",39761.6666666667
+"1118",2007,"yellowfin tuna","Massachusetts",37133.3333333333
+"1119",2008,"yellowfin tuna","Massachusetts",42302
+"1120",2009,"yellowfin tuna","Massachusetts",85536
+"1121",2010,"yellowfin tuna","Massachusetts",143592.666666667
+"1122",2011,"yellowfin tuna","Massachusetts",206863.666666667
+"1123",2012,"yellowfin tuna","Massachusetts",190176.333333333
+"1124",2013,"yellowfin tuna","Massachusetts",177690.666666667
+"1125",2014,"yellowfin tuna","Massachusetts",150939.666666667
+"1126",2015,"yellowfin tuna","Massachusetts",140361
+"1127",2016,"yellowfin tuna","Massachusetts",79992.6666666667
+"1128",2017,"yellowfin tuna","Massachusetts",NA
+"1129",2006,"yellowtail flounder","Massachusetts",5227073.33333333
+"1130",2007,"yellowtail flounder","Massachusetts",3456096.66666667
+"1131",2008,"yellowtail flounder","Massachusetts",3159929
+"1132",2009,"yellowtail flounder","Massachusetts",2917702.66666667
+"1133",2010,"yellowtail flounder","Massachusetts",3027189.66666667
+"1134",2011,"yellowtail flounder","Massachusetts",3137961.66666667
+"1135",2012,"yellowtail flounder","Massachusetts",2830561
+"1136",2013,"yellowtail flounder","Massachusetts",2054205
+"1137",2014,"yellowtail flounder","Massachusetts",1389402.66666667
+"1138",2015,"yellowtail flounder","Massachusetts",1066468.33333333
+"1139",2016,"yellowtail flounder","Massachusetts",670660.333333333
+"1140",2017,"yellowtail flounder","Massachusetts",NA
+"1141",2006,"acadian redfish","New Hampshire",22735.3333333333
+"1142",2007,"acadian redfish","New Hampshire",18154
+"1143",2008,"acadian redfish","New Hampshire",19029.3333333333
+"1144",2009,"acadian redfish","New Hampshire",20588
+"1145",2010,"acadian redfish","New Hampshire",19465.3333333333
+"1146",2011,"acadian redfish","New Hampshire",14122.3333333333
+"1147",2012,"acadian redfish","New Hampshire",11166.3333333333
+"1148",2013,"acadian redfish","New Hampshire",6050
+"1149",2014,"acadian redfish","New Hampshire",4082.66666666667
+"1150",2015,"acadian redfish","New Hampshire",1407.66666666667
+"1151",2016,"acadian redfish","New Hampshire",1407.66666666667
+"1152",2017,"acadian redfish","New Hampshire",NA
+"1153",2006,"american lobster","New Hampshire",2460702
+"1154",2007,"american lobster","New Hampshire",2464301.66666667
+"1155",2008,"american lobster","New Hampshire",2673669.33333333
+"1156",2009,"american lobster","New Hampshire",3066740
+"1157",2010,"american lobster","New Hampshire",3517459.33333333
+"1158",2011,"american lobster","New Hampshire",3932148.66666667
+"1159",2012,"american lobster","New Hampshire",3988688.33333333
+"1160",2013,"american lobster","New Hampshire",4139881.33333333
+"1161",2014,"american lobster","New Hampshire",4304196
+"1162",2015,"american lobster","New Hampshire",4958927.66666667
+"1163",2016,"american lobster","New Hampshire",3501338.33333333
+"1164",2017,"american lobster","New Hampshire",NA
+"1165",2006,"atlantic cod","New Hampshire",1161696.66666667
+"1166",2007,"atlantic cod","New Hampshire",1223693.33333333
+"1167",2008,"atlantic cod","New Hampshire",1543861.66666667
+"1168",2009,"atlantic cod","New Hampshire",1563334
+"1169",2010,"atlantic cod","New Hampshire",1499127.33333333
+"1170",2011,"atlantic cod","New Hampshire",1079491.33333333
+"1171",2012,"atlantic cod","New Hampshire",747276.666666667
+"1172",2013,"atlantic cod","New Hampshire",406257.666666667
+"1173",2014,"atlantic cod","New Hampshire",179312.666666667
+"1174",2015,"atlantic cod","New Hampshire",121074
+"1175",2016,"atlantic cod","New Hampshire",33287.3333333333
+"1176",2017,"atlantic cod","New Hampshire",NA
+"1177",2006,"atlantic halibut","New Hampshire",553.333333333333
+"1178",2007,"atlantic halibut","New Hampshire",1405
+"1179",2008,"atlantic halibut","New Hampshire",1552.66666666667
+"1180",2009,"atlantic halibut","New Hampshire",1416.33333333333
+"1181",2010,"atlantic halibut","New Hampshire",393
+"1182",2011,"atlantic halibut","New Hampshire",113
+"1183",2012,"atlantic halibut","New Hampshire",307.666666666667
+"1184",2013,"atlantic halibut","New Hampshire",307.666666666667
+"1185",2014,"atlantic halibut","New Hampshire",832
+"1186",2015,"atlantic halibut","New Hampshire",1215.66666666667
+"1187",2016,"atlantic halibut","New Hampshire",1215.66666666667
+"1188",2017,"atlantic halibut","New Hampshire",NA
+"1189",2006,"atlantic herring","New Hampshire",319272.666666667
+"1190",2007,"atlantic herring","New Hampshire",718558.333333333
+"1191",2008,"atlantic herring","New Hampshire",1751198
+"1192",2009,"atlantic herring","New Hampshire",2382585.33333333
+"1193",2010,"atlantic herring","New Hampshire",2488059.66666667
+"1194",2011,"atlantic herring","New Hampshire",2245002.33333333
+"1195",2012,"atlantic herring","New Hampshire",1828015.66666667
+"1196",2013,"atlantic herring","New Hampshire",1323255.66666667
+"1197",2014,"atlantic herring","New Hampshire",1859293.33333333
+"1198",2015,"atlantic herring","New Hampshire",1332953.33333333
+"1199",2016,"atlantic herring","New Hampshire",1332953.33333333
+"1200",2017,"atlantic herring","New Hampshire",NA
+"1201",2006,"atlantic surf clam","New Hampshire",0
+"1202",2007,"atlantic surf clam","New Hampshire",0
+"1203",2008,"atlantic surf clam","New Hampshire",0
+"1204",2009,"atlantic surf clam","New Hampshire",0
+"1205",2010,"atlantic surf clam","New Hampshire",0
+"1206",2011,"atlantic surf clam","New Hampshire",0
+"1207",2012,"atlantic surf clam","New Hampshire",0
+"1208",2013,"atlantic surf clam","New Hampshire",0
+"1209",2014,"atlantic surf clam","New Hampshire",0
+"1210",2015,"atlantic surf clam","New Hampshire",0
+"1211",2016,"atlantic surf clam","New Hampshire",0
+"1212",2017,"atlantic surf clam","New Hampshire",NA
+"1213",2006,"black sea bass","New Hampshire",0
+"1214",2007,"black sea bass","New Hampshire",0
+"1215",2008,"black sea bass","New Hampshire",0
+"1216",2009,"black sea bass","New Hampshire",0
+"1217",2010,"black sea bass","New Hampshire",0
+"1218",2011,"black sea bass","New Hampshire",0
+"1219",2012,"black sea bass","New Hampshire",0
+"1220",2013,"black sea bass","New Hampshire",0
+"1221",2014,"black sea bass","New Hampshire",0
+"1222",2015,"black sea bass","New Hampshire",0
+"1223",2016,"black sea bass","New Hampshire",0
+"1224",2017,"black sea bass","New Hampshire",NA
+"1225",2006,"bluefin tuna","New Hampshire",17049.6666666667
+"1226",2007,"bluefin tuna","New Hampshire",7668.66666666667
+"1227",2008,"bluefin tuna","New Hampshire",13874.3333333333
+"1228",2009,"bluefin tuna","New Hampshire",39215
+"1229",2010,"bluefin tuna","New Hampshire",69624.6666666667
+"1230",2011,"bluefin tuna","New Hampshire",92543
+"1231",2012,"bluefin tuna","New Hampshire",66409
+"1232",2013,"bluefin tuna","New Hampshire",53380
+"1233",2014,"bluefin tuna","New Hampshire",63877.3333333333
+"1234",2015,"bluefin tuna","New Hampshire",113079.666666667
+"1235",2016,"bluefin tuna","New Hampshire",95699
+"1236",2017,"bluefin tuna","New Hampshire",NA
+"1237",2006,"bluefish","New Hampshire",4961.66666666667
+"1238",2007,"bluefish","New Hampshire",4961.66666666667
+"1239",2008,"bluefish","New Hampshire",5116
+"1240",2009,"bluefish","New Hampshire",1252.33333333333
+"1241",2010,"bluefish","New Hampshire",1252.33333333333
+"1242",2011,"bluefish","New Hampshire",0
+"1243",2012,"bluefish","New Hampshire",0
+"1244",2013,"bluefish","New Hampshire",0
+"1245",2014,"bluefish","New Hampshire",0
+"1246",2015,"bluefish","New Hampshire",0
+"1247",2016,"bluefish","New Hampshire",0
+"1248",2017,"bluefish","New Hampshire",NA
+"1249",2006,"butterfish","New Hampshire",0
+"1250",2007,"butterfish","New Hampshire",0
+"1251",2008,"butterfish","New Hampshire",0
+"1252",2009,"butterfish","New Hampshire",0
+"1253",2010,"butterfish","New Hampshire",0
+"1254",2011,"butterfish","New Hampshire",1437.33333333333
+"1255",2012,"butterfish","New Hampshire",1437.33333333333
+"1256",2013,"butterfish","New Hampshire",1437.33333333333
+"1257",2014,"butterfish","New Hampshire",0
+"1258",2015,"butterfish","New Hampshire",0
+"1259",2016,"butterfish","New Hampshire",0
+"1260",2017,"butterfish","New Hampshire",NA
+"1261",2006,"flounder,atlantic,plaice","New Hampshire",19450.6666666667
+"1262",2007,"flounder,atlantic,plaice","New Hampshire",13835.3333333333
+"1263",2008,"flounder,atlantic,plaice","New Hampshire",16680.3333333333
+"1264",2009,"flounder,atlantic,plaice","New Hampshire",21382.6666666667
+"1265",2010,"flounder,atlantic,plaice","New Hampshire",25252.3333333333
+"1266",2011,"flounder,atlantic,plaice","New Hampshire",28489
+"1267",2012,"flounder,atlantic,plaice","New Hampshire",24526
+"1268",2013,"flounder,atlantic,plaice","New Hampshire",15398.3333333333
+"1269",2014,"flounder,atlantic,plaice","New Hampshire",15949
+"1270",2015,"flounder,atlantic,plaice","New Hampshire",24221
+"1271",2016,"flounder,atlantic,plaice","New Hampshire",24221
+"1272",2017,"flounder,atlantic,plaice","New Hampshire",NA
+"1273",2006,"golden tilefish","New Hampshire",0
+"1274",2007,"golden tilefish","New Hampshire",0
+"1275",2008,"golden tilefish","New Hampshire",0
+"1276",2009,"golden tilefish","New Hampshire",0
+"1277",2010,"golden tilefish","New Hampshire",0
+"1278",2011,"golden tilefish","New Hampshire",0
+"1279",2012,"golden tilefish","New Hampshire",0
+"1280",2013,"golden tilefish","New Hampshire",0
+"1281",2014,"golden tilefish","New Hampshire",0
+"1282",2015,"golden tilefish","New Hampshire",0
+"1283",2016,"golden tilefish","New Hampshire",0
+"1284",2017,"golden tilefish","New Hampshire",NA
+"1285",2006,"haddock","New Hampshire",77458
+"1286",2007,"haddock","New Hampshire",62075.3333333333
+"1287",2008,"haddock","New Hampshire",52763.6666666667
+"1288",2009,"haddock","New Hampshire",38532
+"1289",2010,"haddock","New Hampshire",27215.3333333333
+"1290",2011,"haddock","New Hampshire",27185
+"1291",2012,"haddock","New Hampshire",24475.3333333333
+"1292",2013,"haddock","New Hampshire",21769.3333333333
+"1293",2014,"haddock","New Hampshire",8835
+"1294",2015,"haddock","New Hampshire",8495.33333333333
+"1295",2016,"haddock","New Hampshire",5007.33333333333
+"1296",2017,"haddock","New Hampshire",NA
+"1297",2006,"menhaden","New Hampshire",161.333333333333
+"1298",2007,"menhaden","New Hampshire",297.333333333333
+"1299",2008,"menhaden","New Hampshire",308.333333333333
+"1300",2009,"menhaden","New Hampshire",277
+"1301",2010,"menhaden","New Hampshire",141
+"1302",2011,"menhaden","New Hampshire",255
+"1303",2012,"menhaden","New Hampshire",125
+"1304",2013,"menhaden","New Hampshire",125
+"1305",2014,"menhaden","New Hampshire",0
+"1306",2015,"menhaden","New Hampshire",0
+"1307",2016,"menhaden","New Hampshire",0
+"1308",2017,"menhaden","New Hampshire",NA
+"1309",2006,"ocean quahog clam","New Hampshire",0
+"1310",2007,"ocean quahog clam","New Hampshire",0
+"1311",2008,"ocean quahog clam","New Hampshire",0
+"1312",2009,"ocean quahog clam","New Hampshire",0
+"1313",2010,"ocean quahog clam","New Hampshire",0
+"1314",2011,"ocean quahog clam","New Hampshire",0
+"1315",2012,"ocean quahog clam","New Hampshire",0
+"1316",2013,"ocean quahog clam","New Hampshire",0
+"1317",2014,"ocean quahog clam","New Hampshire",0
+"1318",2015,"ocean quahog clam","New Hampshire",0
+"1319",2016,"ocean quahog clam","New Hampshire",0
+"1320",2017,"ocean quahog clam","New Hampshire",NA
+"1321",2006,"pollock","New Hampshire",2195746.66666667
+"1322",2007,"pollock","New Hampshire",2348766
+"1323",2008,"pollock","New Hampshire",2165934
+"1324",2009,"pollock","New Hampshire",1838174.33333333
+"1325",2010,"pollock","New Hampshire",1596760
+"1326",2011,"pollock","New Hampshire",1274028
+"1327",2012,"pollock","New Hampshire",1254502
+"1328",2013,"pollock","New Hampshire",886872.333333333
+"1329",2014,"pollock","New Hampshire",627331.333333333
+"1330",2015,"pollock","New Hampshire",332275.333333333
+"1331",2016,"pollock","New Hampshire",122704.666666667
+"1332",2017,"pollock","New Hampshire",NA
+"1333",2006,"sea scallop","New Hampshire",33780
+"1334",2007,"sea scallop","New Hampshire",9007
+"1335",2008,"sea scallop","New Hampshire",2123.33333333333
+"1336",2009,"sea scallop","New Hampshire",1012.66666666667
+"1337",2010,"sea scallop","New Hampshire",1165
+"1338",2011,"sea scallop","New Hampshire",5054
+"1339",2012,"sea scallop","New Hampshire",13207.6666666667
+"1340",2013,"sea scallop","New Hampshire",21421.3333333333
+"1341",2014,"sea scallop","New Hampshire",27671.3333333333
+"1342",2015,"sea scallop","New Hampshire",27263.6666666667
+"1343",2016,"sea scallop","New Hampshire",18199.3333333333
+"1344",2017,"sea scallop","New Hampshire",NA
+"1345",2006,"spiny dogfish shark","New Hampshire",80794
+"1346",2007,"spiny dogfish shark","New Hampshire",537518.333333333
+"1347",2008,"spiny dogfish shark","New Hampshire",1147703.33333333
+"1348",2009,"spiny dogfish shark","New Hampshire",1552337.66666667
+"1349",2010,"spiny dogfish shark","New Hampshire",1644316
+"1350",2011,"spiny dogfish shark","New Hampshire",1549504.66666667
+"1351",2012,"spiny dogfish shark","New Hampshire",1316686.33333333
+"1352",2013,"spiny dogfish shark","New Hampshire",767983.666666667
+"1353",2014,"spiny dogfish shark","New Hampshire",171816
+"1354",2015,"spiny dogfish shark","New Hampshire",0
+"1355",2016,"spiny dogfish shark","New Hampshire",0
+"1356",2017,"spiny dogfish shark","New Hampshire",NA
+"1357",2006,"striped bass","New Hampshire",0
+"1358",2007,"striped bass","New Hampshire",0
+"1359",2008,"striped bass","New Hampshire",0
+"1360",2009,"striped bass","New Hampshire",0
+"1361",2010,"striped bass","New Hampshire",0
+"1362",2011,"striped bass","New Hampshire",0
+"1363",2012,"striped bass","New Hampshire",0
+"1364",2013,"striped bass","New Hampshire",0
+"1365",2014,"striped bass","New Hampshire",0
+"1366",2015,"striped bass","New Hampshire",0
+"1367",2016,"striped bass","New Hampshire",0
+"1368",2017,"striped bass","New Hampshire",NA
+"1369",2006,"summer flounder","New Hampshire",0
+"1370",2007,"summer flounder","New Hampshire",0
+"1371",2008,"summer flounder","New Hampshire",0
+"1372",2009,"summer flounder","New Hampshire",0
+"1373",2010,"summer flounder","New Hampshire",0
+"1374",2011,"summer flounder","New Hampshire",0
+"1375",2012,"summer flounder","New Hampshire",0
+"1376",2013,"summer flounder","New Hampshire",0
+"1377",2014,"summer flounder","New Hampshire",0
+"1378",2015,"summer flounder","New Hampshire",0
+"1379",2016,"summer flounder","New Hampshire",0
+"1380",2017,"summer flounder","New Hampshire",NA
+"1381",2006,"swordfish","New Hampshire",0
+"1382",2007,"swordfish","New Hampshire",0
+"1383",2008,"swordfish","New Hampshire",0
+"1384",2009,"swordfish","New Hampshire",0
+"1385",2010,"swordfish","New Hampshire",0
+"1386",2011,"swordfish","New Hampshire",0
+"1387",2012,"swordfish","New Hampshire",0
+"1388",2013,"swordfish","New Hampshire",0
+"1389",2014,"swordfish","New Hampshire",0
+"1390",2015,"swordfish","New Hampshire",0
+"1391",2016,"swordfish","New Hampshire",0
+"1392",2017,"swordfish","New Hampshire",NA
+"1393",2006,"white hake","New Hampshire",174654
+"1394",2007,"white hake","New Hampshire",98948.3333333333
+"1395",2008,"white hake","New Hampshire",87479.3333333333
+"1396",2009,"white hake","New Hampshire",88550.3333333333
+"1397",2010,"white hake","New Hampshire",156753
+"1398",2011,"white hake","New Hampshire",175637.333333333
+"1399",2012,"white hake","New Hampshire",183479.333333333
+"1400",2013,"white hake","New Hampshire",100871
+"1401",2014,"white hake","New Hampshire",50162.3333333333
+"1402",2015,"white hake","New Hampshire",8962.33333333333
+"1403",2016,"white hake","New Hampshire",8962.33333333333
+"1404",2017,"white hake","New Hampshire",NA
+"1405",2006,"windowpane flounder","New Hampshire",50.3333333333333
+"1406",2007,"windowpane flounder","New Hampshire",50.3333333333333
+"1407",2008,"windowpane flounder","New Hampshire",262.666666666667
+"1408",2009,"windowpane flounder","New Hampshire",262.666666666667
+"1409",2010,"windowpane flounder","New Hampshire",262.666666666667
+"1410",2011,"windowpane flounder","New Hampshire",0
+"1411",2012,"windowpane flounder","New Hampshire",0
+"1412",2013,"windowpane flounder","New Hampshire",0
+"1413",2014,"windowpane flounder","New Hampshire",0
+"1414",2015,"windowpane flounder","New Hampshire",0
+"1415",2016,"windowpane flounder","New Hampshire",0
+"1416",2017,"windowpane flounder","New Hampshire",NA
+"1417",2006,"winter flounder","New Hampshire",11332.3333333333
+"1418",2007,"winter flounder","New Hampshire",9755.33333333333
+"1419",2008,"winter flounder","New Hampshire",9812
+"1420",2009,"winter flounder","New Hampshire",7933
+"1421",2010,"winter flounder","New Hampshire",6219.33333333333
+"1422",2011,"winter flounder","New Hampshire",6271.66666666667
+"1423",2012,"winter flounder","New Hampshire",7222.33333333333
+"1424",2013,"winter flounder","New Hampshire",5491.66666666667
+"1425",2014,"winter flounder","New Hampshire",3153.33333333333
+"1426",2015,"winter flounder","New Hampshire",3105.66666666667
+"1427",2016,"winter flounder","New Hampshire",3105.66666666667
+"1428",2017,"winter flounder","New Hampshire",NA
+"1429",2006,"witch flounder","New Hampshire",71370.6666666667
+"1430",2007,"witch flounder","New Hampshire",27882.3333333333
+"1431",2008,"witch flounder","New Hampshire",22806.3333333333
+"1432",2009,"witch flounder","New Hampshire",19932
+"1433",2010,"witch flounder","New Hampshire",19078.6666666667
+"1434",2011,"witch flounder","New Hampshire",21453.3333333333
+"1435",2012,"witch flounder","New Hampshire",20912.6666666667
+"1436",2013,"witch flounder","New Hampshire",15409.3333333333
+"1437",2014,"witch flounder","New Hampshire",10610.6666666667
+"1438",2015,"witch flounder","New Hampshire",10785.6666666667
+"1439",2016,"witch flounder","New Hampshire",10785.6666666667
+"1440",2017,"witch flounder","New Hampshire",NA
+"1441",2006,"yellowfin tuna","New Hampshire",0
+"1442",2007,"yellowfin tuna","New Hampshire",0
+"1443",2008,"yellowfin tuna","New Hampshire",0
+"1444",2009,"yellowfin tuna","New Hampshire",0
+"1445",2010,"yellowfin tuna","New Hampshire",0
+"1446",2011,"yellowfin tuna","New Hampshire",0
+"1447",2012,"yellowfin tuna","New Hampshire",0
+"1448",2013,"yellowfin tuna","New Hampshire",0
+"1449",2014,"yellowfin tuna","New Hampshire",0
+"1450",2015,"yellowfin tuna","New Hampshire",0
+"1451",2016,"yellowfin tuna","New Hampshire",0
+"1452",2017,"yellowfin tuna","New Hampshire",NA
+"1453",2006,"yellowtail flounder","New Hampshire",40549.3333333333
+"1454",2007,"yellowtail flounder","New Hampshire",27290.3333333333
+"1455",2008,"yellowtail flounder","New Hampshire",25518
+"1456",2009,"yellowtail flounder","New Hampshire",23239.3333333333
+"1457",2010,"yellowtail flounder","New Hampshire",20933
+"1458",2011,"yellowtail flounder","New Hampshire",30590
+"1459",2012,"yellowtail flounder","New Hampshire",35008.3333333333
+"1460",2013,"yellowtail flounder","New Hampshire",28192
+"1461",2014,"yellowtail flounder","New Hampshire",22740.3333333333
+"1462",2015,"yellowtail flounder","New Hampshire",22846.6666666667
+"1463",2016,"yellowtail flounder","New Hampshire",22846.6666666667
+"1464",2017,"yellowtail flounder","New Hampshire",NA
+"1465",2006,"acadian redfish","New York",2298.33333333333
+"1466",2007,"acadian redfish","New York",5848
+"1467",2008,"acadian redfish","New York",12623.3333333333
+"1468",2009,"acadian redfish","New York",15189.6666666667
+"1469",2010,"acadian redfish","New York",13261
+"1470",2011,"acadian redfish","New York",7807.33333333333
+"1471",2012,"acadian redfish","New York",8858
+"1472",2013,"acadian redfish","New York",7045.33333333333
+"1473",2014,"acadian redfish","New York",4723.66666666667
+"1474",2015,"acadian redfish","New York",3140.66666666667
+"1475",2016,"acadian redfish","New York",2473.33333333333
+"1476",2017,"acadian redfish","New York",NA
+"1477",2006,"albacore tuna","New York",36042
+"1478",2007,"albacore tuna","New York",37614.3333333333
+"1479",2008,"albacore tuna","New York",35920.6666666667
+"1480",2009,"albacore tuna","New York",29842.3333333333
+"1481",2010,"albacore tuna","New York",25204.6666666667
+"1482",2011,"albacore tuna","New York",39413.6666666667
+"1483",2012,"albacore tuna","New York",39824
+"1484",2013,"albacore tuna","New York",46019.6666666667
+"1485",2014,"albacore tuna","New York",32575.3333333333
+"1486",2015,"albacore tuna","New York",32973
+"1487",2016,"albacore tuna","New York",15223
+"1488",2017,"albacore tuna","New York",NA
+"1489",2006,"american lobster","New York",1102944
+"1490",2007,"american lobster","New York",1001567.66666667
+"1491",2008,"american lobster","New York",897988.333333333
+"1492",2009,"american lobster","New York",865239
+"1493",2010,"american lobster","New York",696536.333333333
+"1494",2011,"american lobster","New York",477655.666666667
+"1495",2012,"american lobster","New York",289240.333333333
+"1496",2013,"american lobster","New York",248777
+"1497",2014,"american lobster","New York",206108
+"1498",2015,"american lobster","New York",196301
+"1499",2016,"american lobster","New York",122020
+"1500",2017,"american lobster","New York",NA
+"1501",2006,"atlantic cod","New York",20458.3333333333
+"1502",2007,"atlantic cod","New York",21078.3333333333
+"1503",2008,"atlantic cod","New York",45905.6666666667
+"1504",2009,"atlantic cod","New York",70451.3333333333
+"1505",2010,"atlantic cod","New York",80082
+"1506",2011,"atlantic cod","New York",62476
+"1507",2012,"atlantic cod","New York",41457.6666666667
+"1508",2013,"atlantic cod","New York",21187.6666666667
+"1509",2014,"atlantic cod","New York",16299.3333333333
+"1510",2015,"atlantic cod","New York",20118.3333333333
+"1511",2016,"atlantic cod","New York",16828
+"1512",2017,"atlantic cod","New York",NA
+"1513",2006,"atlantic croaker","New York",745
+"1514",2007,"atlantic croaker","New York",1596
+"1515",2008,"atlantic croaker","New York",1406.33333333333
+"1516",2009,"atlantic croaker","New York",1207.66666666667
+"1517",2010,"atlantic croaker","New York",360.333333333333
+"1518",2011,"atlantic croaker","New York",1001
+"1519",2012,"atlantic croaker","New York",2790.33333333333
+"1520",2013,"atlantic croaker","New York",2922.33333333333
+"1521",2014,"atlantic croaker","New York",2100.33333333333
+"1522",2015,"atlantic croaker","New York",312
+"1523",2016,"atlantic croaker","New York",116.333333333333
+"1524",2017,"atlantic croaker","New York",NA
+"1525",2006,"atlantic halibut","New York",0
+"1526",2007,"atlantic halibut","New York",0
+"1527",2008,"atlantic halibut","New York",0
+"1528",2009,"atlantic halibut","New York",0
+"1529",2010,"atlantic halibut","New York",0
+"1530",2011,"atlantic halibut","New York",0
+"1531",2012,"atlantic halibut","New York",0
+"1532",2013,"atlantic halibut","New York",0
+"1533",2014,"atlantic halibut","New York",0
+"1534",2015,"atlantic halibut","New York",0
+"1535",2016,"atlantic halibut","New York",0
+"1536",2017,"atlantic halibut","New York",NA
+"1537",2006,"atlantic herring","New York",145778.333333333
+"1538",2007,"atlantic herring","New York",186140
+"1539",2008,"atlantic herring","New York",106086
+"1540",2009,"atlantic herring","New York",70296.6666666667
+"1541",2010,"atlantic herring","New York",38489.3333333333
+"1542",2011,"atlantic herring","New York",46574
+"1543",2012,"atlantic herring","New York",63656.3333333333
+"1544",2013,"atlantic herring","New York",97009
+"1545",2014,"atlantic herring","New York",111540.666666667
+"1546",2015,"atlantic herring","New York",113635
+"1547",2016,"atlantic herring","New York",70051.6666666667
+"1548",2017,"atlantic herring","New York",NA
+"1549",2006,"atlantic surf clam","New York",8033639
+"1550",2007,"atlantic surf clam","New York",6966974
+"1551",2008,"atlantic surf clam","New York",8904197.66666667
+"1552",2009,"atlantic surf clam","New York",7802671.33333333
+"1553",2010,"atlantic surf clam","New York",5154853.33333333
+"1554",2011,"atlantic surf clam","New York",3594480
+"1555",2012,"atlantic surf clam","New York",2793134
+"1556",2013,"atlantic surf clam","New York",3184190.66666667
+"1557",2014,"atlantic surf clam","New York",2567141.66666667
+"1558",2015,"atlantic surf clam","New York",1515380
+"1559",2016,"atlantic surf clam","New York",854499.333333333
+"1560",2017,"atlantic surf clam","New York",NA
+"1561",2006,"bigeye tuna","New York",47032.3333333333
+"1562",2007,"bigeye tuna","New York",52235.3333333333
+"1563",2008,"bigeye tuna","New York",33931
+"1564",2009,"bigeye tuna","New York",27958
+"1565",2010,"bigeye tuna","New York",27155
+"1566",2011,"bigeye tuna","New York",44657.6666666667
+"1567",2012,"bigeye tuna","New York",43417
+"1568",2013,"bigeye tuna","New York",48143.6666666667
+"1569",2014,"bigeye tuna","New York",52196
+"1570",2015,"bigeye tuna","New York",51552.3333333333
+"1571",2016,"bigeye tuna","New York",33576
+"1572",2017,"bigeye tuna","New York",NA
+"1573",2006,"black sea bass","New York",275597.666666667
+"1574",2007,"black sea bass","New York",261552.333333333
+"1575",2008,"black sea bass","New York",198794
+"1576",2009,"black sea bass","New York",175895
+"1577",2010,"black sea bass","New York",169723.333333333
+"1578",2011,"black sea bass","New York",179495.666666667
+"1579",2012,"black sea bass","New York",172499
+"1580",2013,"black sea bass","New York",185919
+"1581",2014,"black sea bass","New York",185243
+"1582",2015,"black sea bass","New York",186530.666666667
+"1583",2016,"black sea bass","New York",111969.666666667
+"1584",2017,"black sea bass","New York",NA
+"1585",2006,"bluefin tuna","New York",11130.6666666667
+"1586",2007,"bluefin tuna","New York",14006
+"1587",2008,"bluefin tuna","New York",7903.66666666667
+"1588",2009,"bluefin tuna","New York",4388.33333333333
+"1589",2010,"bluefin tuna","New York",4741
+"1590",2011,"bluefin tuna","New York",14169.6666666667
+"1591",2012,"bluefin tuna","New York",38561.3333333333
+"1592",2013,"bluefin tuna","New York",35475.6666666667
+"1593",2014,"bluefin tuna","New York",28549.3333333333
+"1594",2015,"bluefin tuna","New York",5981.33333333333
+"1595",2016,"bluefin tuna","New York",4326
+"1596",2017,"bluefin tuna","New York",NA
+"1597",2006,"bluefish","New York",1262552
+"1598",2007,"bluefish","New York",1303327.33333333
+"1599",2008,"bluefish","New York",1341524
+"1600",2009,"bluefish","New York",1131164
+"1601",2010,"bluefish","New York",1101286.66666667
+"1602",2011,"bluefish","New York",1037279.66666667
+"1603",2012,"bluefish","New York",1178723
+"1604",2013,"bluefish","New York",1102531.66666667
+"1605",2014,"bluefish","New York",1053046.66666667
+"1606",2015,"bluefish","New York",938280.333333333
+"1607",2016,"bluefish","New York",623903
+"1608",2017,"bluefish","New York",NA
+"1609",2006,"blue marlin","New York",0
+"1610",2007,"blue marlin","New York",0
+"1611",2008,"blue marlin","New York",0
+"1612",2009,"blue marlin","New York",0
+"1613",2010,"blue marlin","New York",0
+"1614",2011,"blue marlin","New York",33.3333333333333
+"1615",2012,"blue marlin","New York",33.3333333333333
+"1616",2013,"blue marlin","New York",33.3333333333333
+"1617",2014,"blue marlin","New York",0
+"1618",2015,"blue marlin","New York",0
+"1619",2016,"blue marlin","New York",0
+"1620",2017,"blue marlin","New York",NA
+"1621",2006,"butterfish","New York",423798.666666667
+"1622",2007,"butterfish","New York",415723.333333333
+"1623",2008,"butterfish","New York",339250.333333333
+"1624",2009,"butterfish","New York",353857.333333333
+"1625",2010,"butterfish","New York",388581
+"1626",2011,"butterfish","New York",460268.333333333
+"1627",2012,"butterfish","New York",453147
+"1628",2013,"butterfish","New York",471730.666666667
+"1629",2014,"butterfish","New York",449327.666666667
+"1630",2015,"butterfish","New York",501599.333333333
+"1631",2016,"butterfish","New York",309853.333333333
+"1632",2017,"butterfish","New York",NA
+"1633",2006,"flounder,atlantic,plaice","New York",2312.66666666667
+"1634",2007,"flounder,atlantic,plaice","New York",114.666666666667
+"1635",2008,"flounder,atlantic,plaice","New York",326.666666666667
+"1636",2009,"flounder,atlantic,plaice","New York",751
+"1637",2010,"flounder,atlantic,plaice","New York",1274
+"1638",2011,"flounder,atlantic,plaice","New York",1926
+"1639",2012,"flounder,atlantic,plaice","New York",3589
+"1640",2013,"flounder,atlantic,plaice","New York",3696
+"1641",2014,"flounder,atlantic,plaice","New York",4608.66666666667
+"1642",2015,"flounder,atlantic,plaice","New York",3651.66666666667
+"1643",2016,"flounder,atlantic,plaice","New York",2910.33333333333
+"1644",2017,"flounder,atlantic,plaice","New York",NA
+"1645",2006,"golden tilefish","New York",1277271.33333333
+"1646",2007,"golden tilefish","New York",1296541.66666667
+"1647",2008,"golden tilefish","New York",1342016.33333333
+"1648",2009,"golden tilefish","New York",1406214.33333333
+"1649",2010,"golden tilefish","New York",1513772
+"1650",2011,"golden tilefish","New York",1506634.66666667
+"1651",2012,"golden tilefish","New York",1466882
+"1652",2013,"golden tilefish","New York",1419187
+"1653",2014,"golden tilefish","New York",1259777
+"1654",2015,"golden tilefish","New York",1018128.66666667
+"1655",2016,"golden tilefish","New York",558666
+"1656",2017,"golden tilefish","New York",NA
+"1657",2006,"haddock","New York",0
+"1658",2007,"haddock","New York",0
+"1659",2008,"haddock","New York",0
+"1660",2009,"haddock","New York",0
+"1661",2010,"haddock","New York",0
+"1662",2011,"haddock","New York",0
+"1663",2012,"haddock","New York",0
+"1664",2013,"haddock","New York",0
+"1665",2014,"haddock","New York",0
+"1666",2015,"haddock","New York",0
+"1667",2016,"haddock","New York",0
+"1668",2017,"haddock","New York",NA
+"1669",2006,"menhaden","New York",180490.333333333
+"1670",2007,"menhaden","New York",194013
+"1671",2008,"menhaden","New York",191309.333333333
+"1672",2009,"menhaden","New York",252496
+"1673",2010,"menhaden","New York",302508.333333333
+"1674",2011,"menhaden","New York",272774.333333333
+"1675",2012,"menhaden","New York",548927.666666667
+"1676",2013,"menhaden","New York",718918.666666667
+"1677",2014,"menhaden","New York",1112831.66666667
+"1678",2015,"menhaden","New York",1276317.66666667
+"1679",2016,"menhaden","New York",1018056.66666667
+"1680",2017,"menhaden","New York",NA
+"1681",2006,"ocean quahog clam","New York",3166.66666666667
+"1682",2007,"ocean quahog clam","New York",0
+"1683",2008,"ocean quahog clam","New York",0
+"1684",2009,"ocean quahog clam","New York",0
+"1685",2010,"ocean quahog clam","New York",0
+"1686",2011,"ocean quahog clam","New York",0
+"1687",2012,"ocean quahog clam","New York",0
+"1688",2013,"ocean quahog clam","New York",0
+"1689",2014,"ocean quahog clam","New York",0
+"1690",2015,"ocean quahog clam","New York",0
+"1691",2016,"ocean quahog clam","New York",0
+"1692",2017,"ocean quahog clam","New York",NA
+"1693",2006,"pollock","New York",448.333333333333
+"1694",2007,"pollock","New York",395
+"1695",2008,"pollock","New York",224.666666666667
+"1696",2009,"pollock","New York",373.666666666667
+"1697",2010,"pollock","New York",557.333333333333
+"1698",2011,"pollock","New York",702.333333333333
+"1699",2012,"pollock","New York",773
+"1700",2013,"pollock","New York",859.333333333333
+"1701",2014,"pollock","New York",721
+"1702",2015,"pollock","New York",443.333333333333
+"1703",2016,"pollock","New York",64.6666666666667
+"1704",2017,"pollock","New York",NA
+"1705",2006,"scup","New York",1580108.66666667
+"1706",2007,"scup","New York",1984780
+"1707",2008,"scup","New York",1796291.66666667
+"1708",2009,"scup","New York",1918015
+"1709",2010,"scup","New York",2756354.33333333
+"1710",2011,"scup","New York",3575245.33333333
+"1711",2012,"scup","New York",4203486.66666667
+"1712",2013,"scup","New York",4018768
+"1713",2014,"scup","New York",3933190
+"1714",2015,"scup","New York",3576471.33333333
+"1715",2016,"scup","New York",2518179.33333333
+"1716",2017,"scup","New York",NA
+"1717",2006,"sea scallop","New York",768985.666666667
+"1718",2007,"sea scallop","New York",813997.333333333
+"1719",2008,"sea scallop","New York",773212.666666667
+"1720",2009,"sea scallop","New York",735911.333333333
+"1721",2010,"sea scallop","New York",649315.666666667
+"1722",2011,"sea scallop","New York",486579.666666667
+"1723",2012,"sea scallop","New York",402589
+"1724",2013,"sea scallop","New York",315659.666666667
+"1725",2014,"sea scallop","New York",201445.333333333
+"1726",2015,"sea scallop","New York",248831.666666667
+"1727",2016,"sea scallop","New York",161644.666666667
+"1728",2017,"sea scallop","New York",NA
+"1729",2006,"skipjack tuna","New York",217.333333333333
+"1730",2007,"skipjack tuna","New York",217.333333333333
+"1731",2008,"skipjack tuna","New York",0
+"1732",2009,"skipjack tuna","New York",0
+"1733",2010,"skipjack tuna","New York",0
+"1734",2011,"skipjack tuna","New York",313.333333333333
+"1735",2012,"skipjack tuna","New York",419.666666666667
+"1736",2013,"skipjack tuna","New York",421.333333333333
+"1737",2014,"skipjack tuna","New York",151.333333333333
+"1738",2015,"skipjack tuna","New York",152.666666666667
+"1739",2016,"skipjack tuna","New York",151
+"1740",2017,"skipjack tuna","New York",NA
+"1741",2006,"spiny dogfish shark","New York",27747.3333333333
+"1742",2007,"spiny dogfish shark","New York",19068
+"1743",2008,"spiny dogfish shark","New York",78491.3333333333
+"1744",2009,"spiny dogfish shark","New York",194345
+"1745",2010,"spiny dogfish shark","New York",340842.333333333
+"1746",2011,"spiny dogfish shark","New York",378527.666666667
+"1747",2012,"spiny dogfish shark","New York",282047.333333333
+"1748",2013,"spiny dogfish shark","New York",148307.333333333
+"1749",2014,"spiny dogfish shark","New York",56257.3333333333
+"1750",2015,"spiny dogfish shark","New York",42848
+"1751",2016,"spiny dogfish shark","New York",22966.6666666667
+"1752",2017,"spiny dogfish shark","New York",NA
+"1753",2006,"striped bass","New York",710201.333333333
+"1754",2007,"striped bass","New York",690974.333333333
+"1755",2008,"striped bass","New York",710509.666666667
+"1756",2009,"striped bass","New York",715882
+"1757",2010,"striped bass","New York",783272.333333333
+"1758",2011,"striped bass","New York",761606
+"1759",2012,"striped bass","New York",787044.666666667
+"1760",2013,"striped bass","New York",678716
+"1761",2014,"striped bass","New York",623254
+"1762",2015,"striped bass","New York",535631.666666667
+"1763",2016,"striped bass","New York",358868.666666667
+"1764",2017,"striped bass","New York",NA
+"1765",2006,"summer flounder","New York",1320038
+"1766",2007,"summer flounder","New York",1005862
+"1767",2008,"summer flounder","New York",979909.666666667
+"1768",2009,"summer flounder","New York",1120573
+"1769",2010,"summer flounder","New York",1340816.33333333
+"1770",2011,"summer flounder","New York",1372810.33333333
+"1771",2012,"summer flounder","New York",1262717
+"1772",2013,"summer flounder","New York",1034562
+"1773",2014,"summer flounder","New York",898599
+"1774",2015,"summer flounder","New York",755295
+"1775",2016,"summer flounder","New York",477772.666666667
+"1776",2017,"summer flounder","New York",NA
+"1777",2006,"swordfish","New York",86375.6666666667
+"1778",2007,"swordfish","New York",118531.666666667
+"1779",2008,"swordfish","New York",141745
+"1780",2009,"swordfish","New York",142186
+"1781",2010,"swordfish","New York",146198
+"1782",2011,"swordfish","New York",136914.666666667
+"1783",2012,"swordfish","New York",128593
+"1784",2013,"swordfish","New York",90445.3333333333
+"1785",2014,"swordfish","New York",66903
+"1786",2015,"swordfish","New York",56555.6666666667
+"1787",2016,"swordfish","New York",39409
+"1788",2017,"swordfish","New York",NA
+"1789",2006,"weakfish","New York",116421
+"1790",2007,"weakfish","New York",94624
+"1791",2008,"weakfish","New York",77522.6666666667
+"1792",2009,"weakfish","New York",52981
+"1793",2010,"weakfish","New York",43936.6666666667
+"1794",2011,"weakfish","New York",31124
+"1795",2012,"weakfish","New York",62977
+"1796",2013,"weakfish","New York",68366.3333333333
+"1797",2014,"weakfish","New York",55404.3333333333
+"1798",2015,"weakfish","New York",29421.6666666667
+"1799",2016,"weakfish","New York",18318
+"1800",2017,"weakfish","New York",NA
+"1801",2006,"white hake","New York",51112.6666666667
+"1802",2007,"white hake","New York",54872.6666666667
+"1803",2008,"white hake","New York",59216.6666666667
+"1804",2009,"white hake","New York",45011
+"1805",2010,"white hake","New York",27494.3333333333
+"1806",2011,"white hake","New York",8833.66666666667
+"1807",2012,"white hake","New York",3966.66666666667
+"1808",2013,"white hake","New York",1147.66666666667
+"1809",2014,"white hake","New York",246.666666666667
+"1810",2015,"white hake","New York",312.333333333333
+"1811",2016,"white hake","New York",205.333333333333
+"1812",2017,"white hake","New York",NA
+"1813",2006,"white marlin","New York",0
+"1814",2007,"white marlin","New York",0
+"1815",2008,"white marlin","New York",0
+"1816",2009,"white marlin","New York",0
+"1817",2010,"white marlin","New York",0
+"1818",2011,"white marlin","New York",0
+"1819",2012,"white marlin","New York",0
+"1820",2013,"white marlin","New York",0
+"1821",2014,"white marlin","New York",0
+"1822",2015,"white marlin","New York",0
+"1823",2016,"white marlin","New York",0
+"1824",2017,"white marlin","New York",NA
+"1825",2006,"windowpane flounder","New York",60384
+"1826",2007,"windowpane flounder","New York",78746.3333333333
+"1827",2008,"windowpane flounder","New York",83230.3333333333
+"1828",2009,"windowpane flounder","New York",80823.3333333333
+"1829",2010,"windowpane flounder","New York",68209.3333333333
+"1830",2011,"windowpane flounder","New York",59661
+"1831",2012,"windowpane flounder","New York",40354
+"1832",2013,"windowpane flounder","New York",36864.6666666667
+"1833",2014,"windowpane flounder","New York",36457.3333333333
+"1834",2015,"windowpane flounder","New York",32842.6666666667
+"1835",2016,"windowpane flounder","New York",22865.3333333333
+"1836",2017,"windowpane flounder","New York",NA
+"1837",2006,"winter flounder","New York",307700
+"1838",2007,"winter flounder","New York",315531.666666667
+"1839",2008,"winter flounder","New York",224336
+"1840",2009,"winter flounder","New York",96836.3333333333
+"1841",2010,"winter flounder","New York",40636.6666666667
+"1842",2011,"winter flounder","New York",13266.6666666667
+"1843",2012,"winter flounder","New York",40706.3333333333
+"1844",2013,"winter flounder","New York",56324.3333333333
+"1845",2014,"winter flounder","New York",97003
+"1846",2015,"winter flounder","New York",99681.6666666667
+"1847",2016,"winter flounder","New York",80103
+"1848",2017,"winter flounder","New York",NA
+"1849",2006,"witch flounder","New York",9252.66666666667
+"1850",2007,"witch flounder","New York",6847
+"1851",2008,"witch flounder","New York",3956.66666666667
+"1852",2009,"witch flounder","New York",2460
+"1853",2010,"witch flounder","New York",1162.33333333333
+"1854",2011,"witch flounder","New York",244
+"1855",2012,"witch flounder","New York",657
+"1856",2013,"witch flounder","New York",1499.33333333333
+"1857",2014,"witch flounder","New York",1843.33333333333
+"1858",2015,"witch flounder","New York",1356
+"1859",2016,"witch flounder","New York",475.333333333333
+"1860",2017,"witch flounder","New York",NA
+"1861",2006,"yellowfin tuna","New York",46414
+"1862",2007,"yellowfin tuna","New York",51882
+"1863",2008,"yellowfin tuna","New York",41027.6666666667
+"1864",2009,"yellowfin tuna","New York",38241.3333333333
+"1865",2010,"yellowfin tuna","New York",54607.6666666667
+"1866",2011,"yellowfin tuna","New York",74185.6666666667
+"1867",2012,"yellowfin tuna","New York",70494
+"1868",2013,"yellowfin tuna","New York",61672
+"1869",2014,"yellowfin tuna","New York",50486.6666666667
+"1870",2015,"yellowfin tuna","New York",55212.3333333333
+"1871",2016,"yellowfin tuna","New York",32164.3333333333
+"1872",2017,"yellowfin tuna","New York",NA
+"1873",2006,"yellowtail flounder","New York",40980.6666666667
+"1874",2007,"yellowtail flounder","New York",41921.3333333333
+"1875",2008,"yellowtail flounder","New York",51408
+"1876",2009,"yellowtail flounder","New York",51803.6666666667
+"1877",2010,"yellowtail flounder","New York",46430.6666666667
+"1878",2011,"yellowtail flounder","New York",33703
+"1879",2012,"yellowtail flounder","New York",60317.6666666667
+"1880",2013,"yellowtail flounder","New York",107393.333333333
+"1881",2014,"yellowtail flounder","New York",136050.333333333
+"1882",2015,"yellowtail flounder","New York",108569.666666667
+"1883",2016,"yellowtail flounder","New York",51850.3333333333
+"1884",2017,"yellowtail flounder","New York",NA
+"1885",2006,"acadian redfish","Rhode Island",6929.66666666667
+"1886",2007,"acadian redfish","Rhode Island",7726.66666666667
+"1887",2008,"acadian redfish","Rhode Island",6438.66666666667
+"1888",2009,"acadian redfish","Rhode Island",5483.66666666667
+"1889",2010,"acadian redfish","Rhode Island",2185.33333333333
+"1890",2011,"acadian redfish","Rhode Island",357
+"1891",2012,"acadian redfish","Rhode Island",175.333333333333
+"1892",2013,"acadian redfish","Rhode Island",175.333333333333
+"1893",2014,"acadian redfish","Rhode Island",1181.33333333333
+"1894",2015,"acadian redfish","Rhode Island",1051
+"1895",2016,"acadian redfish","Rhode Island",1051
+"1896",2017,"acadian redfish","Rhode Island",NA
+"1897",2006,"albacore tuna","Rhode Island",9740.66666666667
+"1898",2007,"albacore tuna","Rhode Island",9740.66666666667
+"1899",2008,"albacore tuna","Rhode Island",11440.6666666667
+"1900",2009,"albacore tuna","Rhode Island",6284.66666666667
+"1901",2010,"albacore tuna","Rhode Island",6571
+"1902",2011,"albacore tuna","Rhode Island",3518.33333333333
+"1903",2012,"albacore tuna","Rhode Island",4562.66666666667
+"1904",2013,"albacore tuna","Rhode Island",12556.6666666667
+"1905",2014,"albacore tuna","Rhode Island",10756.3333333333
+"1906",2015,"albacore tuna","Rhode Island",9712
+"1907",2016,"albacore tuna","Rhode Island",1431.66666666667
+"1908",2017,"albacore tuna","Rhode Island",NA
+"1909",2006,"american lobster","Rhode Island",3462966.66666667
+"1910",2007,"american lobster","Rhode Island",2939115.66666667
+"1911",2008,"american lobster","Rhode Island",2635290.33333333
+"1912",2009,"american lobster","Rhode Island",2847029.66666667
+"1913",2010,"american lobster","Rhode Island",2840997.33333333
+"1914",2011,"american lobster","Rhode Island",2796400
+"1915",2012,"american lobster","Rhode Island",2538754
+"1916",2013,"american lobster","Rhode Island",2425021
+"1917",2014,"american lobster","Rhode Island",2294792.33333333
+"1918",2015,"american lobster","Rhode Island",2329649.66666667
+"1919",2016,"american lobster","Rhode Island",1525354
+"1920",2017,"american lobster","Rhode Island",NA
+"1921",2006,"atlantic cod","Rhode Island",345141.333333333
+"1922",2007,"atlantic cod","Rhode Island",368647
+"1923",2008,"atlantic cod","Rhode Island",435240
+"1924",2009,"atlantic cod","Rhode Island",316783.333333333
+"1925",2010,"atlantic cod","Rhode Island",361267
+"1926",2011,"atlantic cod","Rhode Island",319802.666666667
+"1927",2012,"atlantic cod","Rhode Island",323531.333333333
+"1928",2013,"atlantic cod","Rhode Island",252266.666666667
+"1929",2014,"atlantic cod","Rhode Island",208092.666666667
+"1930",2015,"atlantic cod","Rhode Island",181203.333333333
+"1931",2016,"atlantic cod","Rhode Island",116179.333333333
+"1932",2017,"atlantic cod","Rhode Island",NA
+"1933",2006,"atlantic croaker","Rhode Island",4
+"1934",2007,"atlantic croaker","Rhode Island",0
+"1935",2008,"atlantic croaker","Rhode Island",0
+"1936",2009,"atlantic croaker","Rhode Island",0
+"1937",2010,"atlantic croaker","Rhode Island",0
+"1938",2011,"atlantic croaker","Rhode Island",0
+"1939",2012,"atlantic croaker","Rhode Island",317.666666666667
+"1940",2013,"atlantic croaker","Rhode Island",750
+"1941",2014,"atlantic croaker","Rhode Island",750
+"1942",2015,"atlantic croaker","Rhode Island",432.333333333333
+"1943",2016,"atlantic croaker","Rhode Island",0
+"1944",2017,"atlantic croaker","Rhode Island",NA
+"1945",2006,"atlantic halibut","Rhode Island",250.666666666667
+"1946",2007,"atlantic halibut","Rhode Island",256.333333333333
+"1947",2008,"atlantic halibut","Rhode Island",241
+"1948",2009,"atlantic halibut","Rhode Island",157
+"1949",2010,"atlantic halibut","Rhode Island",104
+"1950",2011,"atlantic halibut","Rhode Island",101
+"1951",2012,"atlantic halibut","Rhode Island",103.666666666667
+"1952",2013,"atlantic halibut","Rhode Island",303.666666666667
+"1953",2014,"atlantic halibut","Rhode Island",421.333333333333
+"1954",2015,"atlantic halibut","Rhode Island",419.666666666667
+"1955",2016,"atlantic halibut","Rhode Island",219.666666666667
+"1956",2017,"atlantic halibut","Rhode Island",NA
+"1957",2006,"atlantic herring","Rhode Island",10229090
+"1958",2007,"atlantic herring","Rhode Island",11730563.6666667
+"1959",2008,"atlantic herring","Rhode Island",7189883.33333333
+"1960",2009,"atlantic herring","Rhode Island",7503849
+"1961",2010,"atlantic herring","Rhode Island",8911977.33333333
+"1962",2011,"atlantic herring","Rhode Island",10348867
+"1963",2012,"atlantic herring","Rhode Island",16965704.3333333
+"1964",2013,"atlantic herring","Rhode Island",19557921
+"1965",2014,"atlantic herring","Rhode Island",18421925.6666667
+"1966",2015,"atlantic herring","Rhode Island",12158262.3333333
+"1967",2016,"atlantic herring","Rhode Island",6656443.66666667
+"1968",2017,"atlantic herring","Rhode Island",NA
+"1969",2006,"atlantic surf clam","Rhode Island",0
+"1970",2007,"atlantic surf clam","Rhode Island",0
+"1971",2008,"atlantic surf clam","Rhode Island",0
+"1972",2009,"atlantic surf clam","Rhode Island",571256.666666667
+"1973",2010,"atlantic surf clam","Rhode Island",571256.666666667
+"1974",2011,"atlantic surf clam","Rhode Island",571256.666666667
+"1975",2012,"atlantic surf clam","Rhode Island",0
+"1976",2013,"atlantic surf clam","Rhode Island",0
+"1977",2014,"atlantic surf clam","Rhode Island",0
+"1978",2015,"atlantic surf clam","Rhode Island",0
+"1979",2016,"atlantic surf clam","Rhode Island",0
+"1980",2017,"atlantic surf clam","Rhode Island",NA
+"1981",2006,"bigeye tuna","Rhode Island",8006
+"1982",2007,"bigeye tuna","Rhode Island",16776
+"1983",2008,"bigeye tuna","Rhode Island",30664.6666666667
+"1984",2009,"bigeye tuna","Rhode Island",29096.3333333333
+"1985",2010,"bigeye tuna","Rhode Island",23405
+"1986",2011,"bigeye tuna","Rhode Island",13003.3333333333
+"1987",2012,"bigeye tuna","Rhode Island",16768.6666666667
+"1988",2013,"bigeye tuna","Rhode Island",38314
+"1989",2014,"bigeye tuna","Rhode Island",38735.6666666667
+"1990",2015,"bigeye tuna","Rhode Island",30717
+"1991",2016,"bigeye tuna","Rhode Island",6093
+"1992",2017,"bigeye tuna","Rhode Island",NA
+"1993",2006,"black sea bass","Rhode Island",307893.666666667
+"1994",2007,"black sea bass","Rhode Island",285544
+"1995",2008,"black sea bass","Rhode Island",237178.666666667
+"1996",2009,"black sea bass","Rhode Island",198962
+"1997",2010,"black sea bass","Rhode Island",193848.666666667
+"1998",2011,"black sea bass","Rhode Island",219183.333333333
+"1999",2012,"black sea bass","Rhode Island",227093.666666667
+"2000",2013,"black sea bass","Rhode Island",245801.666666667
+"2001",2014,"black sea bass","Rhode Island",257328
+"2002",2015,"black sea bass","Rhode Island",266902
+"2003",2016,"black sea bass","Rhode Island",177665
+"2004",2017,"black sea bass","Rhode Island",NA
+"2005",2006,"bluefin tuna","Rhode Island",11356.6666666667
+"2006",2007,"bluefin tuna","Rhode Island",9996.33333333333
+"2007",2008,"bluefin tuna","Rhode Island",16516
+"2008",2009,"bluefin tuna","Rhode Island",12872
+"2009",2010,"bluefin tuna","Rhode Island",10827.6666666667
+"2010",2011,"bluefin tuna","Rhode Island",0
+"2011",2012,"bluefin tuna","Rhode Island",409.333333333333
+"2012",2013,"bluefin tuna","Rhode Island",409.333333333333
+"2013",2014,"bluefin tuna","Rhode Island",551
+"2014",2015,"bluefin tuna","Rhode Island",141.666666666667
+"2015",2016,"bluefin tuna","Rhode Island",141.666666666667
+"2016",2017,"bluefin tuna","Rhode Island",NA
+"2017",2006,"bluefish","Rhode Island",596462
+"2018",2007,"bluefish","Rhode Island",552288
+"2019",2008,"bluefish","Rhode Island",516237
+"2020",2009,"bluefish","Rhode Island",421481.333333333
+"2021",2010,"bluefish","Rhode Island",419280.333333333
+"2022",2011,"bluefish","Rhode Island",463034
+"2023",2012,"bluefish","Rhode Island",498408.333333333
+"2024",2013,"bluefish","Rhode Island",530262.333333333
+"2025",2014,"bluefish","Rhode Island",492161.333333333
+"2026",2015,"bluefish","Rhode Island",494106.666666667
+"2027",2016,"bluefish","Rhode Island",325806.666666667
+"2028",2017,"bluefish","Rhode Island",NA
+"2029",2006,"butterfish","Rhode Island",523925
+"2030",2007,"butterfish","Rhode Island",656244
+"2031",2008,"butterfish","Rhode Island",632629.333333333
+"2032",2009,"butterfish","Rhode Island",563425
+"2033",2010,"butterfish","Rhode Island",545788.333333333
+"2034",2011,"butterfish","Rhode Island",576914
+"2035",2012,"butterfish","Rhode Island",910093.333333333
+"2036",2013,"butterfish","Rhode Island",2655687
+"2037",2014,"butterfish","Rhode Island",3577591
+"2038",2015,"butterfish","Rhode Island",3517898.66666667
+"2039",2016,"butterfish","Rhode Island",1568142.66666667
+"2040",2017,"butterfish","Rhode Island",NA
+"2041",2006,"flounder,atlantic,plaice","Rhode Island",70081
+"2042",2007,"flounder,atlantic,plaice","Rhode Island",64809
+"2043",2008,"flounder,atlantic,plaice","Rhode Island",81532.6666666667
+"2044",2009,"flounder,atlantic,plaice","Rhode Island",55807
+"2045",2010,"flounder,atlantic,plaice","Rhode Island",59776.3333333333
+"2046",2011,"flounder,atlantic,plaice","Rhode Island",28917.6666666667
+"2047",2012,"flounder,atlantic,plaice","Rhode Island",31493.6666666667
+"2048",2013,"flounder,atlantic,plaice","Rhode Island",48812.3333333333
+"2049",2014,"flounder,atlantic,plaice","Rhode Island",54492
+"2050",2015,"flounder,atlantic,plaice","Rhode Island",52949.3333333333
+"2051",2016,"flounder,atlantic,plaice","Rhode Island",21697.6666666667
+"2052",2017,"flounder,atlantic,plaice","Rhode Island",NA
+"2053",2006,"golden tilefish","Rhode Island",25537.6666666667
+"2054",2007,"golden tilefish","Rhode Island",39028.6666666667
+"2055",2008,"golden tilefish","Rhode Island",33540.6666666667
+"2056",2009,"golden tilefish","Rhode Island",39845
+"2057",2010,"golden tilefish","Rhode Island",21651.3333333333
+"2058",2011,"golden tilefish","Rhode Island",19582
+"2059",2012,"golden tilefish","Rhode Island",16315.6666666667
+"2060",2013,"golden tilefish","Rhode Island",15941.6666666667
+"2061",2014,"golden tilefish","Rhode Island",14922.6666666667
+"2062",2015,"golden tilefish","Rhode Island",10379
+"2063",2016,"golden tilefish","Rhode Island",5495.66666666667
+"2064",2017,"golden tilefish","Rhode Island",NA
+"2065",2006,"haddock","Rhode Island",288794.666666667
+"2066",2007,"haddock","Rhode Island",290972.666666667
+"2067",2008,"haddock","Rhode Island",262105
+"2068",2009,"haddock","Rhode Island",279152
+"2069",2010,"haddock","Rhode Island",301466
+"2070",2011,"haddock","Rhode Island",273605.333333333
+"2071",2012,"haddock","Rhode Island",142255.333333333
+"2072",2013,"haddock","Rhode Island",13415
+"2073",2014,"haddock","Rhode Island",5379
+"2074",2015,"haddock","Rhode Island",6263.33333333333
+"2075",2016,"haddock","Rhode Island",5754.66666666667
+"2076",2017,"haddock","Rhode Island",NA
+"2077",2006,"menhaden","Rhode Island",35273.6666666667
+"2078",2007,"menhaden","Rhode Island",120218.666666667
+"2079",2008,"menhaden","Rhode Island",128593.333333333
+"2080",2009,"menhaden","Rhode Island",151661.666666667
+"2081",2010,"menhaden","Rhode Island",89865.3333333333
+"2082",2011,"menhaden","Rhode Island",89551.3333333333
+"2083",2012,"menhaden","Rhode Island",96775.3333333333
+"2084",2013,"menhaden","Rhode Island",235776.666666667
+"2085",2014,"menhaden","Rhode Island",887035
+"2086",2015,"menhaden","Rhode Island",959537.333333333
+"2087",2016,"menhaden","Rhode Island",792569.666666667
+"2088",2017,"menhaden","Rhode Island",NA
+"2089",2006,"ocean quahog clam","Rhode Island",733.333333333333
+"2090",2007,"ocean quahog clam","Rhode Island",733.333333333333
+"2091",2008,"ocean quahog clam","Rhode Island",0
+"2092",2009,"ocean quahog clam","Rhode Island",686853
+"2093",2010,"ocean quahog clam","Rhode Island",686853
+"2094",2011,"ocean quahog clam","Rhode Island",686853
+"2095",2012,"ocean quahog clam","Rhode Island",0
+"2096",2013,"ocean quahog clam","Rhode Island",0
+"2097",2014,"ocean quahog clam","Rhode Island",0
+"2098",2015,"ocean quahog clam","Rhode Island",0
+"2099",2016,"ocean quahog clam","Rhode Island",0
+"2100",2017,"ocean quahog clam","Rhode Island",NA
+"2101",2006,"pollock","Rhode Island",45338
+"2102",2007,"pollock","Rhode Island",49580
+"2103",2008,"pollock","Rhode Island",43317
+"2104",2009,"pollock","Rhode Island",18396.3333333333
+"2105",2010,"pollock","Rhode Island",9646.66666666667
+"2106",2011,"pollock","Rhode Island",3718.66666666667
+"2107",2012,"pollock","Rhode Island",3157.33333333333
+"2108",2013,"pollock","Rhode Island",722.333333333333
+"2109",2014,"pollock","Rhode Island",582
+"2110",2015,"pollock","Rhode Island",415.333333333333
+"2111",2016,"pollock","Rhode Island",357
+"2112",2017,"pollock","Rhode Island",NA
+"2113",2006,"scup","Rhode Island",2525018
+"2114",2007,"scup","Rhode Island",3242169.33333333
+"2115",2008,"scup","Rhode Island",3233965.66666667
+"2116",2009,"scup","Rhode Island",3356242
+"2117",2010,"scup","Rhode Island",4750887.66666667
+"2118",2011,"scup","Rhode Island",5647795.66666667
+"2119",2012,"scup","Rhode Island",6663507.33333333
+"2120",2013,"scup","Rhode Island",6868001
+"2121",2014,"scup","Rhode Island",7029485.66666667
+"2122",2015,"scup","Rhode Island",6850548.66666667
+"2123",2016,"scup","Rhode Island",4534258
+"2124",2017,"scup","Rhode Island",NA
+"2125",2006,"sea scallop","Rhode Island",2083931
+"2126",2007,"sea scallop","Rhode Island",1649829.33333333
+"2127",2008,"sea scallop","Rhode Island",674262.333333333
+"2128",2009,"sea scallop","Rhode Island",311074.666666667
+"2129",2010,"sea scallop","Rhode Island",437863
+"2130",2011,"sea scallop","Rhode Island",633976
+"2131",2012,"sea scallop","Rhode Island",1093544.33333333
+"2132",2013,"sea scallop","Rhode Island",1143750
+"2133",2014,"sea scallop","Rhode Island",1049274.66666667
+"2134",2015,"sea scallop","Rhode Island",770835
+"2135",2016,"sea scallop","Rhode Island",490491.666666667
+"2136",2017,"sea scallop","Rhode Island",NA
+"2137",2006,"skipjack tuna","Rhode Island",840.333333333333
+"2138",2007,"skipjack tuna","Rhode Island",840.333333333333
+"2139",2008,"skipjack tuna","Rhode Island",0
+"2140",2009,"skipjack tuna","Rhode Island",0
+"2141",2010,"skipjack tuna","Rhode Island",0
+"2142",2011,"skipjack tuna","Rhode Island",192
+"2143",2012,"skipjack tuna","Rhode Island",192
+"2144",2013,"skipjack tuna","Rhode Island",192
+"2145",2014,"skipjack tuna","Rhode Island",0
+"2146",2015,"skipjack tuna","Rhode Island",0
+"2147",2016,"skipjack tuna","Rhode Island",0
+"2148",2017,"skipjack tuna","Rhode Island",NA
+"2149",2006,"spiny dogfish shark","Rhode Island",406813.333333333
+"2150",2007,"spiny dogfish shark","Rhode Island",437430.333333333
+"2151",2008,"spiny dogfish shark","Rhode Island",567774.666666667
+"2152",2009,"spiny dogfish shark","Rhode Island",628876.333333333
+"2153",2010,"spiny dogfish shark","Rhode Island",971023.666666667
+"2154",2011,"spiny dogfish shark","Rhode Island",1108245
+"2155",2012,"spiny dogfish shark","Rhode Island",1205639.66666667
+"2156",2013,"spiny dogfish shark","Rhode Island",1013764
+"2157",2014,"spiny dogfish shark","Rhode Island",739501.666666667
+"2158",2015,"spiny dogfish shark","Rhode Island",629561.333333333
+"2159",2016,"spiny dogfish shark","Rhode Island",399746.333333333
+"2160",2017,"spiny dogfish shark","Rhode Island",NA
+"2161",2006,"striped bass","Rhode Island",225724.666666667
+"2162",2007,"striped bass","Rhode Island",235829
+"2163",2008,"striped bass","Rhode Island",240385
+"2164",2009,"striped bass","Rhode Island",243165.666666667
+"2165",2010,"striped bass","Rhode Island",237282.666666667
+"2166",2011,"striped bass","Rhode Island",239001
+"2167",2012,"striped bass","Rhode Island",233130.333333333
+"2168",2013,"striped bass","Rhode Island",229370.666666667
+"2169",2014,"striped bass","Rhode Island",212172
+"2170",2015,"striped bass","Rhode Island",193312
+"2171",2016,"striped bass","Rhode Island",121016.666666667
+"2172",2017,"striped bass","Rhode Island",NA
+"2173",2006,"summer flounder","Rhode Island",2188088.33333333
+"2174",2007,"summer flounder","Rhode Island",1704113
+"2175",2008,"summer flounder","Rhode Island",1594338
+"2176",2009,"summer flounder","Rhode Island",1852236.33333333
+"2177",2010,"summer flounder","Rhode Island",2302434
+"2178",2011,"summer flounder","Rhode Island",2507619
+"2179",2012,"summer flounder","Rhode Island",2475345.33333333
+"2180",2013,"summer flounder","Rhode Island",2219349.33333333
+"2181",2014,"summer flounder","Rhode Island",1988233
+"2182",2015,"summer flounder","Rhode Island",1692842.66666667
+"2183",2016,"summer flounder","Rhode Island",1007494.66666667
+"2184",2017,"summer flounder","Rhode Island",NA
+"2185",2006,"swordfish","Rhode Island",30495.3333333333
+"2186",2007,"swordfish","Rhode Island",30495.3333333333
+"2187",2008,"swordfish","Rhode Island",81504.3333333333
+"2188",2009,"swordfish","Rhode Island",57557
+"2189",2010,"swordfish","Rhode Island",64965.6666666667
+"2190",2011,"swordfish","Rhode Island",19003.3333333333
+"2191",2012,"swordfish","Rhode Island",49309.6666666667
+"2192",2013,"swordfish","Rhode Island",44645.6666666667
+"2193",2014,"swordfish","Rhode Island",40019.6666666667
+"2194",2015,"swordfish","Rhode Island",7774.66666666667
+"2195",2016,"swordfish","Rhode Island",5030
+"2196",2017,"swordfish","Rhode Island",NA
+"2197",2006,"weakfish","Rhode Island",35578
+"2198",2007,"weakfish","Rhode Island",24974.3333333333
+"2199",2008,"weakfish","Rhode Island",12191.6666666667
+"2200",2009,"weakfish","Rhode Island",7129.66666666667
+"2201",2010,"weakfish","Rhode Island",5817.33333333333
+"2202",2011,"weakfish","Rhode Island",9691.33333333333
+"2203",2012,"weakfish","Rhode Island",18500
+"2204",2013,"weakfish","Rhode Island",21772.3333333333
+"2205",2014,"weakfish","Rhode Island",17912
+"2206",2015,"weakfish","Rhode Island",11310.6666666667
+"2207",2016,"weakfish","Rhode Island",6116.33333333333
+"2208",2017,"weakfish","Rhode Island",NA
+"2209",2006,"white hake","Rhode Island",22159
+"2210",2007,"white hake","Rhode Island",20434.3333333333
+"2211",2008,"white hake","Rhode Island",15812.3333333333
+"2212",2009,"white hake","Rhode Island",9397.66666666667
+"2213",2010,"white hake","Rhode Island",6151.66666666667
+"2214",2011,"white hake","Rhode Island",3355
+"2215",2012,"white hake","Rhode Island",3131.66666666667
+"2216",2013,"white hake","Rhode Island",1572
+"2217",2014,"white hake","Rhode Island",1911
+"2218",2015,"white hake","Rhode Island",1182
+"2219",2016,"white hake","Rhode Island",867.666666666667
+"2220",2017,"white hake","Rhode Island",NA
+"2221",2006,"white marlin","Rhode Island",0
+"2222",2007,"white marlin","Rhode Island",0
+"2223",2008,"white marlin","Rhode Island",0
+"2224",2009,"white marlin","Rhode Island",0
+"2225",2010,"white marlin","Rhode Island",0
+"2226",2011,"white marlin","Rhode Island",0
+"2227",2012,"white marlin","Rhode Island",0
+"2228",2013,"white marlin","Rhode Island",0
+"2229",2014,"white marlin","Rhode Island",0
+"2230",2015,"white marlin","Rhode Island",0
+"2231",2016,"white marlin","Rhode Island",0
+"2232",2017,"white marlin","Rhode Island",NA
+"2233",2006,"windowpane flounder","Rhode Island",35132.6666666667
+"2234",2007,"windowpane flounder","Rhode Island",47502.3333333333
+"2235",2008,"windowpane flounder","Rhode Island",47339.3333333333
+"2236",2009,"windowpane flounder","Rhode Island",32323.6666666667
+"2237",2010,"windowpane flounder","Rhode Island",15238.3333333333
+"2238",2011,"windowpane flounder","Rhode Island",2999.66666666667
+"2239",2012,"windowpane flounder","Rhode Island",534.333333333333
+"2240",2013,"windowpane flounder","Rhode Island",200.666666666667
+"2241",2014,"windowpane flounder","Rhode Island",0
+"2242",2015,"windowpane flounder","Rhode Island",0
+"2243",2016,"windowpane flounder","Rhode Island",0
+"2244",2017,"windowpane flounder","Rhode Island",NA
+"2245",2006,"winter flounder","Rhode Island",1045364.33333333
+"2246",2007,"winter flounder","Rhode Island",1032650
+"2247",2008,"winter flounder","Rhode Island",711860
+"2248",2009,"winter flounder","Rhode Island",348050.333333333
+"2249",2010,"winter flounder","Rhode Island",163900.333333333
+"2250",2011,"winter flounder","Rhode Island",68765.3333333333
+"2251",2012,"winter flounder","Rhode Island",179051.666666667
+"2252",2013,"winter flounder","Rhode Island",304725.333333333
+"2253",2014,"winter flounder","Rhode Island",412781.666666667
+"2254",2015,"winter flounder","Rhode Island",376990
+"2255",2016,"winter flounder","Rhode Island",223021.666666667
+"2256",2017,"winter flounder","Rhode Island",NA
+"2257",2006,"witch flounder","Rhode Island",135841.333333333
+"2258",2007,"witch flounder","Rhode Island",109873.666666667
+"2259",2008,"witch flounder","Rhode Island",88882
+"2260",2009,"witch flounder","Rhode Island",57288
+"2261",2010,"witch flounder","Rhode Island",51524.6666666667
+"2262",2011,"witch flounder","Rhode Island",27636
+"2263",2012,"witch flounder","Rhode Island",22381.3333333333
+"2264",2013,"witch flounder","Rhode Island",10413.6666666667
+"2265",2014,"witch flounder","Rhode Island",8283
+"2266",2015,"witch flounder","Rhode Island",5564.66666666667
+"2267",2016,"witch flounder","Rhode Island",3665
+"2268",2017,"witch flounder","Rhode Island",NA
+"2269",2006,"yellowfin tuna","Rhode Island",34179.6666666667
+"2270",2007,"yellowfin tuna","Rhode Island",46070
+"2271",2008,"yellowfin tuna","Rhode Island",36893.6666666667
+"2272",2009,"yellowfin tuna","Rhode Island",22251.6666666667
+"2273",2010,"yellowfin tuna","Rhode Island",12211
+"2274",2011,"yellowfin tuna","Rhode Island",8508
+"2275",2012,"yellowfin tuna","Rhode Island",11000
+"2276",2013,"yellowfin tuna","Rhode Island",24182.3333333333
+"2277",2014,"yellowfin tuna","Rhode Island",31880.6666666667
+"2278",2015,"yellowfin tuna","Rhode Island",25694.3333333333
+"2279",2016,"yellowfin tuna","Rhode Island",10662.3333333333
+"2280",2017,"yellowfin tuna","Rhode Island",NA
+"2281",2006,"yellowtail flounder","Rhode Island",392018.333333333
+"2282",2007,"yellowtail flounder","Rhode Island",366871
+"2283",2008,"yellowtail flounder","Rhode Island",417850.666666667
+"2284",2009,"yellowtail flounder","Rhode Island",349548.333333333
+"2285",2010,"yellowtail flounder","Rhode Island",376134.333333333
+"2286",2011,"yellowtail flounder","Rhode Island",417099
+"2287",2012,"yellowtail flounder","Rhode Island",648362.333333333
+"2288",2013,"yellowtail flounder","Rhode Island",1031812.66666667
+"2289",2014,"yellowtail flounder","Rhode Island",1051431.33333333
+"2290",2015,"yellowtail flounder","Rhode Island",890928.333333333
+"2291",2016,"yellowtail flounder","Rhode Island",358875
+"2292",2017,"yellowtail flounder","Rhode Island",NA
+"2293",2006,"albacore tuna",NA,0
+"2294",2007,"albacore tuna",NA,0
+"2295",2008,"albacore tuna",NA,0
+"2296",2009,"albacore tuna",NA,0
+"2297",2010,"albacore tuna",NA,0
+"2298",2011,"albacore tuna",NA,0
+"2299",2012,"albacore tuna",NA,0
+"2300",2013,"albacore tuna",NA,0
+"2301",2014,"albacore tuna",NA,0
+"2302",2015,"albacore tuna",NA,0
+"2303",2016,"albacore tuna",NA,0
+"2304",2017,"albacore tuna",NA,NA
+"2305",2006,"atlantic croaker",NA,0
+"2306",2007,"atlantic croaker",NA,0
+"2307",2008,"atlantic croaker",NA,0
+"2308",2009,"atlantic croaker",NA,0
+"2309",2010,"atlantic croaker",NA,0
+"2310",2011,"atlantic croaker",NA,0
+"2311",2012,"atlantic croaker",NA,0
+"2312",2013,"atlantic croaker",NA,0
+"2313",2014,"atlantic croaker",NA,0
+"2314",2015,"atlantic croaker",NA,0
+"2315",2016,"atlantic croaker",NA,0
+"2316",2017,"atlantic croaker",NA,NA
+"2317",2006,"blue marlin",NA,0
+"2318",2007,"blue marlin",NA,0
+"2319",2008,"blue marlin",NA,0
+"2320",2009,"blue marlin",NA,0
+"2321",2010,"blue marlin",NA,0
+"2322",2011,"blue marlin",NA,0
+"2323",2012,"blue marlin",NA,0
+"2324",2013,"blue marlin",NA,0
+"2325",2014,"blue marlin",NA,0
+"2326",2015,"blue marlin",NA,0
+"2327",2016,"blue marlin",NA,0
+"2328",2017,"blue marlin",NA,NA
+"2329",2006,"golden tilefish",NA,0
+"2330",2007,"golden tilefish",NA,0
+"2331",2008,"golden tilefish",NA,0
+"2332",2009,"golden tilefish",NA,0
+"2333",2010,"golden tilefish",NA,0
+"2334",2011,"golden tilefish",NA,0
+"2335",2012,"golden tilefish",NA,0
+"2336",2013,"golden tilefish",NA,0
+"2337",2014,"golden tilefish",NA,0
+"2338",2015,"golden tilefish",NA,0
+"2339",2016,"golden tilefish",NA,0
+"2340",2017,"golden tilefish",NA,NA
+"2341",2006,"monkfish",NA,0
+"2342",2007,"monkfish",NA,0
+"2343",2008,"monkfish",NA,0
+"2344",2009,"monkfish",NA,0
+"2345",2010,"monkfish",NA,0
+"2346",2011,"monkfish",NA,0
+"2347",2012,"monkfish",NA,0
+"2348",2013,"monkfish",NA,0
+"2349",2014,"monkfish",NA,0
+"2350",2015,"monkfish",NA,0
+"2351",2016,"monkfish",NA,0
+"2352",2017,"monkfish",NA,NA
+"2353",2006,"sailfish",NA,0
+"2354",2007,"sailfish",NA,0
+"2355",2008,"sailfish",NA,0
+"2356",2009,"sailfish",NA,0
+"2357",2010,"sailfish",NA,0
+"2358",2011,"sailfish",NA,0
+"2359",2012,"sailfish",NA,0
+"2360",2013,"sailfish",NA,0
+"2361",2014,"sailfish",NA,0
+"2362",2015,"sailfish",NA,0
+"2363",2016,"sailfish",NA,0
+"2364",2017,"sailfish",NA,NA
+"2365",2006,"scup",NA,0
+"2366",2007,"scup",NA,0
+"2367",2008,"scup",NA,0
+"2368",2009,"scup",NA,0
+"2369",2010,"scup",NA,0
+"2370",2011,"scup",NA,0
+"2371",2012,"scup",NA,0
+"2372",2013,"scup",NA,0
+"2373",2014,"scup",NA,0
+"2374",2015,"scup",NA,0
+"2375",2016,"scup",NA,0
+"2376",2017,"scup",NA,NA
+"2377",2006,"skipjack tuna",NA,0
+"2378",2007,"skipjack tuna",NA,0
+"2379",2008,"skipjack tuna",NA,0
+"2380",2009,"skipjack tuna",NA,0
+"2381",2010,"skipjack tuna",NA,0
+"2382",2011,"skipjack tuna",NA,0
+"2383",2012,"skipjack tuna",NA,0
+"2384",2013,"skipjack tuna",NA,0
+"2385",2014,"skipjack tuna",NA,0
+"2386",2015,"skipjack tuna",NA,0
+"2387",2016,"skipjack tuna",NA,0
+"2388",2017,"skipjack tuna",NA,NA
+"2389",2006,"spiny dogfish shark",NA,0
+"2390",2007,"spiny dogfish shark",NA,0
+"2391",2008,"spiny dogfish shark",NA,0
+"2392",2009,"spiny dogfish shark",NA,0
+"2393",2010,"spiny dogfish shark",NA,0
+"2394",2011,"spiny dogfish shark",NA,0
+"2395",2012,"spiny dogfish shark",NA,0
+"2396",2013,"spiny dogfish shark",NA,0
+"2397",2014,"spiny dogfish shark",NA,0
+"2398",2015,"spiny dogfish shark",NA,0
+"2399",2016,"spiny dogfish shark",NA,0
+"2400",2017,"spiny dogfish shark",NA,NA
+"2401",2006,"white marlin",NA,0
+"2402",2007,"white marlin",NA,0
+"2403",2008,"white marlin",NA,0
+"2404",2009,"white marlin",NA,0
+"2405",2010,"white marlin",NA,0
+"2406",2011,"white marlin",NA,0
+"2407",2012,"white marlin",NA,0
+"2408",2013,"white marlin",NA,0
+"2409",2014,"white marlin",NA,0
+"2410",2015,"white marlin",NA,0
+"2411",2016,"white marlin",NA,0
+"2412",2017,"white marlin",NA,NA
