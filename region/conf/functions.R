@@ -29,20 +29,17 @@ FIS <- function(layers) {
   # To calculate the weight (i.e, the relative catch of each stock per region),
   # the mean catch of taxon i is divided by the sum of mean catch of all species in region/year
 
-  #get the weight for each region/stock/year combo
-  catch_weight <- catch %>%
+  #remove stocks without scores, calculate catch weight, get catch-weighted stock scores then calculate region scores
+
+  state_status <- catch %>%
+    left_join(stockscores) %>%
+    filter(!is.na(score)) %>% #remove stocks with no stock scores **THIS MIGHT NEED TO CHANGE IF WE WANT TO KEEP THESE STOCKS AND GAPFILL INSTEAD**
     group_by(year, region_id) %>%
     mutate(SumCatch = sum(catch)) %>%
     ungroup() %>%
-    mutate(wprop = catch / SumCatch) %>%
-    distinct()
-
-  #merge catch weight with stock scores
-  state_status <- catch_weight %>%
-    left_join(stockscores) %>%
-    filter(!is.na(score)) %>% #remove stocks with no stock scores **THIS MIGHT NEED TO CHANGE IF WE WANT TO KEEP THESE STOCKS AND GAPFILL INSTEAD**
     rowwise() %>%
-    mutate(weighted_score = sum(score * wprop)) %>%
+    mutate(wprop = catch / SumCatch,
+           weighted_score = sum(score * wprop)) %>%
     group_by(region_id, year) %>%
     summarize(score = sum(weighted_score)) %>%
     ungroup()
