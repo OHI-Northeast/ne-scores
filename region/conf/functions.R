@@ -1220,6 +1220,13 @@ CW <- function(layers) {
            year = scenario_year,
            wqi_score)
 
+  ## Sediment quality index. The higher the better
+  sqi <- AlignDataYears(layer_nm = "cw_sqi", layers_obj = layers) %>%
+    mutate(sqi_score = score/100) %>%
+    select(region_id = rgn_id,
+           year = scenario_year,
+           sqi_score)
+
   ## trash calculated from pounds per person. The lower the better so here I inverse the values.
   trash <- AlignDataYears(layer_nm = "cw_trash", layers_obj = layers) %>%
     mutate(trash_score = 1-score) %>%
@@ -1234,6 +1241,7 @@ CW <- function(layers) {
 
   ## combine layers
   cw_data <- wqi %>%
+    full_join(sqi) %>%
     full_join(trash) %>%
     full_join(path) %>%
     gather(key = layer, value = value, -region_id, -year)

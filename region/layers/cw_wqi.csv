@@ -1,111 +1,56 @@
-rgn_id,rgn_name,year,score
-5,Connecticut,2001,51.06382978723404
-5,Connecticut,2002,51.5177304964539
-5,Connecticut,2003,51.97163120567376
-5,Connecticut,2004,52.42553191489362
-5,Connecticut,2005,52.87943262411348
-5,Connecticut,2006,53.333333333333336
-5,Connecticut,2007,55.625
-5,Connecticut,2008,57.91666666666667
-5,Connecticut,2009,60.208333333333336
-5,Connecticut,2010,62.5
-6,Maine,2001,89.8989898989899
-6,Maine,2002,91.04199893673578
-6,Maine,2003,92.18500797448166
-6,Maine,2004,93.32801701222753
-6,Maine,2005,94.47102604997342
-6,Maine,2006,95.6140350877193
-6,Maine,2007,95.25703794369645
-6,Maine,2008,94.9000407996736
-6,Maine,2009,94.54304365565076
-6,Maine,2010,94.18604651162791
-7,Massachusetts-Gulf of Maine,2001,86.17021276595744
-7,Massachusetts-Gulf of Maine,2002,87.46558197747184
-7,Massachusetts-Gulf of Maine,2003,88.76095118898623
-7,Massachusetts-Gulf of Maine,2004,90.05632040050062
-7,Massachusetts-Gulf of Maine,2005,91.35168961201501
-7,Massachusetts-Gulf of Maine,2006,92.6470588235294
-7,Massachusetts-Gulf of Maine,2007,92.56221719457014
-7,Massachusetts-Gulf of Maine,2008,92.47737556561086
-7,Massachusetts-Gulf of Maine,2009,92.39253393665157
-7,Massachusetts-Gulf of Maine,2010,92.3076923076923
-8,Massachusetts-Virginian,2001,81.25
-8,Massachusetts-Virginian,2002,81.875
-8,Massachusetts-Virginian,2003,82.5
-8,Massachusetts-Virginian,2004,83.125
-8,Massachusetts-Virginian,2005,83.75
-8,Massachusetts-Virginian,2006,84.375
-8,Massachusetts-Virginian,2007,84.80902777777777
-8,Massachusetts-Virginian,2008,85.24305555555556
-8,Massachusetts-Virginian,2009,85.67708333333334
-8,Massachusetts-Virginian,2010,86.11111111111111
-9,New Hampshire,2001,59.09090909090909
-9,New Hampshire,2002,61.53198653198653
-9,New Hampshire,2003,63.97306397306397
-9,New Hampshire,2004,66.41414141414141
-9,New Hampshire,2005,68.85521885521885
-9,New Hampshire,2006,71.29629629629629
-9,New Hampshire,2007,70.13888888888889
-9,New Hampshire,2008,68.98148148148148
-9,New Hampshire,2009,67.82407407407408
-9,New Hampshire,2010,66.66666666666667
-10,New York,2001,57.25806451612903
-10,New York,2002,60.09216589861751
-10,New York,2003,62.92626728110599
-10,New York,2004,65.76036866359448
-10,New York,2005,68.59447004608295
-10,New York,2006,71.42857142857143
-10,New York,2007,70.1155462184874
-10,New York,2008,68.80252100840336
-10,New York,2009,67.48949579831933
-10,New York,2010,66.17647058823529
-11,Rhode Island,2001,62.71186440677966
-11,Rhode Island,2002,65.28060263653484
-11,Rhode Island,2003,67.84934086629002
-11,Rhode Island,2004,70.4180790960452
-11,Rhode Island,2005,72.98681732580037
-11,Rhode Island,2006,75.55555555555556
-11,Rhode Island,2007,73.63095238095238
-11,Rhode Island,2008,71.70634920634922
-11,Rhode Island,2009,69.78174603174604
-11,Rhode Island,2010,67.85714285714286
-1,Offshore,2001,NA
-2,Georges Bank,2001,NA
-3,Gulf of Maine,2001,NA
-4,Mid-Atlantic Bight,2001,NA
-1,Offshore,2002,NA
-2,Georges Bank,2002,NA
-3,Gulf of Maine,2002,NA
-4,Mid-Atlantic Bight,2002,NA
-1,Offshore,2003,NA
-2,Georges Bank,2003,NA
-3,Gulf of Maine,2003,NA
-4,Mid-Atlantic Bight,2003,NA
-1,Offshore,2004,NA
-2,Georges Bank,2004,NA
-3,Gulf of Maine,2004,NA
-4,Mid-Atlantic Bight,2004,NA
-1,Offshore,2005,NA
-2,Georges Bank,2005,NA
-3,Gulf of Maine,2005,NA
-4,Mid-Atlantic Bight,2005,NA
-1,Offshore,2006,NA
-2,Georges Bank,2006,NA
-3,Gulf of Maine,2006,NA
-4,Mid-Atlantic Bight,2006,NA
-1,Offshore,2007,NA
-2,Georges Bank,2007,NA
-3,Gulf of Maine,2007,NA
-4,Mid-Atlantic Bight,2007,NA
-1,Offshore,2008,NA
-2,Georges Bank,2008,NA
-3,Gulf of Maine,2008,NA
-4,Mid-Atlantic Bight,2008,NA
-1,Offshore,2009,NA
-2,Georges Bank,2009,NA
-3,Gulf of Maine,2009,NA
-4,Mid-Atlantic Bight,2009,NA
-1,Offshore,2010,NA
-2,Georges Bank,2010,NA
-3,Gulf of Maine,2010,NA
-4,Mid-Atlantic Bight,2010,NA
+year,rgn_id,rgn_name,score
+2006,5,Connecticut,56.14276674257839
+2007,5,Connecticut,57.57511740691409
+2008,5,Connecticut,59.00746807124979
+2009,5,Connecticut,60.43981873558549
+2010,5,Connecticut,61.87216939992119
+2006,6,Maine,98.91607487970478
+2007,6,Maine,97.30467830327756
+2008,6,Maine,95.69328172685033
+2009,6,Maine,94.08188515042309
+2010,6,Maine,92.47048857399587
+2006,7,Massachusetts-Gulf of Maine,92.64705882352942
+2007,7,Massachusetts-Gulf of Maine,93.74168504635364
+2008,7,Massachusetts-Gulf of Maine,94.83631126917786
+2009,7,Massachusetts-Gulf of Maine,95.93093749200209
+2010,7,Massachusetts-Gulf of Maine,97.0255637148263
+2006,8,Massachusetts-Virginian,88.30766388927441
+2007,8,Massachusetts-Virginian,90.07500624264684
+2008,8,Massachusetts-Virginian,91.84234859601926
+2009,8,Massachusetts-Virginian,93.6096909493917
+2010,8,Massachusetts-Virginian,95.37703330276413
+2006,9,New Hampshire,71.2962962962963
+2007,9,New Hampshire,70.07802272885115
+2008,9,New Hampshire,68.859749161406
+2009,9,New Hampshire,67.64147559396085
+2010,9,New Hampshire,66.4232020265157
+2006,10,New York,68.6947771205414
+2007,10,New York,68.93455451450677
+2008,10,New York,69.17433190847214
+2009,10,New York,69.41410930243751
+2010,10,New York,69.65388669640288
+2006,11,Rhode Island,76.3099068314533
+2007,11,Rhode Island,80.08723672502593
+2008,11,Rhode Island,83.86456661859856
+2009,11,Rhode Island,87.64189651217117
+2010,11,Rhode Island,91.4192264057438
+2006,1,Offshore,NA
+2006,2,Georges Bank,NA
+2006,3,Gulf of Maine,NA
+2006,4,Mid-Atlantic Bight,NA
+2007,1,Offshore,NA
+2007,2,Georges Bank,NA
+2007,3,Gulf of Maine,NA
+2007,4,Mid-Atlantic Bight,NA
+2008,1,Offshore,NA
+2008,2,Georges Bank,NA
+2008,3,Gulf of Maine,NA
+2008,4,Mid-Atlantic Bight,NA
+2009,1,Offshore,NA
+2009,2,Georges Bank,NA
+2009,3,Gulf of Maine,NA
+2009,4,Mid-Atlantic Bight,NA
+2010,1,Offshore,NA
+2010,2,Georges Bank,NA
+2010,3,Gulf of Maine,NA
+2010,4,Mid-Atlantic Bight,NA
