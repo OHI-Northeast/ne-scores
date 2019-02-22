@@ -1414,12 +1414,33 @@ HAB <- function(layers) {
 
 
 SPP <- function(layers) {
-  scores <- rbind(layers$data$spp_status, layers$data$spp_trend) %>%
+
+  scen_year <- layers$data$scenario_year
+
+  #load data of each species and associated area per OHI Northeast region
+  spp_areas <-
+    AlignDataYears(layer_nm = "spp_rgn_areas", layers_obj = layers)
+
+  #load conservation status scores (between 0 and 1) for each species/region combo
+  spp_scores <-
+    AlignDataYears(layer_nm = "spp_status_scores", layers_obj = layers)
+
+  #load the trend data (not yet developed 2/21/19)
+  # spp_trend <-
+  #   AlignDataYears(layer_nm = "spp_trend", layers_obj = layers)
+
+###below is old. Need to now do the model! We still dont have trend yet (2/21/19)
+
+
+  spp_score <- rbind(layers$data$spp_status, layers$data$spp_trend) %>%
     mutate(goal = 'SPP') %>%
     mutate(dimension = ifelse(layer == "spp_status", "status", "trend")) %>%
     mutate(score = ifelse(dimension == 'status', score * 100, score)) %>%
     select(region_id = rgn_id, goal, dimension, score)
 
+  # return final scores
+  scores <- spp_score %>%
+    select(region_id, goal, dimension, score)
 
   return(scores)
 }
