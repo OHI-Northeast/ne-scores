@@ -1430,31 +1430,44 @@ SPP <- function(layers) {
     filter(scenario_year == scen_year) %>%
     mutate(common = as.character(common),
            sciname = tolower(as.character(sciname)))
-  #load the trend data (not yet developed 2/21/19)
-  # spp_trend <-
-  #   AlignDataYears(layer_nm = "spp_trend", layers_obj = layers)
 
+  #load the trend data
+  spp_trend <-
+    AlignDataYears(layer_nm = "spp_trend", layers_obj = layers) %>%
+    filter(scenario_year == scen_year)
 
+  #calculate status
   spp_status <- spp_areas %>%
-    select(rgn_id, common, sciname, area_km2) %>%
     left_join(spp_scores, by = c("common", "sciname", "rgn_id")) %>%
     select(rgn_id, common, sciname, area_km2, score) %>%
     filter(!is.na(score)) %>%
-    mutate(weighted_score = area_km2*(score)) %>%
+    mutate(weighted_score = area_km2*score) %>%
     group_by(rgn_id) %>%
     mutate(rgn_cells = sum(area_km2),
            status = sum(weighted_score)/rgn_cells) %>%
     select(region_id = rgn_id, status) %>%
     distinct()
 
+  #get trend by region
+  rgn_trend <- spp_areas %>%
+    select(sciname, rgn_id) %>%
+    left_join(spp_trend) %>%
+    group_by(rgn_id) %>%
+    summarize(trend = mean(score, na.rm=T)) %>% #take the mean trend for each region
+    mutate(dimension = "trend",
+           goal = "SPP") %>%
+    rename(score = trend,
+           region_id = rgn_id)
+
+
   #adjust the calculated status to score by incorporating the threshold at which rgns would get a 0
   scores <- spp_status %>%
     mutate(score = 100*(0.75-status)/0.75, #this assigns a region score of 0 if 80% of all species were critically endangered
            dimension = "status",
            goal = "SPP") %>%
-    select(-status)
+    select(-status) %>%
+    bind_rows(rgn_trend)
 
-  ##need to add in TREND ^ (2.25.19)
 
   return(scores)
 }
