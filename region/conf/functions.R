@@ -1419,28 +1419,42 @@ SPP <- function(layers) {
 
   #load data of each species and associated area per OHI Northeast region
   spp_areas <-
-    AlignDataYears(layer_nm = "spp_rgn_areas", layers_obj = layers)
+    AlignDataYears(layer_nm = "spp_rgn_areas", layers_obj = layers) %>%
+    filter(scenario_year == scen_year) %>%
+    mutate(common = as.character(common),
+           sciname = as.character(sciname))
 
   #load conservation status scores (between 0 and 1) for each species/region combo
   spp_scores <-
-    AlignDataYears(layer_nm = "spp_status_scores", layers_obj = layers)
-
+    AlignDataYears(layer_nm = "spp_status_scores", layers_obj = layers) %>%
+    filter(scenario_year == scen_year) %>%
+    mutate(common = as.character(common),
+           sciname = tolower(as.character(sciname)))
   #load the trend data (not yet developed 2/21/19)
   # spp_trend <-
   #   AlignDataYears(layer_nm = "spp_trend", layers_obj = layers)
 
-###below is old. Need to now do the model! We still dont have trend yet (2/21/19)
 
+  spp_status <- spp_areas %>%
+    select(rgn_id, common, sciname, area_km2) %>%
+    left_join(spp_scores, by = c("common", "sciname", "rgn_id")) %>%
+    select(rgn_id, common, sciname, area_km2, score) %>%
+    filter(!is.na(score)) %>%
+    mutate(weighted_score = area_km2*(score)) %>%
+    group_by(rgn_id) %>%
+    mutate(rgn_cells = sum(area_km2),
+           status = sum(weighted_score)/rgn_cells) %>%
+    select(region_id = rgn_id, status) %>%
+    distinct()
 
-  spp_score <- rbind(layers$data$spp_status, layers$data$spp_trend) %>%
-    mutate(goal = 'SPP') %>%
-    mutate(dimension = ifelse(layer == "spp_status", "status", "trend")) %>%
-    mutate(score = ifelse(dimension == 'status', score * 100, score)) %>%
-    select(region_id = rgn_id, goal, dimension, score)
+  #adjust the calculated status to score by incorporating the threshold at which rgns would get a 0
+  scores <- spp_status %>%
+    mutate(score = 100*(0.75-status)/0.75, #this assigns a region score of 0 if 80% of all species were critically endangered
+           dimension = "status",
+           goal = "SPP") %>%
+    select(-status)
 
-  # return final scores
-  scores <- spp_score %>%
-    select(region_id, goal, dimension, score)
+  ##need to add in TREND ^ (2.25.19)
 
   return(scores)
 }
