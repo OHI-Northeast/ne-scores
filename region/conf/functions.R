@@ -22,7 +22,7 @@ FIS <- function(layers) {
     select(
       region_id = rgn_id,
       year = scenario_year,
-      species,
+      species = nmfs_original_species,
       score
     )
 
@@ -35,13 +35,13 @@ FIS <- function(layers) {
     left_join(stockscores) %>%
     filter(!is.na(score)) %>% #remove stocks with no stock scores **THIS MIGHT NEED TO CHANGE IF WE WANT TO KEEP THESE STOCKS AND GAPFILL INSTEAD**
     group_by(year, region_id) %>%
-    mutate(SumCatch = sum(catch)) %>%
+    mutate(SumCatch = sum(catch, na.rm=T)) %>% #calculate total catch per region per year
     ungroup() %>%
     rowwise() %>%
-    mutate(wprop = catch / SumCatch,
+    mutate(wprop = catch / SumCatch,  #calculate proportional catch
            weighted_score = sum(score * wprop)) %>%
     group_by(region_id, year) %>%
-    summarize(score = sum(weighted_score)) %>%
+    summarize(score = sum(weighted_score, na.rm=T)) %>%
     ungroup()
 
 
