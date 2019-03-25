@@ -1,0 +1,91 @@
+year,rgn_id,rgn_name,score,metric
+2006,5,Connecticut,100,nitrogen
+2007,5,Connecticut,100,nitrogen
+2008,5,Connecticut,100,nitrogen
+2009,5,Connecticut,100,nitrogen
+2010,5,Connecticut,100,nitrogen
+2006,6,Maine,100,nitrogen
+2007,6,Maine,97.9934865607067,nitrogen
+2008,6,Maine,95.9869731214134,nitrogen
+2009,6,Maine,93.9804596821201,nitrogen
+2010,6,Maine,91.9739462428268,nitrogen
+2006,7,Massachusetts-Gulf of Maine,100,nitrogen
+2007,7,Massachusetts-Gulf of Maine,100,nitrogen
+2008,7,Massachusetts-Gulf of Maine,100,nitrogen
+2009,7,Massachusetts-Gulf of Maine,100,nitrogen
+2010,7,Massachusetts-Gulf of Maine,100,nitrogen
+2006,8,Massachusetts-Virginian,99.5190747672074,nitrogen
+2007,8,Massachusetts-Virginian,99.63930607540556,nitrogen
+2008,8,Massachusetts-Virginian,99.7595373836037,nitrogen
+2009,8,Massachusetts-Virginian,99.87976869180184,nitrogen
+2010,8,Massachusetts-Virginian,100,nitrogen
+2006,9,New Hampshire,100,nitrogen
+2007,9,New Hampshire,97.8849569888475,nitrogen
+2008,9,New Hampshire,95.76991397769503,nitrogen
+2009,9,New Hampshire,93.65487096654255,nitrogen
+2010,9,New Hampshire,91.53982795539005,nitrogen
+2006,10,New York,100,nitrogen
+2007,10,New York,97.16377606397882,nitrogen
+2008,10,New York,94.32755212795763,nitrogen
+2009,10,New York,91.49132819193643,nitrogen
+2010,10,New York,88.65510425591525,nitrogen
+2006,11,Rhode Island,100,nitrogen
+2007,11,Rhode Island,100,nitrogen
+2008,11,Rhode Island,100,nitrogen
+2009,11,Rhode Island,100,nitrogen
+2010,11,Rhode Island,100,nitrogen
+2006,5,Connecticut,100,clarity
+2007,5,Connecticut,100,clarity
+2008,5,Connecticut,100,clarity
+2009,5,Connecticut,100,clarity
+2010,5,Connecticut,100,clarity
+2006,6,Maine,98.83396837850806,clarity
+2007,6,Maine,99.12547628388104,clarity
+2008,6,Maine,99.41698418925404,clarity
+2009,6,Maine,99.70849209462702,clarity
+2010,6,Maine,100,clarity
+2006,7,Massachusetts-Gulf of Maine,100,clarity
+2007,7,Massachusetts-Gulf of Maine,100,clarity
+2008,7,Massachusetts-Gulf of Maine,100,clarity
+2009,7,Massachusetts-Gulf of Maine,100,clarity
+2010,7,Massachusetts-Gulf of Maine,100,clarity
+2006,8,Massachusetts-Virginian,100,clarity
+2007,8,Massachusetts-Virginian,99.87976869180184,clarity
+2008,8,Massachusetts-Virginian,99.7595373836037,clarity
+2009,8,Massachusetts-Virginian,99.63930607540556,clarity
+2010,8,Massachusetts-Virginian,99.5190747672074,clarity
+2006,9,New Hampshire,76.36363636363636,clarity
+2007,9,New Hampshire,82.27272727272727,clarity
+2008,9,New Hampshire,88.18181818181819,clarity
+2009,9,New Hampshire,94.0909090909091,clarity
+2010,9,New Hampshire,100,clarity
+2006,10,New York,93.91938025200425,clarity
+2007,10,New York,95.43953518900318,clarity
+2008,10,New York,96.95969012600213,clarity
+2009,10,New York,98.47984506300106,clarity
+2010,10,New York,100,clarity
+2006,11,Rhode Island,92.69011098828538,clarity
+2007,11,Rhode Island,94.51758324121404,clarity
+2008,11,Rhode Island,96.34505549414268,clarity
+2009,11,Rhode Island,98.17252774707134,clarity
+2010,11,Rhode Island,100,clarity
+2006,1,Offshore,NA,NA
+2006,2,Georges Bank,NA,NA
+2006,3,Gulf of Maine,NA,NA
+2006,4,Mid-Atlantic Bight,NA,NA
+2007,1,Offshore,NA,NA
+2007,2,Georges Bank,NA,NA
+2007,3,Gulf of Maine,NA,NA
+2007,4,Mid-Atlantic Bight,NA,NA
+2008,1,Offshore,NA,NA
+2008,2,Georges Bank,NA,NA
+2008,3,Gulf of Maine,NA,NA
+2008,4,Mid-Atlantic Bight,NA,NA
+2009,1,Offshore,NA,NA
+2009,2,Georges Bank,NA,NA
+2009,3,Gulf of Maine,NA,NA
+2009,4,Mid-Atlantic Bight,NA,NA
+2010,1,Offshore,NA,NA
+2010,2,Georges Bank,NA,NA
+2010,3,Gulf of Maine,NA,NA
+2010,4,Mid-Atlantic Bight,NA,NA
