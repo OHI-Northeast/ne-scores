@@ -1285,131 +1285,49 @@ CW <- function(layers) {
 
 
 HAB <- function(layers) {
+
   scen_year <- layers$data$scenario_year
 
-
-  extent_lyrs <-
-    c(
-      'hab_mangrove_extent',
-      'hab_seagrass_extent',
-      'hab_saltmarsh_extent',
-      'hab_coral_extent',
-      'hab_seaice_extent',
-      'hab_softbottom_extent'
-    )
-  health_lyrs <-
-    c(
-      'hab_mangrove_health',
-      'hab_seagrass_health',
-      'hab_saltmarsh_health',
-      'hab_coral_health',
-      'hab_seaice_health',
-      'hab_softbottom_health'
-    )
-  trend_lyrs <-
-    c(
-      'hab_mangrove_trend',
-      'hab_seagrass_trend',
-      'hab_saltmarsh_trend',
-      'hab_coral_trend',
-      'hab_seaice_trend',
-      'hab_softbottom_trend'
-    )
-
-  # get data together:
-  extent <- AlignManyDataYears(extent_lyrs) %>%
+  ## salt marsh
+  saltmarsh <- AlignManyDataYears("hab_salt_marsh") %>%
     filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, habitat, extent = km2) %>%
-    mutate(habitat = as.character(habitat))
+    mutate(habitat = "saltmarsh",
+      status = ifelse(perc_loss <= 0, 100, 100-perc_loss)) %>% #this keeps the perc_loss from going negative from going above 100 for Maine
+    select(year = scenario_year, region_id = rgn_id, rgn_name, status, habitat)
 
-  health <- AlignManyDataYears(health_lyrs) %>%
-    filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, habitat, health) %>%
-    mutate(habitat = as.character(habitat))
-
-  trend <- AlignManyDataYears(trend_lyrs) %>%
-    filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, habitat, trend) %>%
-    mutate(habitat = as.character(habitat))
+  ## eelgrass
 
 
-  # join and limit to HAB habitats
-  d <- health %>%
-    full_join(trend, by = c('region_id', 'habitat')) %>%
-    full_join(extent, by = c('region_id', 'habitat')) %>%
-    filter(
-      habitat %in% c(
-        'coral',
-        'mangrove',
-        'saltmarsh',
-        'seaice_edge',
-        'seagrass',
-        'soft_bottom'
-      )
-    ) %>%
-    mutate(w  = ifelse(!is.na(extent) & extent > 0, 1, NA)) %>%
-    filter(!is.na(w))
+  ## calculate scores. eventually rbind() the other habitats here
+  hab_status <- saltmarsh %>%
+    #rbind(eelgrass) %>%
+    mutate(dimension = 'status')
 
-  if (sum(d$w %in% 1 & is.na(d$trend)) > 0) {
-    warning(
-      "Some regions/habitats have extent data, but no trend data.  Consider estimating these values."
-    )
-  }
 
-  if (sum(d$w %in% 1 & is.na(d$health)) > 0) {
-    warning(
-      "Some regions/habitats have extent data, but no health data.  Consider estimating these values."
-    )
-  }
+  ## calculate trend
+  trend_data <- hab_status %>%
+    filter(!is.na(status))
 
+  trend_years <- (scen_year - 4):(scen_year)
+
+  hab_trend <-
+    CalculateTrend(status_data = trend_data, trend_years = trend_years)
 
   ## calculate scores
-  status <- d %>%
-    group_by(region_id) %>%
-    filter(!is.na(health)) %>%
-    summarize(score = pmin(1, sum(health) / sum(w)) * 100,
-              dimension = 'status') %>%
-    ungroup()
-
-  trend <- d %>%
-    group_by(region_id) %>%
-    filter(!is.na(trend)) %>%
-    summarize(score =  sum(trend) / sum(w),
-              dimension = 'trend')  %>%
-    ungroup()
-
-  scores_HAB <- rbind(status, trend) %>%
+  hab_score <- hab_status %>%
+    filter(year == scen_year) %>%
+    select(region_id, score = status, dimension) %>%
+    bind_rows(hab_trend) %>%
     mutate(goal = "HAB") %>%
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
+
+  ## return final scores
+  scores <- hab_score %>%
     select(region_id, goal, dimension, score)
 
-
-  ## create weights file for pressures/resilience calculations
-
-  weights <- extent %>%
-    filter(
-      habitat %in% c(
-        'seagrass',
-        'saltmarsh',
-        'mangrove',
-        'coral',
-        'seaice_edge',
-        'soft_bottom'
-      )
-    ) %>%
-    filter(extent > 0) %>%
-    mutate(boolean = 1) %>%
-    mutate(layer = "element_wts_hab_pres_abs") %>%
-    select(rgn_id = region_id, habitat, boolean, layer)
-
-  write.csv(weights,
-            sprintf("temp/element_wts_hab_pres_abs_%s.csv", scen_year),
-            row.names = FALSE)
-
-  layers$data$element_wts_hab_pres_abs <- weights
-
-
-  # return scores
-  return(scores_HAB)
+  return(scores)
 }
 
 
