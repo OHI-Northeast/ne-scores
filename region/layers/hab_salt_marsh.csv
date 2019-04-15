@@ -21,6 +21,50 @@ rgn_id,rgn_name,year,perc_loss
 5,Connecticut,2015,27.444993277605654
 5,Connecticut,2016,27.444993277605654
 5,Connecticut,2017,27.444993277605654
+7,Massachusetts-Gulf of Maine,1996,41
+8,Massachusetts-Virginian,1996,41
+7,Massachusetts-Gulf of Maine,1997,40.99281858354721
+8,Massachusetts-Virginian,1997,40.99281858354721
+7,Massachusetts-Gulf of Maine,1998,40.985637167094424
+8,Massachusetts-Virginian,1998,40.985637167094424
+7,Massachusetts-Gulf of Maine,1999,40.97845575064164
+8,Massachusetts-Virginian,1999,40.97845575064164
+7,Massachusetts-Gulf of Maine,2000,40.971274334188855
+8,Massachusetts-Virginian,2000,40.971274334188855
+7,Massachusetts-Gulf of Maine,2001,40.96409291773607
+8,Massachusetts-Virginian,2001,40.96409291773607
+7,Massachusetts-Gulf of Maine,2002,40.95934416724618
+8,Massachusetts-Virginian,2002,40.95934416724618
+7,Massachusetts-Gulf of Maine,2003,40.95459541675629
+8,Massachusetts-Virginian,2003,40.95459541675629
+7,Massachusetts-Gulf of Maine,2004,40.9498466662664
+8,Massachusetts-Virginian,2004,40.9498466662664
+7,Massachusetts-Gulf of Maine,2005,40.945097915776515
+8,Massachusetts-Virginian,2005,40.945097915776515
+7,Massachusetts-Gulf of Maine,2006,40.94034916528663
+8,Massachusetts-Virginian,2006,40.94034916528663
+7,Massachusetts-Gulf of Maine,2007,40.98811840865562
+8,Massachusetts-Virginian,2007,40.98811840865562
+7,Massachusetts-Gulf of Maine,2008,41.03588765202462
+8,Massachusetts-Virginian,2008,41.03588765202462
+7,Massachusetts-Gulf of Maine,2009,41.08365689539362
+8,Massachusetts-Virginian,2009,41.08365689539362
+7,Massachusetts-Gulf of Maine,2010,41.13142613876261
+8,Massachusetts-Virginian,2010,41.13142613876261
+7,Massachusetts-Gulf of Maine,2011,41.13142613876261
+8,Massachusetts-Virginian,2011,41.13142613876261
+7,Massachusetts-Gulf of Maine,2012,41.13142613876261
+8,Massachusetts-Virginian,2012,41.13142613876261
+7,Massachusetts-Gulf of Maine,2013,41.13142613876261
+8,Massachusetts-Virginian,2013,41.13142613876261
+7,Massachusetts-Gulf of Maine,2014,41.13142613876261
+8,Massachusetts-Virginian,2014,41.13142613876261
+7,Massachusetts-Gulf of Maine,2015,41.13142613876261
+8,Massachusetts-Virginian,2015,41.13142613876261
+7,Massachusetts-Gulf of Maine,2016,41.13142613876261
+8,Massachusetts-Virginian,2016,41.13142613876261
+7,Massachusetts-Gulf of Maine,2017,41.13142613876261
+8,Massachusetts-Virginian,2017,41.13142613876261
 6,Maine,1996,0
 6,Maine,1997,-0.07731349051952385
 6,Maine,1998,-0.1546269810390477
