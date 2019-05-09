@@ -86,8 +86,6 @@ PlotFlower(assessment_name = "Toolbox Demo",
 dir_fig_save    = "reports/figures")
 ```
 
-
-
 ## Example workflow
 
 These code chunks will help you as you develop individual goal models in `conf/functions.R`. A good workflow is:
