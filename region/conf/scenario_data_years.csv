@@ -140,8 +140,8 @@ scenario_year,layer_name,data_year
 2013,eco_coast_gdp,2013
 2014,eco_coast_gdp,2014
 2015,eco_coast_gdp,2015
-2016,eco_coast_gdp,2015
-2017,eco_coast_gdp,2015
+2016,eco_coast_gdp,2016
+2017,eco_coast_gdp,2016
 2005,fis_stockscores,2005
 2006,fis_stockscores,2006
 2007,fis_stockscores,2007
@@ -634,8 +634,8 @@ scenario_year,layer_name,data_year
 2013,le_coast_wages,2013
 2014,le_coast_wages,2014
 2015,le_coast_wages,2015
-2016,le_coast_wages,2015
-2017,le_coast_wages,2015
+2016,le_coast_wages,2016
+2017,le_coast_wages,2016
 2005,le_job_growth,2008
 2006,le_job_growth,2008
 2007,le_job_growth,2008
@@ -647,8 +647,8 @@ scenario_year,layer_name,data_year
 2013,le_job_growth,2013
 2014,le_job_growth,2014
 2015,le_job_growth,2015
-2016,le_job_growth,2015
-2017,le_job_growth,2015
+2016,le_job_growth,2016
+2017,le_job_growth,2016
 2005,lsp_prot_area_inland1km,2008
 2006,lsp_prot_area_inland1km,2008
 2007,lsp_prot_area_inland1km,2008
