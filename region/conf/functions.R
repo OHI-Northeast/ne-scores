@@ -922,6 +922,8 @@ LIV <- function(layers){
              ),
            job_score = ifelse(job_score > 1, 1, job_score))
 
+  write.csv(jobs_score, file = "~/github/ne-prep/prep/liv/data/job_scores.csv")
+
 
   ## Wage scores
 
@@ -934,6 +936,9 @@ LIV <- function(layers){
              case_when(
                wage_growth_rate >= targ_wage ~ 1, #if the growth rate is about 3.5% it gets a perfect score
                wage_growth_rate <= targ_wage ~ (wage_growth_rate - min_wage)/(targ_wage-min_wage)))
+
+  write.csv(wages_score, file = "~/github/ne-prep/prep/liv/data/wages_scores.csv")
+
 
   # LIV calculations ----
 
@@ -987,11 +992,15 @@ ECO <- function(layers) {
   min_gdp  = -0.3 #this represents the worst case scenario (what gets a 0)
   targ_gdp = 0.03 #this represents our target gdp growth rate
 
-  eco_status <- eco_cst_gdp %>%
+   gdp_scores <- eco_cst_gdp %>%
     mutate(status =
              case_when(
                gdp_growth_rate >= targ_gdp ~ 1, #if the growth rate is about 3.5% it gets a perfect score
-               gdp_growth_rate <= targ_gdp ~ (gdp_growth_rate - min_gdp)/(targ_gdp - min_gdp))) %>%
+               gdp_growth_rate <= targ_gdp ~ (gdp_growth_rate - min_gdp)/(targ_gdp - min_gdp)))
+
+    write.csv(gdp_scores, file = "~/github/ne-prep/prep/eco/data/gdp_scores.csv")
+
+    eco_status <- gdp_scores %>%
     select(year = scenario_year, region_id = rgn_id, status) %>%
     filter(!is.na(status))
 
