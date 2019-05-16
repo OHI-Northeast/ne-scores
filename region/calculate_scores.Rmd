@@ -67,6 +67,8 @@ for (s_year in scenario_years){  # s_year=2015
 
   ## bind scores to dataframe
   scores_all_years <- rbind(scores_all_years, scores_sy)
+  
+  #add flowerplot code in here so we generate flowerplots for each year. This will need to include s_year in naming
 
 }
 
@@ -82,7 +84,7 @@ Run this to create flower plots for each region.
 ## source script (to be incorporated into ohicore)
 source('https://raw.githubusercontent.com/OHI-Science/arc/master/circle2016/plot_flower_local.R')
 
-PlotFlower(assessment_name = "Toolbox Demo",
+PlotFlower(assessment_name = "US Northeast",
 dir_fig_save    = "reports/figures")
 ```
 
