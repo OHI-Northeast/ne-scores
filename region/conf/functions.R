@@ -1305,12 +1305,18 @@ HAB <- function(layers) {
     select(year = scenario_year, region_id = rgn_id, rgn_name, status, habitat)
 
   ## eelgrass
-
+  eelgrass <- AlignManyDataYears("hab_eelgrass") %>%
+    filter(scenario_year == scen_year) %>%
+    mutate(habitat = "eelgrass") %>%
+    select(year = scenario_year, region_id = rgn_id, rgn_name, status = score , habitat)
 
   ## calculate scores. eventually rbind() the other habitats here
   hab_status <- saltmarsh %>%
-    #rbind(eelgrass) %>%
-    mutate(dimension = 'status')
+    rbind(eelgrass) %>%
+    group_by(year, region_id, rgn_name) %>%
+    summarize(status = mean(status)) %>%
+    mutate(dimension = 'status') %>%
+    ungroup()
 
 
   ## calculate trend
@@ -1327,10 +1333,7 @@ HAB <- function(layers) {
     filter(year == scen_year) %>%
     select(region_id, score = status, dimension) %>%
     bind_rows(hab_trend) %>%
-    mutate(goal = "HAB") %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
-             goal,
-             dimension)
+    mutate(goal = "HAB")
 
   ## return final scores
   scores <- hab_score %>%
