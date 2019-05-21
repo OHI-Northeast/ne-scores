@@ -1308,13 +1308,21 @@ HAB <- function(layers) {
   eelgrass <- AlignManyDataYears("hab_eelgrass") %>%
     filter(scenario_year == scen_year) %>%
     mutate(habitat = "eelgrass") %>%
-    select(year = scenario_year, region_id = rgn_id, rgn_name, status = score , habitat)
+    select(year = scenario_year, region_id = rgn_id, rgn_name, status = score, habitat)
+
+  ## Offshore
+  offshore <- AlignManyDataYears("hab_sasi") %>%
+    filter(scenario_year == scen_year) %>%
+    mutate(habitat = "offshore",
+           status = 100 - (sasi*100)) %>%
+    select(year = scenario_year, region_id = rgn_id, rgn_name, status, habitat)
 
   ## calculate scores. eventually rbind() the other habitats here
   hab_status <- saltmarsh %>%
     rbind(eelgrass) %>%
+    rbind(offshore) %>%
     group_by(year, region_id, rgn_name) %>%
-    summarize(status = mean(status)) %>%
+    summarize(status = mean(status, na.rm = T)) %>%
     mutate(dimension = 'status') %>%
     ungroup()
 
