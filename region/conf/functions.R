@@ -561,7 +561,7 @@ ICO <- function(layers){
   # and calculate status score
   ico_status <- ico_species_scores %>%
     group_by(scenario_year, rgn_id) %>%
-    summarize(status = mean(score)) %>%
+    summarize(status = mean(score)*100) %>%
     ungroup()
 
   # calculate trend
