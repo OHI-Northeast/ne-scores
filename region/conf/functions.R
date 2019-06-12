@@ -553,58 +553,40 @@ ICO <- function(layers){
 
   scen_year <- layers$data$scenario_year
 
-  rk <- AlignDataYears(layer_nm="ico_spp_iucn_status", layers_obj = layers) %>%
-    select(region_id = rgn_id, sciname, iucn_cat=category, scenario_year, ico_spp_iucn_status_year) %>%
-    mutate(iucn_cat = as.character(iucn_cat))
+  # load iconic species scores per region
+  ico_species_scores <- AlignDataYears(layer_nm = "ico_scores", layers_obj = layers)
 
-  # lookup for weights status
-  #  LC <- "LOWER RISK/LEAST CONCERN (LR/LC)"
-  #  NT <- "LOWER RISK/NEAR THREATENED (LR/NT)"
-  #  T  <- "THREATENED (T)" treat as "EN"
-  #  VU <- "VULNERABLE (V)"
-  #  EN <- "ENDANGERED (E)"
-  #  LR/CD <- "LOWER RISK/CONSERVATION DEPENDENT (LR/CD)" treat as between VU and NT
-  #  CR <- "VERY RARE AND BELIEVED TO BE DECREASING IN NUMBERS"
-  #  DD <- "INSUFFICIENTLY KNOWN (K)"
-  #  DD <- "INDETERMINATE (I)"
-  #  DD <- "STATUS INADEQUATELY KNOWN-SURVEY REQUIRED OR DATA SOUGHT"
-  w.risk_category = data.frame(iucn_cat = c('LC', 'NT', 'CD', 'VU', 'EN', 'CR', 'EX', 'DD'),
-                               risk_score = c(0,  0.2,  0.3,  0.4,  0.6,  0.8,  1, NA)) %>%
-    mutate(status_score = 1-risk_score) %>%
-    mutate(iucn_cat = as.character(iucn_cat))
 
-  ####### status
-  # STEP 1: take mean of subpopulation scores
-  r.status_spp <- rk %>%
-    left_join(w.risk_category, by = 'iucn_cat') %>%
-    group_by(region_id, sciname, scenario_year, ico_spp_iucn_status_year) %>%
-    summarize(spp_mean = mean(status_score, na.rm=TRUE)) %>%
+  # get percent of total area that is protected for inland1km (cp) and offshore3nm (cmpa) per year
+  # and calculate status score
+  ico_status <- ico_species_scores %>%
+    group_by(scenario_year, rgn_id) %>%
+    summarize(status = mean(score)) %>%
     ungroup()
 
-  # STEP 2: take mean of populations within regions
-  r.status <- r.status_spp %>%
-    group_by(region_id, scenario_year, ico_spp_iucn_status_year) %>%
-    summarize(status = mean(spp_mean, na.rm=TRUE)) %>%
-    ungroup()
+  # calculate trend
 
-  ####### status
-  status <- r.status %>%
+  trend_years <- (scen_year-4):(scen_year)
+
+  ico_trend <- CalculateTrend(status_data = ico_status, trend_years = trend_years)
+
+
+  #combine trend and status
+  ico_scores <- ico_status %>%
     filter(scenario_year == scen_year) %>%
-    mutate(score = status * 100) %>%
-    mutate(dimension = "status") %>%
-    select(region_id, score, dimension)
+    mutate(dimension = "status",
+           score = status) %>%
+    select(region_id = rgn_id, score, dimension) %>%
+    rbind(ico_trend) %>%
+    mutate(goal = 'ICO') %>%
+    arrange(goal, dimension, region_id) %>%
+    distinct() %>%
+    complete(region_id = 1:11, #this adds in all regions with NA values for trend and status
+             goal,
+             dimension)
 
-  ####### trend
-  trend_years <- (scen_year-9):(scen_year)
-
-  trend <- CalculateTrend(status_data = r.status, trend_years=trend_years)
-
-  # return scores
-  scores <-  rbind(status, trend) %>%
-    mutate('goal'='ICO') %>%
-    select(goal, dimension, region_id, score) %>%
-    data.frame()
-  return(scores)
+  # return final scores
+  return(ico_scores)
 
 }
 
