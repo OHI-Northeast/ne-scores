@@ -812,8 +812,8 @@ SPP <- function(layers) {
   scen_year <- layers$data$scenario_year
 
   #load data of each species and associated area per OHI Northeast region
-  spp_areas <-
-    AlignDataYears(layer_nm = "spp_rgn_areas", layers_obj = layers) %>%
+  spp_rgns <-
+    AlignDataYears(layer_nm = "spp_rgns", layers_obj = layers) %>%
     filter(scenario_year == scen_year) %>%
     mutate(common = as.character(common),
            sciname = as.character(sciname))
@@ -831,19 +831,17 @@ SPP <- function(layers) {
     filter(scenario_year == scen_year)
 
   #calculate status
-  spp_status <- spp_areas %>%
+  spp_status <- spp_rgns %>%
     left_join(spp_scores, by = c("common", "sciname", "rgn_id")) %>%
-    select(rgn_id, common, sciname, area_km2, score) %>%
+    select(rgn_id, common, sciname, score) %>%
     filter(!is.na(score)) %>%
-    mutate(weighted_score = area_km2*score) %>%
     group_by(rgn_id) %>%
-    mutate(rgn_cells = sum(area_km2),
-           status = sum(weighted_score)/rgn_cells) %>%
+    mutate(status = mean(score)) %>%
     select(region_id = rgn_id, status) %>%
     distinct()
 
   #get trend by region
-  rgn_trend <- spp_areas %>%
+  rgn_trend <- spp_rgns %>%
     select(sciname, rgn_id) %>%
     left_join(spp_trend) %>%
     group_by(rgn_id) %>%
