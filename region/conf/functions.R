@@ -88,7 +88,8 @@ MAR <- function(layers) {
     AlignDataYears(layer_nm = "mar_production", layers_obj = layers) %>%
     mutate(species = as.character(Species),
            year = scenario_year) %>%
-    select(-layer_name, -Species, -scenario_year)
+    select(-layer_name, -Species, -scenario_year) %>%
+    filter(!is.na(production))
 
   #sustainability scores
   sustscores <-
