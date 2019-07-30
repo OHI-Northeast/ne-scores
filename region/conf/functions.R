@@ -103,10 +103,11 @@ MAR <- function(layers) {
     rowwise() %>%
     mutate(sust_times_prod = production*sust_score,
            growth_score    = case_when(
+             production > 0 & is.na(last_years_prod) ~ 1, #if last years production was non existent, but this year there is production, set the growth score to the highest (1).
              production == 0 & last_years_prod == 0 ~ 0,
              TRUE ~ min(c(1, sust_times_prod/(1.04*last_years_prod))))) %>% #cap growth score to 1
     group_by(rgn_id, year) %>%
-    mutate(total_rgn_prod = sum(production)) %>% #get total production for each region and year
+    mutate(total_rgn_prod = sum(production, na.rm = T)) %>% #get total production for each region and year
     ungroup() %>%
     rowwise() %>%
     mutate(prop_prod = production/total_rgn_prod, #calculate species specific proportion of production for each region and year
