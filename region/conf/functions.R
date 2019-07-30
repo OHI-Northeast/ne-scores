@@ -83,77 +83,62 @@ FIS <- function(layers) {
 MAR <- function(layers) {
   scen_year <- layers$data$scenario_year
 
-  harvest_tonnes <-
-    AlignDataYears(layer_nm = "mar_harvest_tonnes", layers_obj = layers)
+  #production data
+  production <-
+    AlignDataYears(layer_nm = "mar_production", layers_obj = layers) %>%
+    mutate(species = as.character(Species),
+           year = scenario_year) %>%
+    select(-layer_name, -Species, -scenario_year)
 
+  #sustainability scores
+  sustscores <-
+    read_csv("~/github/ne-scores/region/layers/mar_sust_scores.csv") %>%
+    select(-sustainabilityscore)
 
-  sustainability_score <-
-    AlignDataYears(layer_nm = "mar_sustainability_score", layers_obj = layers)
-
-  popn_inland25mi <-
-    AlignDataYears(layer_nm = "mar_coastalpopn_inland25mi", layers_obj = layers) %>%
-    mutate(popsum = popsum + 1)
-
-
-  rky <-  harvest_tonnes %>%
-    left_join(sustainability_score,
-              by = c('rgn_id', 'taxa_code', 'scenario_year')) %>%
-    select(rgn_id, scenario_year, taxa_code, tonnes, sust_coeff)
-
-
-  # fill in gaps with no data
-  rky <- spread(rky, scenario_year, tonnes)
-  rky <- gather(rky, "scenario_year", "tonnes",-(1:3)) %>%
-    mutate(scenario_year = as.numeric(scenario_year))
-
-
-  # 4-year rolling mean of data
-  m <- rky %>%
-    group_by(rgn_id, taxa_code, sust_coeff) %>%
-    arrange(rgn_id, taxa_code, scenario_year) %>%
-    mutate(sm_tonnes = zoo::rollapply(tonnes, 4, mean, na.rm = TRUE, partial =
-                                        TRUE)) %>%
-    ungroup()
-
-
-  # smoothed mariculture harvest * sustainability coefficient
-  m <- m %>%
-    mutate(sust_tonnes = sust_coeff * sm_tonnes)
-
-
-  # aggregate all weighted timeseries per region, and divide by coastal human population
-  ry = m %>%
-    group_by(rgn_id, scenario_year) %>%
-    summarize(sust_tonnes_sum = sum(sust_tonnes, na.rm = TRUE)) %>%  #na.rm = TRUE assumes that NA values are 0
-    left_join(popn_inland25mi, by = c('rgn_id', 'scenario_year')) %>%
-    mutate(mar_pop = sust_tonnes_sum / popsum) %>%
-    ungroup()
-
-  # get reference quantile based on argument years
-
-  ref_95pct <- quantile(ry$mar_pop, 0.95, na.rm = TRUE)
-
-  ry = ry %>%
-    mutate(status = ifelse(mar_pop / ref_95pct > 1,
-                           1,
-                           mar_pop / ref_95pct))
-  status <- ry %>%
-    filter(scenario_year == scen_year) %>%
-    mutate(dimension = "status") %>%
-    select(region_id = rgn_id, score = status, dimension) %>%
-    mutate(score = round(score * 100, 2))
+  #calculate status from sustainability weighted production
+  mar_status <- production %>%
+    filter(yr_num > 2) %>% #we want to start with the third year in the series since we use a 3 year rolling mean for production
+    left_join(sustscores) %>%
+    rowwise() %>%
+    mutate(sust_times_prod = production*sust_score,
+           growth_score    = case_when(
+             production == 0 & last_years_prod == 0 ~ 0,
+             TRUE ~ min(c(1, sust_times_prod/(1.04*last_years_prod))))) %>% #cap growth score to 1
+    group_by(rgn_id, year) %>%
+    mutate(total_rgn_prod = sum(production)) %>% #get total production for each region and year
+    ungroup() %>%
+    rowwise() %>%
+    mutate(prop_prod = production/total_rgn_prod, #calculate species specific proportion of production for each region and year
+           prod_weighted_score = prop_prod * growth_score*100) %>%
+    group_by(rgn_id, year) %>%
+    summarize(status = sum(prod_weighted_score)) %>%
+    ungroup() %>%
+    rename(region_id = rgn_id) %>%
+    mutate(dimension = 'status')
 
 
   # calculate trend
+  trend_data <- mar_status %>%
+    filter(!is.na(status))
 
   trend_years <- (scen_year - 4):(scen_year)
 
-  trend <- CalculateTrend(status_data = ry, trend_years = trend_years)
+  mar_trend <-
+    CalculateTrend(status_data = trend_data, trend_years = trend_years)
 
+  # bind status and trend by rows
+  mar_score <- mar_status %>%
+    filter(year == scen_year) %>% ## filter for scenario year after calculating trend
+    select(region_id, score = status, dimension) %>%
+    bind_rows(mar_trend) %>%
+    mutate(goal = 'MAR') %>%
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
 
-  # return scores
-  scores = rbind(status, trend) %>%
-    mutate(goal = 'MAR')
+  # return final scores
+  scores <- mar_score %>%
+    select(region_id, goal, dimension, score)
 
   return(scores)
 }
@@ -162,75 +147,45 @@ MAR <- function(layers) {
 FP <- function(layers, scores) {
   scen_year <- layers$data$scenario_year
 
-  w <-
-    AlignDataYears(layer_nm = "fp_wildcaught_weight", layers_obj = layers) %>%
-    filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, w_fis)
+  #fisheries harvest
 
-  # scores
+  f <-
+    AlignDataYears(layer_nm = "fis_meancatch", layers_obj = layers) %>%
+    select(
+      region_id = rgn_id,
+      year = scenario_year,
+      species,
+      catch = mean_catch
+    ) %>%
+    group_by(region_id, year) %>%
+    summarize(total_catch = sum(catch))
+
+  #mariculture production
+  m <-
+    AlignDataYears(layer_nm = "mar_production", layers_obj = layers) %>%
+    mutate(species = as.character(Species),
+           year = scenario_year) %>%
+    group_by(rgn_id, year) %>%
+    summarize(total_production = sum(production))
+
+  #combine
+  w <- m %>%
+    rename(region_id = rgn_id) %>%
+    full_join(f) %>%
+    rowwise() %>%
+    mutate(w_fis = total_catch/sum(total_production, total_catch,na.rm = T),
+           w_mar = 1-w_fis)
+
+
+  # combine with FIS and MAR scores
   s <- scores %>%
     filter(goal %in% c('FIS', 'MAR')) %>%
     filter(!(dimension %in% c('pressures', 'resilience'))) %>%
     left_join(w, by = "region_id")  %>%
-    mutate(w_mar = 1 - w_fis) %>%
     mutate(weight = ifelse(goal == "FIS", w_fis, w_mar))
 
 
-  ## Some warning messages due to potential mismatches in data:
-  # NA score but there is a weight
-  tmp <-
-    filter(s,
-           goal == 'FIS' &
-             is.na(score) & (!is.na(w_fis) & w_fis != 0) & dimension == "score")
-  if (dim(tmp)[1] > 0) {
-    warning(paste0(
-      "Check: these regions have a FIS weight but no score: ",
-      paste(as.character(tmp$region_id), collapse = ", ")
-    ))
-  }
-
-  tmp <-
-    filter(s,
-           goal == 'MAR' &
-             is.na(score) & (!is.na(w_mar) & w_fis != 0) & dimension == "score")
-  if (dim(tmp)[1] > 0) {
-    warning(paste0(
-      "Check: these regions have a MAR weight but no score: ",
-      paste(as.character(tmp$region_id), collapse = ", ")
-    ))
-  }
-
-  # score, but the weight is NA or 0
-  tmp <-
-    filter(
-      s,
-      goal == 'FIS' &
-        (!is.na(score) &
-           score > 0) &
-        (is.na(w_fis) | w_fis == 0) & dimension == "score" & region_id != 0
-    )
-  if (dim(tmp)[1] > 0) {
-    warning(paste0(
-      "Check: these regions have a FIS score but no weight: ",
-      paste(as.character(tmp$region_id), collapse = ", ")
-    ))
-  }
-
-  tmp <-
-    filter(
-      s,
-      goal == 'MAR' &
-        (!is.na(score) &
-           score > 0) &
-        (is.na(w_mar) | w_mar == 0) & dimension == "score" & region_id != 0
-    )
-  if (dim(tmp)[1] > 0) {
-    warning(paste0(
-      "Check: these regions have a MAR score but no weight: ",
-      paste(as.character(tmp$region_id), collapse = ", ")
-    ))
-  }
-
+  #scores with weighted contributions
   s <- s  %>%
     group_by(region_id, dimension) %>%
     summarize(score = weighted.mean(score, weight, na.rm = TRUE)) %>%

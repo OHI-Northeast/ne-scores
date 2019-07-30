@@ -37,6 +37,7 @@ library(ohicore)
 
 ## set the working directory to a filepath we all have
 setwd(here::here('region'))
+options(scipen=999)
 ```
 
 
