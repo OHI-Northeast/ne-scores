@@ -293,11 +293,17 @@ TR <- function(layers) {
 
   scen_year <- layers$data$scenario_year
 
-  ## read in layer
+  ## read in tourism jobs layer
 
   tourism_job_growth <-
     AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
     select(-layer_name, -X)
+
+  ## read in beach closures layer
+
+  beach <- AlignDataYears(layer_nm = "tr_beach_closures", layers_obj = layers) %>%
+    select(-layer_name) %>%
+    rename(region_id = rgn_id)
 
 
   # we don't set a specific target of job growth in the T&R sector. As long as regions are not losing jobs
@@ -307,20 +313,20 @@ TR <- function(layers) {
   ## parameters
   min_jobs = -0.25 #(a loss of 25% of all jobs gets a score of 0)
 
-  tr_score <- tourism_job_growth %>%
-    dplyr::mutate(score =
+  tr_job_score <- tourism_job_growth %>%
+    dplyr::mutate(job_score =
              case_when(
                tr_job_growth >= 0 ~ 1,
                tr_job_growth < 0 ~ (tr_job_growth - min_jobs)/(0 - min_jobs)
              ))
 
-
   # get status
-  tr_status <- tr_score %>%
-    select(region_id = rgn_id, score, scenario_year) %>%
-    mutate(status = score * 100) %>%
-    mutate(dimension = 'status')
-
+  tr_status <- tr_job_score %>%
+    select(region_id = rgn_id, job_score, scenario_year) %>%
+    left_join(beach) %>%
+    rowwise() %>%
+    mutate(status = mean(c(perc_open, job_score))*100,
+           dimension = 'status')
 
   # calculate trend
   trend_data <- tr_status %>%
