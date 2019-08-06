@@ -201,42 +201,48 @@ FP <- function(layers, scores) {
 }
 
 
-AO <- function(layers) {
-  Sustainability <- 1.0
-
+RAO <- function(layers) {
   scen_year <- layers$data$scenario_year
 
-  r <- AlignDataYears(layer_nm = "ao_access", layers_obj = layers) %>%
-    rename(region_id = rgn_id, access = value) %>%
-    na.omit()
-
-  ry <-
-    AlignDataYears(layer_nm = "ao_need", layers_obj = layers) %>%
-    rename(region_id = rgn_id, need = value) %>%
-    left_join(r, by = c("region_id", "scenario_year"))
-
-  # model
-  ry <- ry %>%
-    mutate(Du = (1 - need) * (1 - access)) %>%
-    mutate(status = (1 - Du) * Sustainability)
-
-  # status
-  r.status <- ry %>%
+  ## Economic access (gas prices compared to mean wage)
+  econ_access <- AlignManyDataYears("rao_econ_access") %>%
     filter(scenario_year == scen_year) %>%
-    select(region_id, status) %>%
-    mutate(status = status * 100) %>%
-    select(region_id, score = status) %>%
-    mutate(dimension = 'status')
+    rename(econ_score = score) %>%
+    select(-layer_name, -data_year)
 
-  # trend
+  ## Fish stock sustainability
+  fish_access <- AlignManyDataYears("rao_fssi") %>%
+    filter(scenario_year == scen_year) %>%
+    rename(fssi_score = score) %>%
+    select(-layer_name, -data_year)
+
+
+  ## calculate status
+  rao_status <- econ_access %>%
+    left_join(fish_access) %>%
+    rowwise() %>%
+    mutate(status = sum(econ_score, fssi_score)/2*100,
+           dimension = 'status')
+
+  ## calculate trend
+  trend_data <- rao_status %>%
+    filter(!is.na(status))
 
   trend_years <- (scen_year - 4):(scen_year)
 
-  r.trend <- CalculateTrend(status_data = ry, trend_years = trend_years)
+  rao_trend <-
+    CalculateTrend(status_data = trend_data, trend_years = trend_years)
 
-  # return scores
-  scores <- rbind(r.status, r.trend) %>%
-    mutate(goal = 'AO')
+  ## calculate scores
+  rao_score <- rao_status %>%
+    filter(scenario_year == scen_year) %>%
+    select(region_id = rgn_id, score = status, dimension) %>%
+    bind_rows(rao_trend) %>%
+    mutate(goal = "RAO")
+
+  ## return final scores
+  scores <- rao_score %>%
+    select(region_id, goal, dimension, score)
 
   return(scores)
 }
