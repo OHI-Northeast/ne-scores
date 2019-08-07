@@ -727,26 +727,26 @@ HAB <- function(layers) {
     filter(scenario_year == scen_year) %>%
     mutate(habitat = "saltmarsh",
       status = ifelse(perc_loss <= 0, 100, 100-perc_loss)) %>% #this keeps the perc_loss from going negative from going above 100 for Maine
-    select(year = scenario_year, region_id = rgn_id, rgn_name, status, habitat)
+    select(year = scenario_year, region_id = rgn_id, status, habitat)
 
   ## eelgrass
   eelgrass <- AlignManyDataYears("hab_eelgrass") %>%
     filter(scenario_year == scen_year) %>%
     mutate(habitat = "eelgrass") %>%
-    select(year = scenario_year, region_id = rgn_id, rgn_name, status = score, habitat)
+    select(year = scenario_year, region_id = rgn_id, status = score, habitat)
 
   ## Offshore
   offshore <- AlignManyDataYears("hab_sasi") %>%
     filter(scenario_year == scen_year) %>%
     mutate(habitat = "offshore",
            status = 100 - (sasi*100)) %>%
-    select(year = scenario_year, region_id = rgn_id, rgn_name, status, habitat)
+    select(year = scenario_year, region_id = rgn_id, status, habitat)
 
   ## calculate status. eventually rbind() the other habitats here
   hab_status <- saltmarsh %>%
     rbind(eelgrass) %>%
     rbind(offshore) %>%
-    group_by(year, region_id, rgn_name) %>%
+    group_by(year, region_id) %>%
     summarize(status = mean(status, na.rm = T)) %>%
     mutate(dimension = 'status') %>%
     ungroup()
