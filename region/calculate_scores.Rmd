@@ -83,7 +83,7 @@ Run this to create flower plots for each region.
 
 ```{r plot, eval=FALSE}
 ## source script (to be incorporated into ohicore)
-source('https://raw.githubusercontent.com/OHI-Science/arc/master/circle2016/plot_flower_local.R')
+source('conf/arctic_flower_plot.R')
 
 PlotFlower(assessment_name = "US Northeast",
 dir_fig_save    = "reports/figures")
