@@ -322,7 +322,7 @@ PlotFlower <- function(region_plot     = NA,
     ggsave(filename = fig_save,
            plot = plot_obj,
            device = "png",
-           height = 6, width = 6, units = 'in', dpi = 300)
+           height = 6, width = 8, units = 'in', dpi = 300)
 
 
     ### ...then return the plot object for further use
