@@ -101,7 +101,7 @@ MAR <- function(layers) {
     filter(yr_num > 2) %>% #we want to start with the third year in the series since we use a 3 year rolling mean for production
     left_join(sustscores) %>%
     rowwise() %>%
-    mutate(sust_times_prod = production*sust_score,
+    mutate(sust_times_prod = production*rescaled,
            growth_score    = case_when(
              production > 0 & is.na(last_years_prod) ~ 1, #if last years production was non existent, but this year there is production, set the growth score to the highest (1).
              production == 0 & last_years_prod == 0 ~ 0,
@@ -679,9 +679,6 @@ CW <- function(layers) {
     full_join(trash) %>%
     full_join(path) %>%
     gather(key = layer, value = value, -region_id, -year)
-
-  ## saving cw_data for dashboard -- CONSIDER DOING THIS IN PREP
-  write.csv(cw_data, "~/github/ne-prep/prep/cw/data/region_layer_scores.csv")
 
  ## apply the geometric mean
   cw_status <- cw_data %>%

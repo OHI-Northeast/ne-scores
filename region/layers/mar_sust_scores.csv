@@ -1,10 +1,8 @@
-species,sustainabilityscore,sust_score
-Oysters,7.98,0.798
-Hard Clam,7.01,0.701
+species,sustainabilityscore,rescaled
+Hard Clam,8.39,0.8390000000000001
+Soft Shell Clam,7,0.7
 Blue Mussel,8.11,0.8109999999999999
-Atlantic Salmon,4.83,0.483
+Oysters,7.98,0.798
 Scallops,8.86,0.8859999999999999
-Soft Shell Clams,7.03,0.7030000000000001
-Trout,4.83,0.483
-Quahog,7.01,0.701
-Clams,7.01,0.701
+Atlantic Salmon,4.82,0.48200000000000004
+Trout,4.82,0.48200000000000004
