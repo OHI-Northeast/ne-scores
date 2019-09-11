@@ -1,9 +1,7 @@
 layer,category,subcategory
 prs_sqi,ecological,pollution
-po_chemicals_3nm,ecological,pollution
 prs_pathogens,ecological,pollution
 prs_wqi,ecological,pollution
-po_nutrients_3nm,ecological,pollution
 prs_trash,ecological,pollution
 sp_alien,ecological,alien_species
 sp_genetic,ecological,alien_species
