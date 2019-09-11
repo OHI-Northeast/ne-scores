@@ -663,10 +663,9 @@ CW <- function(layers) {
 
   ## trash calculated from pounds per person. The lower the better so here I inverse the values.
   trash <- AlignDataYears(layer_nm = "cw_trash", layers_obj = layers) %>%
-    mutate(trash_score = 1-score) %>%
     select(region_id = rgn_id,
            year = scenario_year,
-           trash_score)
+           trash_score = score)
 
   path <- AlignDataYears(layer_nm = "cw_pathogens", layers_obj = layers) %>%
     select(region_id = rgn_id,

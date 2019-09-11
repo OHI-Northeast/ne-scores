@@ -9,16 +9,16 @@ year,rgn_id,rgn_name,score
 2008,6,Maine,95.69328172685033
 2009,6,Maine,94.08188515042309
 2010,6,Maine,92.47048857399587
-2006,7,Massachusetts-Gulf of Maine,92.64705882352942
-2007,7,Massachusetts-Gulf of Maine,93.74168504635364
-2008,7,Massachusetts-Gulf of Maine,94.83631126917786
-2009,7,Massachusetts-Gulf of Maine,95.93093749200209
-2010,7,Massachusetts-Gulf of Maine,97.0255637148263
-2006,8,Massachusetts-Virginian,88.30766388927441
-2007,8,Massachusetts-Virginian,90.07500624264684
-2008,8,Massachusetts-Virginian,91.84234859601926
-2009,8,Massachusetts-Virginian,93.6096909493917
-2010,8,Massachusetts-Virginian,95.37703330276413
+2006,7,Massachusetts-North,92.64705882352942
+2007,7,Massachusetts-North,93.74168504635364
+2008,7,Massachusetts-North,94.83631126917786
+2009,7,Massachusetts-North,95.93093749200209
+2010,7,Massachusetts-North,97.0255637148263
+2006,8,Massachusetts-South,88.30766388927441
+2007,8,Massachusetts-South,90.07500624264684
+2008,8,Massachusetts-South,91.84234859601926
+2009,8,Massachusetts-South,93.6096909493917
+2010,8,Massachusetts-South,95.37703330276413
 2006,9,New Hampshire,71.2962962962963
 2007,9,New Hampshire,70.07802272885115
 2008,9,New Hampshire,68.859749161406
