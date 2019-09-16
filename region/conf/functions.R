@@ -206,22 +206,29 @@ RAO <- function(layers) {
 
   ## Economic access (gas prices compared to mean wage)
   econ_access <- AlignManyDataYears("rao_econ_access") %>%
-    filter(scenario_year == scen_year) %>%
-    rename(econ_score = score) %>%
+    rename(econ_score = score,
+           region_id = rgn_id) %>%
     select(-layer_name, -data_year)
 
   ## Fish stock sustainability
   fish_access <- AlignManyDataYears("rao_fssi") %>%
-    filter(scenario_year == scen_year) %>%
-    rename(fssi_score = score) %>%
+    rename(fssi_score = score,
+           region_id = rgn_id) %>%
     select(-layer_name, -data_year)
+
+  #coastal access
+  coast_access <- AlignDataYears(layer_nm = "tr_rao_coastal_access", layers_obj = layers)  %>%
+    select(-layer_name) %>%
+    rename(region_id = rgn_id,
+           access_score = score)
 
 
   ## calculate status
   rao_status <- econ_access %>%
     left_join(fish_access) %>%
+    left_join(coast_access) %>%
     rowwise() %>%
-    mutate(status = sum(econ_score, fssi_score)/2*100,
+    mutate(status = mean(econ_score, fssi_score, access_score, na.rm = T)*100,
            dimension = 'status')
 
   ## calculate trend
@@ -236,7 +243,7 @@ RAO <- function(layers) {
   ## calculate scores
   rao_score <- rao_status %>%
     filter(scenario_year == scen_year) %>%
-    select(region_id = rgn_id, score = status, dimension) %>%
+    select(region_id, score = status, dimension) %>%
     bind_rows(rao_trend) %>%
     mutate(goal = "RAO")
 
@@ -300,17 +307,20 @@ TR <- function(layers) {
   scen_year <- layers$data$scenario_year
 
   ## read in tourism jobs layer
-
   tourism_job_growth <-
     AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
     select(-layer_name, -X)
 
   ## read in beach closures layer
-
   beach <- AlignDataYears(layer_nm = "tr_beach_closures", layers_obj = layers) %>%
     select(-layer_name) %>%
     rename(region_id = rgn_id)
 
+  #coastal access
+  access <- AlignDataYears(layer_nm = "tr_rao_coastal_access", layers_obj = layers) %>%
+    select(-layer_name) %>%
+    rename(region_id = rgn_id,
+           access_score = score)
 
   # we don't set a specific target of job growth in the T&R sector. As long as regions are not losing jobs
   # in the sector, they receive a score of 100. We do set a minimum, or lower limit, of 25% job loss, where
@@ -330,8 +340,9 @@ TR <- function(layers) {
   tr_status <- tr_job_score %>%
     select(region_id = rgn_id, job_score, scenario_year) %>%
     left_join(beach) %>%
+    left_join(access) %>%
     rowwise() %>%
-    mutate(status = mean(c(perc_open, job_score))*100,
+    mutate(status = mean(c(perc_open, job_score, access_score))*100,
            dimension = 'status')
 
   # calculate trend
