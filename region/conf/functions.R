@@ -228,7 +228,7 @@ RAO <- function(layers) {
     left_join(fish_access) %>%
     left_join(coast_access) %>%
     rowwise() %>%
-    mutate(status = mean(econ_score, fssi_score, access_score, na.rm = T)*100,
+    mutate(status = mean(c(econ_score, fssi_score, access_score), na.rm = T)*100,
            dimension = 'status')
 
   ## calculate trend
