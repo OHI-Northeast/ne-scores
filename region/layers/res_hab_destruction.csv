@@ -1,12 +1,12 @@
-"","rgn_name","rgn_id","score"
-"1","Maine",6,0.3763971469511
-"2","New Hampshire",9,0.375
-"3","Massachusetts-North",7,0.416666666666667
-"4","Rhode Island",11,0.333333333333333
-"5","Connecticut",5,0.333333333333333
-"6","New York",10,0.375
-"7","Massachusetts-South",8,0.416666666666667
-"8","Gulf of Maine",3,0.202863612803608
-"9","Georges Bank",2,0.262107213568406
-"10","Mid-Atlantic Bight",4,0.0382356156761671
-"11","Offshore",1,1
+"","rgn_name","rgn_id","score","year"
+"1","Maine",6,0.3763971469511,2017
+"2","New Hampshire",9,0.375,2017
+"3","Massachusetts-North",7,0.416666666666667,2017
+"4","Rhode Island",11,0.333333333333333,2017
+"5","Connecticut",5,0.333333333333333,2017
+"6","New York",10,0.375,2017
+"7","Massachusetts-South",8,0.416666666666667,2017
+"8","Gulf of Maine",3,0.202863612803608,2017
+"9","Georges Bank",2,0.262107213568406,2017
+"10","Mid-Atlantic Bight",4,0.0382356156761671,2017
+"11","Offshore",1,1,2017
