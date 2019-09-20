@@ -38,6 +38,9 @@ library(ohicore)
 ## set the working directory to a filepath we all have
 setwd(here::here('region'))
 options(scipen=999)
+
+#Run following to update the layers.csv file with the latest information in layers_base.csv and to reset 
+source("layers_meta_data/layers_script.R")
 ```
 
 
@@ -59,6 +62,10 @@ for (s_year in scenario_years){  # s_year=2015
 
   ## configure checks
   conf   <-  ohicore::Conf('conf')
+  ohicore::CheckLayers(layers.csv = 'layers.csv',
+            layers.dir = 'layers',
+            flds_id    = conf$config$layers_id_fields)
+  #add CheckLayers() function here
   layers <-  ohicore::Layers(layers.csv = 'layers.csv', layers.dir = 'layers')
   layers$data$scenario_year <-  s_year
 

@@ -1,0 +1,55 @@
+﻿layer,filename,fld_value,units,name,description
+cc_acid,cc_acid_gl2017.csv,pressure_score,scaled 0-1,Ocean acidification,Ocean acidification pressure scaled using biological thresholds
+cc_slr,cc_slr_gl2017.csv,pressure_score,scaled 0-1,Sea level rise,Sea level rise pressure
+cc_sst,cc_sst.csv,pressure_score,scaled 0-1,Sea surface temperature,Sea surface temperature anomalies
+cw_pathogens,cw_pathogens.csv,perc_open,proportion,Pathogen-related beach closures,Proportion of swim season beaches are closed due to presence of pathogens
+cw_sqi,cw_sqi.csv,score,score 0-100,Sediment quality index score,Sediment quality index
+cw_trash,cw_trash.csv,score,scaled 0-1,Pounds per person,Pounds of trash collected per volunteer
+cw_wqi,cw_wqi.csv,score,score 0-100,Water quality index score,Water quality score
+eco_coast_gdp,eco_coast_gdp.csv,gdp_growth_rate,rate,GDP growth rate,GDP growth rate for coastal jobs
+element_wts_hab_pres_abs,element_wts_hab_pres_abs_gl2017.csv,boolean,boolean,Habitat weights,List of habitats in each region
+fis_meancatch,fis_meancatch.csv,mean_catch_times_prop,pounds,Fishery catch data,rolling three year mean of commercial catch by state
+fis_stockscores,fis_stockscores.csv,score,stock score,Stock scores,Fisheries stock scores between 0 and 1
+hab_eelgrass,hab_eelgrass.csv,score,score 0 - 100,Water Quality Index score,Water Quality Index Score
+hab_salt_marsh,hab_salt_marsh.csv,perc_loss,percent,Percent loss of habitat,Percent of habitat loss compared to historical values
+hab_sasi,hab_sasi.csv,sasi,score 0 - 1,SASI,SASI
+hd_intertidal,hd_intertidal_gl2017.csv,pressure_score,scaled 0-1,Intertidal habitat destruction,Coastal population density (25 mi from shore)  as a proxy for intertidal habitat destruction
+hd_subtidal,prs_sasi.csv,score,scaled 0-1,SASI,SASI
+hs_carbon_storage,hs_carbon_storage.csv,cs_score,score 0 - 100,Carbon storage,Carbon storage score based on eelgrass and salt marsh
+hs_coastal_protection,hs_coastal_protection.csv,cp_score,score 0 - 100,Coastal Protection,Coastal protection score based on eelgrass and salt marsh
+ico_scores,ico_scores.csv,score,score 0 - 1,Conservation status,Conservation status from IUCN or Natureserve per region
+le_coast_wages,le_coast_wages.csv,wage_growth_rate,rate,wage growth rate,growth rate in wages compared to the average of the previous 3 years
+le_job_growth,le_job_growth.csv,coast_job_growth,rate,job growth wate,growth rate of jobs compared to the average of the previous 3 years
+lsp_protected_land,lsp_protected_land.csv,prop_area,proportion,Inland coastal protected areas,Proportion of 1km inland area protected
+lsp_protected_marine,lsp_protected_marine.csv,prop_area,proportion,Offshore coastal protected areas,Proportion of state waters protected
+mar_production,mar_production.csv,production,tonnes,Tonnes of production,Tonnes of production with a 3 yr rolling average
+mar_sust_scores,mar_sust_scores.csv,rescaled,scaled 0 - 1,Seafood Watch sustainability scores,Seafood watch sustainability scores
+prs_bycatch,prs_bycatch.csv,pressure_score,scaled 0-1,Bycatch,Pressure from discards and bycatch
+prs_landings,prs_landings.csv,pressure_score,scaled 0-1,Landings,Pressure from targeted landings
+prs_pathogens,prs_pathogens.csv,perc_closed,scaled 0-1,Pathogen pollution,Percent of year with beaches closed due to presence of pathogens
+prs_sqi,prs_sqi.csv,score,scaled 0-1,Sediment quality index,Water quality score
+prs_trash,prs_trash.csv,score,scaled 0-1,Beach trash,Trash picked up during coastal cleanup day
+prs_wqi,prs_wqi.csv,score,scaled 0-1,Water quality index,Water quality score
+rao_econ_access,rao_econ_access.csv,score,scaled 0 - 1,Gas prices to wage ratio,Comparison of gas prices to mean wages
+rao_fssi,rao_fssi.csv,score,scaled 0-1,Fish stock sustainability,NOAA's fish stock sustainability index
+res_alien,sp_alien_species_gl2017.csv,resilience score,scaled 0-1,Management of nonindigenous species,Survey responses by country to the Convention on Biological Diversity (CBD) Third National Report: invasive species related questions
+res_climate_change,res_climate_change.csv,score,scaled 0-1,,
+res_fishing,res_fishing.csv,score,scaled 0-1,,
+res_hab_destruction,res_hab_destruction.csv,score,scaled 0-1,,
+res_social,res_social.csv,score,scaled 0-1,,
+res_species_diversity,fp_mpa_coast_gl2017.csv,resilience.score,scaled 0-1,Coastal protected marine areas (fishing preservation),Protected marine areas within 3nm of coastline (lasting special places goal status score)
+res_water_pollution,res_water_pollution.csv,score,scaled 0-1,,
+rgn_area,rgn_area.csv,area_km2,km2,Region areas based on EEZ boundaries,Area of Ocean Health Index regions modified from exclusive economic zones
+rgn_georegions,rgn_georegions_gl2017.csv,georgn_id,UN regions,UN geopolitical region classifications,"UN geopolitical regions (3 levels), often used for gapfilling missing data"
+rgn_global,rgn_global.csv,label,label,OHI regions,Subset of regions that are not deleted or disputed
+rgn_labels,rgn_labels.csv,label,label,Regions,"Regions by type (eez, subocean, unclaimed)"
+sp_alien,sp_alien_gl2017.csv,pressures.score,scaled 0-1,Nonindigenous species,Measure of harmful invasive species
+sp_genetic,sp_genetic_gl2017.csv,pressure_score,scaled 0-1,Genetic escapes,Introduced mariculture species (Mariculture Sustainability Index) as a proxy for genetic escapes
+spp_rgns,spp_rgns.csv,rgn_id,region,Region id where species exist,region id where species is found
+spp_status_scores,spp_status_scores.csv,score,scaled 0-1,Species conservation status score,Species conservation status score based on IUCN and NatureServe
+spp_trend,spp_trend.csv,score,0.25 to -0.25,species trends,species population trends
+ss_spi,ss_spi_gl2017.csv,pressure_score,scaled 0-1,Weakness of social progress,Inverse of Social Progress Index scores
+ss_wgi,ss_wgi_gl2017.csv,pressure_score,scaled 0-1,Weakness of governance,Inverse of World Governance Indicators (WGI) six combined scores
+tr_beach_closures,tr_beach_closures.csv,perc_open,proportion,Proportion of swim season beaches are open on average,Proportion of swim season beaches are open on average
+tr_job_growth,tr_job_growth.csv,tr_job_growth,rate,job growth rate,Job growth rate in T&R sector compared to avg of previous 3 years
+tr_rao_coastal_access,tr_rao_coastal_access.csv,score,score 0 - 1,proportion of coast with an access point,proportion of coast with an access point

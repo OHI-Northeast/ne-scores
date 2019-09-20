@@ -1,9 +1,6 @@
 goal,element,res_water_pollution,res_fishing,res_climate_change,res_alien,res_hab_destruction,res_social,res_species_diversity
-RAO,fisheries,,x,x,,x,x,x
-RAO,economic,,x,x,,x,x,x
-RAO,coastal,x,,x,,x,x,x
-HS,saltmarsh,x,,x,,x,x,x
-HS,seagrass,x,,x,,x,x,x
+RAO,,x,x,x,,x,x,x
+HS,,x,,x,,x,x,x
 CW,,x,,x,,,x,x
 ECO,,,,,,,x,x
 FIS,,,x,x,,x,x,x
