@@ -7,8 +7,7 @@ sp_alien,ecological,alien_species
 sp_genetic,ecological,alien_species
 hd_subtidal,ecological,habitat_destruction
 hd_intertidal,ecological,habitat_destruction
-prs_bycatch,ecological,fishing_pressure
-prs_landings,ecological,fishing_pressure
+prs_fishing,ecological,fishing_pressure
 cc_sst,ecological,climate_change
 cc_acid,ecological,climate_change
 cc_uv,ecological,climate_change

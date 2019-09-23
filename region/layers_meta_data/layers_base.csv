@@ -24,8 +24,7 @@ lsp_protected_land,lsp_protected_land.csv,prop_area,proportion,Inland coastal pr
 lsp_protected_marine,lsp_protected_marine.csv,prop_area,proportion,Offshore coastal protected areas,Proportion of state waters protected
 mar_production,mar_production.csv,production,tonnes,Tonnes of production,Tonnes of production with a 3 yr rolling average
 mar_sust_scores,mar_sust_scores.csv,rescaled,scaled 0 - 1,Seafood Watch sustainability scores,Seafood watch sustainability scores
-prs_bycatch,prs_bycatch.csv,pressure_score,scaled 0-1,Bycatch,Pressure from discards and bycatch
-prs_landings,prs_landings.csv,pressure_score,scaled 0-1,Landings,Pressure from targeted landings
+prs_fishing,prs_fishing.csv,pressure_score,scaled 0-1,Fishing pressure,Pressure from fishing biomass removal
 prs_pathogens,prs_pathogens.csv,perc_closed,scaled 0-1,Pathogen pollution,Percent of year with beaches closed due to presence of pathogens
 prs_sqi,prs_sqi.csv,score,scaled 0-1,Sediment quality index,Water quality score
 prs_trash,prs_trash.csv,score,scaled 0-1,Beach trash,Trash picked up during coastal cleanup day

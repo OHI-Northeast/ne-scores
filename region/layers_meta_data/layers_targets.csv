@@ -61,12 +61,6 @@ mar_production,MAR,status
 mar_sust_scores,MAR,status
 rao_econ_access,RAO,status
 rao_fssi,RAO,status
-prs_bycatch,RAO,pressure
-prs_bycatch,FIS,pressure
-prs_bycatch,ICO,pressure
-prs_bycatch,LSP,pressure
-prs_bycatch,SPP,pressure
-prs_bycatch,TR,pressure
 prs_landings,RAO,pressure
 prs_landings,FIS,pressure
 prs_landings,ICO,pressure
