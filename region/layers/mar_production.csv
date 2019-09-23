@@ -46,13 +46,13 @@ year,rgn_id,Species,production,yr_num,last_years_prod
 2008,6,Atlantic Salmon,12913181.333333334,9,10156219
 2009,6,Atlantic Salmon,13998357,10,12913181.333333334
 2010,6,Atlantic Salmon,19321244.666666668,11,13998357
-2011,6,Atlantic Salmon,19045205.5,12,19321244.666666668
-2012,6,Atlantic Salmon,24530940,13,19045205.5
-2013,6,Atlantic Salmon,NaN,14,24530940
-2014,6,Atlantic Salmon,NaN,15,NaN
-2015,6,Atlantic Salmon,NaN,16,NaN
-2016,6,Atlantic Salmon,NaN,17,NaN
-2017,6,Atlantic Salmon,NaN,18,NaN
+2011,6,Atlantic Salmon,20873783.666666668,12,19321244.666666668
+2012,6,Atlantic Salmon,24530940,13,20873783.666666668
+2013,6,Atlantic Salmon,24530940,14,24530940
+2014,6,Atlantic Salmon,24530940,15,24530940
+2015,6,Atlantic Salmon,24530940,16,24530940
+2016,6,Atlantic Salmon,24530940,17,24530940
+2017,6,Atlantic Salmon,24530940,18,24530940
 2000,6,Blue Mussel,NaN,1,NA
 2001,6,Blue Mussel,NaN,2,NaN
 2002,6,Blue Mussel,NaN,3,NaN
@@ -89,24 +89,6 @@ year,rgn_id,Species,production,yr_num,last_years_prod
 2015,6,Oysters,5735493.666666667,16,4008539.6666666665
 2016,6,Oysters,7142745,17,5735493.666666667
 2017,6,Oysters,8202352.5,18,7142745
-2000,6,Trout,NaN,1,NA
-2001,6,Trout,0,2,NaN
-2002,6,Trout,0,3,0
-2003,6,Trout,0,4,0
-2004,6,Trout,0,5,0
-2005,6,Trout,0,6,0
-2006,6,Trout,0,7,0
-2007,6,Trout,0,8,0
-2008,6,Trout,0,9,0
-2009,6,Trout,0,10,0
-2010,6,Trout,0,11,0
-2011,6,Trout,0,12,0
-2012,6,Trout,0,13,0
-2013,6,Trout,NaN,14,0
-2014,6,Trout,NaN,15,NaN
-2015,6,Trout,NaN,16,NaN
-2016,6,Trout,NaN,17,NaN
-2017,6,Trout,NaN,18,NaN
 2000,7,Hard Clam,NaN,1,NA
 2000,8,Hard Clam,NaN,1,NA
 2001,7,Hard Clam,NaN,2,NaN

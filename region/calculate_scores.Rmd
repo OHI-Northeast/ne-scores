@@ -96,13 +96,4 @@ PlotFlower(assessment_name = "US Northeast",
 dir_fig_save    = "reports/figures")
 ```
 
-## Example workflow
 
-These code chunks will help you as you develop individual goal models in `conf/functions.R`. A good workflow is:
-
-1. prepare data layers in the prep/ folders (script as much as possible in R)
-2. register data layers in layers.csv and save them in layers/ folder
-3. update information in conf/scenario_data_years.csv
-4. run the Configure Toolbox code chunk
-5. develop goal models in functions.r, running individual goal models line by line
-6. calculate scores when the model is developed (remember to re-run Configure Toolbox first!)
