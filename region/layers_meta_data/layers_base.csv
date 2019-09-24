@@ -36,7 +36,7 @@ res_climate_change,res_climate_change.csv,score,scaled 0-1,,
 res_fishing,res_fishing.csv,score,scaled 0-1,,
 res_hab_destruction,res_hab_destruction.csv,score,scaled 0-1,,
 res_social,res_social.csv,score,scaled 0-1,,
-res_species_diversity,fp_mpa_coast_gl2017.csv,resilience.score,scaled 0-1,Coastal protected marine areas (fishing preservation),Protected marine areas within 3nm of coastline (lasting special places goal status score)
+res_eco_integrity,res_eco_integrity.csv,resilience_score,scaled 0-1,Species status,Species status as calculated in the SPP goal but used as a measure of ecological resilience
 res_water_pollution,res_water_pollution.csv,score,scaled 0-1,,
 rgn_area,rgn_area.csv,area_km2,km2,Region areas based on EEZ boundaries,Area of Ocean Health Index regions modified from exclusive economic zones
 rgn_georegions,rgn_georegions_gl2017.csv,georgn_id,UN regions,UN geopolitical region classifications,"UN geopolitical regions (3 levels), often used for gapfilling missing data"
