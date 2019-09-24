@@ -7,7 +7,7 @@ cw_sqi,cw_sqi.csv,score,score 0-100,Sediment quality index score,Sediment qualit
 cw_trash,cw_trash.csv,score,scaled 0-1,Pounds per person,Pounds of trash collected per volunteer
 cw_wqi,cw_wqi.csv,score,score 0-100,Water quality index score,Water quality score
 eco_coast_gdp,eco_coast_gdp.csv,gdp_growth_rate,rate,GDP growth rate,GDP growth rate for coastal jobs
-element_wts_hab_pres_abs,element_wts_hab_pres_abs_gl2017.csv,boolean,boolean,Habitat weights,List of habitats in each region
+element_wts_hab_pres_abs,element_wts_hab_pres_abs.csv,boolean,boolean,Habitat weights,List of habitats in each region
 fis_meancatch,fis_meancatch.csv,mean_catch_times_prop,pounds,Fishery catch data,rolling three year mean of commercial catch by state
 fis_stockscores,fis_stockscores.csv,score,stock score,Stock scores,Fisheries stock scores between 0 and 1
 hab_eelgrass,hab_eelgrass.csv,score,score 0 - 100,Water Quality Index score,Water Quality Index Score

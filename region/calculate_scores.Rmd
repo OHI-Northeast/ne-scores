@@ -65,7 +65,6 @@ for (s_year in scenario_years){  # s_year=2015
   ohicore::CheckLayers(layers.csv = 'layers.csv',
             layers.dir = 'layers',
             flds_id    = conf$config$layers_id_fields)
-  #add CheckLayers() function here
   layers <-  ohicore::Layers(layers.csv = 'layers.csv', layers.dir = 'layers')
   layers$data$scenario_year <-  s_year
 
