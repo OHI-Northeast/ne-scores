@@ -732,21 +732,18 @@ HAB <- function(layers) {
   ## salt marsh
   saltmarsh <- AlignManyDataYears("hab_salt_marsh") %>%
     filter(scenario_year == scen_year) %>%
-    mutate(habitat = "saltmarsh",
-      status = ifelse(perc_loss <= 0, 100, 100-perc_loss)) %>% #this keeps the perc_loss from going negative from going above 100 for Maine
+    mutate(status = ifelse(perc_loss <= 0, 100, 100-perc_loss)) %>% #this keeps the perc_loss from going negative from going above 100 for Maine
     select(year = scenario_year, region_id = rgn_id, status, habitat)
 
   ## eelgrass
   eelgrass <- AlignManyDataYears("hab_eelgrass") %>%
     filter(scenario_year == scen_year) %>%
-    mutate(habitat = "eelgrass") %>%
     select(year = scenario_year, region_id = rgn_id, status = score, habitat)
 
   ## Offshore
   offshore <- AlignManyDataYears("hab_sasi") %>%
     filter(scenario_year == scen_year) %>%
-    mutate(habitat = "offshore",
-           status = 100 - (sasi*100)) %>%
+    mutate(status = 100 - (sasi*100)) %>%
     select(year = scenario_year, region_id = rgn_id, status, habitat)
 
   ## calculate status. eventually rbind() the other habitats here
@@ -778,6 +775,24 @@ HAB <- function(layers) {
   ## return final scores
   scores <- hab_score %>%
     select(region_id, goal, dimension, score)
+
+  ## create weights file for pressures/resilience calculations. This identifies
+  ## what regions contain what habitats
+
+  weights <- saltmarsh %>%
+    rbind(eelgrass) %>%
+    rbind(offshore)  %>%
+    filter(!is.na(status)) %>%
+    select(-status) %>%
+    dplyr::mutate(boolean = 1) %>%
+    dplyr::mutate(layer = "element_wts_hab_pres_abs") %>%
+    dplyr::select(rgn_id = region_id, habitat, boolean, layer)
+
+  write.csv(weights,
+            sprintf(here("region/temp/element_wts_hab_pres_abs_%s.csv"), scen_year),
+            row.names = FALSE)
+
+  layers$data$element_wts_hab_pres_abs <- weights
 
   return(scores)
 }

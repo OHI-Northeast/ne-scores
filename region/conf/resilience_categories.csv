@@ -1,5 +1,5 @@
 layer,category,category_type,subcategory,weight
-res_species_diversity,ecological,ecosystem,res_species_diversity,1
+res_eco_integrity,ecological,ecosystem,res_eco_integrity,1
 res_water_pollution,ecological,regulatory,res_water_pollution,1
 res_climate_change,ecological,regulatory,res_climate_change,1
 res_alien,ecological,regulatory,res_alien,1
