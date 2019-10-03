@@ -32,7 +32,7 @@ prs_wqi,prs_wqi.csv,score,scaled 0-1,Water quality index,Water quality score
 prs_social,prs_social.csv,pressure_score,scaled 0 - 1,Socal pressure,Social pressure derived from NOAAs social vulnerability index
 rao_econ_access,rao_econ_access.csv,score,scaled 0 - 1,Gas prices to wage ratio,Comparison of gas prices to mean wages
 rao_fssi,rao_fssi.csv,score,scaled 0-1,Fish stock sustainability,NOAA's fish stock sustainability index
-res_alien,sp_alien_species_gl2017.csv,resilience score,scaled 0-1,Management of nonindigenous species,Survey responses by country to the Convention on Biological Diversity (CBD) Third National Report: invasive species related questions
+res_alien,res_alien.csv,score,scaled 0-1,,
 res_climate_change,res_climate_change.csv,score,scaled 0-1,,
 res_fishing,res_fishing.csv,score,scaled 0-1,,
 res_hab_destruction,res_hab_destruction.csv,score,scaled 0-1,,
