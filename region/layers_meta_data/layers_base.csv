@@ -1,6 +1,6 @@
 ﻿layer,filename,fld_value,units,name,description
 cc_acid,cc_acid_gl2017.csv,pressure_score,scaled 0-1,Ocean acidification,Ocean acidification pressure scaled using biological thresholds
-cc_slr,cc_slr_gl2017.csv,pressure_score,scaled 0-1,Sea level rise,Sea level rise pressure
+cc_slr,cc_slr.csv,pressure_score,scaled 0-1,Sea level rise,Sea level rise pressure
 cc_sst,cc_sst.csv,pressure_score,scaled 0-1,Sea surface temperature,Sea surface temperature anomalies
 cw_pathogens,cw_pathogens.csv,perc_open,proportion,Pathogen-related beach closures,Proportion of swim season beaches are closed due to presence of pathogens
 cw_sqi,cw_sqi.csv,score,score 0-100,Sediment quality index score,Sediment quality index
@@ -14,7 +14,6 @@ hab_eelgrass,hab_eelgrass.csv,score,score 0 - 100,Water Quality Index score,Wate
 hab_salt_marsh,hab_salt_marsh.csv,perc_loss,percent,Percent loss of habitat,Percent of habitat loss compared to historical values
 hab_sasi,hab_sasi.csv,sasi,score 0 - 1,SASI,SASI
 hd_intertidal,hd_intertidal_gl2017.csv,pressure_score,scaled 0-1,Intertidal habitat destruction,Coastal population density (25 mi from shore)  as a proxy for intertidal habitat destruction
-hd_subtidal,prs_sasi.csv,score,scaled 0-1,SASI,SASI
 hs_carbon_storage,hs_carbon_storage.csv,cs_score,score 0 - 100,Carbon storage,Carbon storage score based on eelgrass and salt marsh
 hs_coastal_protection,hs_coastal_protection.csv,cp_score,score 0 - 100,Coastal Protection,Coastal protection score based on eelgrass and salt marsh
 ico_scores,ico_scores.csv,score,score 0 - 1,Conservation status,Conservation status from IUCN or Natureserve per region
@@ -26,18 +25,19 @@ mar_production,mar_production.csv,production,tonnes,Tonnes of production,Tonnes 
 mar_sust_scores,mar_sust_scores.csv,rescaled,scaled 0 - 1,Seafood Watch sustainability scores,Seafood watch sustainability scores
 prs_fishing,prs_fishing.csv,pressure_score,scaled 0-1,Fishing pressure,Pressure from fishing biomass removal
 prs_pathogens,prs_pathogens.csv,perc_closed,scaled 0-1,Pathogen pollution,Percent of year with beaches closed due to presence of pathogens
+hd_subtidal,hd_subtidal.csv,score,scaled 0-1,SASI,SASI
+prs_social,prs_social.csv,pressure_score,scaled 0 - 1,Socal pressure,Social pressure derived from NOAAs social vulnerability index
 prs_sqi,prs_sqi.csv,score,scaled 0-1,Sediment quality index,Water quality score
 prs_trash,prs_trash.csv,score,scaled 0-1,Beach trash,Trash picked up during coastal cleanup day
 prs_wqi,prs_wqi.csv,score,scaled 0-1,Water quality index,Water quality score
-prs_social,prs_social.csv,pressure_score,scaled 0 - 1,Socal pressure,Social pressure derived from NOAAs social vulnerability index
 rao_econ_access,rao_econ_access.csv,score,scaled 0 - 1,Gas prices to wage ratio,Comparison of gas prices to mean wages
 rao_fssi,rao_fssi.csv,score,scaled 0-1,Fish stock sustainability,NOAA's fish stock sustainability index
-res_alien,sp_alien_species_gl2017.csv,resilience score,scaled 0-1,Management of nonindigenous species,Survey responses by country to the Convention on Biological Diversity (CBD) Third National Report: invasive species related questions
+res_alien,res_alien.csv,score,scaled 0-1,,
 res_climate_change,res_climate_change.csv,score,scaled 0-1,,
+res_eco_integrity,res_eco_integrity.csv,resilience_score,scaled 0-1,Species status,Species status as calculated in the SPP goal but used as a measure of ecological resilience
 res_fishing,res_fishing.csv,score,scaled 0-1,,
 res_hab_destruction,res_hab_destruction.csv,score,scaled 0-1,,
 res_social,res_social.csv,score,scaled 0-1,Social resilience,Social resilience derived from NOAA's social vulnerability index
-res_eco_integrity,res_eco_integrity.csv,resilience_score,scaled 0-1,Species status,Species status as calculated in the SPP goal but used as a measure of ecological resilience
 res_water_pollution,res_water_pollution.csv,score,scaled 0-1,,
 rgn_area,rgn_area.csv,area_km2,km2,Region areas based on EEZ boundaries,Area of Ocean Health Index regions modified from exclusive economic zones
 rgn_georegions,rgn_georegions_gl2017.csv,georgn_id,UN regions,UN geopolitical region classifications,"UN geopolitical regions (3 levels), often used for gapfilling missing data"
