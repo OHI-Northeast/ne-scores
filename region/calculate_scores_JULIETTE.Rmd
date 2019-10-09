@@ -55,6 +55,11 @@ Run this chunk to calculate and save scores as `scores` object and as `scores.cs
 scenario_years <- c(2005:2017)
 scores_all_years <- data.frame()
 
+#because of a weird issue in the ohicore CalculateResilience All function, I created my own resilience function and then 
+#force R to use it by sourcing an updated CalculateAll function. Ideally, we fix it in ohicore and remove the next two lines
+source("conf/ne_resilience_function.R")
+source("conf/calculate_all_function.R")
+
 ## loop through each scenario year
 for (s_year in scenario_years){  # s_year=2015
 
@@ -69,7 +74,7 @@ for (s_year in scenario_years){  # s_year=2015
   layers$data$scenario_year <-  s_year
 
   ## calculate scores
-  scores_sy <- ohicore::CalculateAll(conf, layers) %>%
+  scores_sy <- CalculateAll(conf, layers) %>%
     mutate(year = s_year)
 
   ## bind scores to dataframe
@@ -89,10 +94,12 @@ Run this to create flower plots for each region.
 
 ```{r plot, eval=FALSE}
 ## source script (to be incorporated into ohicore)
+#source('conf/arctic_flower_plot.R')
 source('conf/arctic_flower_plot.R')
 
-PlotFlower(assessment_name = "US Northeast",
-dir_fig_save    = "reports/figures")
+PlotFlower(assessment_name = "US Northeast")
+
+#,dir_fig_save    = "reports/figures")
 ```
 
 

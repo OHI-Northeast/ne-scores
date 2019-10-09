@@ -1,6 +1,6 @@
-#' Flower plots for US Northeast OHI scores
-#' By Jamie Afflerbach
-#' Assumes you are in the region folder, and will rely on scores.csv and conf/goals.csv
+#' Flower plots for OHI scores
+#' By Casey O'Hara, Julia Lowndes, Melanie Frazier github.com/ohi-science
+#' Assumes you are in the scenario folder, and will rely on scores.csv and conf/goals.csv
 #' will save figs to reports/figures, and list them in regions_figs.csv
 #'
 #' param scores scores dataframe. default = NULL, which then reads in scores.csv
@@ -22,7 +22,7 @@ library(RColorBrewer)
 #'
 PlotFlower <- function(region_plot     = NA,
                        year_plot       = NA,
-                       assessment_name = "OHI Northeast Assessment",
+                       assessment_name = "OHI Assessment",
                        dir_fig_save    = "reports/figures") {
 
 
@@ -76,20 +76,10 @@ PlotFlower <- function(region_plot     = NA,
   conf <- conf %>%
     left_join(supra_lookup, by = 'parent') %>%
     filter(!(goal %in% goals_supra)) %>%
-    dplyr::select(-preindex_function, -postindex_function, -description) %>%
+    dplyr::select(goal, order_color, order_hierarchy,
+                  weight, name_supra, name_flower) %>%
     mutate(name_flower = gsub("\\n", "\n", name_flower, fixed = TRUE)) %>%
     arrange(order_hierarchy)
-
-  ###GRABBED THIS FROM ELLIE
-  if(labels %in% c("curved", "arc")){
-    plot_config <- plot_config %>%
-      dplyr::rowwise() %>%
-      dplyr::mutate(
-        f = stringr::str_split(name_flower, "\n"),
-        f1 = ifelse(order_calculate <= max(plot_config$order_calculate)/2, f[1],  f[2]),
-        f2 = ifelse(order_calculate <= max(plot_config$order_calculate)/2, f[2], f[1])) %>%
-      dplyr::select(-f)
-  }
 
   ## join scores and conf ----
   score_df <- scores %>%
@@ -181,13 +171,34 @@ PlotFlower <- function(region_plot     = NA,
   dark_fill  <- 'grey22'
 
 
-  ## Mel's color palette ----
-  reds <-  grDevices::colorRampPalette(
-    c("#A50026", "#D73027", "#F46D43", "#FDAE61", "#FEE090"),
-    space="Lab")(65)
-  blues <-  grDevices::colorRampPalette(
-    c("#E0F3F8", "#ABD9E9", "#74ADD1", "#4575B4", "#313695"))(35)
-  myPalette <-   c(reds, blues)
+  ## Juliette's color pallet with shiny colors
+
+  red <- c("#DD4B39")
+  purple <- c("#605CA8")
+  blue <- c("#0073B7")
+  aqua <- c("#00C0EF")
+  yellow <- c("#F39C12")
+  orange <- c("#FF851B")
+  navy <- c("#001F3F")
+  green <- c("#00A65A")
+  olive <- c("#3D9970")
+  fuscia <- c("#F012BE")
+  maroon <- c("#D81B60")
+  teal <- c("#39CCCC")
+  light_blue <- c("#3C8DBC")
+
+  myPalette <- c("HS" = maroon, ## habitat services
+                 "RAO" = red, ## resource access opportunities
+                 "MAR" = fuscia, ## food provision: aquaculture/mariculture
+                 "FIS" = purple, ## food provision: fishing
+                 "SPP"  = blue, ## biodiversity: species
+                 "HAB" = light_blue, ## biodiversity: habitat
+                 "CW" = aqua, ## clean waters
+                 "LSP" = teal, ## sense of place: lasting special places
+                 "ICO" = olive, ## sense of place: iconic species,
+                 "ECO" = green, ## livelihood/economies: economies,
+                 "LIV" = yellow, ## liveihood/economies: livelihoods
+                 "TR" = orange) ## tourism and recreation
 
 
   ## filenaming for labeling and saving ----
@@ -243,7 +254,7 @@ PlotFlower <- function(region_plot     = NA,
 
     ## set up basic plot parameters ----
     plot_obj <- ggplot(data = plot_df,
-                       aes(x = pos, y = score, fill = score, width = weight))
+                       aes(x = pos, y = score, width = weight, fill= goal))
 
     ## sets up the background/borders to the external boundary (100%) of plot
     plot_obj <- plot_obj +
@@ -262,7 +273,7 @@ PlotFlower <- function(region_plot     = NA,
     ## establish the basics of the flower plot
     plot_obj <- plot_obj +
       ## plot the actual scores on top of background/borders:
-      geom_bar(stat = 'identity', color = dark_line, size = .2) +
+      geom_bar(stat = 'identity', color = dark_line, size = .2, alpha = 0.8) +
       ## emphasize edge of petal
       geom_errorbar(aes(x = pos, ymin = score, ymax = score),
                     size = 0.5, color = dark_line, show.legend = NA) +
@@ -271,16 +282,14 @@ PlotFlower <- function(region_plot     = NA,
                     size = 0.5, color = dark_line, show.legend = NA) +
       ## turn linear bar chart into polar coordinates start at 90 degrees (pi*.5)
       coord_polar(start = pi * 0.5) +
-      ## set petal colors to the red-yellow-blue color scale:
-      scale_fill_gradientn(colours=myPalette, na.value="black",
-                           limits = c(0, 100)) +
+      ## set petal colors to the shiny colors assigned to goals
+      ggplot2::scale_fill_manual(values = myPalette, na.value="black", aesthetics = "fill")+
       ## use weights to assign widths to petals:
       scale_x_continuous(labels = plot_df$goal, breaks = plot_df$pos, limits = p_limits) +
       scale_y_continuous(limits = c(-blank_circle_rad,
                                     ifelse(first(goal_labels == TRUE) |
                                              is.data.frame(goal_labels),
                                            150, 100)))
-
 
     ## add center number and title
     plot_obj <- plot_obj +
@@ -290,8 +299,8 @@ PlotFlower <- function(region_plot     = NA,
                 x = 0, y = -blank_circle_rad,
                 hjust = .5, vjust = .5,
                 size = 12,
-                color = dark_line) +
-      labs(title = str_replace_all(region_name, '-', ' - '))
+                color = dark_line) #+
+      #labs(title = str_replace_all(region_name, '-', ' - '))
 
 
     ### clean up the theme
@@ -347,7 +356,7 @@ ggtheme_plot <- function(base_size = 9) {
         text             = element_text(family = 'Helvetica', color = 'gray30', size = base_size),
         plot.title       = element_text(size = rel(3), hjust = 0.5, vjust=-2, face = 'bold'),
         panel.background = element_blank(),
-        legend.position  = 'right',
+        legend.position  = "none",
         panel.border     = element_blank(),
         panel.grid.minor = element_blank(),
         panel.grid.major = element_line(colour = 'grey90', size = .25),
