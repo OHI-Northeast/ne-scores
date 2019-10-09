@@ -188,17 +188,17 @@ PlotFlower <- function(region_plot     = NA,
   light_blue <- c("#3C8DBC")
 
   myPalette <- c("HS" = maroon, ## habitat services
-                 "RAO" = red, ## resource access opportunities
-                 "MAR" = fuscia, ## food provision: aquaculture/mariculture
-                 "FIS" = purple, ## food provision: fishing
-                 "SPP"  = blue, ## biodiversity: species
-                 "HAB" = light_blue, ## biodiversity: habitat
-                 "CW" = aqua, ## clean waters
-                 "LSP" = teal, ## sense of place: lasting special places
-                 "ICO" = olive, ## sense of place: iconic species,
-                 "ECO" = green, ## livelihood/economies: economies,
-                 "LIV" = yellow, ## liveihood/economies: livelihoods
-                 "TR" = orange) ## tourism and recreation
+                 "RAO" = fuscia, ## resource access opportunities
+                 "MAR" = purple, ## food provision: aquaculture/mariculture
+                 "FIS" = blue, ## food provision: fishing
+                 "SPP"  = light_blue, ## biodiversity: species
+                 "HAB" = aqua, ## biodiversity: habitat
+                 "CW" = teal, ## clean waters
+                 "LSP" = olive, ## sense of place: lasting special places
+                 "ICO" = green, ## sense of place: iconic species,
+                 "ECO" = yellow, ## livelihood/economies: economies,
+                 "LIV" = orange, ## liveihood/economies: livelihoods
+                 "TR" = red) ## tourism and recreation
 
 
   ## filenaming for labeling and saving ----
