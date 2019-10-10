@@ -113,7 +113,7 @@ MAR <- function(layers) {
     mutate(prop_prod = production/total_rgn_prod, #calculate species specific proportion of production for each region and year
            prod_weighted_score = prop_prod * growth_score*100) %>%
     group_by(rgn_id, year) %>%
-    summarize(status = sum(prod_weighted_score)) %>%
+    summarize(status = sum(prod_weighted_score, na.rm = T)) %>%
     ungroup() %>%
     rename(region_id = rgn_id) %>%
     mutate(dimension = 'status')
