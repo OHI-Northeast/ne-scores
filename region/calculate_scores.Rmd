@@ -101,7 +101,7 @@ dir_fig_save    = "reports/figures")
 
 #crop figures because the white space is too big
 library(magick) #this library has image_trim
-imgs <- list.files("reports/figures", pattern = ".png", full.names = T)
+imgs <- list.files("reports/figures", pattern = "^flower_", full.names = T)
 
 for(i in 1:length(imgs)){
   filename <- paste0("reports/figures/trimmed_", basename(imgs[i]))
