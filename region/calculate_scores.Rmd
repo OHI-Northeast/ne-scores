@@ -98,7 +98,10 @@ source('conf/flower_plot.R')
 
 PlotFlower(assessment_name = "US Northeast",
 dir_fig_save    = "reports/figures")
+```
 
+Only run this if the above images have changed.
+```{r eval=FALSE}
 #crop figures because the white space is too big
 library(magick) #this library has image_trim
 imgs <- list.files("reports/figures", pattern = "^flower_", full.names = T)
