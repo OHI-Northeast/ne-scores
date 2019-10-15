@@ -40,6 +40,9 @@ PlotFlower <- function(region_plot     = NA,
   if(is.na(year_plot)){
     scores <- scores %>%
       filter(year == max(year))
+  }else{
+    scores <- scores %>%
+      filter(year == year_plot)
   }
 
   ## filters the region of interest, otherwise all goals are printed
@@ -124,7 +127,8 @@ PlotFlower <- function(region_plot     = NA,
 
     ## read in weights
     w <- read_csv(w_fn) %>%
-      dplyr::select(rgn_id, w_fis)
+      filter(year == year_plot) %>%
+      dplyr::select(rgn_id = region_id, w_fis)
     w <- rbind(w, data.frame(rgn_id = 0, w_fis = mean(w$w_fis))) %>%
       arrange(rgn_id)
 
@@ -186,6 +190,7 @@ PlotFlower <- function(region_plot     = NA,
   maroon <- c("#D81B60")
   teal <- c("#39CCCC")
   light_blue <- c("#3C8DBC")
+  lime <- c("#00FF00")
 
   myPalette <- c("HS" = maroon, ## habitat services
                  "RAO" = fuscia, ## resource access opportunities
@@ -196,6 +201,7 @@ PlotFlower <- function(region_plot     = NA,
                  "CW" = teal, ## clean waters
                  "LSP" = olive, ## sense of place: lasting special places
                  "ICO" = green, ## sense of place: iconic species,
+                 "SPFIS" = lime, ## sense of place: fishing engagement
                  "ECO" = yellow, ## livelihood/economies: economies,
                  "LIV" = orange, ## liveihood/economies: livelihoods
                  "TR" = red) ## tourism and recreation
@@ -222,7 +228,7 @@ PlotFlower <- function(region_plot     = NA,
 
 
   ## loop through to save flower plot for each region ----
-  for (region in region_plots) { # region = 301
+  for (region in region_plots) { # region = 7
 
     ## filter region info, setup to plot ----
     plot_df <- score_df %>%
@@ -315,7 +321,7 @@ PlotFlower <- function(region_plot     = NA,
     plot_obj <- plot_obj +
       geom_text(aes(label = name_flower, x = pos, y = 120),
                 hjust = .5, vjust = .5,
-                size = 3,
+                size = 2.75,
                 color = dark_line)
 
 
@@ -330,7 +336,7 @@ PlotFlower <- function(region_plot     = NA,
       geom_text(data = supra_df, inherit.aes = FALSE,
                 aes(label = name_supra, x = pos_supra, y = supra_rad, angle = myAng),
                 hjust = .5, vjust = .5,
-                size = 3,
+                size = 2.75,
                 color = dark_line)
 
 

@@ -160,7 +160,7 @@ FP <- function(layers, scores) {
       catch = mean_catch
     ) %>%
     group_by(region_id, year) %>%
-    summarize(total_catch = sum(catch))
+    summarize(total_catch = sum(catch, na.rm = T))
 
   #mariculture production
   m <-
@@ -168,7 +168,7 @@ FP <- function(layers, scores) {
     mutate(species = as.character(Species),
            year = scenario_year) %>%
     group_by(rgn_id, year) %>%
-    summarize(total_production = sum(production))
+    summarize(total_production = sum(production, na.rm = T))
 
   #combine
   w <- m %>%
@@ -177,6 +177,8 @@ FP <- function(layers, scores) {
     rowwise() %>%
     mutate(w_fis = total_catch/sum(total_production, total_catch,na.rm = T),
            w_mar = 1-w_fis)
+
+  write_csv(w, "layers/fp_wildcaught_weight.csv")
 
 
   # combine with FIS and MAR scores
@@ -626,10 +628,56 @@ LSP <- function(layers) {
   return(lsp_scores)
 }
 
+SPFIS <- function(layers){
+
+  scen_year <- layers$data$scenario_year
+
+  # commercial
+  comm <- AlignDataYears(layer_nm = "sop_comm_engagement", layers_obj = layers) %>%
+    select(-layer_name, -sop_comm_engagement_year, -ref, -mean_score) %>%
+    mutate(layer = "commercial")
+
+  # recreational
+  rec  <- AlignDataYears(layer_nm = "sop_rec_reliance", layers_obj = layers) %>%
+    select(-layer_name, -sop_rec_reliance_year, -ref, -mean_score) %>%
+    mutate(layer = "recreational")
+
+  # take the average score across both layers
+  spfis_status <- comm %>%
+    bind_rows(rec) %>%
+    group_by(scenario_year, rgn_id, rgn_name) %>%
+    summarize(status = mean(score)*100) %>%
+    ungroup()
+
+  # calculate trend
+
+  trend_years <- (scen_year-4):(scen_year)
+
+  spfis_trend <- CalculateTrend(status_data = spfis_status, trend_years = trend_years)
+
+
+  #combine trend and status
+  spfis_scores <- spfis_status %>%
+    filter(scenario_year == scen_year) %>%
+    mutate(dimension = "status",
+           score = status) %>%
+    select(region_id = rgn_id, score, dimension) %>%
+    rbind(spfis_trend) %>%
+    mutate(goal = 'SPFIS') %>%
+    arrange(goal, dimension, region_id) %>%
+    distinct() %>%
+    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+             goal,
+             dimension)
+
+  # return final scores
+  return(spfis_scores)
+}
+
 SP <- function(scores) {
   ## to calculate the four SP dimesions, average those dimensions for ICO and LSP
   s <- scores %>%
-    filter(goal %in% c('ICO', 'LSP'),
+    filter(goal %in% c('ICO', 'LSP', 'SPFIS'),
            dimension %in% c('status', 'trend', 'future', 'score')) %>%
     group_by(region_id, dimension) %>%
     summarize(score = mean(score, na.rm = TRUE)) %>%
