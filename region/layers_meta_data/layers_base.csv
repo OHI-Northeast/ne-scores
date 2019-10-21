@@ -53,3 +53,5 @@ ss_wgi,ss_wgi_gl2017.csv,pressure_score,scaled 0-1,Weakness of governance,Invers
 tr_beach_closures,tr_beach_closures.csv,perc_open,proportion,Proportion of swim season beaches are open on average,Proportion of swim season beaches are open on average
 tr_job_growth,tr_job_growth.csv,tr_job_growth,rate,job growth rate,Job growth rate in T&R sector compared to avg of previous 3 years
 tr_rao_coastal_access,tr_rao_coastal_access.csv,score,score 0 - 1,proportion of coast with an access point,proportion of coast with an access point
+sop_comm_engagement,sop_comm_engagement.csv,score,score 0 - 1,Commercial fishing engagement,
+sop_rec_reliance,sop_rec_reliance.csv,score,score 0 - 1,Recreational fishing reliance,

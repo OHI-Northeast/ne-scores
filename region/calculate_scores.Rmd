@@ -97,7 +97,8 @@ Run this to create flower plots for each region.
 source('conf/flower_plot.R')
 
 PlotFlower(assessment_name = "US Northeast",
-dir_fig_save    = "reports/figures")
+dir_fig_save    = "reports/figures",
+year_plot = 2017)
 ```
 
 Only run this if the above images have changed.
