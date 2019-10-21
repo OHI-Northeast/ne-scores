@@ -42,7 +42,6 @@ res_hab_destruction,res_hab_destruction.csv,score,scaled 0-1,,
 res_social,res_social.csv,score,scaled 0-1,Social resilience,Social resilience derived from NOAA's social vulnerability index
 res_water_pollution,res_water_pollution.csv,score,scaled 0-1,,
 rgn_area,rgn_area.csv,area_km2,km2,Region areas based on EEZ boundaries,Area of Ocean Health Index regions modified from exclusive economic zones
-rgn_georegions,rgn_georegions_gl2017.csv,georgn_id,UN regions,UN geopolitical region classifications,"UN geopolitical regions (3 levels), often used for gapfilling missing data"
 rgn_global,rgn_global.csv,label,label,OHI regions,Subset of regions that are not deleted or disputed
 rgn_labels,rgn_labels.csv,label,label,Regions,"Regions by type (eez, subocean, unclaimed)"
 sp_alien,sp_alien.csv,score,scaled 0-1,Nonindigenous species,Measure of harmful invasive species
@@ -50,8 +49,6 @@ sp_genetic,sp_genetic.csv,score,scaled 0-1,Genetic escapes,Introduced maricultur
 spp_rgns,spp_rgns.csv,rgn_id,region,Region id where species exist,region id where species is found
 spp_status_scores,spp_status_scores.csv,score,scaled 0-1,Species conservation status score,Species conservation status score based on IUCN and NatureServe
 spp_trend,spp_trend.csv,score,0.25 to -0.25,species trends,species population trends
-ss_spi,ss_spi_gl2017.csv,pressure_score,scaled 0-1,Weakness of social progress,Inverse of Social Progress Index scores
-ss_wgi,ss_wgi_gl2017.csv,pressure_score,scaled 0-1,Weakness of governance,Inverse of World Governance Indicators (WGI) six combined scores
 tr_beach_closures,tr_beach_closures.csv,perc_open,proportion,Proportion of swim season beaches are open on average,Proportion of swim season beaches are open on average
 tr_job_growth,tr_job_growth.csv,tr_job_growth,rate,job growth rate,Job growth rate in T&R sector compared to avg of previous 3 years
 tr_rao_coastal_access,tr_rao_coastal_access.csv,score,score 0 - 1,proportion of coast with an access point,proportion of coast with an access point
