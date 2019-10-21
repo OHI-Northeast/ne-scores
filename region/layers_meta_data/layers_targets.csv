@@ -146,8 +146,6 @@ res_water_pollution,HS,resilience
 res_water_pollution,CW,resilience
 res_water_pollution,FIS,resilience
 res_water_pollution,HAB,resilience
-res_water_pollution,HAB,resilience
-res_water_pollution,HAB,resilience
 res_water_pollution,ICO,resilience
 res_water_pollution,LSP,resilience
 res_water_pollution,MAR,resilience
@@ -160,8 +158,6 @@ rgn_labels,,spatial
 sp_alien,RAO,pressure
 sp_alien,HS,pressure
 sp_alien,FIS,pressure
-sp_alien,HAB,pressure
-sp_alien,HAB,pressure
 sp_alien,HAB,pressure
 sp_alien,ICO,pressure
 sp_alien,LSP,pressure
@@ -192,3 +188,18 @@ tr_rao_coastal_access,TR,status
 tr_rao_coastal_access,RAO,status
 sop_comm_engagement,SOP,status
 sop_rec_reliance,SOP,status
+prs_aqua_hab,RAO,pressure
+prs_aqua_hab,HS,pressure
+prs_aqua_hab,FIS,pressure
+prs_aqua_hab,HAB,pressure
+prs_aqua_hab,ICO,pressure
+prs_aqua_hab,LSP,pressure
+prs_aqua_hab,MAR,pressure
+prs_aqua_hab,SPP,pressure
+prs_aqua_hab,SPFIS,pressure
+prs_disease,RAO,pressure
+prs_disease,FIS,pressure
+prs_disease,ICO,pressure
+prs_disease,MAR,pressure
+prs_disease,SPP,pressure
+prs_disease,SPFIS,pressure
