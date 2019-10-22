@@ -58,6 +58,7 @@ scores_all_years <- data.frame()
 #because of a weird issue in the ohicore CalculateResilience All function, I created my own resilience function and then 
 #force R to use it by sourcing an updated CalculateAll function. Ideally, we fix it in ohicore and remove the next two lines
 source("conf/ne_resilience_function.R")
+source("conf/ne_pressure_function.R")
 source("conf/calculate_all_function.R")
 
 ## loop through each scenario year

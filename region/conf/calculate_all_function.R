@@ -17,8 +17,8 @@
 #' \enumerate{
 #'   \item \code{Setup()} - execute function \code{Setup()} if defined in file \code{\link{functions.R}}.
 #'   This function typically installs extra packages upon which the other functions in functions.R depend.
-#'   \item \code{\link{CalculatePressuresAll}()} - calculate pressures across all goals using pressures_matrix.csv.
-#'   \item \code{\link{CalculateResilienceAll}()} - calculate resilience across all goals using resilience_matrix.csv and resilience_weights.csv.
+#'   \item \code{\link{NECalculatePressuresAll}()} - calculate pressures across all goals using pressures_matrix.csv.
+#'   \item \code{\link{NECalculateResilienceAll}()} - calculate resilience across all goals using resilience_matrix.csv and resilience_weights.csv.
 #'   \item goals.csv:\code{preindex_functions} - execute code in the \code{preindex_function} column of the goals.csv file
 #'   based on \code{order_calculate} using functions defined in functions.R.
 #'   These funcutions are usually for calculating the goal's status and trend dimensions, i.e.
@@ -117,7 +117,7 @@ CalculateAll = function(conf, layers){
 
   ## Calculate Pressures, all goals
   #  layers = Layers(layers.csv = 'layers.csv', layers.dir = 'layers')
-  scores_P = CalculatePressuresAll(layers, conf)
+  scores_P = NECalculatePressuresAll(layers, conf)
   scores = rbind(scores, scores_P)
 
   ## Calculate Resilience, all goals
