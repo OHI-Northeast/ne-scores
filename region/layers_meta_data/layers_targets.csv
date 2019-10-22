@@ -203,3 +203,14 @@ prs_disease,ICO,pressure
 prs_disease,MAR,pressure
 prs_disease,SPP,pressure
 prs_disease,SPFIS,pressure
+prs_trampling,HS,pressure
+prs_trampling,HAB,pressure
+prs_trampling,LSP,pressure
+prs_trampling,MAR,pressure
+prs_trampling,SPP,pressure
+prs_hardening,RAO,pressure
+prs_hardening,HS,pressure
+prs_hardening,HAB,pressure
+prs_hardening,ICO,pressure
+prs_hardening,LSP,pressure
+prs_hardening,SPP,pressure

@@ -14,3 +14,5 @@ cc_slr,ecological,climate_change
 prs_social,social,social
 prs_aqua_hab,ecological,habitat_destruction
 prs_disease,ecological,alien_species
+prs_trampling,ecological,habitat_destruction
+prs_hardening,ecological,habitat_destruction
