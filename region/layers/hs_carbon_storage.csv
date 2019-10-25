@@ -1,133 +1,133 @@
-"","rgn_id","rgn_name","year","cs_score"
-"1",1,"Offshore",2006,NA
-"2",1,"Offshore",2007,NA
-"3",1,"Offshore",2008,NA
-"4",1,"Offshore",2009,NA
-"5",1,"Offshore",2010,NA
-"6",1,"Offshore",2011,NA
-"7",1,"Offshore",2012,NA
-"8",1,"Offshore",2013,NA
-"9",1,"Offshore",2014,NA
-"10",1,"Offshore",2015,NA
-"11",1,"Offshore",2016,NA
-"12",1,"Offshore",2017,NA
-"13",2,"Georges Bank",2006,NA
-"14",2,"Georges Bank",2007,NA
-"15",2,"Georges Bank",2008,NA
-"16",2,"Georges Bank",2009,NA
-"17",2,"Georges Bank",2010,NA
-"18",2,"Georges Bank",2011,NA
-"19",2,"Georges Bank",2012,NA
-"20",2,"Georges Bank",2013,NA
-"21",2,"Georges Bank",2014,NA
-"22",2,"Georges Bank",2015,NA
-"23",2,"Georges Bank",2016,NA
-"24",2,"Georges Bank",2017,NA
-"25",3,"Gulf of Maine",2006,NA
-"26",3,"Gulf of Maine",2007,NA
-"27",3,"Gulf of Maine",2008,NA
-"28",3,"Gulf of Maine",2009,NA
-"29",3,"Gulf of Maine",2010,NA
-"30",3,"Gulf of Maine",2011,NA
-"31",3,"Gulf of Maine",2012,NA
-"32",3,"Gulf of Maine",2013,NA
-"33",3,"Gulf of Maine",2014,NA
-"34",3,"Gulf of Maine",2015,NA
-"35",3,"Gulf of Maine",2016,NA
-"36",3,"Gulf of Maine",2017,NA
-"37",4,"Mid-Atlantic Bight",2006,NA
-"38",4,"Mid-Atlantic Bight",2007,NA
-"39",4,"Mid-Atlantic Bight",2008,NA
-"40",4,"Mid-Atlantic Bight",2009,NA
-"41",4,"Mid-Atlantic Bight",2010,NA
-"42",4,"Mid-Atlantic Bight",2011,NA
-"43",4,"Mid-Atlantic Bight",2012,NA
-"44",4,"Mid-Atlantic Bight",2013,NA
-"45",4,"Mid-Atlantic Bight",2014,NA
-"46",4,"Mid-Atlantic Bight",2015,NA
-"47",4,"Mid-Atlantic Bight",2016,NA
-"48",4,"Mid-Atlantic Bight",2017,NA
-"49",5,"Connecticut",2006,65.0646254182761
-"50",5,"Connecticut",2007,65.6018660789965
-"51",5,"Connecticut",2008,66.1391067397169
-"52",5,"Connecticut",2009,66.6763474004374
-"53",5,"Connecticut",2010,67.2135880611578
-"54",5,"Connecticut",2011,67.2135880611578
-"55",5,"Connecticut",2012,67.2135880611578
-"56",5,"Connecticut",2013,67.2135880611578
-"57",5,"Connecticut",2014,67.2135880611578
-"58",5,"Connecticut",2015,67.2135880611578
-"59",5,"Connecticut",2016,67.2135880611578
-"60",5,"Connecticut",2017,67.2135880611578
-"61",6,"Maine",2006,99.4580374398524
-"62",6,"Maine",2007,98.6523391516388
-"63",6,"Maine",2008,97.8466408634252
-"64",6,"Maine",2009,97.0409425752115
-"65",6,"Maine",2010,96.2352442869979
-"66",6,"Maine",2011,96.2352442869979
-"67",6,"Maine",2012,96.2352442869979
-"68",6,"Maine",2013,96.2352442869979
-"69",6,"Maine",2014,96.2352442869979
-"70",6,"Maine",2015,96.2352442869979
-"71",6,"Maine",2016,96.2352442869979
-"72",6,"Maine",2017,96.2352442869979
-"73",7,"Massachusetts-North",2006,74.5357032671321
-"74",7,"Massachusetts-North",2007,75.2823615099468
-"75",7,"Massachusetts-North",2008,76.0290197527616
-"76",7,"Massachusetts-North",2009,76.7756779955764
-"77",7,"Massachusetts-North",2010,77.5223362383912
-"78",7,"Massachusetts-North",2011,77.5223362383912
-"79",7,"Massachusetts-North",2012,77.5223362383912
-"80",7,"Massachusetts-North",2013,77.5223362383912
-"81",7,"Massachusetts-North",2014,77.5223362383912
-"82",7,"Massachusetts-North",2015,77.5223362383912
-"83",7,"Massachusetts-North",2016,77.5223362383912
-"84",7,"Massachusetts-North",2017,77.5223362383912
-"85",8,"Massachusetts-South",2006,74.1798377646343
-"86",8,"Massachusetts-South",2007,74.958808225808
-"87",8,"Massachusetts-South",2008,75.7377786869817
-"88",8,"Massachusetts-South",2009,76.5167491481554
-"89",8,"Massachusetts-South",2010,77.2957196093291
-"90",8,"Massachusetts-South",2011,77.2957196093291
-"91",8,"Massachusetts-South",2012,77.2957196093291
-"92",8,"Massachusetts-South",2013,77.2957196093291
-"93",8,"Massachusetts-South",2014,77.2957196093291
-"94",8,"Massachusetts-South",2015,77.2957196093291
-"95",8,"Massachusetts-South",2016,77.2957196093291
-"96",8,"Massachusetts-South",2017,77.2957196093291
-"97",9,"New Hampshire",2006,75.2999479440771
-"98",9,"New Hampshire",2007,75.1557332628261
-"99",9,"New Hampshire",2008,75.0115185815751
-"100",9,"New Hampshire",2009,74.8673039003241
-"101",9,"New Hampshire",2010,74.7230892190732
-"102",9,"New Hampshire",2011,74.7230892190732
-"103",9,"New Hampshire",2012,74.7230892190732
-"104",9,"New Hampshire",2013,74.7230892190732
-"105",9,"New Hampshire",2014,74.7230892190732
-"106",9,"New Hampshire",2015,74.7230892190732
-"107",9,"New Hampshire",2016,74.7230892190732
-"108",9,"New Hampshire",2017,74.7230892190732
-"109",10,"New York",2006,62.3210187210334
-"110",10,"New York",2007,62.0997585011814
-"111",10,"New York",2008,61.8784982813294
-"112",10,"New York",2009,61.6572380614774
-"113",10,"New York",2010,61.4359778416254
-"114",10,"New York",2011,61.4359778416254
-"115",10,"New York",2012,61.4359778416254
-"116",10,"New York",2013,61.4359778416254
-"117",10,"New York",2014,61.4359778416254
-"118",10,"New York",2015,61.4359778416254
-"119",10,"New York",2016,61.4359778416254
-"120",10,"New York",2017,61.4359778416254
-"121",11,"Rhode Island",2006,62.5461855651898
-"122",11,"Rhode Island",2007,64.3624839261464
-"123",11,"Rhode Island",2008,66.1787822871029
-"124",11,"Rhode Island",2009,67.9950806480594
-"125",11,"Rhode Island",2010,69.811379009016
-"126",11,"Rhode Island",2011,69.811379009016
-"127",11,"Rhode Island",2012,69.811379009016
-"128",11,"Rhode Island",2013,69.811379009016
-"129",11,"Rhode Island",2014,69.811379009016
-"130",11,"Rhode Island",2015,69.811379009016
-"131",11,"Rhode Island",2016,69.811379009016
-"132",11,"Rhode Island",2017,69.811379009016
+"","rgn_id","rgn_name","year","cs_score","digits"
+"1",1,"Offshore",2006,NA,2
+"2",1,"Offshore",2007,NA,2
+"3",1,"Offshore",2008,NA,2
+"4",1,"Offshore",2009,NA,2
+"5",1,"Offshore",2010,NA,2
+"6",1,"Offshore",2011,NA,2
+"7",1,"Offshore",2012,NA,2
+"8",1,"Offshore",2013,NA,2
+"9",1,"Offshore",2014,NA,2
+"10",1,"Offshore",2015,NA,2
+"11",1,"Offshore",2016,NA,2
+"12",1,"Offshore",2017,NA,2
+"13",2,"Georges Bank",2006,NA,2
+"14",2,"Georges Bank",2007,NA,2
+"15",2,"Georges Bank",2008,NA,2
+"16",2,"Georges Bank",2009,NA,2
+"17",2,"Georges Bank",2010,NA,2
+"18",2,"Georges Bank",2011,NA,2
+"19",2,"Georges Bank",2012,NA,2
+"20",2,"Georges Bank",2013,NA,2
+"21",2,"Georges Bank",2014,NA,2
+"22",2,"Georges Bank",2015,NA,2
+"23",2,"Georges Bank",2016,NA,2
+"24",2,"Georges Bank",2017,NA,2
+"25",3,"Gulf of Maine",2006,NA,2
+"26",3,"Gulf of Maine",2007,NA,2
+"27",3,"Gulf of Maine",2008,NA,2
+"28",3,"Gulf of Maine",2009,NA,2
+"29",3,"Gulf of Maine",2010,NA,2
+"30",3,"Gulf of Maine",2011,NA,2
+"31",3,"Gulf of Maine",2012,NA,2
+"32",3,"Gulf of Maine",2013,NA,2
+"33",3,"Gulf of Maine",2014,NA,2
+"34",3,"Gulf of Maine",2015,NA,2
+"35",3,"Gulf of Maine",2016,NA,2
+"36",3,"Gulf of Maine",2017,NA,2
+"37",4,"Mid-Atlantic Bight",2006,NA,2
+"38",4,"Mid-Atlantic Bight",2007,NA,2
+"39",4,"Mid-Atlantic Bight",2008,NA,2
+"40",4,"Mid-Atlantic Bight",2009,NA,2
+"41",4,"Mid-Atlantic Bight",2010,NA,2
+"42",4,"Mid-Atlantic Bight",2011,NA,2
+"43",4,"Mid-Atlantic Bight",2012,NA,2
+"44",4,"Mid-Atlantic Bight",2013,NA,2
+"45",4,"Mid-Atlantic Bight",2014,NA,2
+"46",4,"Mid-Atlantic Bight",2015,NA,2
+"47",4,"Mid-Atlantic Bight",2016,NA,2
+"48",4,"Mid-Atlantic Bight",2017,NA,2
+"49",5,"Connecticut",2006,65,2
+"50",5,"Connecticut",2007,66,2
+"51",5,"Connecticut",2008,66,2
+"52",5,"Connecticut",2009,67,2
+"53",5,"Connecticut",2010,67,2
+"54",5,"Connecticut",2011,67,2
+"55",5,"Connecticut",2012,67,2
+"56",5,"Connecticut",2013,67,2
+"57",5,"Connecticut",2014,67,2
+"58",5,"Connecticut",2015,67,2
+"59",5,"Connecticut",2016,67,2
+"60",5,"Connecticut",2017,67,2
+"61",6,"Maine",2006,99,2
+"62",6,"Maine",2007,99,2
+"63",6,"Maine",2008,98,2
+"64",6,"Maine",2009,97,2
+"65",6,"Maine",2010,96,2
+"66",6,"Maine",2011,96,2
+"67",6,"Maine",2012,96,2
+"68",6,"Maine",2013,96,2
+"69",6,"Maine",2014,96,2
+"70",6,"Maine",2015,96,2
+"71",6,"Maine",2016,96,2
+"72",6,"Maine",2017,96,2
+"73",7,"Massachusetts-North",2006,75,2
+"74",7,"Massachusetts-North",2007,75,2
+"75",7,"Massachusetts-North",2008,76,2
+"76",7,"Massachusetts-North",2009,77,2
+"77",7,"Massachusetts-North",2010,78,2
+"78",7,"Massachusetts-North",2011,78,2
+"79",7,"Massachusetts-North",2012,78,2
+"80",7,"Massachusetts-North",2013,78,2
+"81",7,"Massachusetts-North",2014,78,2
+"82",7,"Massachusetts-North",2015,78,2
+"83",7,"Massachusetts-North",2016,78,2
+"84",7,"Massachusetts-North",2017,78,2
+"85",8,"Massachusetts-South",2006,74,2
+"86",8,"Massachusetts-South",2007,75,2
+"87",8,"Massachusetts-South",2008,76,2
+"88",8,"Massachusetts-South",2009,77,2
+"89",8,"Massachusetts-South",2010,77,2
+"90",8,"Massachusetts-South",2011,77,2
+"91",8,"Massachusetts-South",2012,77,2
+"92",8,"Massachusetts-South",2013,77,2
+"93",8,"Massachusetts-South",2014,77,2
+"94",8,"Massachusetts-South",2015,77,2
+"95",8,"Massachusetts-South",2016,77,2
+"96",8,"Massachusetts-South",2017,77,2
+"97",9,"New Hampshire",2006,75,2
+"98",9,"New Hampshire",2007,75,2
+"99",9,"New Hampshire",2008,75,2
+"100",9,"New Hampshire",2009,75,2
+"101",9,"New Hampshire",2010,75,2
+"102",9,"New Hampshire",2011,75,2
+"103",9,"New Hampshire",2012,75,2
+"104",9,"New Hampshire",2013,75,2
+"105",9,"New Hampshire",2014,75,2
+"106",9,"New Hampshire",2015,75,2
+"107",9,"New Hampshire",2016,75,2
+"108",9,"New Hampshire",2017,75,2
+"109",10,"New York",2006,62,2
+"110",10,"New York",2007,62,2
+"111",10,"New York",2008,62,2
+"112",10,"New York",2009,62,2
+"113",10,"New York",2010,61,2
+"114",10,"New York",2011,61,2
+"115",10,"New York",2012,61,2
+"116",10,"New York",2013,61,2
+"117",10,"New York",2014,61,2
+"118",10,"New York",2015,61,2
+"119",10,"New York",2016,61,2
+"120",10,"New York",2017,61,2
+"121",11,"Rhode Island",2006,63,2
+"122",11,"Rhode Island",2007,64,2
+"123",11,"Rhode Island",2008,66,2
+"124",11,"Rhode Island",2009,68,2
+"125",11,"Rhode Island",2010,70,2
+"126",11,"Rhode Island",2011,70,2
+"127",11,"Rhode Island",2012,70,2
+"128",11,"Rhode Island",2013,70,2
+"129",11,"Rhode Island",2014,70,2
+"130",11,"Rhode Island",2015,70,2
+"131",11,"Rhode Island",2016,70,2
+"132",11,"Rhode Island",2017,70,2
