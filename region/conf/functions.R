@@ -100,24 +100,16 @@ MAR <- function(layers) {
   mar_status <- production %>%
     filter(yr_num > 2) %>% #we want to start with the third year in the series since we use a 3 year rolling mean for production
     left_join(sustscores) %>%
-    rowwise() %>%
-    mutate(sust_times_prod = production*rescaled,
-           growth_score    = case_when(
-             production > 0 & is.na(last_years_prod) ~ 1, #if last years production was non existent, but this year there is production, set the growth score to the highest (1).
-             production == 0 & last_years_prod == 0 ~ 0,
-             TRUE ~ min(c(1, sust_times_prod/(1.04*last_years_prod))))) %>% #cap growth score to 1
-    group_by(rgn_id, year) %>%
-    mutate(total_rgn_prod = sum(production, na.rm = T)) %>% #get total production for each region and year
+    mutate(last_yrs_prod_sust = last_years_prod * rescaled, #scaling last years production data by sustainability score
+           sust_times_prod    = production*rescaled)  %>% #current years production times sustainability score
+    group_by(mar_production_year, rgn_id, year) %>%
+    summarize(total_production   = sum(sust_times_prod, na.rm = T),
+              last_yr_total_prod = sum(last_yrs_prod_sust, na.rm = T)) %>%
     ungroup() %>%
-    rowwise() %>%
-    mutate(prop_prod = production/total_rgn_prod, #calculate species specific proportion of production for each region and year
-           prod_weighted_score = prop_prod * growth_score*100) %>%
-    group_by(rgn_id, year) %>%
-    summarize(status = sum(prod_weighted_score, na.rm = T)) %>%
-    ungroup() %>%
-    rename(region_id = rgn_id) %>%
-    mutate(dimension = 'status')
-
+    mutate(growth_score = pmin(1, total_production/(1.04*last_yr_total_prod)),
+           status = 100 * growth_score,
+           dimension = "status") %>%
+    rename(region_id = rgn_id)
 
   # calculate trend
   trend_data <- mar_status %>%
