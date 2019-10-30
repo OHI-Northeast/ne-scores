@@ -8,7 +8,7 @@
 #####################################
 
 
-targets <- read.csv('layers_meta_data/layers_targets.csv', stringsAsFactors=FALSE) %>%
+targets <- read.csv('~/github/ne-scores/metadata_documentation/layers_targets.csv', stringsAsFactors=FALSE) %>%
   dplyr::mutate(dimension = ifelse(dimension %in% c("status", "trend"), NA, dimension)) %>%
   dplyr::filter(!is.na(dimension) | !is.na(goal)) %>%
   dplyr::mutate(goal = ifelse(is.na(goal), dimension, goal)) %>%
@@ -21,7 +21,7 @@ targets <- read.csv('layers_meta_data/layers_targets.csv', stringsAsFactors=FALS
 
 
 # add the meta data
-meta <- read.csv("layers_meta_data/layers_base.csv")
+meta <- read.csv("~/github/ne-scores/metadata_documentation/layers_base.csv")
 layers <- meta %>%
   dplyr::left_join(targets, by="layer") %>%
   dplyr::select(layer, filename, fld_value, targets, name, units, description)

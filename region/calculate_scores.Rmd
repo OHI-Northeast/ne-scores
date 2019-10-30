@@ -35,12 +35,12 @@ library(zoo)
 library(here)
 library(ohicore)
 
+#Run following to update the layers.csv file with the latest information in layers_base.csv and to reset 
+source("~/github/ne-scores/metadata_documentation/layers_script.R")
+
 ## set the working directory to a filepath we all have
 setwd(here::here('region'))
 options(scipen=999)
-
-#Run following to update the layers.csv file with the latest information in layers_base.csv and to reset 
-source("layers_meta_data/layers_script.R")
 ```
 
 
