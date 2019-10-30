@@ -1,4 +1,4 @@
-﻿layer,filename,fld_value,units,name,description
+layer,filename,fld_value,units,name,description
 cc_acid,cc_acid_gl2017.csv,pressure_score,scaled 0-1,Ocean acidification,Ocean acidification pressure scaled using biological thresholds
 cc_slr,cc_slr.csv,pressure_score,scaled 0-1,Sea level rise,Sea level rise pressure
 cc_sst,cc_sst.csv,pressure_score,scaled 0-1,Sea surface temperature,Sea surface temperature anomalies
@@ -13,7 +13,7 @@ fis_stockscores,fis_stockscores.csv,score,stock score,Stock scores,Fisheries sto
 hab_eelgrass,hab_eelgrass.csv,score,score 0 - 100,Water Quality Index score,Water Quality Index Score
 hab_salt_marsh,hab_salt_marsh.csv,perc_loss,percent,Percent loss of habitat,Percent of habitat loss compared to historical values
 hab_sasi,hab_sasi.csv,sasi,score 0 - 1,SASI,SASI
-hd_intertidal,hd_intertidal_gl2017.csv,pressure_score,scaled 0-1,Intertidal habitat destruction,Coastal population density (25 mi from shore)  as a proxy for intertidal habitat destruction
+hd_intertidal,hd_intertidal_gl2017.csv,pressure_score,scaled 0-1,Intertidal habitat destruction,Coastal population density (25 mi from shore) as a proxy for intertidal habitat destruction
 hs_carbon_storage,hs_carbon_storage.csv,cs_score,score 0 - 100,Carbon storage,Carbon storage score based on eelgrass and salt marsh
 hs_coastal_protection,hs_coastal_protection.csv,cp_score,score 0 - 100,Coastal Protection,Coastal protection score based on eelgrass and salt marsh
 ico_scores,ico_scores.csv,score,score 0 - 1,Conservation status,Conservation status from IUCN or Natureserve per region
