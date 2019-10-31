@@ -1,0 +1,12 @@
+*Pressure*
+
+*Category: ecological*
+
+*Subcategory: Habitat Destruction*
+
+Not all aquaculture production facilities are build in similar areas, and the effects of faculties location and production on the habitat differ greatly across regions, methods, and species produced. Generally, shellfish aquaculture is the least harmful, because there is little change to the habitat, not much extra structure needs to build, and they actual clean the water (REF and edit). On the other hand, shrimp production in some areas require the removal of mangroves and the growing process creates poor water quality conditions.
+
+Sustainability scores for farmed species were obtained from the Monterrey Bay Aquarium Seafood Watch Standards for Aquaculture. This assessment incorporates 10 criteria: availability and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during growing, disease (pathogen, and parasite interaction), stock source, predator and wildlife moralities, and escapes during transit when calculating the overall sustainability score. We used the effects on habitats criteria to inform how much aquaculture production contributes to the habitat destruction layer. The criteria assesses the impact or risk of impact the aquaculture farm has on the "ecosystem services" provided by habitat within the farm the immediate/neighboring areas.
+
+
+blurb about how we actually calculated this part

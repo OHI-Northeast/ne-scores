@@ -1,0 +1,6 @@
+*Goal: Livelihoods and Economies*
+Jobs and revenue produced from marine-related industries are clearly of huge value to many people, even for those people who do not directly participate in marine-related industries. People value community identity, tax revenue, and indirect economic and social impacts of a stable coastal economy. The necessity of providing for oneself and those dependent on them, generally surpasses any other needs or objectives. Without the availability of jobs with livable wages, it is likely that people will prioritize ocean health less and feel less connected to it. This goal tracks the number and quality of jobs and the amount of revenue produced across as many marine-related industries/sectors as possible through two sub-goals, Livelihoods and Economies. A score of 100 reflects productive coastal economies that avoid the loss of ocean-dependent livelihoods while maximizing livelihood quality.
+
+*Subgoal: Economies*
+
+The coastal gross domestic product (GDP) layer was derived from the National Ocean Economics Program data. The annual GDP growth rate is calculated by comparing each year's GDP total to the average of the previous 3 years. The target is a 3% growth rate.

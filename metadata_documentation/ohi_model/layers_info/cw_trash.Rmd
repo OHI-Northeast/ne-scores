@@ -1,0 +1,8 @@
+*Goal: Clean Waters*
+People value marine waters that are free of pollution and debris for aesthetic and health reasons. Contamination of waters comes from oil spills, chemicals, eutrophication, algal blooms, disease pathogens (e.g., fecal coliform, viruses, and parasites from sewage outflow), floating trash, and mass kills of organisms due to pollution. People are sensitive to these phenomena occurring in areas they access for recreation or other purposes as well as for simply knowing that clean waters exist. This goal scores highest when contamination from all potential sources is zero.
+
+We include four measures of pollution in the clean waters goal: pathogens, trash, water quality, and sediment quality. This decision was meant to represent a comprehensive list of the contamination categories that are commonly considered in assessments of coastal clean waters (Borja et al. 2008) and for which we could obtain data (see data layers below).
+
+*Trash*
+
+The status of trash pollution was estimated using data from the Coastal Conservancy on pounds of trash collected per person on each International Coastal Cleanup Day every year from 2007 to 2016. The target reference point for this goal is zero pounds of trash collected per person and the limit reference point (maximum possible which would warrant a zero score) was set to reflect the highest trash collected over the same time period across all states on the US East Coast (Maryland with 94.5 pounds of trash per person) plus a 10% buffer, as we do not think that the highest recorded historical level of trash collected necessarily reflects the highest potential trash that could be collected across the region in future years.

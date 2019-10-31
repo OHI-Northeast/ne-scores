@@ -1,0 +1,11 @@
+*Pressure*
+
+*Category: ecological*
+
+*Subcategory: climate change*
+
+Ocean acidification data were obtained from the East Coast Ocean Acidification Product Suite (ECOAPS) (REF), which is produced by the NOAA Coral Health and Monitoring Program. Changes in the aragonite saturation state ($\Omega_{arag}$) can be attributed to changes in the concentration of CO~2~ and thus we use this measurement as a proxy for increasing CO~2~. This layer is rescaled between 0-1 using two accepted thresholds; 1.5$\Omega_{arag}$ the level when organims show mild dissolution (ref1) and 1$\Omega_{arag}$ the lethal level (ref2). 
+
+
+ref1 source: https://www.frontiersin.org/articles/10.3389/fmars.2019.00227/full
+ref2 source(https://pubs.geoscienceworld.org/gsa/geology/article/37/12/1131/103987/Marine-calcifiers-exhibit-mixed-responses-to-CO2)
