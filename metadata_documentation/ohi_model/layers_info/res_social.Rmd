@@ -5,7 +5,7 @@
 
 “The Opportunity Index was created by Opportunity Nation (ref) as an alternative to the limited information commonly used to assess economic strength and security, namely poverty rates and GDP.  This index seeks to provide communities with more diverse and informative data to allow for progression towards increased economic mobility and opportunity. The Opportunity Index measures three dimensions of community opportunity to produce a single overall score for all 50 U.S states: Economy, Education, and Community. Indicators are selected to measure the opportunities that are available in communities based on their established connection to expanding or restricting economic mobility and opportunity (WC OHI).”  Index scores from 2012, and 2014-2017 were used. The Opportunity Index scores each state on a scale of 0-100, which we then rescaled 0-1 and applied directly into each state resilience measure.
 
-**Beacon Hill Competitiveness Report"**
+**Beacon Hill Competitiveness Report:**
 
 “The State Competitiveness Report is produced by Beacon Hill Institute on an annual basis and aggregates key microeconomic variables into a single index to measure the economic competitiveness of each state.  A state is considered by Beacon Hill Institute to be competitive “if it has in place the policies and conditions that ensure and sustain a high level of per capita income and its continued growth”. Sub-indicators used to assess each state include: Government and fiscal policies, Security, Infrastructure, Human resources, Technology, Business incubation, Openness, and Environmental Policy.(WC OHI)”  Index scores from 2005-2017 were used. The State Competitiveness Report scores each state on a scale of 0-10, which we rescaled 0-1 and applied directly into each state resilience measure.
 
@@ -21,6 +21,7 @@ One of NOAA’s aims is to research and better understand the impacts fisheries 
 
 
 
+REFERENCES/Citations for each of the data
 
 
 

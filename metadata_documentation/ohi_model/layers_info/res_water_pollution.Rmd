@@ -14,3 +14,5 @@ The data used to measure water pollution resilience are from the Environmental P
 
 4. Each facility has a permit which requires discharge monitoring reports at various intervals depending on the permit. We calculated the percent of expected discharge monitoring reports submitted and recaled it to the target of 95% submitted, which is based on the EPA established “National Goals.”
 
+
+REFERENCES/Citations for each of the data

@@ -17,3 +17,4 @@ Multiple data sources were used to calculate the climate change resilience layer
 The same data as Implementation/Enforcement are used as a proxy indicator for this layer
 
 
+REFERENCES/Citations for each of the data

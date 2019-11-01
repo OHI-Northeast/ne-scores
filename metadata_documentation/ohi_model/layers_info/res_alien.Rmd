@@ -4,7 +4,7 @@ The data sources used to calculate the species pollution resilience layer includ
 
 1. The existence of the Ballast Water Management Plan Requirements implemented and monitored by the US Coast Guard imply the presence of regulations; each region received score of 1
 
-2. The existence of aquaculture permitting system imply the presence of regulations; each region received score of. For calculation purposes this layer does not change the overall score in this layer, but is used more as a placeholder for future iterations of the OHI as aquaculture becomes more streamlined, reguated, and large-scale in the Northeast.
+2. The existence of aquaculture permitting system imply the presence of regulations; each region received score of. For calculation purposes this layer does not change the overall score in this layer, but is used more as a placeholder for future iterations of the OHI as aquaculture becomes more streamlined, regulated, and large-scale in the Northeast.
 
 **Implementation/Enforcement **
 
@@ -14,3 +14,5 @@ The data sources used to calculate the species pollution resilience layer includ
 
 4. The USGS Nonindigenous Aquatic Species database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the number of new occurrences in each region each year.
 
+
+REFERENCES/Citations for each of the data

@@ -1,1 +1,18 @@
-TO BE FILLED OUT
+The data sources used to calculate the habitat destruction resilience layer includes Surfrider Foundation, NOAA Greater Atlantic Regional Fishing Office (GARFO), and NOAA Office of Law Enforcement.There are 4 data layers used in the water pollution resilience layer.
+
+**Presence**
+
+1. The Surfrider Foundation releases an annual State of the Beach Reportcard (since 2017) which scores each coastal state on their policies to protect their beaches from coastal erosion, haphazard development, and sea level. A score of 10/10 results in an A+. We rescaled these scores 0-1.
+
+2. NOAA GARFO shapefiles were used to identify areas where fisheries regulations are in place that prohibit trawling and dredging are prohibited year-round; target is 30% protected
+
+**Implementation/Enforcement**
+
+3. The total number of staff,  patrols, and outreach events OLE partakes in is pulled from the NOAA OLE Northeast Region Annual report. These are summed by year and divided by the highest historic total.
+
+**Effectiveness/Compliance**
+
+4. Using data from the NOAA OLE Northeast Region Annual report, this layer was calculated by taking the number of investigations and dividing it by the number of enforcement actions.
+
+
+REFERENCES/Citations for each of the data
