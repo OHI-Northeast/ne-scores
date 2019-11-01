@@ -2,15 +2,15 @@ The data used to measure water pollution resilience are from the Environmental P
 
 **Presence** 
 
-* The existence of the EPA and the ECHO database imply the presence of regulations, so each region received a score of 1.
+1. The existence of the EPA and the ECHO database imply the presence of regulations, so each region received a score of 1.
 
 **Implementation/Enforcement **
 
-* We calculated the total number of discharge facilities that were inspected in each region and the total number of discharge facilities. We used 50% of facilities in each region inspected as our target, since that is the EPA established “National Goals”.
+2. We calculated the total number of discharge facilities that were inspected in each region and the total number of discharge facilities. We used 50% of facilities in each region inspected as our target, since that is the EPA established “National Goals”.
 
 **Effectiveness/Compliance**
 
-* We calculated the total number of facility violations in each region and assigned a binary value to each facility, at least one violation that year or no violation so as to not over penalize regions were a single facility had multiple violations. There are 4 different types of violation, but we did not differentiate between them. We used a reference point of 0%, no violations.
+3. We calculated the total number of facility violations in each region and assigned a binary value to each facility, at least one violation that year or no violation so as to not over penalize regions were a single facility had multiple violations. There are 4 different types of violation, but we did not differentiate between them. We used a reference point of 0%, no violations.
 
-* Each facility has a permit which requires discharge monitoring reports at various intervals depending on the permit. We calculated the percent of expected discharge monitoring reports submitted and recaled it to the target of 95% submitted, which is based on the EPA established “National Goals.”
+4. Each facility has a permit which requires discharge monitoring reports at various intervals depending on the permit. We calculated the percent of expected discharge monitoring reports submitted and recaled it to the target of 95% submitted, which is based on the EPA established “National Goals.”
 
