@@ -7,12 +7,15 @@
 The data used to measure water pollution resilience are from the Environmental Protection Agency (EPA) Enforcement and Compliance History Online (ECHO) database (TABLE: data sources). The EPA’s management of water discharge facilities is used as an indicator for other water pollution prevention regulations, implementation and effectiveness in each region. This database includes historic and current information on facilities that discharge waste and pollution. There are 4 data layers used in the water pollution resilience layer.
 
 **Presence** 
+
 1. The existence of the EPA and the ECHO database imply the presence of regulations, so each region received a score of 1.
 
 **Implementation/Enforcement **
+
 2. We calculated the total number of discharge facilities that were inspected in each region and the total number of discharge facilities. We used 50% of facilities in each region inspected as our target, since that is the EPA established “National Goals”.
 
 **Effectiveness/Compliance**
+
 3. We calculated the total number of facility violations in each region and assigned a binary value to each facility, at least one violation that year or no violation so as to not over penalize regions were a single facility had multiple violations. There are 4 different types of violation, but we did not differentiate between them. We used a reference point of 0%, no violations.
 
 4. Each facility has a permit which requires discharge monitoring reports at various intervals depending on the permit. We calculated the percent of expected discharge monitoring reports submitted and recaled it to the target of 95% submitted, which is based on the EPA established “National Goals.”
