@@ -1,0 +1,25 @@
+*Resilience*
+
+*Category: regulatory*
+
+*Subcategory: Fishing Pressure*
+
+Multiple data sources were used to calculate the fishing pressure resilience layer including National Oceanographic and Atmospheric Administration (NOAA) Fisheries, NOAA Office of Law Enforcement, NOAA Fisheries Observer Program, and the United States Geographic Survey (USGS).There are 7 data layers used in the water pollution resilience layer.
+
+**Presence**
+1. Of the species reported in the NOAA landings data, we calculated how many have had a formal stock assessment. The target is that every speices caught has been assessed at least once. However, since the more heavily fished species are more likely to have been assessed, we weighted these scores by the amount of catch. By doing so we still count species that are rarely caught and have not yet been assessed, but they don't "overrule" major fishery species that are assessed.
+
+2. Stock assessments are very valuable, but need to be intermitantly reassessed to monitor any changes in the stocks. We used the NOAA stock assessment to calculated the percentage of stocks that are adequately assessed. Using expert knowledge, we set the target of an assessment at least once every 5 years.
+
+3. Using the USGS Protected Areas Database we identified areas where all fishing is prohibited year-round, areas where fish would have refuge from fishing. We calculated percentage of area in each region that fit these critera, and then using a target of 30%, rescaled the pressure 0-1. We used a target of 30%, because this is the observed level of ocean closure needed provide fisheries resilience (REF Gaines paper)
+
+4. Most species that are fished do not have a formal stock assessment, but they are managed or regulated in some way, either at the federal, state, or local level. We compiled a list of all species caught and whether or not they are included in managment plans or regulatory policies. From this list we calculated what percentage of species landed have either a management plan or some type of regulation. We rescaled from 0-1 using the reference of 100%.
+
+**Implementation/Enforcement** 
+5. Using data obtained from a contact at the NOAA Fisheries Observer Program, we calculated the number of sea days a fisheries observer spent on board a fishing vessel. Then, using past Annual Discharge Reports with Sea Day Allocation, we pulled the alloted number of sea days for each year and used those as the reference. The alloted sea days was recalclated annualy based on the previous years number of sea days and catch the number of alloted sea days. We then rescaled from 0-1, with the goal to reach the alloted number of sea days.
+
+6.  We extracted the total number of staff,  patrols, and outreach events OLE partakes from the NOAA OLE Northeast Region Annual report. These are summed up and rescaled 0-1 using the highest historic total as the reference point.
+
+**Effectiveness/Compliance**
+7. Using data from the NOAA OLE Northeast Region Annual report, this layer was calculated by taking the number of investigations and dividing it by the number of enforcement actions.
+
