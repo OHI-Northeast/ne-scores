@@ -20,5 +20,18 @@ Multiple data sources were used to calculate the fishing pressure resilience lay
 
 7. Using data from the NOAA OLE Northeast Region Annual report, this layer was calculated by taking the number of investigations and dividing it by the number of enforcement actions.
 
+**References**
 
-REFERENCES/Citations for each of the data
+1. U.S. Geological Survey (USGS) Gap Analysis Project (GAP), 2018, Protected Areas Database of the United States (PAD-US): U.S. Geological Survey data release, https://doi.org/10.5066/P955KPLE.
+
+2. Fisheries Observer data, how to cite? Debrah says there isn't a specific way for us to cite it
+
+3. Fisheries landings and stock data, how to cite?
+
+4. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018, 2018
+
+5. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2017, 2017
+
+6. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2016, 2016
+
+7. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2015, 2015

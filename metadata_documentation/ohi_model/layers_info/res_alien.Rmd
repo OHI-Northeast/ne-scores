@@ -14,5 +14,19 @@ The data sources used to calculate the species pollution resilience layer includ
 
 4. The USGS Nonindigenous Aquatic Species database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the number of new occurrences in each region each year.
 
+**References**
 
-REFERENCES/Citations for each of the data
+1. Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.
+
+2. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018, 2018
+
+3. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2017, 2017
+
+4. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2016, 2016
+
+5. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2015, 2015
+
+
+
+
+

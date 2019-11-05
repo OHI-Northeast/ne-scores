@@ -18,10 +18,12 @@ The League of Conservation Voters is an environmental group that "advocates for 
 
 One of NOAA’s aims is to research and better understand the impacts fisheries management decisions have on fishing communities. They have developed a new method which measures social indicators of the fishing communities  to quantify vulnerability and resilience in US coastal regions.  Each community is scored in 4 indicators: Social Vulnerability, Gentrification Pressure, Sea Level Rise Vulnerability, Fishing Engagement and Reliance. The factor analysis technique was used to construct the indicators which “consisted of a principal component analysis with a varimax rotation (methods doc).” Since there was no cap on the maximum value for vulnerability and resilience, we averaged each indicator by region and then rescaled 0-1 using the maximum value as a 1. We then averaged all four rescaled indicators to calculate each regions resilience measure.
 
+**References**
 
-
-
-REFERENCES/Citations for each of the data
+1. Opportunity Nation. 2012, 2014-2017. Opportunity Index. Available at http://opportunityindex.org/
+2. Beacon Hill Institute. 2005-2017. State Competitiveness Report. Availiable at http://beaconhill.org/economic-competitiveness/
+3.  League of Conservation Voters, 2017 National Environmental LCV Scorecard. Washington D.C.: League of Conservation Voters. (Same citation for 2005-2017, different reports)
+4. 
 
 
 
