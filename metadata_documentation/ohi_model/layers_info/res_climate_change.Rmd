@@ -17,7 +17,9 @@ library(kableExtra)
 library(dplyr)
 dir_git <- '~/github/ne-prep'
 
-table_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/energy_consumption_goals.csv"))
+table_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/energy_consumption_goals.csv"))%>% 
+  select(State, Goal)
+
 
 kable(table_res_cc, caption = "State Set Renewable Energy Consumption Targets") %>% 
   kable_styling(bootstrap_options = "striped", full_width = F)
@@ -33,7 +35,8 @@ library(kableExtra)
 library(dplyr)
 dir_git <- '~/github/ne-prep'
 
-table2_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/state_co2em_targets.csv"))
+table2_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/state_co2em_targets.csv")) %>% 
+  select(State, Goal)
 
 kable(table2_res_cc, caption = "State Set CO2 Emissions Targets") %>% 
   kable_styling(bootstrap_options = "striped", full_width = F)
