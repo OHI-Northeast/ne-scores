@@ -10,11 +10,27 @@ The habitat subgoal measures the average condition of marine habitats present in
 
 Data availability remains a major challenge for species and habitat assessments. We compiled and analyzed the best available data in both cases, but key gaps remain. Although several efforts have been made in recent years to create or compile the data necessary to look at the status and trends of marine habitats, most efforts are still hampered by limited geographical and temporal sampling (Joppa et al. 2016). In addition, most marine habitats have only been monitored since the late 1970s at the earliest, many sites were only sampled over a short period of time, and very few sites were monitored before the late 1990s so establishing reference points was difficult. eelgrasses were the most data-limited of the habitats included in the analysis.
 
-For **salt marsh** habitats we used NOAA's Coastal Change Analysis Program data (C-CAP) to derive an estimate of salt marsh loss from 1996 through 2010 and a collection of historical loss estimates to estimate the overall loss of salt marsh habitat coverage since ~1880. The NOAA C-CAP data are land cover raster data (.img format) available for the years 1996, 2001, 2006 and 2010 for each state. To measure salt marsh habitats coverage in each of these years we included the following C-CAP land classifications: Estuarine Forested Wetland (16), Estuarine Scrub/Shrub Wetland (17), Estuarine Emergent Wetland (18), Estuarine Aquatic Bed (23). For each time step we remove all land cover cells that are not in those four categories. We then calculated the % gained or lost within each of these classifications in each time step, using a linear interpolation between all time steps. We then incorporate the historical areas lost estimates to represent the full loss of salt marsh habitat since ~1850s.
+#### Salt Marsh
 
-Data available to measure the extent and condition of **eelgrass** habitats in the Northeast through time is quite limited. As such we developed a model to assess the water quality condition in areas that are home to eelgrass habitats as a proxy for the condition of eelgrasses across the region. To gauge the extent of eelgrass across all Northeast States we first used the spatial Past Eelgrass Surveys data layer from the Northeast Data Portal to identify all locations where eelgrass has been in the past (1980 forwards). We then overlaid this location information with the EPA's National Coastal Condition Assessment Water Quality Index which measures Phosphorus, Nitrogen, Dissolved Oxygen, Water Clarity, and Chlorophyll a for each site monitored by the EPA across the region. The Water Quality Index provides data in categories of "Good", "Fair" and "Poor" for each monitoring site. We assign the following scores to each of these categories: Good = 100, Fair = 50 and Poor = 0. We then intersect the Water Quality Index monitoring sites with the current and past eelgrass beds as identified in the Northeast Data Portal using a 10km buffer to determine the water quality values where eelgrass are present. We only use sites where eelgrass presence data and water quality monitoring sites overlap within our 10km buffer and take the average score based on all overlapping points. 
+For salt marsh habitats we used NOAA's Coastal Change Analysis Program data (C-CAP) to derive an estimate of salt marsh loss from 1996 through 2010 and a collection of historical loss estimates to estimate the overall loss of salt marsh habitat coverage since ~1880 (Table 1). The NOAA C-CAP data are land cover raster data (.img format) available for the years 1996, 2001, 2006 and 2010 for each state. To measure salt marsh habitats coverage in each of these years we included the following C-CAP land classifications: Estuarine Forested Wetland (16), Estuarine Scrub/Shrub Wetland (17), Estuarine Emergent Wetland (18), Estuarine Aquatic Bed (23). For each time step we remove all land cover cells that are not in the four categories. The total number of wetland cells is calculated for each time step, and then compared to the 1996 value to get a sense for percent gained or lost since 1996. These values ranged between a 2.5% loss (New York) and a roughly 3% gain (Maine). These values were added to the historical loss estimates (Table 1). Linear interpolation was used to gapfill missing data between 2001 and 2010, and the most recent value (2010) was carried forward to 2017.
 
-For **seabed habitats** we utilized the Fishing Effects model developed by the New England Fishery Management Council which measures the impacts placed on seabed habitats from fishing activity as percent disturbance based on a scale of 0 - 1, with a score of 1 representing the most disturbed. These data are available at a 5x5 km grid spatial scale for each month from 1996 - 2017. For our purposes we took the mean percent disturbance across each region and year to measure the status of the seabed habitats included in the model (see table below for all seabed habitats included in the Model). Regions with the least amount of disturbance from fishing scored the highest in this model.
+|State|Historical loss (%)|Reference|
+|----|----|----|
+|Rhode Island| 53| Bromberg and Bertness (2005)|
+|Massachusetts| 41| Bromberg and Bertness (2005)|
+|New Hampshire| 18| Bromberg and Bertness (2005)|
+|Maine|0| Bromberg and Bertness (2005)|
+|Connecticut|27| Basso et al. 2015 |
+|New York|48|Basso et al. 2015 |
+Table 1: Estimates of historical salt marsh loss by state.
+
+#### Eelgrass
+
+Data available to measure the extent and condition of eelgrass habitats in the Northeast through time is quite limited. As such we developed a model to assess the water quality condition in areas that are home to eelgrass habitats as a proxy for the condition of eelgrasses across the region. To gauge the extent of eelgrass across all Northeast States we first used the spatial Past Eelgrass Surveys data layer from the Northeast Data Portal to identify all locations where eelgrass has been in the past (1980 forwards). We then overlaid this location information with the EPA's National Coastal Condition Assessment Water Quality Index which measures Phosphorus, Nitrogen, Dissolved Oxygen, Water Clarity, and Chlorophyll a for each site monitored by the EPA across the region. The Water Quality Index provides data in categories of "Good", "Fair" and "Poor" for each monitoring site. We assign the following scores to each of these categories: Good = 100, Fair = 50 and Poor = 0. We then intersect the Water Quality Index monitoring sites with the current and past eelgrass beds as identified in the Northeast Data Portal using a 10km buffer to determine the water quality values where eelgrass are present. We only use sites where eelgrass presence data and water quality monitoring sites overlap within our 10km buffer and take the average score based on all overlapping points. Data is missing for 2005 and 2011-2017. With only two data points for 2006 and 2010, we gapfill 2005 data with the 2006 data and the 2010 data is carried forward through 2017.
+
+#### Seabed habitats
+
+For seabed habitats we utilized the Fishing Effects model developed by the New England Fishery Management Council which measures the impacts placed on seabed habitats from fishing activity as percent disturbance based on a scale of 0 - 1, with a score of 1 representing the most disturbed. These data are available at a 5x5 km grid spatial scale for each month from 1996 - 2017. For our purposes we took the mean percent disturbance across each region and year to measure the status of the seabed habitats included in the model (see table below for all seabed habitats included in the Model). Regions with the least amount of disturbance from fishing scored the highest in this model.
 Seabed habitats included in the Fishing Effects Model:
 
 * Amphipods
@@ -38,21 +54,43 @@ Seabed habitats included in the Fishing Effects Model:
 
 ### Species
 
+#### Range maps
+
 Species range maps were collected from two different sources: the Northeast Data Portal and the The International Union for Conservation of Nature’s (IUCN). When species range maps were available for the same species from both data sources we prioritized the Northeast Data Portal maps as they were developed by regional experts and can thus be assumed to be more accurate for the assessment region. 
 
-Species conservation status data were collected from two different sources: NatureServe and the International Union for Conservation of Nature’s (IUCN). When species status information was available for the same species from both data sources we prioritized the NatureServe assessments as they were developed by regional experts and can thus be assumed to be more accurate for the assessment region. 
+#### Conservation status
+
+Species conservation status data were collected from two different sources: NatureServe and the International Union for Conservation of Nature’s (IUCN). When species status information was available for the same species from both data sources we prioritized the NatureServe assessments as they were developed by regional experts and can thus be assumed to be more accurate for the assessment region. Often conservation status information was available at the state level from NatureServe. Status' were translated into scores from 0 to 1 (Table 2).
+
+Threat weights were assigned based on the IUCN threat categories status of each species following the weighting schemes developed by Butchart et al. (2007). For the purposes of this analysis, we included only data for extant species for which sufficient data were available to conduct an assessment. We did not include the Data Deficient classification as assessed species following previously published guidelines for a mid-point approach (Schipper et al. 2008; Hoffmann et al. 2010)
+
+|Conservation status| Score|
+|----|----|
+|Least Concern|	0|
+|Near threatened|	0.2|
+|Vulnerable|	0.4|
+|Endangered|	0.6|
+|Critically endangered|	0.8|
+|Extinct|	1|
+Table 2: Conservation status scores translated into 0 (low threat) to 1 (highest threat/extinct) scale.
 
 ## Model
 
 The Biodiversity goal status is calculated as the average of the condition of marine and coastal associated species (Species subgoal) and biodiversity-supporting marine and coastal habitats (Habitats subgoal).
 
-The **Habitats model** is calculated as the average score for each of the three habitat classes assessed: Salt marsh, eelgrass, and seabed habitats.
+The **Habitats sub-goal** score for each region and year is equal to the average score across the three habitat classes assessed: salt marsh, eelgrass, and seabed habitats
 
-The **Species model** measures the average threat status, defined by NatureServe state-level threat assessments where available and IUCN Red List threat assessments elsewhere, of all species found in each region. The upper reference point for the Species sub-goal is to have all species at a risk status of Least Concern. As in OHI global assessments, we scale the lower end of the goal to be 0 when 75% of species are extinct, a level comparable to the five documented mass extinctions that would constitute a catastrophic loss of biodiversity.
+The **Species sub-goal** score for each region and year is calculated by taking the average threat status for all species found in the region and subtracting from 1. The upper reference point for the Species sub-goal is to have all species at a risk status of Least Concern. As in OHI global assessments, we scale the lower end of the goal to be 0 when 75% of species are extinct, a level comparable to the five documented mass extinctions that would constitute a catastrophic loss of biodiversity.
 
-Threat weights were assigned based on the IUCN threat categories status of each species following the weighting schemes developed by Butchart et al. (2007). For the purposes of this analysis, we included only data for extant species for which sufficient data were available to conduct an assessment. We did not include the Data Deficient classification as assessed species following previously published guidelines for a mid-point approach (Schipper et al. 2008; Hoffmann et al. 2010)
+The **Biodiversity goal** score is equal to the average of the Habitats and Species sub-goal scores for each region and year.
 
 
 ## References
+
+Basso, G., K. O'Brien, M. Albino, and V. O'Neill. "Status and trends of wetlands in the Long Island Sound Area: 130 year assessment." U.S. Department of the Interior, Fish and Wildlife Service. (2015): 37 pp.
+
+Bromberg, Keryn D., and Mark D. Bertness. "Reconstructing New England salt marsh losses using historical maps." Estuaries 28.6 (2005): 823-832.
+
+Butchart, Stuart HM, et al. "Improvements to the red list index." PloS one 2.1 (2007): e140.
 
 Schipper, Jan, et al. "The status of the world's land and marine mammals: diversity, threat, and knowledge." Science 322.5899 (2008): 225-230.

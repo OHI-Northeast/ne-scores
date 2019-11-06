@@ -28,6 +28,4 @@ The **recreational fishing engagement** layer is derived from NOAA Vulnerability
 
 ## Model
 
-All layers are equally weighted when calculating the goal score for sense of place.
-
-## References
+The Sense of Place goal score is equal to the average layer score.

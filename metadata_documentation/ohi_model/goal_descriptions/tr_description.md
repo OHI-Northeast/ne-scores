@@ -17,5 +17,7 @@ The **coastal access** layer was derived from the NOAA Environmental Sensitivity
 
 ## Model
 
-Each data layer is scored between 0 and 100 and then averaged with equal weighting by region to get the Tourism & Recreation score.
+The Tourism & Recreation goal score is equal to the average layer score (coastal access, beach closures and jobs in tourism).
+
+
 
