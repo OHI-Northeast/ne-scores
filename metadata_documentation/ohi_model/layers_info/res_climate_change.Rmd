@@ -35,7 +35,7 @@ dir_git <- '~/github/ne-prep'
 
 table2_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/state_co2em_targets.csv"))
 
-kable(table2_res_cc, caption = "State Set CO2 Emmissions Targets") %>% 
+kable(table2_res_cc, caption = "State Set CO2 Emissions Targets") %>% 
   kable_styling(bootstrap_options = "striped", full_width = F)
 ```
 
