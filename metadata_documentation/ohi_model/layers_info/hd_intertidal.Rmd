@@ -1,0 +1,11 @@
+*Pressure*
+
+*Category: ecological*
+
+*Subcategory: habitat destruction*
+
+Human population density from the 2010 US Census data downloaded from the NASA Socioeconomic Data and Applications Center (SEDAC) was used as a proxy for human trampling of intertidal habitats. Only the people living within 25 miles of the coastline were included in our analysis. Population data is very skewed, with the majority of people living in major cities (up to 38,000 people/km^2^ in NYC), while the medium is 28. We log transformed the data since a few people can have a large effect of the habitat, which would not have been represented otherwise. We then used the 99.99th quantifiable as our reference point, and rescaled the pressure 0-1. 
+
+**References**
+
+1. “U.S. Census Grids.” Summary File 1, v1: U.S. Census Grids | SEDAC, NASA Socioeconomic Data and Applications Center (SEDAC), 2010, doi.org/10.7927/H4TB14TN.

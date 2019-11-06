@@ -10,7 +10,9 @@ Artificially hardening our coastlines is a method to protect developments along 
 
 Data from the NOAA [Environmental Response Management Application](https://erma.noaa.gov/atlantic/erma.html#/layers=1+13763+16973+35410+491&x=-78.22196&y=38.23326&z=6&panel=layer) portal was used to calculate the percentage of armored coastline in each of the regions. We included all man made structures such as seawalls, riprap, jetties, bulkheads, etc within a 1 km distance of the coastline. The percentage hardened in each region was used directly as the pressure score for this layer.
 
-REF: 1. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/150065
-2 https://onlinelibrary.wiley.com/doi/full/10.1111/j.1439-0485.2008.00231.x
+**References**
+1. Gittman, Rachel K, et al. “Engineering Away Our Natural Defenses: an Analysis of Shoreline Hardening in the US.” The Ecological Society of America, John Wiley &amp; Sons, Ltd, 1 Aug. 2015, esajournals.onlinelibrary.wiley.com/doi/full/10.1890/150065.
 
-3. NOAA [Environmental Response Management Application](https://erma.noaa.gov/atlantic/erma.html#/layers=1+13763+16973+35410+491&x=-78.22196&y=38.23326&z=6&panel=layer)
+2. Dugan, Jenifer E., et al. “Ecological Effects of Coastal Armoring on Sandy Beaches.” Wiley Online Library, John Wiley &amp; Sons, Ltd (10.1111), 3 June 2008, onlinelibrary.wiley.com/doi/full/10.1111/j.1439-0485.2008.00231.x.
+
+3. NOAA Office of Response and Restoration. Environmental Response Management Application (ERMA) avaliable at https://erma.noaa.gov/atlantic/erma.html#/layers=1+13763+16973+35410+491&x=-78.22196&y=38.23326&z=6&panel=layer
