@@ -4,12 +4,12 @@
  library(knitr) 
  library(here) 
 
-###CHANGE THESE TWO PATHS. ALSO ADD THOSE COLUMNS WE TALKED ABOUT TO LAYERS_EEZ_BASE; FOR USE ITRS REGIONS
 layer_meta <- read.csv(here('metadata_documentation/layers_base.csv'), stringsAsFactors = FALSE) 
 layer_path <- 'https://github.com/OHI-Science/ohi-global/tree/draft/region/layers' 
 
 ```
 
+# Goals
 
 
 # Pressures
