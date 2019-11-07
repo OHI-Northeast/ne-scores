@@ -5,9 +5,228 @@
  library(here) 
 
 ###CHANGE THESE TWO PATHS. ALSO ADD THOSE COLUMNS WE TALKED ABOUT TO LAYERS_EEZ_BASE; FOR USE ITRS REGIONS
- #layer_meta <- read.csv(here('metadata_documentation/layers_eez_base.csv'), stringsAsFactors = FALSE) 
- #layer_path <- 'https://github.com/OHI-Science/ohi-global/tree/draft/eez/layers' 
+layer_meta <- read.csv(here('metadata_documentation/layers_base.csv'), stringsAsFactors = FALSE) 
+layer_path <- 'https://github.com/OHI-Science/ohi-global/tree/draft/region/layers' 
+
 ```
+
+
+
+# Pressures
+"The pressure score, p, describes the cumulative impact of ecological and social stressors in a given year and region which tend to depress the goal score in future years. Pressure scores range from 0 to 1, and include both ecological (p_E) and social pressures (p_S), such that:
+
+$$p=γp_E+(1-γ)p_S$$
+
+where γ=0.5 is the relative weight for ecological vs. social pressures categories. We default to equal weighting as little evidence was available to justify or quantify unequal weights between ecological and social pressures categories. It may be that future work can inform unequal weighting terms γ for individual goals.
+
+For each goal, subgoal, or goal element (e.g. specific habitat), we calculated pressures as an impact-weighted cumulative impact for each pressure category $p_{ecol}^{goal}$ and $p_{soc}^{goal}$. Impact weights are based on a goal’s sensitivity $w_(s_i)^{goal}$ to specific stressors s_i ranked as low $(w_(s_i)^{goal}=1)$, medium $(w_(s_i)^{goal}=2)$, high $(w_(s_i)^{goal}=3)$, or no impact $(w_(s_i)^{goal}=NA)$, as determined by peer-reviewed literature and expert judgment (Fig. SM2 shows the matrix of stressors, goals, and weights). The denominator represents the maximum stressor impact weight for that category and goal. If cumulative pressure load for a goal/component combination exceeds the maximum possible stressor intensity, we cap it to 1.0, i.e. the equivalent to an individual stressor at maximum stress and intensity.
+$$p_{cat}^{goal}=min(\frac{1}{(w_{cat,max}^{goal}}\sum_{i=1}^N w_{s_i}^{goal} ×s_i, 1)$$" OHIBC
+
+## Ecological Pressure
+
+We included five subcategories of ecological stressors/pressures: water pollution, climate change, habitat destruction, fishing pressure, and species pollution
+
+-- more about this here and equations; unsure if the way BC calculated it is the same --
+
+### Water Pollution
+
+[prs_pathogens](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_pathogens.csv) 
+
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_pathogens.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[prs_sqi](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_sqi.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_sqi.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[prs_trash](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_trash.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_trash.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[prs_wqi](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_wqi.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_wqi.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+
+### Climate Change
+
+[cc_acid](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/cc_acid.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/cc_acid.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[cc_sst](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/cc_sst.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/cc_sst.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[cc_slr](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/cc_slr.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/cc_slr.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+### Fishing
+[prs_fishing](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_fishing.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_fishing.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+### Habitat Destruction
+
+[hd_intertidal](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/hd_intertidal.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/hd_intertidal.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[hd_subtidal](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/hd_subtidal.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/hd_subtidal.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[prs_hardening](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_hardening.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_hardening.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[prs_aqua_hab](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_aqua_hab.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_aqua_hab.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[prs_sasi](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_sasi.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_sasi.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+### Species Pollution
+
+[prs_disease](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_disease.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_disease.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[sp_alien](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/sp_alien.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/sp_alien.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+[sp_genetic](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/sp_genetic.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/sp_genetic.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
+
+## Social Pressure
+
+[prs_social](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_social.csv) 
+```{r, echo=FALSE, results='hide'}
+                                  x <- tempfile(fileext = 'Rmd')
+                                  on.exit(unlink(x))
+                                  download.file("https://raw.githubusercontent.com/OHI-Northeast/ne-scores/master/metadata_documentation/ohi_model/layers_info/prs_social.Rmd", x)
+```
+ 
+```{r, child = x, echo=FALSE, results='asis'} 
+ 
+``` 
 
 
 # Resilience 
@@ -22,9 +241,6 @@ These components are weighted such that resilience to ecological pressures (i.e.
 ## I. Ecological Integrity
 
 “An intact biodiverse ecosystem provides general resilience to ecological pressures by ensuring the system’s ability to maintain functionality in the face of stressors imposed by human activity and climate change. For OHIBC, we consider the area-weighted average conservation status of all species found in the coastal zone (3 nmi offshore) (as resilience to coastal pressures) and found within the entire EEZ (as resilience to pressures not limited to the coast). (BC OHI)”
-
-
-CODE CHUNKS FOR ECOLOGICAL INTEGREITY LAYER
 
 ## II. Regulatory Efforts/Resilience
 
@@ -117,5 +333,6 @@ $$socialintegrity = \frac{OpportunityIndex + CompetitivenessReport + LCV + Socia
  
 ``` 
 
+# Resilience Data Assessment
 
-
+insert the matrix for quality of data here. use the highlighting functions in kable for the green, yellow, red

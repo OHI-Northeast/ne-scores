@@ -1,8 +1,4 @@
-*Pressure*
-
-*Category: ecological*
-
-*Subcategory: Species Pollution*
+**Nonindigenous Species**
 
 The USGS Nonindigenous Aquatic Species database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the maximum number of occurances from 1970-2017.
 

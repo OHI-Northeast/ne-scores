@@ -1,10 +1,4 @@
-*Pressure*
-
-*Category: ecological*
-
-*Subcategory: Species Pollution*
-
-**Aquaculture: Disease**
+**Aquaculture Effects on Disease**
 
 One of the observed side effects during aquaculture production is the increased prevelance of disease, pathogens, and parasite spreading in the farms due to high densities of individuals (REF). These can spread out through neighboring water bodies and infect wild stocks (REF).
 

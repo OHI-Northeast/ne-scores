@@ -1,10 +1,8 @@
-*Pressure*
+**Trampling**
 
-*Category: ecological*
+Beaches and coastlines are very sensitive to disturbances, even a few individuals can cause damage (REF). As population densities along the coastlines increases, so does the mounting pressure on intertidal habitats from the presence of humans utlizing them.
 
-*Subcategory: habitat destruction*
-
-Human population density from the 2010 US Census data downloaded from the NASA Socioeconomic Data and Applications Center (SEDAC) was used as a proxy for human trampling of intertidal habitats. Only the people living within 25 miles of the coastline were included in our analysis. Population data is very skewed, with the majority of people living in major cities (up to 38,000 people/km^2^ in NYC), while the medium is 28. We log transformed the data since a few people can have a large effect of the habitat, which would not have been represented otherwise. We then used the 99.99th quantifiable as our reference point, and rescaled the pressure 0-1. 
+We used 2010 census data downloaded from [NASA's Socioeconomic Data and Applications Center](https://sedac.ciesin.columbia.edu/data/set/usgrid-summary-file1-2010/data-download). The GeoTiff files represent popualtion densities in 1 km^{2} grids. To focus on populations that would contribute coastal trampling pressure, we selcted for areas within 25 miles of the coastline. The distrubution of the population densities were very skewed, due to large cities like New York and Boston, so we log transformed the popualtion densities, since a small number of people can have a very large effect on habitats. The 99.99th quantile of raster values was used as the reference point to rescale the layer from 0 to 1, and the mean value of the raster cells within each OHI region was calculated
 
 **References**
 

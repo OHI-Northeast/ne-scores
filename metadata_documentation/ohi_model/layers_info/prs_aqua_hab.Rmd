@@ -1,10 +1,4 @@
-*Pressure*
-
-*Category: ecological*
-
-*Subcategory: Habitat Destruction*
-
-**Aquaculture: Habitat Destruction**
+**Aquaculture Effects on Habitat**
 
 Not all aquaculture production facilities are build in similar areas, and the effects of faculties location and production on the habitat differ greatly across regions, methods, and species produced. Generally, shellfish aquaculture is the least harmful, because there is little change to the habitat, not much extra structure needs to build, and they actual clean the water (REF and edit). On the other hand, shrimp production in some areas require the removal of mangroves and the growing process creates poor water quality conditions.
 
