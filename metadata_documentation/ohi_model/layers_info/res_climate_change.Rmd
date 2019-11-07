@@ -17,8 +17,7 @@ library(kableExtra)
 library(dplyr)
 dir_git <- '~/github/ne-prep'
 
-table_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/energy_consumption_goals.csv"))%>% 
-  select(State, Goal)
+table_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/energy_consumption_goals.csv"))
 
 
 kable(table_res_cc, caption = "State Set Renewable Energy Consumption Targets") %>% 
@@ -50,15 +49,9 @@ The same data as Implementation/Enforcement are used as a proxy indicator for th
 **References**
 
 1. American Council for an Energy-Efficient Economy 2019, The State Energy Efficiency Scorecard. Washington D.C.: American Council for an Energy-Efficient Economy. 
-
 2. America’s Pledge, “America’s Pledge Phase 1 Report: States, Cities, and Businesses in the United States Are Stepping Up on Climate Action,” November 2017.
-
 3. U.S. Energy Information Administration 2019, Total Energy Data, Viewed July 2019, <https://www.eia.gov/>
-
 4. U.S. Environmental Protection Agency 2019, CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2), Viewed August 2019, <https://www.epa.gov/sites/production/files/2017-09/documents/co2ffc_2015.pdf>
-
 5. Center for Climate and Energy Solutions,  “U.S. State Greenhouse Gas Emissions Targets”, 8 July 2019, www.c2es.org/document/greenhouse-gas-emissions-targets/.
-
 6. Rhode Island Department of Administration Division of Planning. “Energy 2035: Rhode Island State Energy Plan.”,  8 Oct. 2015, www.planning.ri.gov/documents/LU/energy/energy15.pdf.
-
 7. Database of State Incentives for Renewables and Efficiency, Renewable Portfolio Standards. (Raleigh, N.C. State University, 2017).

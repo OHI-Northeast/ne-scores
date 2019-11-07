@@ -1,6 +1,3 @@
-
-“Social resilience describes the social integrity of coastal communities that allow for adaptive responses to social and ecological pressures (BC)” This layer was calculated using data from the US Opportunity Index, Beacon Hill Competitiveness Reports, League of Conservation Voters Scorecards, and the NOAA Office of Science and Technology Social Indicators scores.
-
 **US Opportunity Index:**
 
 “The Opportunity Index was created by Opportunity Nation (ref) as an alternative to the limited information commonly used to assess economic strength and security, namely poverty rates and GDP.  This index seeks to provide communities with more diverse and informative data to allow for progression towards increased economic mobility and opportunity. The Opportunity Index measures three dimensions of community opportunity to produce a single overall score for all 50 U.S states: Economy, Education, and Community. Indicators are selected to measure the opportunities that are available in communities based on their established connection to expanding or restricting economic mobility and opportunity (WC OHI).”  Index scores from 2012, and 2014-2017 were used. The Opportunity Index scores each state on a scale of 0-100, which we then rescaled 0-1 and applied directly into each state resilience measure.

@@ -14,9 +14,10 @@
 
 "Resilience for each goal and region, r, is based on three components: ecological integrity, r_ecol, and regulatory efforts that target specific ecological pressures, r_reg, which combine to address resilience to ecological pressures; and social integrity, r_soc, which addresses social pressures. Each resilience category contains one or more layers reflecting the magnitude of resilience within each region for each year; layers are “activated” to address specific pressures acting on specific goals based on a resilience matrix (Fig. matrix), and active layers are summed to determine a score for each resilience category. Each layer is constrained from 0 to 1.
 
-        EQUATION
+$$r=γ((\frac{r_{ecol}+r_{reg})}{2})+(1-γ)r_{soc}$$
+ 
 
-These components are weighted such that resilience to ecological pressures (i.e., ) and resilience to social pressures (i.e., ) reflect the proportional contribution of ecological and social pressures in the pressures model, i.e. gamma=0.5 (BC OHI)”
+These components are weighted such that resilience to ecological pressures (i.e., ) and resilience to social pressures (i.e., ) reflect the proportional contribution of ecological and social pressures in the pressures model, i.e. $γ=0.5$ (BC OHI)”
 
 ## I. Ecological Integrity
 
@@ -29,7 +30,7 @@ CODE CHUNKS FOR ECOLOGICAL INTEGREITY LAYER
 
 “Regulatory resilience describes the institutional measures (e.g., rules, regulations, and laws) designed to address ecological pressures. The regulatory resilience datasets are grouped into five categories that address the 5 pressure categories: water pollution, climate change, fishing pressure, habitat destruction and species introductions (invasive species and genetic escapes)(OHI Goals website).” The resilience layers for each category are composed of 3 components: presence of regulations, implementation/enforcement of regulations, and effectiveness/compliance of regulations. We searched for data that would serve as direct measurements or proxy indicators of the extent and successfulness of these components. Federal or state set targets were used as references for calculating resilience scores, and when this information was not available we used choose references we felt reasonable. In cases where multiple data layers are used to calculate one component, they were averaged, and then the three regulatory resilience categories are equally weighted in the overall resilience layer score. (reg metrics table) 
 
-EXAMPLE MATH EQUATION FOR HOW THIS IS CALCULATED
+$$regulatory resilience_{layer x} = \frac{presence + implemenation/enforcemnet + effectiveness/compliance}{3}$$
 
 ### 1. Water Pollution
 [res_water_pollution](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/res_water_pollution.csv) 
@@ -101,6 +102,10 @@ EXAMPLE MATH EQUATION FOR HOW THIS IS CALCULATED
 
 ## III. Social Integrity
 [res_social](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/res_social.csv) 
+
+“Social resilience describes the social integrity of coastal communities that allow for adaptive responses to social and ecological pressures (BC)” This layer was calculated using data from the US Opportunity Index, Beacon Hill Competitiveness Reports, League of Conservation Voters Scorecards, and the NOAA Office of Science and Technology Social Indicators scores.
+
+$$socialintegrity = \frac{OpportunityIndex + CompetitivenessReport + LCV + SocialIndicators}{4}$$
 
 ```{r, echo=FALSE, results='hide'}
                                   x <- tempfile(fileext = 'Rmd')

@@ -17,14 +17,9 @@ The data sources used to calculate the habitat destruction resilience layer incl
 **References**
 
 1. Surfrider Foundation (2017), State of the Beach Report. San Clemente, CA
-
 2. NOAA Greater Atlantic Region Fisheries Office, GIS Datasets. https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html
-
 3. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018, 2018
-
 4. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2017, 2017
-
 5. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2016, 2016
-
 6. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2015, 2015
 
