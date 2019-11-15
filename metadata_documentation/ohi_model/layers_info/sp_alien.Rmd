@@ -1,7 +1,7 @@
 **Nonindigenous Species**
 
-The USGS Nonindigenous Aquatic Species database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the maximum number of occurances from 1970-2017.
+The [USGS Nonindigenous Aquatic Species](http://nas.er.usgs.gov) database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated^[Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.
+]. This layer was calculated by dividing the number of species eradicated by the maximum number of occurances from 1970-2017.
 
 **References**
 
-1. Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.

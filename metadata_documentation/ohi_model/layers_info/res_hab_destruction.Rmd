@@ -2,24 +2,17 @@ The data sources used to calculate the habitat destruction resilience layer incl
 
 **Presence**
 
-1. The Surfrider Foundation releases an annual State of the Beach Reportcard (since 2017) which scores each coastal state on their policies to protect their beaches from coastal erosion, haphazard development, and sea level. A score of 10/10 results in an A+. We rescaled these scores 0-1.
+1. The Surfrider Foundation releases an annual [State of the Beach Reportcard](https://www.surfrider.org/coastal-blog/entry/2017-state-of-the-beach-report) (since 2017) which scores each coastal state on their policies to protect their beaches from coastal erosion, haphazard development, and sea level. A score of 10/10 results in an A+. We rescaled these scores 0-1^[Surfrider Foundation (2017), State of the Beach Report. San Clemente, CA].
 
-2. NOAA GARFO shapefiles were used to identify areas where fisheries regulations are in place that prohibit trawling and dredging are prohibited year-round; target is 30% protected
+2. [NOAA GARFO shapefiles](https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html) were used to identify areas where fisheries regulations are in place that prohibit trawling and dredging are prohibited year-round; target is 30% protected^[NOAA Greater Atlantic Region Fisheries Office, GIS Datasets. https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html].
 
 **Implementation/Enforcement**
 
-3. The total number of staff,  patrols, and outreach events OLE partakes in is pulled from the NOAA OLE Northeast Region Annual report. These are summed by year and divided by the highest historic total.
+3. The total number of staff,  patrols, and outreach events OLE partakes in is pulled from the NOAA OLE Northeast Region Annual report. These are summed by year and divided by the highest historic total^[(National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018-2015, 2018-2015)].
 
 **Effectiveness/Compliance**
 
-4. Using data from the NOAA OLE Northeast Region Annual report, this layer was calculated by taking the number of investigations and dividing it by the number of enforcement actions.
+4. Using data from the NOAA OLE Northeast Region Annual report, this layer was calculated by taking the number of investigations and dividing it by the number of enforcement actions^3^.
 
 **References**
-
-1. Surfrider Foundation (2017), State of the Beach Report. San Clemente, CA
-2. NOAA Greater Atlantic Region Fisheries Office, GIS Datasets. https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html
-3. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018, 2018
-4. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2017, 2017
-5. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2016, 2016
-6. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2015, 2015
 

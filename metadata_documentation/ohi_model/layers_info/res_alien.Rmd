@@ -8,23 +8,16 @@ We used data/information from Coast Guard, NOAA Office of Law Enforcement (OLE),
 
 **Implementation/Enforcement **
 
-3. We extracted the total number of staff,  patrols, and outreach events OLE partakes from the NOAA OLE Northeast Region Annual report. These are summed up and rescaled 0-1 using the highest historic total as the reference point. This information was given to us in PDF report form for 4 years. This data in raw form, over the entire period of time would be optimal, if this data becomes avaliable.
+3. We extracted the total number of staff,  patrols, and outreach events OLE partakes from the NOAA OLE Northeast Region Annual report. These are summed up and rescaled 0-1 using the highest historic total as the reference point. This information was given to us in PDF report form for 4 years^[(National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018-2015, 2018-2015)]. This data in raw form, over the entire period of time would be optimal, if this data becomes avaliable.
 
 **Effectiveness/Compliance**
 
-4. The USGS Nonindigenous Aquatic Species database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the number of new occurrences in each region each year. This data in raw form, over the entire period of time would be optimal, if this data becomes avaliable.
+4. The [USGS Nonindigenous Aquatic Species](http://nas.er.usgs.gov) database was used to inform this layer^[Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.]. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the number of new occurrences in each region each year. This data in raw form, over the entire period of time would be optimal, if this data becomes avaliable.
+
+
 
 **References**
 
-1. Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.
-
-2. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018, 2018
-
-3. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2017, 2017
-
-4. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2016, 2016
-
-5. National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2015, 2015
 
 
 

@@ -1,13 +1,15 @@
 **Aquaculture Escapes**
 
+With aquaculture production comes the risk of some farmed individuals escaping into the wild stocks or spawning events introducing farmed genetic recruits into the wild gene pool. This is generally considered detrimental to wild stocks, and that diluting the native gene pool resulting in lower fitness stocks^[Mcginnity, Philip, et al. “Fitness Reduction and Potential Extinction of Wild Populations of Atlantic Salmon,            Salmo Salar            , as a Result of Interactions with Escaped Farm Salmon.” Proceedings of the Royal Society of London. Series B: Biological Sciences, vol. 270, no. 1532, 2003, pp. 2443–2450., doi:10.1098/rspb.2003.2520.]
+
 One of the observed side effects during aquaculture production is the increased prevelance of disease, pathogens, and parasite spreading in the farms due to high densities of individuals (REF). These can spread out through neighboring water bodies and infect wild stocks (REF).
 
-Sustianability scores for farmed species were obtained from the Monterey Bay Aquarium Seafood Watch Standards for Aquaculture. This assessment incorportates 10 criteria: avaliablity and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, diseases (pathogen, and parasite interaction), stock source, predator and wildlife mortalities, and escapes during transit when calculating the overall sustainability score. We used the escapes during production criteria to inform how much genetic escapes from aquaculture production contributes to the species pollution layer. The criteria assesses the risk level of impacts on wild stock populations's fitness and habitat caused by the aquaculture escapes of non-native or genetically distinct fish.
+Sustianability scores for farmed species were obtained from the [Monterey Bay Aquarium Seafood Watch Seafood Recommendations](https://www.seafoodwatch.org/seafood-recommendations)^[Monterey Bay Aquarium Seafood Watch, avaliable at: https://www.seafoodwatch.org/seafood-recommendations]. This assessment incorportates 10 criteria: avaliablity and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, diseases (pathogen, and parasite interaction), stock source, predator and wildlife mortalities, and escapes during transit when calculating the overall sustainability score. We used the escapes during production criteria to inform how much genetic escapes from aquaculture production contributes to the species pollution layer. The criteria assesses the risk level of impacts on wild stock populations's fitness and habitat caused by the aquaculture escapes of non-native or genetically distinct fish.
 
 To calculate the score for this layer we rescaled the criteria score from 0-10 to 0-1, scaled the production by multiplying it with the new criteria score, summed up all the scaled production in each region, and then divided it by the total area of the region to distribute the pressures. Since we know that aquculture production is in the early stages and will likely grow much larger than the current prodcution levels, we used a reference point of twice the current maxium of the scaled distributed production in each region, and then rescaled the pressure score 0-1.
 
 **References**
 
-1. Monterey Bay Aquarium Seafood Watch, avaliable at: https://www.seafoodwatch.org
+
 
 

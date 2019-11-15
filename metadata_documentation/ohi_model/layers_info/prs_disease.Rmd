@@ -1,13 +1,10 @@
-**Aquaculture Effects on Disease**
+**Disease Amplification**
 
-One of the observed side effects during aquaculture production is the increased prevelance of disease, pathogens, and parasite spreading in the farms due to high densities of individuals (REF). These can spread out through neighboring water bodies and infect wild stocks (REF).
+One of the observed side effects during aquaculture production is the increased prevelance of disease, pathogens, and parasite spreading in the farms due to high densities of individuals^[Bondad-Reantaso, Melba G., et al. “Disease and Health Management in Asian Aquaculture.” Veterinary Parasitology, vol. 132, no. 3-4, 2005, pp. 249–272., doi:10.1016/j.vetpar.2005.07.005.]. These can spread out through neighboring water bodies and infect wild stocks.
 
-Sustianability scores for farmed species were obtained from the Monterey Bay Aquarium Seafood Watch Standards for Aquaculture. This assessment incorportates 10 criteria: avaliablity and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, diseases (pathogen, and parasite interaction), stock source, predator and wildlife mortalities, and escapes during transit when calculating the overall sustainability score. We used the disease, pathogen, and parasite interaction criteria to inform how much disease from aquaculture production contributes to the species pollution layer. The criteria assesses the increases in transmision or retransmission of diseases or pathogens to wild fish stocks due to the amplification caused by aquaculture production
+Sustianability scores for farmed species were obtained from [Monterey Bay Aquarium Seafood Watch Seafood Recommendations](https://www.seafoodwatch.org/seafood-recommendations)^[Monterey Bay Aquarium Seafood Watch, avaliable at: https://www.seafoodwatch.org/seafood-recommendations]. This assessment incorportates 10 criteria: avaliablity and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, diseases (pathogen, and parasite interaction), stock source, predator and wildlife mortalities, and escapes during transit when calculating the overall sustainability score. We used the disease, pathogen, and parasite interaction criteria to inform how much disease from aquaculture production contributes to the species pollution layer. The criteria assesses the increases in transmision or retransmission of diseases or pathogens to wild fish stocks due to the amplification caused by aquaculture production
 
 To calculate the score for this layer we rescaled the criteria score from 0-10 to 0-1, scaled the production by multiplying it with the new criteria score, summed up all the scaled production in each region, and then divided it by the total area of the region to distribute the pressures. Since we know that aquculture production is in the early stages and will likely grow much larger than the current prodcution levels, we used a reference point of twice the current maxium of the scaled distributed production in each region, and then rescaled the pressure score 0-1.
 
 
 **References**
-
-1. Monterey Bay Aquarium Seafood Watch, avaliable at: https://www.seafoodwatch.org
-
