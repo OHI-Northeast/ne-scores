@@ -1,8 +1,9 @@
 ---
-output:
-  word_document: default
-  html_document: default
+output: html_document
 ---
+output: word_document
+always_allow_html: yes
+
 ```{r, message=FALSE, echo=FALSE, warning=FALSE, error=FALSE} 
  library(dplyr) 
  library(tidyr) 
@@ -44,7 +45,7 @@ We included five subcategories of ecological stressors/pressures: water pollutio
 ```
  
 ```{r, child = x, echo=FALSE, results='asis'} 
- 
+
 ``` 
 
 [prs_sqi](https://github.com/OHI-Northeast/ne-scores/blob/master/region/layers/prs_sqi.csv) 
