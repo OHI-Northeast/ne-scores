@@ -1,8 +1,7 @@
 ---
-output: html_document
----
 output: word_document
 always_allow_html: yes
+---
 
 ```{r, message=FALSE, echo=FALSE, warning=FALSE, error=FALSE} 
  library(dplyr) 
@@ -234,6 +233,8 @@ We included five subcategories of ecological stressors/pressures: water pollutio
  
 ``` 
 
+## Presures Data Selection Criteria Matrix:
+
 
 # Resilience 
 
@@ -339,6 +340,4 @@ $$socialintegrity = \frac{OpportunityIndex + CompetitivenessReport + LCV + Socia
  
 ``` 
 
-# Resilience Data Assessment
-
-insert the matrix for quality of data here. use the highlighting functions in kable for the green, yellow, red
+## Resilience Data Selection Criteria Matrix: 
