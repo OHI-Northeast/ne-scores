@@ -1,14 +1,14 @@
-Multiple data sources were used to calculate the climate change resilience layer including American Council for Energy Efficiency (ACEE), America’s Pledge Report, US Energy Information Administration (EIA), and the Environmental Protection Agency (EPA) (TABLE: data sources all layers). There are 4 data layers used in the climate change resilience layer.
+Multiple data sources were used to calculate the climate change resilience layer including American Council for Energy Efficiency (ACEE), America’s Pledge Report, US Energy Information Administration (EIA), and the Environmental Protection Agency (EPA). There are 4 data layers used in the climate change resilience layer.
 
 **Presence**
 
-1. The state's scores from the annual [ACEE State Energy Efficiency Scorecard](https://aceee.org/state-policy/scorecard), which scores each state on their energy efficient policies; the target is the maximum possible score of 50^[American Council for an Energy-Efficient Economy 2019, The State Energy Efficiency Scorecard. Washington D.C.: American Council for an Energy-Efficient Economy.]. 
+1. The state's scores from the annual [ACEE State Energy Efficiency Scorecard](https://aceee.org/state-policy/scorecard), which scores each state on their energy efficient policies, were compiled from 2005-2017^[American Council for an Energy-Efficient Economy 2019, The State Energy Efficiency Scorecard. Washington D.C.: American Council for an Energy-Efficient Economy.]. We used the maximum score possible of 50 as the reference point, and then rescaled 0-1. 
 
-2.  State level climate friendly actions since the United States exit from the Paris Climate Agreement; This information is taken from [America’s Pledge Report](https://www.bbhub.io/dotorg/sites/28/2017/11/AmericasPledgePhaseOneReportWeb.pdf) which lists the number of climate friendly actions in 33 categories. For this layer, we removed the energy efficiency categories as to not double count and states are scored based on actions taken in 30 different categories; the target is at least one action in each of the category^[America’s Pledge, “America’s Pledge Phase 1 Report: States, Cities, and Businesses in the United States Are Stepping Up on Climate Action,” November 2017.].
+2.  We incorporated state level climate friendly actions since the United States exit from the Paris Climate Agreement in this layer. This information was taken from [America’s Pledge Report](https://www.bbhub.io/dotorg/sites/28/2017/11/AmericasPledgePhaseOneReportWeb.pdf) which lists the number of climate friendly actions in 33 different categories. For this layer, we removed the energy efficiency categories as to not double count policies in this area, since we used the ACEE scorecard are a more comprehensive assessment of energy polices. The states are scored based on actions taken in 30 different categories, and the target is at least one action in each of the category^[America’s Pledge, “America’s Pledge Phase 1 Report: States, Cities, and Businesses in the United States Are Stepping Up on Climate Action,” November 2017.].
 
 **Implementation/Enforcement**
 
-3. Scores are calculated by taking the EIA energy consumption data, calculating the percent of energy consumed that comes from clean sources, and dividing it by the target emissions. Total annual carbon emissions were pulled from the EIA website. Clean energy consumption targets are calculated by performing a linear regression from 2004 to the target year of their consumption goal. While there are a variety of energy plans and portfolios in the US that differ from state to state, every state in our region of interest has a "renewable energy portfolio standards", so we do not include nuclear energy production as part of the total renewable energy consumption target^[U.S. Energy Information Administration 2019, Total Energy Data, Viewed July 2019, <https://www.eia.gov/>] (Table X^[Database of State Incentives for Renewables and Efficiency, Renewable Portfolio Standards. (Raleigh, N.C. State University, 2017.]). 
+3. The EIA energy consumption data is used to resume how well each state is doing with regards to implementation of their clean energy consumption targets. Scores are calculated by taking the EIA energy consumption data, calculating the percent of energy consumed that comes from clean sources, and dividing it by the target emissions. Clean energy consumption targets are calculated by performing a linear regression from 2004 to the target year of their consumption goal. While there are a variety of energy plans and portfolios in the US that differ from state to state, every state in our region of interest has a "renewable energy portfolio standards", so we do not include nuclear energy production as part of the total renewable energy consumption target^[U.S. Energy Information Administration 2019, Total Energy Data, Viewed July 2019, <https://www.eia.gov/>] (Table X^[Database of State Incentives for Renewables and Efficiency, Renewable Portfolio Standards. (Raleigh, N.C. State University, 2017.]). 
 
 ```{r echo = FALSE, message = FALSE}
 # make sure to number this table correctly in the end
@@ -20,12 +20,12 @@ dir_git <- '~/github/ne-prep'
 table_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/energy_consumption_goals.csv"))
 
 
-kable(table_res_cc, caption = "State Set Renewable Energy Consumption Targets") %>% 
+kable(table_res_cc, caption = "Table X. State Set Renewable Energy Consumption Targets") %>% 
   kable_styling(bootstrap_options = "striped", full_width = F)
 ```
 
 
-4. Scores are calculated by taking the EPA emissions data and dividing it by the target emissions. Total annual carbon emissions were pulled from the EPA website^[U.S. Environmental Protection Agency 2019, CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2), Viewed August 2019, <https://www.epa.gov/sites/production/files/2017-09/documents/co2ffc_2015.pdf>]. Carbon emission targets are calculated by performing a linear regression from 2004 to the target year of state set emissions goal (Table X^[Center for Climate and Energy Solutions,  “U.S. State Greenhouse Gas Emissions Targets”, 8 July 2019, www.c2es.org/document/greenhouse-gas-emissions-targets/.]). 
+4. The EPA carbon emissions data is used to resume how well each state is doing with regards to implementation of their carbon emissions targets. Scores are calculated by taking the EPA emissions data and dividing it by the target emissions. Total annual carbon emissions were pulled from the EPA website^[U.S. Environmental Protection Agency 2019, CO2 Emissions from Fossil Fuel Combustion - Million Metric Tons CO2 (MMTCO2), Viewed August 2019, <https://www.epa.gov/sites/production/files/2017-09/documents/co2ffc_2015.pdf>]. Carbon emission targets are calculated by performing a linear regression from 2004 to the target year of state set emissions goal (Table X^[Center for Climate and Energy Solutions,  “U.S. State Greenhouse Gas Emissions Targets”, 8 July 2019, www.c2es.org/document/greenhouse-gas-emissions-targets/.]). 
 
 ```{r echo = FALSE, message = FALSE}
 # make sure to number this table correctly in the end
@@ -37,13 +37,13 @@ dir_git <- '~/github/ne-prep'
 table2_res_cc <- readr::read_csv(file.path(dir_git, "prep/resilience/ecological/climate_change/state_co2em_targets.csv")) %>% 
   select(State, Goal)
 
-kable(table2_res_cc, caption = "State Set CO2 Emissions Targets") %>% 
+kable(table2_res_cc, caption = "Table X. State Set CO2 Emissions Targets") %>% 
   kable_styling(bootstrap_options = "striped", full_width = F)
 ```
 
 **Effectiveness/Compliance**
 
-The same data as Implementation/Enforcement are used as a proxy indicator for this layer
+The same data as Implementation/Enforcement are used as a proxy indicator for this layer.
 
 
 **References**

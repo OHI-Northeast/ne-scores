@@ -2,19 +2,17 @@ We used data/information from Coast Guard, NOAA Office of Law Enforcement (OLE),
 
 **Presence**
 
-1. The existence of the Ballast Water Management Plan (BWMP) Requirements implemented and monitored by the US Coast Guard imply the presence of regulations, so each region received a score of 1. It appears that information exists on the number of vessels inspected and how many are in violation of the BWMP, however this is not avaliable to the public. A declassified version or a similar data set would be optimal for quantifying each component of this resilience layer, if it were to become avaliable.
+1. The existence of the Ballast Water Management Plan (BWMP) Requirements implemented and monitored by the US Coast Guard imply the presence of regulations, so each region received a score of 1. It appears that information exists on the number of vessels inspected and how many are in violation of the BWMP, however this is not available to the public. A declassified version or a similar data set would be optimal for quantifying each component of this resilience layer, if it were to become available.
 
-2. The existence of aquaculture permitting system imply the presence of regulations, so each region received score of 1. For calculation purposes this layer does not change the overall score in this layer, but is used more as a placeholder for future iterations of the OHI as aquaculture becomes more streamlined, regulated, and large-scale in the Northeast and better data becomes avaliable.
+2. The existence of aquaculture permitting system imply the presence of regulations, so each region received score of 1. For calculation purposes this layer does not change the overall score in this layer, but is used more as a placeholder for future iterations of the OHI as aquaculture becomes more streamlined, regulated, and large-scale in the Northeast and better data becomes available.
 
 **Implementation/Enforcement **
 
-3. We extracted the total number of staff,  patrols, and outreach events OLE partakes from the NOAA OLE Northeast Region Annual report. These are summed up and rescaled 0-1 using the highest historic total as the reference point. This information was given to us in PDF report form for 4 years^[(National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018-2015, 2018-2015)]. This data in raw form, over the entire period of time would be optimal, if this data becomes avaliable.
+3. We extracted the total number of staff,  patrols, and outreach events OLE partakes in from the NOAA OLE Northeast Region Annual reports. These are summed up and rescaled 0-1 using the highest historic total as the reference point. This information was given to us in PDF report form for 4 years^[(National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Division: Annual Report Fiscal Year 2018-2015, 2018-2015)]. This data in raw form, over the entire period of time would be optimal, if this data becomes available.
 
 **Effectiveness/Compliance**
 
-4. The [USGS Nonindigenous Aquatic Species](http://nas.er.usgs.gov) database was used to inform this layer^[Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.]. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the number of new occurrences in each region each year. This data in raw form, over the entire period of time would be optimal, if this data becomes avaliable.
-
-
+4. The [USGS Nonindigenous Aquatic Species](http://nas.er.usgs.gov) database was used to inform this layer^[Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.]. We used locally specific occurrence data to calculate the total number of occurrences in each region that have become established and eradicated. This layer was calculated by dividing the number of species eradicated by the number of new occurrences in each region each year. 
 
 **References**
 

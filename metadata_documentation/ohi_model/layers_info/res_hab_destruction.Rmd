@@ -2,13 +2,13 @@ The data sources used to calculate the habitat destruction resilience layer incl
 
 **Presence**
 
-1. The Surfrider Foundation releases an annual [State of the Beach Reportcard](https://www.surfrider.org/coastal-blog/entry/2017-state-of-the-beach-report) (since 2017) which scores each coastal state on their policies to protect their beaches from coastal erosion, haphazard development, and sea level. A score of 10/10 results in an A+. We rescaled these scores 0-1^[Surfrider Foundation (2017), State of the Beach Report. San Clemente, CA].
+1. The Surfrider Foundation releases an annual [State of the Beach Reportcard](https://www.surfrider.org/coastal-blog/entry/2018-state-of-the-beach-report-card-released) (since 2017) which scores each coastal state on their policies to protect their beaches from coastal erosion, haphazard development, and sea level for a total potential score of 10. We rescaled these scores 0-1^[Surfrider Foundation (2017), State of the Beach Report. San Clemente, CA].
 
-2. [NOAA GARFO shapefiles](https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html) were used to identify areas where fisheries regulations are in place that prohibit trawling and dredging are prohibited year-round; target is 30% protected^[NOAA Greater Atlantic Region Fisheries Office, GIS Datasets. https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html].
+2. [NOAA GARFO shapefiles](https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html) were used to identify areas where fisheries regulations are in place that prohibit trawling and dredging year-round^[NOAA Greater Atlantic Region Fisheries Office, GIS Datasets. https://archive.fisheries.noaa.gov/garfo/educational_resources/gis/data/indextab.html]. We used a target of 30% protected total area in each region.
 
 **Implementation/Enforcement**
 
-3. The total number of staff,  patrols, and outreach events OLE partakes in is pulled from the NOAA OLE Northeast Region Annual report. These are summed by year and divided by the highest historic total^[(National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018-2015, 2018-2015)].
+3. The total number of staff, patrols, and outreach events OLE partakes in is pulled from the NOAA OLE Northeast Region Annual report. These are summed by year and divided by the highest historic total^[(National Oceanographic Atmospheric Association Office of Law Enforcement, Northeast Enforcement Divison: Annual Report Fiscal Year 2018-2015, 2018-2015)].
 
 **Effectiveness/Compliance**
 
