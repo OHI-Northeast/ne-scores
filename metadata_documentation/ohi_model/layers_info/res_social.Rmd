@@ -1,6 +1,6 @@
 **US Opportunity Index:**
 
-“The [Opportunity Index](http://opportunityindex.org/) was created by Opportunity Nation^[Opportunity Nation. 2012, 2014-2017. Opportunity Index. Available at http://opportunityindex.org/]. The Opportunity Index aims to use indicators beyond economics and to measure the access of opportunities in communities across the country. The index measures four dimensions of community well-being: economy, education, health, and community. Index scores from 2012, and 2014-2017 were used. The Opportunity Index scores each state on a scale of 0-100, which we then rescaled 0-1 and applied directly into each state resilience measure.
+The [Opportunity Index](http://opportunityindex.org/) was created by Opportunity Nation^[Opportunity Nation. 2012, 2014-2017. Opportunity Index. Available at http://opportunityindex.org/]. The Opportunity Index aims to use indicators beyond economics and to measure the access of opportunities in communities across the country. The index measures four dimensions of community well-being: economy, education, health, and community. Index scores from 2012, and 2014-2017 were used. The Opportunity Index scores each state on a scale of 0-100, which we then rescaled 0-1 and applied directly into each state resilience measure.
 
 **Beacon Hill Competitiveness Report:**
 
