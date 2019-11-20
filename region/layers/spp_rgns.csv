@@ -1,4 +1,142 @@
 rgn_id,common,sciname,year
+12,acadian redfish,sebastes fasciatus,2017
+12,alewife,alosa pseudoharengus,2017
+12,american lobster,homarus americanus,2017
+12,american plaice,hippoglossoides platessoides,2017
+12,american shad,alosa sapidissima,2017
+12,arctic tern,sterna paradisaea,2017
+12,atlantic spotted dolphin,stenella frontalis,2017
+12,atlantic white sided dolphin,lagenorhynchus acutus,2017
+12,atlantic cod,gadus morhua,2017
+12,atlantic croaker,micropogonias undulatus,2017
+12,atlantic halibut,hippoglossus hippoglossus,2017
+12,atlantic herring,clupea harengus,2017
+12,atlantic mackerel,scomber scombrus,2017
+12,atlantic menhaden,brevoortia tyrannus,2017
+12,atlantic puffin,fratercula arctica,2017
+12,atlantic sturgeon,acipenser oxyrinchus,2017
+12,atlantic torpedo,torpedo nobiliana,2017
+12,atlantic wolffish,anarhichas lupus,2017
+12,audubons shearwater,puffinus lherminieri,2017
+12,band rumped storm petrel,oceanodroma castro,2017
+12,barndoor skate,dipturus laevis,2017
+12,bay anchovy,anchoa mitchilli,2017
+12,black capped petrel,pterodroma hasitata,2017
+12,black guillemot,cepphus grylle,2017
+12,black legged kittiwake,rissa tridactyla,2017
+12,black scoter,melanitta americana,2017
+12,black sea bass,centropristis striata,2017
+12,blackbelly rosefish,helicolenus dactylopterus,2017
+12,blainvilles beaked whale,mesoplodon densirostris,2017
+12,blueback herring,alosa aestivalis,2017
+12,bluefish,pomatomus saltatrix,2017
+12,bonapartes gull,chroicocephalus philadelphia,2017
+12,bottlenose dolphin,tursiops truncatus,2017
+12,bridled tern,onychoprion anaethetus,2017
+12,brown pelican,pelecanus occidentalis,2017
+12,bullnose ray,myliobatis freminvillii,2017
+12,butterfish,peprilus triacanthus,2017
+12,clearnose skate,raja eglanteria,2017
+12,common eider,somateria mollissima,2017
+12,common loon,gavia immer,2017
+12,common murre,uria aalge,2017
+12,common tern,sterna hirundo,2017
+12,corys shearwater,calonectris borealis,2017
+12,cunner,tautogolabrus adspersus,2017
+12,cusk,brosme brosme,2017
+12,cuviers beaked whale,ziphius cavirostris,2017
+12,double crested cormorant,phalacrocorax auritus,2017
+12,dovekie,alle alle,2017
+12,fin whale,balaenoptera physalus,2017
+12,fourspot flounder,hippoglossina oblonga,2017
+12,gervais beaked whale,mesoplodon europaeus,2017
+12,goosefish,lophius americanus,2017
+12,great black backed gull,larus marinus,2017
+12,great shearwater,ardenna gravis,2017
+12,great skua,stercorarius skua,2017
+12,gulf stream flounder,citharichthys arctifrons,2017
+12,haddock,melanogrammus aeglefinus,2017
+12,harbor porpoise,phocoena phocoena,2017
+12,herring gull,larus smithsonianus,2017
+12,horned grebe,podiceps auritus,2017
+12,horseshoe crab,limulus polyphemus,2017
+12,humpback whale,megaptera novaeangliae,2017
+12,jonah crab,cancer borealis,2017
+12,laughing gull,leucophaeus atricilla,2017
+12,leachs storm petrel,oceanodroma leucorhoa,2017
+12,least tern,sternula antillarum,2017
+12,little skate,leucoraja erinacea,2017
+12,long finned pilot whale,globicephala melas,2017
+12,long tailed duck,clangula hyemalis,2017
+12,longfin squid,doryteuthis pealeii,2017
+12,longhorn sculpin,myoxocephalus octodecemspinosus,2017
+12,manx shearwater,puffinus puffinus,2017
+12,minke whale,balaenoptera acutorostrata,2017
+12,north atlantic right whale,eubalaena glacialis,2017
+12,northern fulmar,fulmarus glacialis,2017
+12,northern gannet,morus bassanus,2017
+12,northern kingfish,menticirrhus saxatilis,2017
+12,northern pipefish,syngnathus fuscus,2017
+12,northern puffer,sphoeroides maculatus,2017
+12,northern sand lance,ammodytes dubius,2017
+12,northern searobin,prionotus carolinus,2017
+12,northern shortfin squid,illex illecebrosus,2017
+12,northern shrimp,pandalus borealis,2017
+12,ocean pout,zoarces americanus,2017
+12,parasitic jaeger,stercorarius parasiticus,2017
+12,pinfish,lagodon rhomboides,2017
+12,pollock,pollachius virens,2017
+12,pomarine jaeger,stercorarius pomarinus,2017
+12,razorbill,alca torda,2017
+12,red breasted merganser,mergus serrator,2017
+12,red hake,urophycis chuss,2017
+12,red necked phalarope,phalaropus lobatus,2017
+12,red phalarope,phalaropus fulicarius,2017
+12,red throated loon,gavia stellata,2017
+12,ring billed gull,larus delawarensis,2017
+12,rissos dolphin,grampus griseus,2017
+12,roseate tern,sterna dougallii,2017
+12,rosette skate,leucoraja garmani,2017
+12,roughtail stingray,dasyatis centroura,2017
+12,round herring,etrumeus sadina,2017
+12,royal tern,thalasseus maximus,2017
+12,scup,stenotomus chrysops,2017
+12,sea raven,hemitripterus americanus,2017
+12,sea scallop,placopecten magellanicus,2017
+12,sei whale,balaenoptera borealis,2017
+12,short beaked common dolphin,delphinus delphis,2017
+12,short finned pilot whale,globicephala macrorhynchus,2017
+12,silver hake,merluccius bilinearis,2017
+12,smooth dogfish,mustelus canis,2017
+12,smooth skate,malacoraja senta,2017
+12,sooty shearwater,ardenna grisea,2017
+12,sooty tern,onychoprion fuscatus,2017
+12,south polar skua,stercorarius maccormicki,2017
+12,sowerbys beaked whale,mesoplodon bidens,2017
+12,sperm whale,physeter macrocephalus,2017
+12,spiny dogfish,squalus acanthias,2017
+12,spot,leiostomus xanthurus,2017
+12,spotted hake,urophycis regia,2017
+12,striped dolphin,stenella coeruleoalba,2017
+12,striped anchovy,anchoa hepsetus,2017
+12,striped bass,morone saxatilis,2017
+12,striped searobin,prionotus evolans,2017
+12,summer flounder,paralichthys dentatus,2017
+12,surf scoter,melanitta perspicillata,2017
+12,tautog,tautoga onitis,2017
+12,thick billed murre,uria lomvia,2017
+12,thorny skate,amblyraja radiata,2017
+12,tilefish,lopholatilus chamaeleonticeps,2017
+12,trues beaked whale,mesoplodon mirus,2017
+12,weakfish,cynoscion regalis,2017
+12,white hake,urophycis tenuis,2017
+12,white winged scoter,melanitta fusca,2017
+12,wilsons storm petrel,oceanites oceanicus,2017
+12,windowpane,scophthalmus aquosus,2017
+12,winter flounder,pseudopleuronectes americanus,2017
+12,winter skate,leucoraja ocellata,2017
+12,witch flounder,glyptocephalus cynoglossus,2017
+12,yellowtail flounder,pleuronectes ferruginea,2017
 1,acadian redfish,sebastes fasciatus,2017
 2,acadian redfish,sebastes fasciatus,2017
 3,acadian redfish,sebastes fasciatus,2017
@@ -5408,3 +5546,621 @@ rgn_id,common,sciname,year
 9,grey seal,halichoerus grypus,2017
 10,grey seal,halichoerus grypus,2017
 11,grey seal,halichoerus grypus,2017
+12,northern bottlenose whale,hyperoodon ampullatus,2017
+12,pygmy sperm whale,kogia breviceps,2017
+12,dwarf sperm whale,kogia sima,2017
+12,white-beaked dolphin,lagenorhynchus albirostris,2017
+12,porbeagle,lamna nasus,2017
+12,olive ridley,lepidochelys olivacea,2017
+12,north american river otter,lontra canadensis,2017
+12,cubera snapper,lutjanus cyanopterus,2017
+12,northern star coral,astrangia poculata,2017
+12,blackmouth bass,synagrops bellus,2017
+12,deep-sea lizardfish,bathysaurus ferox,2017
+12,undistinguished sabretooth,odontostomops normalops,2017
+12,mediterranean spiderfish,bathypterois dubius,2017
+12,blackfin spiderfish,bathypterois phenax,2017
+12,NA,ahliesaurus berryi,2017
+12,waryfish,scopelosaurus argenteus,2017
+12,hammerjaw,omosudis lowii,2017
+12,barracudina,lestidiops affinis,2017
+12,barracudina antifaz,lestrolepis intermedia,2017
+12,NA,macroparalepis affinis,2017
+12,duckbill barracudina,magnisudis atlantica,2017
+12,zugmayer's pearleye,benthalbella infans,2017
+12,snakefish,trachinocephalus myops,2017
+12,flat needlefish,ablennes hians,2017
+12,blacksail flyingfish,cheilopogon nigricans,2017
+12,flathead mullet,mugil cephalus,2017
+12,agassiz' slickhead,alepocephalus agassizii,2017
+12,small scaled brown slickhead,alepocephalus australis,2017
+12,baird's slickhead,alepocephalus bairdii,2017
+12,bigeye smooth-head,bajacalifornia megalops,2017
+12,fangtooth smooth-head,bathyprion danae,2017
+12,michael sars smooth-head,bathytroctes michaelsarsi,2017
+12,loosescale smooth-head,einara macrolepis,2017
+12,softskin smooth-head,rouleina attrita,2017
+12,bluntsnout smooth-head,xenodermichthys copei,2017
+12,eelgrass,zostera marina,2017
+12,killer whale,orcinus orca,2017
+12,american harvestfish,peprilus paru,2017
+12,common dolphinfish,coryphaena hippurus,2017
+12,white-spotted lantern fish,diaphus rafinesquii,2017
+12,rough silverside,membras martinica,2017
+12,blue runner,caranx crysos,2017
+12,richardson's snaggletooth,astronesthes richardsoni,2017
+12,long snouted lancetfish,alepisaurus ferox,2017
+12,can-opener smoothdream,chaenophryne longiceps,2017
+12,shortspine boarfish,antigonia combatia,2017
+12,robust cusk-eel,benthocometes robustus,2017
+12,palometa,trachinotus goodei,2017
+12,half-naked hatchetfish,argyropelecus hemigymnus,2017
+12,african pompano,alectis ciliaris,2017
+12,spearfish remora,remora brachyptera,2017
+12,white suckerfish,remora albescens,2017
+12,barrelfish,hyperoglyphe perciformis,2017
+12,atlantic bonito,sarda sarda,2017
+12,flying halfbeak,euleptorhamphus velox,2017
+12,balao,hemiramphus balao,2017
+12,ballyhoo,hemiramphus brasiliensis,2017
+12,false halfbeak,oxyporhamphus similis,2017
+12,fourbeard rockling,enchelyopus cimbrius,2017
+12,ghostly grenadier,coryphaenoides leptolepis,2017
+12,roundnose grenadier,coryphaenoides rupestris,2017
+12,arrowtail,melanonus zugmayeri,2017
+12,atlantic needlefish,strongylura marina,2017
+12,american straptail grenadier,malacocephalus occidentalis,2017
+12,blackfin tuna,thunnus atlanticus,2017
+12,smallfin lanternfish,benthosema suborbitale,2017
+12,roundnose lanternfish,centrobranchus nigroocellatus,2017
+12,warming's lantern fish,ceratoscopelus warmingii,2017
+12,bertelsen's lanternfish,diaphus bertelseni,2017
+12,short-headed lantern fish,diaphus brachycephalus,2017
+12,headlight fish,diaphus effulgens,2017
+12,fragile lantern fish,diaphus fragilis,2017
+12,spotlight lanternfish,diaphus lucidus,2017
+12,transparent lantern fish,diaphus perspicillatus,2017
+12,horned lanternfish,diaphus splendidus,2017
+12,NA,diaphus subtilis,2017
+12,slopewater lanternfish,diaphus taaningi,2017
+12,taaning's lantern fish,diaphus termophilus,2017
+12,large-finned lanternfish,hygophum macrochir,2017
+12,reinhardt's lantern fish,hygophum reinhardtii,2017
+12,t<e5>ning<92>s lanternfish,hygophum taaningi,2017
+12,anomalous lanternfish,lampadena anomala,2017
+12,chaves' lanternfish,lampadena chavesi,2017
+12,luminous lanternfish,lampadena luminosa,2017
+12,winged lanternfish,lampanyctus alatus,2017
+12,festive lanternfish,lampanyctus festivus,2017
+12,diamondcheek lanternfish,lampanyctus intricarius,2017
+12,NA,lepidophanes gaussi,2017
+12,g<fc>nther<92>s lanternfish,lepidophanes guentheri,2017
+12,metallic lantern fish,myctophum affine,2017
+12,prickly lanternfish,myctophum asperum,2017
+12,spotted lanternfish,myctophum nitidulum,2017
+12,bluntsnout lanternfish,myctophum obtusirostre,2017
+12,wisner's lantern fish,myctophum selenops,2017
+12,dusky lanternfish,nannobrachium atrum,2017
+12,NA,nannobrachium cuprarium,2017
+12,lobisomem,notoscopelus caudispinosus,2017
+12,patchwork lampfish,notoscopelus resplendens,2017
+12,waistcoat lanternfish,taaningichthys minimus,2017
+12,bigeye,epigonus pandionis,2017
+12,red porgy,pagrus pagrus,2017
+12,spinytail skate,bathyraja spinicauda,2017
+12,bigelow's skate,rajella bigelowi,2017
+12,jensen's skate,amblyraja jenseni,2017
+12,black dogfish,centroscyllium fabricii,2017
+12,finetooth shark,carcharhinus isodon,2017
+12,great torpedo ray,tetronarce nobiliana,2017
+12,round skate,rajella fyllae,2017
+12,bigeye thresher,alopias superciliosus,2017
+12,pelagic stingray,pteroplatytrygon violacea,2017
+12,yellowfin bass,anthias nicholsi,2017
+12,deepbody boarfish,antigonia capros,2017
+12,striated argentine,argentina striata,2017
+12,silver-rag driftfish,ariomma bondi,2017
+12,goby flathead,bembrops gobioides,2017
+12,splendid alfonsino,beryx splendens,2017
+12,yellow jack,caranx bartholomaei,2017
+12,bar jack,caranx ruber,2017
+12,atlantic spadefish,chaetodipterus faber,2017
+12,atlantic bumper,chloroscombrus chrysurus,2017
+12,bigeye cigarfish,cubiceps pauciradiatus,2017
+12,round scad,decapterus punctatus,2017
+12,silver anchovy,engraulis eurystole,2017
+12,rainbow runner,elagatis bipinnulata,2017
+12,whitefin sharksucker,echeneis neucratoides,2017
+12,atlantic silverside,menidia menidia,2017
+12,inshore lizardfish,synodus foetens,2017
+12,oyster toadfish,opsanus tau,2017
+12,big-eye soldierfish,ostichthys trachypoma,2017
+12,big roughy,gephyroberyx darwinii,2017
+12,atlantic thread herring,opisthonema oglinum,2017
+12,offshore hake,merluccius albidus,2017
+12,singlespot frogfish,fowlerichthys radiosus,2017
+12,shortbeard cusk-eel,lepophidium brevibarbe,2017
+12,fawn cusk-eel,lepophidium profundorum,2017
+12,spotfin dragonet,foetorepus agassizii,2017
+12,atlantic moonfish,selene setapinnis,2017
+12,atlantic lookdown,selene vomer,2017
+12,longfin yellowtail,seriola rivoliana,2017
+12,banded rudderfish,seriola zonata,2017
+12,florida pompano,trachinotus carolinus,2017
+12,snake mackerel,gempylus serpens,2017
+12,black snake mackerel,nealotus tripes,2017
+12,roudi escolar,promethichthys prometheus,2017
+12,red goatfish,mullus auratus,2017
+12,spotted goatfish,pseudupeneus maculatus,2017
+12,man-of-war fish,nomeus gronovii,2017
+12,freckled driftfish,psenes cyanophrys,2017
+12,bluefin driftfish,psenes pellucidus,2017
+12,spotfin butterflyfish,chaetodon ocellatus,2017
+12,foureye butterflyfish,chaetodon capistratus,2017
+12,streamer bass,baldwinella aureorubens,2017
+12,red cornetfish,fistularia petimba,2017
+12,blue-spotted cornetfish,fistularia tabacaria,2017
+12,florida lobsterette,nephropsis aculeata,2017
+12,caribbean spiny lobster,panulirus argus,2017
+12,harbor seal,phoca vitulina,2017
+12,sea bream,archosargus rhomboidalis,2017
+12,jolthead porgy,calamus bajonado,2017
+12,sheepshead,archosargus probatocephalus,2017
+12,longbill spearfish,tetrapturus pfluegeri,2017
+12,skipjack tuna,katsuwonus pelamis,2017
+12,blue marlin,makaira nigricans,2017
+12,white marlin,kajikia albida,2017
+12,atlantic spanish mackerel,scomberomorus maculatus,2017
+12,cero,scomberomorus regalis,2017
+12,roundscale spearfish,tetrapturus georgii,2017
+12,sailfish,istiophorus platypterus,2017
+12,king mackerel,scomberomorus cavalla,2017
+12,frigate tuna,auxis thazard,2017
+12,little tunny,euthynnus alletteratus,2017
+12,pompano dolphinfish,coryphaena equiselis,2017
+12,bullet tuna,auxis rochei,2017
+12,blue tang,acanthurus coeruleus,2017
+12,doctorfish,acanthurus chirurgus,2017
+12,NA,molpadiodemas atlanticus,2017
+12,NA,paelopatides gigantea,2017
+12,NA,mesothuria lactea,2017
+12,daggertooth,anotopterus pharao,2017
+12,common fangtooth,anoplogaster cornuta,2017
+12,silver spinyfin,diretmus argenteus,2017
+12,abyssal grenadier,coryphaenoides armatus,2017
+12,deepsea angler,ceratias holboelli,2017
+12,NA,bufoceratias wedli,2017
+12,atlantic football-fish,himantolophus groenlandicus,2017
+12,humpback anglerfish,melanocetus johnsonii,2017
+12,bulbous dreamer,oneirodes eschrichtii,2017
+12,rakery beaconlamp,lampanyctus macdonaldi,2017
+12,pudgy cuskeel,spectrunculus grandis,2017
+12,smalleye smooth-head,alepocephalus productus,2017
+12,blackhead salmon,narcetes stomias,2017
+12,grey's deepsea smelt,bathylagichthys greyae,2017
+12,longsnout blacksmelt,dolicholagus longirostris,2017
+12,barreleye,opisthoproctus soleatus,2017
+12,maul's searsid,maulisia mauli,2017
+12,multipore searsid,normichthys operosus,2017
+12,black gemfish,nesiarchus nasutus,2017
+12,snubnose eelpout,pachycara bulbiceps,2017
+12,bobtail eel,cyema atrum,2017
+12,pelican eel,eurypharynx pelecanoides,2017
+12,bent-tooth bristlemouth,cyclothone acclinidens,2017
+12,bicolored bristlemouth,cyclothone pallida,2017
+12,slender bristlemouth,cyclothone pseudopallida,2017
+12,lovely hatchetfish,argyropelecus aculeatus,2017
+12,giant hatchetfish,argyropelecus gigas,2017
+12,snaggletooth,astronesthes gemmifer,2017
+12,scaleless black dragonfish,bathophilus digitatus,2017
+12,scaleless dragonfish,bathophilus vaillanti,2017
+12,threadfin dragonfish,echiostoma barbatum,2017
+12,scaleless dragonfish,eustomias obscurus,2017
+12,longbarb dragonfish,flagellostomias boureei,2017
+12,"cueriduro, zapatero",oligoplites saurus,2017
+12,NA,stereomastis nana,2017
+12,flatback lobster,stereomastis sculpta,2017
+12,NA,cardus crucifer,2017
+12,NA,polycheles typhlops,2017
+12,bigtooth cardinalfish,paroncheilus affinis,2017
+12,skilletfish,gobiesox strumosus,2017
+12,seaboard goby,gobiosoma ginsburgi,2017
+12,naked goby,gobiosoma bosc,2017
+12,pacific barracudina,lestidiops jayakari,2017
+12,sheepshead minnow,cyprinodon variegatus,2017
+12,mummichog,fundulus heteroclitus,2017
+12,palefin dragonet,foetorepus goodenbeani,2017
+12,triplewart seadevil,cryptopsaras couesii,2017
+12,beardless codling,gadella imberbis,2017
+12,polka-dot ribbonfish,desmodema polystictum,2017
+12,marlin sucker,remora osteochir,2017
+12,NA,diceratias pileatus,2017
+12,metallic codling,physiculus fulvus,2017
+12,atlantic barracudina,lestidium atlanticum,2017
+12,benoit's lanternfish,hygophum benoiti,2017
+12,barracudina,sudis hyalina,2017
+12,louvar,luvarus imperialis,2017
+12,mackerel scad,decapterus macarellus,2017
+12,pacific hatchet fish,argyropelecus affinis,2017
+12,margined flyingfish,cheilopogon cyanopterus,2017
+12,small-toothed portholefish,cyclothone microdon,2017
+12,parin's spinyfish,diretmichthys parini,2017
+12,lesser amberjack,seriola fasciata,2017
+12,NA,stemonosudis intermedia,2017
+12,abyssal assfish,bassozetus compressus,2017
+12,whalehead dreamer,lophodolos acanthognathus,2017
+12,oceanic two-wing flyingfish,exocoetus obtusirostris,2017
+12,white mullet,mugil curema,2017
+12,longray fangjaw,bonapartia pedaliota,2017
+12,sargassumfish,histrio histrio,2017
+12,cobia,rachycentron canadum,2017
+12,blunthead puffer,sphoeroides pachygaster,2017
+12,NA,halosaurus guentheri,2017
+12,soft lanternfish,diaphus mollis,2017
+12,antillean smooth-head,talismania antillarum,2017
+12,dana viperfish,chauliodus danae,2017
+12,atlantic saury,scomberesox saurus,2017
+12,striped cusk-eel,ophidion marginatum,2017
+12,dog snapper,lutjanus jocu,2017
+12,NA,astronesthes leucopogon,2017
+12,deepwater lanternfish,taaningichthys bathyphilus,2017
+12,abyssal spiderfish,bathypterois longipes,2017
+12,brown driftfish,ariomma melanum,2017
+12,longfinned bullseye,cookeolus japonicus,2017
+12,pink flabby whalefish,cetostoma regani,2017
+12,topside lampfish,notolychnus valdiviae,2017
+12,madeiran smooth-head,rouleina maderensis,2017
+12,smallscale smooth-head,bathytroctes microlepis,2017
+12,atlantic flyingfish,cheilopogon melanurus,2017
+12,NA,dolopichthys longicornis,2017
+12,koefoed's smooth-head,bathytroctes macrolepis,2017
+12,escolar,lepidocybium flavobrunneum,2017
+12,mirrorwing flyingfish,hirundichthys speculiger,2017
+12,bigeye squaretail,tetragonurus atlanticus,2017
+12,starry smooth-head,photostylus pycnopterus,2017
+12,pale bristlemouth,cyclothone alba,2017
+12,black swallower,chiasmodon niger,2017
+12,lanternfish,nannobrachium lineatum,2017
+12,lantern fish,diaphus dumerilii,2017
+12,blackbelly pearleye,scopelarchus analis,2017
+12,spurcheek lanternfish,bolinichthys photothorax,2017
+12,garman's lanternfish,diaphus garmani,2017
+12,sloane's viperfish,chauliodus sloani,2017
+12,atlantic fanfish,pterycombus brama,2017
+12,myers whalefish,gyrinomimus myersi,2017
+12,scalloped ribbonfish,zu cristatus,2017
+12,NA,cetomimus gillii,2017
+12,loosejaw,aristostomias tittmanni,2017
+12,allied halosaur,aldrovandia affinis,2017
+12,snaggletooth,astronesthes niger,2017
+12,guachanche barracuda,sphyraena guachancho,2017
+12,noble lanternfish,lampanyctus nobilis,2017
+12,oarfish,regalecus glesne,2017
+12,smooth puffer,lagocephalus laevigatus,2017
+12,flat-nose codling,antimora rostrata,2017
+12,bigeye scad,selar crumenophthalmus,2017
+12,blackfin waryfish,scopelosaurus lepidus,2017
+12,lanternfish,bolinichthys indicus,2017
+12,spotfin flyingfish,cheilopogon furcatus,2017
+12,live sharksucker,echeneis naucrates,2017
+12,big-scale pomfret,taractichthys longipinnis,2017
+12,great barracuda,sphyraena barracuda,2017
+12,prickly dreamer,spiniphryne gladisfenae,2017
+12,longnose tapirfish,polyacanthonotus challengeri,2017
+12,permit,trachinotus falcatus,2017
+12,doublekeeled whalefish,ditropichthys storeri,2017
+12,cocco's lantern fish,lobianchia gemellarii,2017
+12,oilfish,ruvettus pretiosus,2017
+12,NA,pseudoscopelus scriptus,2017
+12,fanfin angler,caulophryne jordani,2017
+12,pilotfish,naucrates ductor,2017
+12,spotted lanternfish,myctophum punctatum,2017
+12,crevalle jack,caranx hippos,2017
+12,slender suckerfish,phtheirichthys lineatus,2017
+12,oceanic puffer,lagocephalus lagocephalus,2017
+12,NA,eustomias polyaster,2017
+12,large-scale lantern fish,symbolophorus veranyi,2017
+12,rufous lanternfish,symbolophorus rufinus,2017
+12,scaled sardine,harengula jaguana,2017
+12,bigscale deepsea smelt,melanolagus bericoides,2017
+12,NA,aldrovandia gracilis,2017
+12,stubby lanternfish,bolinichthys supralateralis,2017
+12,NA,polyacanthonotus merretti,2017
+12,redfin parrotfish,sparisoma rubripinne,2017
+12,meek's halfbeak,hyporhamphus meeki,2017
+12,shortfinger anchovy,anchoa lyolepis,2017
+12,rainwater killifish,lucania parva,2017
+12,horse-eye jack,caranx latus,2017
+12,grey snapper,lutjanus griseus,2017
+12,silver croaker,bairdiella chrysoura,2017
+12,speckled seatrout,cynoscion nebulosus,2017
+12,black drum,pogonias cromis,2017
+12,bandtail puffer,sphoeroides spengleri,2017
+12,checkered puffer,sphoeroides testudineus,2017
+12,yellowtail snapper,ocyurus chrysurus,2017
+12,whale shark,rhincodon typus,2017
+12,tripod spiderfish,bathypterois grallator,2017
+12,agassiz's thread-sail fish,chlorophthalmus agassizi,2017
+12,balbo sabretooth,evermannella balbo,2017
+12,spotted barracudina,arctozenus risso,2017
+12,highfin lizardfish,bathysaurus mollis,2017
+12,opah,lampris guttatus,2017
+12,southern kingfish,menticirrhus americanus,2017
+12,atlantic pomfret,brama brama,2017
+12,horse mackerel,trachurus lathami,2017
+12,hawaiian halosaurid fish,aldrovandia phalacra,2017
+12,abyssal halosaur,halosauropsis macrochir,2017
+12,cosmopolitan spineback,notacanthus chemnitzii,2017
+12,atlantic bigeye,priacanthus arenatus,2017
+12,bermuda sea chub,kyphosus sectatrix,2017
+12,tropical two-wing flyingfish,exocoetus volitans,2017
+12,rudderfish,centrolophus niger,2017
+12,bandwing flyingfish,cheilopogon exsiliens,2017
+12,alfonsino,beryx decadactylus,2017
+12,silver roughy,hoplostethus mediterraneus,2017
+12,round sardinella,sardinella aurita,2017
+12,günther's grenadier,coryphaenoides guentheri,2017
+12,mediterranean grenadier,coryphaenoides mediterraneus,2017
+12,glasshead grenadier,hymenocephalus italicus,2017
+12,common atlantic grenadier,nezumia aequalis,2017
+12,roughtip grenadier,nezumia sclerorhynchus,2017
+12,glacier lantern fish,benthosema glaciale,2017
+12,madeira lantern fish,ceratoscopelus maderensis,2017
+12,spothead lantern fish,diaphus metopoclampus,2017
+12,longfin lanternfish,diogenichthys atlanticus,2017
+12,electric lantern fish,electrona risso,2017
+12,cocco's lanternfish,gonichthys cocco,2017
+12,bermuda lantern fish,hygophum hygomii,2017
+12,jewel lanternfish,lampanyctus crocodilus,2017
+12,pygmy lanternfish,lampanyctus pusillus,2017
+12,dofleini's lantern fish,lobianchia dofleini,2017
+12,lanternfish,notoscopelus bolini,2017
+12,greater amberjack,seriola dumerili,2017
+12,whalesucker,remora australis,2017
+12,common remora,remora remora,2017
+12,pencil cardinal,epigonus denticulatus,2017
+12,cape fathead,cubiceps capensis,2017
+12,smalleye squaretail,tetragonurus cuvieri,2017
+12,atlantic soft pout,melanostigma atlanticum,2017
+12,brauer's eye-nosed fish,cyclothone braueri,2017
+12,snaggletooth,borostomias antarcticus,2017
+12,hollowsnout grenadier,coelorinchus caelorhincus,2017
+12,giant manta ray,mobula birostris,2017
+12,blackspotted stickleback,gasterosteus wheatlandi,2017
+12,longnose greeneye,parasudis truculenta,2017
+12,striped killifish,fundulus majalis,2017
+12,atlantic batfish,dibranchus atlanticus,2017
+12,NA,dibranchus tremendus,2017
+12,striped escolar,diplospinus multistriatus,2017
+12,northern sennet,sphyraena borealis,2017
+12,pantropical spotted dolphin,stenella attenuata,2017
+12,clymene dolphin,stenella clymene,2017
+12,spinner dolphin,stenella longirostris,2017
+12,gyre flyingfish,prognichthys glaphyrae,2017
+12,barracudina,paralepis elongata,2017
+12,NA,dolichopteroides binocularis,2017
+12,smallscale searsid,maulisia microlepis,2017
+12,redvelvet whalefish,barbourisia rufa,2017
+12,tube-eye,stylephorus chordatus,2017
+12,NA,caulophryne polynema,2017
+12,stargazing seadevil,ceratias uranoscopus,2017
+12,NA,linophryne pennibarbata,2017
+12,NA,dysalotus alcocki,2017
+12,NA,kali indica,2017
+12,NA,kali parri,2017
+12,longfin escolar,scombrolabrax heterolepis,2017
+12,sladen's hatchet fish,argyropelecus sladeni,2017
+12,NA,aristostomias polydactylus,2017
+12,NA,bathophilus brevis,2017
+12,albacore tuna,thunnus alalunga,2017
+12,yellowfin tuna,thunnus albacares,2017
+12,bigeye tuna,thunnus obesus,2017
+12,atlantic bluefin tuna,thunnus thynnus,2017
+12,shortnose sturgeon,acipenser brevirostrum,2017
+12,snow goose,anser caerulescens,2017
+12,brent goose,branta bernicla,2017
+12,eurasian wigeon,mareca penelope,2017
+12,american wigeon,mareca americana,2017
+12,american black duck,anas rubripes,2017
+12,blue-winged teal,spatula discors,2017
+12,northern shoveler,spatula clypeata,2017
+12,northern pintail,anas acuta,2017
+12,canvasback,aythya valisineria,2017
+12,redhead,aythya americana,2017
+12,tufted duck,aythya fuligula,2017
+12,greater scaup,aythya marila,2017
+12,lesser scaup,aythya affinis,2017
+12,king eider,somateria spectabilis,2017
+12,labrador duck,camptorhynchus labradorius,2017
+12,harlequin duck,histrionicus histrionicus,2017
+12,common goldeneye,bucephala clangula,2017
+12,bufflehead,bucephala albeola,2017
+12,hooded merganser,lophodytes cucullatus,2017
+12,goosander,mergus merganser,2017
+12,common nighthawk,chordeiles minor,2017
+12,hudsonian godwit,limosa haemastica,2017
+12,whimbrel,numenius phaeopus,2017
+12,greater yellowlegs,tringa melanoleuca,2017
+12,spotted sandpiper,actitis macularius,2017
+12,willet,tringa semipalmata,2017
+12,ruddy turnstone,arenaria interpres,2017
+12,short-billed dowitcher,limnodromus griseus,2017
+12,red knot,calidris canutus,2017
+12,sanderling,calidris alba,2017
+12,semipalmated sandpiper,calidris pusilla,2017
+12,red-necked stint,calidris ruficollis,2017
+12,least sandpiper,calidris minutilla,2017
+12,white-rumped sandpiper,calidris fuscicollis,2017
+12,pectoral sandpiper,calidris melanotos,2017
+12,purple sandpiper,calidris maritima,2017
+12,dunlin,calidris alpina,2017
+12,american oystercatcher,haematopus palliatus,2017
+12,american golden plover,pluvialis dominica,2017
+12,grey plover,pluvialis squatarola,2017
+12,semipalmated plover,charadrius semipalmatus,2017
+12,killdeer,charadrius vociferus,2017
+12,great skua,catharacta skua,2017
+12,black skimmer,rynchops niger,2017
+12,glaucous gull,larus hyperboreus,2017
+12,iceland gull,larus glaucoides,2017
+12,lesser black-backed gull,larus fuscus,2017
+12,black-headed gull,larus ridibundus,2017
+12,bonaparte's gull,larus philadelphia,2017
+12,laughing gull,larus atricilla,2017
+12,little gull,hydrocoloeus minutus,2017
+12,sabine's gull,xema sabini,2017
+12,caspian tern,hydroprogne caspia,2017
+12,sandwich tern,thalasseus sandvicensis,2017
+12,black tern,chlidonias niger,2017
+12,great auk,pinguinus impennis,2017
+12,osprey,pandion haliaetus,2017
+12,bald eagle,haliaeetus leucocephalus,2017
+12,merlin,falco columbarius,2017
+12,red-necked grebe,podiceps grisegena,2017
+12,white-tailed tropicbird,phaethon lepturus,2017
+12,great cormorant,phalacrocorax carbo,2017
+12,tricolored heron,egretta tricolor,2017
+12,little blue heron,egretta caerulea,2017
+12,snowy egret,egretta thula,2017
+12,great blue heron,ardea herodias,2017
+12,great white egret,ardea alba,2017
+12,yellow-crowned night-heron,nyctanassa violacea,2017
+12,black-crowned night-heron,nycticorax nycticorax,2017
+12,least bittern,ixobrychus exilis,2017
+12,wood stork,mycteria americana,2017
+12,bermuda petrel,pterodroma cahow,2017
+12,leach's storm-petrel,hydrobates leucorhous,2017
+12,fish crow,corvus ossifragus,2017
+12,common starling,sturnus vulgaris,2017
+12,marsh wren,cistothorus palustris,2017
+12,horned lark,eremophila alpestris,2017
+12,buff-bellied pipit,anthus rubescens,2017
+12,lapland longspur,calcarius lapponicus,2017
+12,song sparrow,melospiza melodia,2017
+12,seaside sparrow,ammospiza maritima,2017
+12,common yellowthroat,geothlypis trichas,2017
+12,green-backed heron,butorides striata,2017
+12,nelson's sparrow,ammospiza nelsoni,2017
+12,white-winged scoter,melanitta deglandi,2017
+12,band-rumped storm-petrel,hydrobates castro,2017
+12,desertas petrel,pterodroma deserta,2017
+12,swordfish,xiphias gladius,2017
+12,bryde's whale,balaenoptera edeni,2017
+12,blue whale,balaenoptera musculus,2017
+12,blacktip shark,carcharhinus limbatus,2017
+12,dusky shark,carcharhinus obscurus,2017
+12,sandbar shark,carcharhinus plumbeus,2017
+12,white shark,carcharodon carcharias,2017
+12,bigeye sand tiger,odontaspis noronhai,2017
+12,common thresher,alopias vulpinus,2017
+12,shortfin mako,isurus oxyrinchus,2017
+12,spinner shark,carcharhinus brevipinna,2017
+12,silky shark,carcharhinus falciformis,2017
+12,bull shark,carcharhinus leucas,2017
+12,oceanic whitetip shark,carcharhinus longimanus,2017
+12,tiger shark,galeocerdo cuvier,2017
+12,lemon shark,negaprion brevirostris,2017
+12,blue shark,prionace glauca,2017
+12,scalloped hammerhead,sphyrna lewini,2017
+12,great hammerhead,sphyrna mokarran,2017
+12,bonnethead shark,sphyrna tiburo,2017
+12,smooth hammerhead,sphyrna zygaena,2017
+12,harp seal,pagophilus groenlandicus,2017
+12,portuguese dogfish,centroscymnus coelolepis,2017
+12,bramble shark,echinorhinus brucus,2017
+12,fleshynose catshark,apristurus melanoasper,2017
+12,blackmouth splitfin,synagrops japonicus,2017
+12,NA,chaenophryne ramifera,2017
+12,NA,dolopichthys allector,2017
+12,short-rod anglerfish,microlophichthys microlophus,2017
+12,basking shark,cetorhinus maximus,2017
+12,wreckfish,polyprion americanus,2017
+12,icelandic catshark,apristurus laurussonii,2017
+12,deepwater catshark,apristurus profundorum,2017
+12,false catshark,pseudotriakis microdon,2017
+12,ghost catshark,apristurus manis,2017
+12,smalleye catshark,apristurus microps,2017
+12,peregrine falcon,falco peregrinus,2017
+12,feather blenny,hypsoblennius hentz,2017
+12,green turtle,chelonia mydas,2017
+12,leatherback,dermochelys coriacea,2017
+12,northern stargazer,astroscopus guttatus,2017
+12,atlantic sabretooth,coccorella atlantica,2017
+12,lutkens lanternfish,diaphus luetkeni,2017
+12,NA,eustomias bibulbosus,2017
+12,NA,eustomias bigelowi,2017
+12,scaleless dragonfish,eustomias macrurus,2017
+12,fierce pike smelt,sudis atrox,2017
+12,NA,bathyonus laticeps,2017
+12,toothless smooth-head,einara edentula,2017
+12,cownose ray,rhinoptera bonasus,2017
+12,narrownose chimaera,harriotta raleighana,2017
+12,atlantic longnose chimaera,rhinochimaera atlantica,2017
+12,bluntnose stingray,hypanus say,2017
+12,greenland shark,somniosus microcephalus,2017
+12,night shark,carcharhinus signatus,2017
+12,nurse shark,ginglymostoma cirratum,2017
+12,longfin mako,isurus paucus,2017
+12,chain catshark,scyliorhinus retifer,2017
+12,great lanternshark,etmopterus princeps,2017
+12,atlantic angelshark,squatina dumeril,2017
+12,NA,abyssobrotula galatheae,2017
+12,short snouted lancetfish,alepisaurus brevirostris,2017
+12,NA,aristostomias lunifer,2017
+12,NA,bassozetus levistomatus,2017
+12,cusk eel,bassozetus normalis,2017
+12,NA,bathophilus metallicus,2017
+12,horned lantern fish,centrophryne spinulosa,2017
+12,smooth dreamer,chaenophryne draco,2017
+12,problematic lanternfish,diaphus problematicus,2017
+12,digitate cusk eel,dicrolene introniger,2017
+12,lobed dreamer,dolopichthys pullatus,2017
+12,NA,dysalotus oligoscolus,2017
+12,twinray dragonfish,eustomias satterleei,2017
+12,NA,eustomias simplex,2017
+12,NA,gigantactis gibbsi,2017
+12,NA,gigantactis ios,2017
+12,NA,gigantactis longicirra,2017
+12,cosmopolitan whipnose,gigantactis vanhoeffeni,2017
+12,soft leafvent angler,haplophryne mollis,2017
+12,footballfish,himantolophus albinares,2017
+12,NA,himantolophus brevirostris,2017
+12,NA,himantolophus rostratus,2017
+12,NA,kali kerberti,2017
+12,NA,kali macrura,2017
+12,mirror lanternfish,lampadena speculigera,2017
+12,dotback lanternfish,lampanyctus photonotus,2017
+12,NA,lamprogrammus brunswigi,2017
+12,scaleline cusk,lamprogrammus shcherbachevi,2017
+12,plainchin dreamarm,leptacanthichthys gracilispinis,2017
+12,barebelly lanternfish,loweina interrupta,2017
+12,rare lanternfish,loweina rara,2017
+12,dark searsid,mentodus facilis,2017
+12,NA,nansenia longicauda,2017
+12,NA,nansenia megalopa,2017
+12,spiny seadevil,neoceratias spinifer,2017
+12,NA,oneirodes macrosteus,2017
+12,false cusk,parabrotula plagiophthalma,2017
+12,NA,penopus microphthalmus,2017
+12,NA,pentherichthys atratus,2017
+12,NA,phyllorhinichthys balushkini,2017
+12,slender cuskeel,porogadus miles,2017
+12,NA,pseudoscopelus altipinnis,2017
+12,NA,pseudoscopelus scutatus,2017
+12,glasshead barreleye,rhynchohyalus natalensis,2017
+12,redmouth whalefish,rondeletia loricata,2017
+12,NA,dolopichthys danae,2017
+12,common gull-billed tern,gelochelidon nilotica,2017
+12,hooded seal,cystophora cristata,2017
+12,clapper rail,rallus crepitans,2017
+12,american coot,fulica americana,2017
+12,kitefin shark,dalatias licha,2017
+12,smalleyed rabbitfish,hydrolagus affinis,2017
+12,richardson’s skate,bathyraja richardsoni,2017
+12,roughtail stingray,bathytoshia centroura,2017
+12,NA,scopelosaurus smithii,2017
+12,NA,macroparalepis brevis,2017
+12,atlantic blackwing flyingfish,hirundichthys volador,2017
+12,hawksbill turtle,eretmochelys imbricata,2017
+12,loggerhead turtle,caretta caretta,2017
+12,grey seal,halichoerus grypus,2017
