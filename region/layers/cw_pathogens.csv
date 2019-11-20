@@ -77,68 +77,81 @@
 "76","New York",10,2015,0.876525423728814
 "77","New York",10,2016,0.911794871794872
 "78","New York",10,2017,0.839541984732824
-"79","Rhode Island",11,2005,0.912
-"80","Rhode Island",11,2006,0.638
-"81","Rhode Island",11,2007,0.954285714285714
-"82","Rhode Island",11,2008,0.938095238095238
-"83","Rhode Island",11,2009,0.894444444444444
-"84","Rhode Island",11,2010,0.961428571428571
-"85","Rhode Island",11,2011,0.956666666666667
-"86","Rhode Island",11,2012,0.971538461538462
-"87","Rhode Island",11,2013,0.932666666666667
-"88","Rhode Island",11,2014,0.973125
-"89","Rhode Island",11,2015,0.961666666666667
-"90","Rhode Island",11,2016,0.964285714285714
-"91","Rhode Island",11,2017,0.938
-"92","Offshore",1,2005,NA
-"93","Georges Bank",2,2005,NA
-"94","Gulf of Maine",3,2005,NA
-"95","Mid-Atlantic Bight",4,2005,NA
-"96","Offshore",1,2006,NA
-"97","Georges Bank",2,2006,NA
-"98","Gulf of Maine",3,2006,NA
-"99","Mid-Atlantic Bight",4,2006,NA
-"100","Offshore",1,2007,NA
-"101","Georges Bank",2,2007,NA
-"102","Gulf of Maine",3,2007,NA
-"103","Mid-Atlantic Bight",4,2007,NA
-"104","Offshore",1,2008,NA
-"105","Georges Bank",2,2008,NA
-"106","Gulf of Maine",3,2008,NA
-"107","Mid-Atlantic Bight",4,2008,NA
-"108","Offshore",1,2009,NA
-"109","Georges Bank",2,2009,NA
-"110","Gulf of Maine",3,2009,NA
-"111","Mid-Atlantic Bight",4,2009,NA
-"112","Offshore",1,2010,NA
-"113","Georges Bank",2,2010,NA
-"114","Gulf of Maine",3,2010,NA
-"115","Mid-Atlantic Bight",4,2010,NA
-"116","Offshore",1,2011,NA
-"117","Georges Bank",2,2011,NA
-"118","Gulf of Maine",3,2011,NA
-"119","Mid-Atlantic Bight",4,2011,NA
-"120","Offshore",1,2012,NA
-"121","Georges Bank",2,2012,NA
-"122","Gulf of Maine",3,2012,NA
-"123","Mid-Atlantic Bight",4,2012,NA
-"124","Offshore",1,2013,NA
-"125","Georges Bank",2,2013,NA
-"126","Gulf of Maine",3,2013,NA
-"127","Mid-Atlantic Bight",4,2013,NA
-"128","Offshore",1,2014,NA
-"129","Georges Bank",2,2014,NA
-"130","Gulf of Maine",3,2014,NA
-"131","Mid-Atlantic Bight",4,2014,NA
-"132","Offshore",1,2015,NA
-"133","Georges Bank",2,2015,NA
-"134","Gulf of Maine",3,2015,NA
-"135","Mid-Atlantic Bight",4,2015,NA
-"136","Offshore",1,2016,NA
-"137","Georges Bank",2,2016,NA
-"138","Gulf of Maine",3,2016,NA
-"139","Mid-Atlantic Bight",4,2016,NA
-"140","Offshore",1,2017,NA
-"141","Georges Bank",2,2017,NA
-"142","Gulf of Maine",3,2017,NA
-"143","Mid-Atlantic Bight",4,2017,NA
+"79","Northeast",12,2005,0.940884955752212
+"80","Northeast",12,2006,0.885876288659794
+"81","Northeast",12,2007,0.929692832764505
+"82","Northeast",12,2008,0.928019480519481
+"83","Northeast",12,2009,0.920837837837838
+"84","Northeast",12,2010,0.944984984984985
+"85","Northeast",12,2011,0.925533498759305
+"86","Northeast",12,2012,0.920652173913043
+"87","Northeast",12,2013,0.928502824858757
+"88","Northeast",12,2014,0.923368794326241
+"89","Northeast",12,2015,0.908897338403042
+"90","Northeast",12,2016,0.932314410480349
+"91","Northeast",12,2017,0.893764705882353
+"92","Rhode Island",11,2005,0.912
+"93","Rhode Island",11,2006,0.638
+"94","Rhode Island",11,2007,0.954285714285714
+"95","Rhode Island",11,2008,0.938095238095238
+"96","Rhode Island",11,2009,0.894444444444444
+"97","Rhode Island",11,2010,0.961428571428571
+"98","Rhode Island",11,2011,0.956666666666667
+"99","Rhode Island",11,2012,0.971538461538462
+"100","Rhode Island",11,2013,0.932666666666667
+"101","Rhode Island",11,2014,0.973125
+"102","Rhode Island",11,2015,0.961666666666667
+"103","Rhode Island",11,2016,0.964285714285714
+"104","Rhode Island",11,2017,0.938
+"105","Offshore",1,2005,NA
+"106","Georges Bank",2,2005,NA
+"107","Gulf of Maine",3,2005,NA
+"108","Mid-Atlantic Bight",4,2005,NA
+"109","Offshore",1,2006,NA
+"110","Georges Bank",2,2006,NA
+"111","Gulf of Maine",3,2006,NA
+"112","Mid-Atlantic Bight",4,2006,NA
+"113","Offshore",1,2007,NA
+"114","Georges Bank",2,2007,NA
+"115","Gulf of Maine",3,2007,NA
+"116","Mid-Atlantic Bight",4,2007,NA
+"117","Offshore",1,2008,NA
+"118","Georges Bank",2,2008,NA
+"119","Gulf of Maine",3,2008,NA
+"120","Mid-Atlantic Bight",4,2008,NA
+"121","Offshore",1,2009,NA
+"122","Georges Bank",2,2009,NA
+"123","Gulf of Maine",3,2009,NA
+"124","Mid-Atlantic Bight",4,2009,NA
+"125","Offshore",1,2010,NA
+"126","Georges Bank",2,2010,NA
+"127","Gulf of Maine",3,2010,NA
+"128","Mid-Atlantic Bight",4,2010,NA
+"129","Offshore",1,2011,NA
+"130","Georges Bank",2,2011,NA
+"131","Gulf of Maine",3,2011,NA
+"132","Mid-Atlantic Bight",4,2011,NA
+"133","Offshore",1,2012,NA
+"134","Georges Bank",2,2012,NA
+"135","Gulf of Maine",3,2012,NA
+"136","Mid-Atlantic Bight",4,2012,NA
+"137","Offshore",1,2013,NA
+"138","Georges Bank",2,2013,NA
+"139","Gulf of Maine",3,2013,NA
+"140","Mid-Atlantic Bight",4,2013,NA
+"141","Offshore",1,2014,NA
+"142","Georges Bank",2,2014,NA
+"143","Gulf of Maine",3,2014,NA
+"144","Mid-Atlantic Bight",4,2014,NA
+"145","Offshore",1,2015,NA
+"146","Georges Bank",2,2015,NA
+"147","Gulf of Maine",3,2015,NA
+"148","Mid-Atlantic Bight",4,2015,NA
+"149","Offshore",1,2016,NA
+"150","Georges Bank",2,2016,NA
+"151","Gulf of Maine",3,2016,NA
+"152","Mid-Atlantic Bight",4,2016,NA
+"153","Offshore",1,2017,NA
+"154","Georges Bank",2,2017,NA
+"155","Gulf of Maine",3,2017,NA
+"156","Mid-Atlantic Bight",4,2017,NA
