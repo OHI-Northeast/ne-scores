@@ -68,7 +68,7 @@ FIS <- function(layers) {
     select(region_id, score = status, dimension) %>%
     bind_rows(trend) %>%
     mutate(goal = 'FIS') %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -126,7 +126,7 @@ MAR <- function(layers) {
     select(region_id, score = status, dimension) %>%
     bind_rows(mar_trend) %>%
     mutate(goal = 'MAR') %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -303,7 +303,7 @@ TR <- function(layers) {
   ## read in tourism jobs layer
   tourism_job_growth <-
     AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
-    select(-layer_name, -X)
+    select(-layer_name, -X1)
 
   ## read in beach closures layer
   beach <- AlignDataYears(layer_nm = "tr_beach_closures", layers_obj = layers) %>%
@@ -355,7 +355,7 @@ TR <- function(layers) {
     select(region_id, score = status, dimension) %>%
     bind_rows(tr_trend) %>%
     mutate(goal = 'TR') %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -372,11 +372,11 @@ LIV <- function(layers){
 
   # wages
   le_cst_wages <- AlignDataYears(layer_nm = "le_coast_wages", layers_obj = layers) %>%
-    select(-layer_name, -X)
+    select(-layer_name)
 
   #jobs
   le_cst_jobs  <- AlignDataYears(layer_nm = "le_job_growth", layers_obj = layers) %>%
-    select(-layer_name, -X)
+    select(-layer_name)
 
   ## Jobs scores
 
@@ -439,7 +439,7 @@ LIV <- function(layers){
     mutate(goal = 'LIV') %>%
     select(region_id, goal, dimension, score) %>%
     arrange(goal, dimension, region_id) %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -455,7 +455,7 @@ ECO <- function(layers) {
 
   #coastal gdp growth rate
   eco_cst_gdp <- AlignDataYears(layer_nm = "eco_coast_gdp", layers_obj = layers) %>%
-    select(-layer_name, -X)
+    select(-layer_name)
 
   # ECO calculations ----
 
@@ -494,7 +494,7 @@ ECO <- function(layers) {
     mutate(goal = 'ECO') %>%
     select(region_id, goal, dimension, score) %>%
     arrange(goal, dimension, region_id) %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -555,7 +555,7 @@ ICO <- function(layers){
     mutate(goal = 'ICO') %>%
     arrange(goal, dimension, region_id) %>%
     distinct() %>%
-    complete(region_id = 1:11, #this adds in all regions with NA values for trend and status
+    complete(region_id = 1:12, #this adds in all regions with NA values for trend and status
              goal,
              dimension)
 
@@ -570,12 +570,12 @@ LSP <- function(layers) {
 
   # marine
   lsp_marine <- AlignDataYears(layer_nm = "lsp_protected_marine", layers_obj = layers) %>%
-    select(-layer_name, -X, -lsp_protected_marine_year) %>%
+    select(-layer_name, -X1, -lsp_protected_marine_year) %>%
     mutate(layer = "marine")
 
   # land
   lsp_land  <- AlignDataYears(layer_nm = "lsp_protected_land", layers_obj = layers) %>%
-    select(-layer_name, -X, -lsp_protected_land_year) %>%
+    select(-layer_name, -X1, -lsp_protected_land_year) %>%
     mutate(layer = "land")
 
   ref_pct_marine <- 0.10 #our reference point for marine protection is 10% based on Aichi
@@ -612,7 +612,7 @@ LSP <- function(layers) {
     mutate(goal = 'LSP') %>%
     arrange(goal, dimension, region_id) %>%
     distinct() %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -658,7 +658,7 @@ SPFIS <- function(layers){
     mutate(goal = 'SPFIS') %>%
     arrange(goal, dimension, region_id) %>%
     distinct() %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -753,7 +753,7 @@ CW <- function(layers) {
     select(region_id, score = status, dimension) %>%
     bind_rows(cw_trend) %>%
     mutate(goal = "CW") %>%
-    complete(region_id = 1:11, #this adds in regions 1-4 with NA values for trend and status
+    complete(region_id = 1:12, #this adds in regions 1-4 with NA values for trend and status
              goal,
              dimension)
 
@@ -781,9 +781,9 @@ HAB <- function(layers) {
     select(year = scenario_year, region_id = rgn_id, status = score, habitat)
 
   ## Offshore
-  offshore <- AlignManyDataYears("hab_sasi") %>%
+  offshore <- AlignManyDataYears("hab_fishing_effects") %>%
     filter(scenario_year == scen_year) %>%
-    mutate(status = 100 - (sasi*100)) %>%
+    mutate(status = score*100) %>%
     select(year = scenario_year, region_id = rgn_id, status, habitat)
 
   ## calculate status. eventually rbind() the other habitats here

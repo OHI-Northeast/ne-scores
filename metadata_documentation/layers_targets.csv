@@ -34,7 +34,7 @@ fis_meancatch,FIS,status
 fis_stockscores,FIS,status
 hab_eelgrass,HAB,status
 hab_salt_marsh,HAB,status
-hab_sasi,HAB,status
+hab_fishing_effects,HAB,status
 hd_intertidal,RAO,pressure
 hd_intertidal,HS,pressure
 hd_intertidal,FIS,pressure
