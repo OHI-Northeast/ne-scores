@@ -303,7 +303,7 @@ TR <- function(layers) {
   ## read in tourism jobs layer
   tourism_job_growth <-
     AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
-    select(-layer_name, -X1)
+    select(-layer_name)
 
   ## read in beach closures layer
   beach <- AlignDataYears(layer_nm = "tr_beach_closures", layers_obj = layers) %>%
@@ -570,12 +570,12 @@ LSP <- function(layers) {
 
   # marine
   lsp_marine <- AlignDataYears(layer_nm = "lsp_protected_marine", layers_obj = layers) %>%
-    select(-layer_name, -X1, -lsp_protected_marine_year) %>%
+    select(-layer_name, -lsp_protected_marine_year) %>%
     mutate(layer = "marine")
 
   # land
   lsp_land  <- AlignDataYears(layer_nm = "lsp_protected_land", layers_obj = layers) %>%
-    select(-layer_name, -X1, -lsp_protected_land_year) %>%
+    select(-layer_name, -lsp_protected_land_year) %>%
     mutate(layer = "land")
 
   ref_pct_marine <- 0.10 #our reference point for marine protection is 10% based on Aichi

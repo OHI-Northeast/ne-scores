@@ -85,6 +85,12 @@ for (s_year in scenario_years){  # s_year=2015
 
 }
 
+#remove region 0 because it's wrong! It takes the average across all regions, INCLUDING the whole Northeast. Region 12 is our new region 0
+
+scores_all_years <- scores_all_years %>%
+  filter(region_id > 0) %>%
+  mutate(region_id = ifelse(region_id == 12, 0, region_id))
+
 ## save .csv file
 readr::write_csv(scores_all_years, 'scores.csv', na='')
 ```
