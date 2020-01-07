@@ -30,7 +30,7 @@ Since eelgrass and salt marsh have relatively similar carbon sequestration rates
 
 ## Coastal Protection
 
-The presence of salt marsh has a near 4-times higher level of coastal protection against storm surge compared to eelgrass. To calculate the Coastal Protection sub-goal score, salt marsh scores are multiplied by 0.8, eelgrass scores multiplied by 0.2 and then summed for each region and year.
+The presence of salt marsh has a near 4-times higher level of coastal protection against storm surge compared to eelgrass (Sharp et al. 2018). To calculate the Coastal Protection sub-goal score, salt marsh scores are multiplied by 0.8, eelgrass scores multiplied by 0.2 and then summed for each region and year.
 
 The **Habitat Services** goal score is the average of Carbon Storage and Coastal Protection.
 
@@ -41,3 +41,5 @@ Basso, G., K. O'Brien, M. Albino, and V. O'Neill. "Status and trends of wetlands
 Bromberg, Keryn D., and Mark D. Bertness. "Reconstructing New England salt marsh losses using historical maps." Estuaries 28.6 (2005): 823-832.
 
 Mcleod, Elizabeth, et al. "A blueprint for blue carbon: toward an improved understanding of the role of vegetated coastal habitats in sequestering CO2." Frontiers in Ecology and the Environment 9.10 (2011): 552-560.
+
+Sharp, R., Tallis, H.T., Ricketts, T., Guerry, A.D., Wood, S.A., Chaplin-Kramer, R., Nelson, E., Ennaanay, D., Wolny, S., Olwero, N., Vigerstol, K., Pennington, D., Mendoza, G., Aukema, J., Foster, J., Forrest, J., Cameron, D., Arkema, K., Lonsdorf, E., Kennedy, C., Verutes, G., Kim, C.K., Guannel, G., Papenfus, M., Toft, J., Marsik, M., Bernhardt, J., Griffin, R., Glowinski, K., Chaumont, N., Perelman, A., Lacayo, M. Mandle, L., Hamel, P., Vogl, A.L., Rogers, L., Bierbower, W., Denu, D., and Douglass, J. 2018. InVEST 3.6.0 User’s Guide. The Natural Capital Project, Stanford University, University of Minnesota, The Nature Conservancy, and World Wildlife Fund.
