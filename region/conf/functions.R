@@ -466,7 +466,7 @@ ECO <- function(layers) {
    gdp_scores <- eco_cst_gdp %>%
     mutate(status =
              case_when(
-               gdp_growth_rate >= targ_gdp ~ 1, #if the growth rate is about 3.5% it gets a perfect score
+               gdp_growth_rate >= targ_gdp ~ 1, #if the growth rate is about 3% it gets a perfect score
                gdp_growth_rate <= targ_gdp ~ (gdp_growth_rate - min_gdp)/(targ_gdp - min_gdp)))
 
     write.csv(gdp_scores, file = "~/github/ne-prep/prep/eco/data/gdp_scores.csv")
