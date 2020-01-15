@@ -383,15 +383,13 @@ LIV <- function(layers){
   #we don't set a specific target of job growth. If national job growth is positive, we want to be at or above that growth rate. If national job growth is negative, we want coastal job growth to be the same or better as the previous 3 yr avg
 
   ## parameters
-  min_jobs = -0.25 #(a loss of 25% of all jobs gets a score of 0)
+  min_jobs = 0.25 #(a loss of 25% of all jobs gets a score of 0)
 
   jobs_score <- le_cst_jobs %>%
     mutate(job_score =
              case_when(
-               coast_job_growth >= 0 & us_job_growth < 0 ~ 1,
-               coast_job_growth >= 0 & us_job_growth >= 0 ~ coast_job_growth/us_job_growth,
-               coast_job_growth < 0 & us_job_growth < 0 ~ (coast_job_growth - min_jobs)/(0 - min_jobs),
-               coast_job_growth <0 & us_job_growth >= 0 ~ (coast_job_growth - min_jobs)/(us_job_growth - min_jobs)
+               us_job_growth < 0 ~ (min_jobs + coast_job_growth)/min_jobs,
+               us_job_growth >= 0 ~ (min_jobs + coast_job_growth)/(min_jobs + us_job_growth)
              ),
            job_score = ifelse(job_score > 1, 1, job_score))
 
