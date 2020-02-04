@@ -14,7 +14,7 @@ FIS <- function(layers) {
       region_id = rgn_id,
       year = scenario_year,
       species,
-      catch = mean_catch
+      catch = mean_catch_times_prop
     )
 
   stockscores <-
