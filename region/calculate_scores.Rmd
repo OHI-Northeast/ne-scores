@@ -62,7 +62,7 @@ source("conf/ne_pressure_function.R")
 source("conf/calculate_all_function.R")
 
 ## loop through each scenario year
-for (s_year in scenario_years){  # s_year=2015
+for (s_year in scenario_years){  # s_year=2017
 
   message(sprintf('--- Calculating Scores for scenario year %s ----', s_year))
 

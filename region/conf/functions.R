@@ -14,7 +14,8 @@ FIS <- function(layers) {
       region_id = rgn_id,
       year = scenario_year,
       species,
-      catch = mean_catch_times_prop
+      catch = mean_catch_times_prop,
+      stockid = stock_id
     )
 
   stockscores <-
@@ -23,7 +24,8 @@ FIS <- function(layers) {
       region_id = rgn_id,
       year = scenario_year,
       species = nmfs_original_species,
-      score
+      score,
+      stockid
     )
 
   # To calculate the weight (i.e, the relative catch of each stock per region),
