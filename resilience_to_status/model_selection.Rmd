@@ -1,0 +1,89 @@
+---
+title: 'OHI Northeast: model selection: causal chain model with fixed effects'
+author: "Jamie Montgomery"
+date: "3/25/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(caret) ### for cross validation
+```
+
+0.1 read tables from regression scripts
+Focus on models that omit ecological resilience - changes are too small, and driven by changes in global-scale assessments rather than local-scale assessments, so not likely to be an accurate predictor of changes in pressure.
+
+```{r}
+prs_res_mdl <- read_csv('prs_res_results_fixed_effects_formatted_p.csv') %>%
+  filter(is.na(model_error)) %>%
+  select(-model_error) %>%
+  filter(!str_detect(model, 'res_ecol'))
+  
+
+prs_mdl_sel <- prs_res_mdl %>%
+  select(-contains('factor')) %>%
+  select(goal, lag, adj_r_squared,
+         intercept, res_reg, res_soc, aicc, rmse) %>%
+  group_by(goal, lag) %>%
+  mutate(aicc_diff    = round(aicc - min(aicc), 3),
+         close_by_aicc = sum(aicc_diff < 2) - 1,
+         rmse_diff    = rmse - min(rmse), 
+         close_by_rmse = sum(rmse_diff < 0.0025) - 1) %>%
+  group_by(goal) %>%
+  filter(rmse == min(rmse)) %>%
+  ungroup()
+### note - the lm adj r squared ranks in same order as the cross val r squared
+### and mae ranks the same "best" as rmse
+
+prs_table_clean <- prs_mdl_sel %>%
+  select(goal, lag, adj_r_squared,
+         intercept, res_reg, res_soc)
+
+write_csv(prs_table_clean, 'prs_res_results_selected.csv')
+
+DT::datatable(prs_table_clean %>% mutate_if(is.double, ~round(., 4)))
+```
+
+```{r}
+status_prs_mdl <- read_csv('status_prs_results_formatted_p.csv') %>%
+  filter(model %in% c('prs_ecol_soc', 'intercept only')) %>%
+  filter(is.na(model_error)) %>%
+  select(-model, -model_error, -contains('factor'))
+
+status_mdl_sel <- status_prs_mdl %>%
+  group_by(goal) %>%
+  filter(rmse == min(rmse)) %>%
+  ungroup()
+### note - the lm adj r squared ranks in same order as the cross val r squared
+### and mae ranks the same "best" as rmse
+
+status_table_clean <- status_mdl_sel %>%
+  select(goal, lag, adj_r_squared,
+         intercept, pressures)
+
+write_csv(status_table_clean, 'status_prs_results_ecol_soc_selected.csv')
+DT::datatable(status_table_clean %>% mutate_if(is.double, ~round(., 4)))
+```
+
+```{r}
+status_prs_mdl <- read_csv('status_prs_results_formatted_p.csv') %>%
+  filter(model %in% c('prs_ecol_only', 'intercept only')) %>%
+  filter(is.na(model_error)) %>%
+  select(-model, -model_error, -contains('factor'))
+
+status_mdl_sel <- status_prs_mdl %>%
+  group_by(goal) %>%
+  filter(rmse == min(rmse)) %>%
+  ungroup()
+### note - the lm adj r squared ranks in same order as the cross val r squared
+### and mae ranks the same "best" as rmse
+
+status_table_clean <- status_mdl_sel %>%
+  select(goal, lag, adj_r_squared,
+         intercept, pressures)
+
+write_csv(status_table_clean, 'status_prs_results_ecol_only_selected.csv')
+DT::datatable(status_table_clean %>% mutate_if(is.double, ~round(., 4)))
+```

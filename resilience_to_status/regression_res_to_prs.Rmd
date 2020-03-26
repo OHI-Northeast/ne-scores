@@ -1,0 +1,296 @@
+---
+title: 'OHI Northeast: Regression between resilience and pressure'
+author: "Jamie Montgomery"
+date: "3/24/2020"
+output: html_document
+---
+
+```{r setup}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
+library(caret) ### for cross validation
+
+
+clean_df_names <- function(df) {
+  df <- df %>%
+    setNames(tolower(names(.)) %>%
+               str_replace_all('[^a-z0-9]+', '_') %>%
+               str_replace_all('^_+|_+$', ''))
+  return(df)
+}
+```
+
+```{r}
+### Set up basic data frame - make sure prs and res are 0-1; status
+### range not important here since we'll take a ratio inside a loop.
+
+res_reg <- read_csv('res_reg_only.csv') %>%
+  select(goal, region_id, year, res_reg = score)
+res_soc <- read_csv('res_soc_only.csv') %>%
+  select(goal, region_id, year, res_soc = score)
+res_ecol <- read_csv('res_ecol_only.csv') %>%
+  select(goal, region_id, year, res_ecol = score)
+prs_no_social <- read_csv('prs_no_social.csv') %>%
+  select(goal, region_id, year, pressures = score)
+
+
+scores_rgn_res <- read_csv('scores.csv') %>%
+  filter(region_id != 0) %>%
+  spread(dimension, score) %>%
+  select(goal, region_id, year, status, trend) %>%
+  left_join(res_reg, by = c('goal', 'region_id', 'year')) %>%
+  left_join(res_soc, by = c('goal', 'region_id', 'year')) %>%
+  left_join(res_ecol, by = c('goal', 'region_id', 'year')) %>%
+  left_join(prs_no_social, by = c('goal', 'region_id', 'year')) %>%
+  group_by(goal, region_id) %>%
+  arrange(year) %>%
+  mutate(res_reg   = res_reg / 100,
+         res_soc   = res_soc / 100,
+         res_ecol  = res_ecol / 100,
+         pressures = pressures / 100) %>%
+  filter(!all(is.na(res_reg), is.na(res_soc), is.na(res_ecol))) %>%
+  filter(!is.na(pressures)) 
+
+goals <- scores_rgn_res$goal %>% 
+  unique() 
+```
+
+
+```{r}
+calc_d_prs <- function(goalname, scores_df, yr_lag) {
+  d_prs_df <- scores_df %>%
+    filter(goal == goalname) %>%
+    mutate(obs_future_prs = dplyr::lead(pressures, yr_lag),
+           d_prs = (obs_future_prs - pressures) / pressures,
+           d_prs = ifelse(d_prs==Inf, NA, d_prs), #if there is an Inf in d_prs, which happens when pressures == 0, turn to NA
+           intercept = 1) %>%
+    filter(!is.na(d_prs))
+  return(d_prs_df)
+}
+
+
+tidy_model <- function(mdl) {
+  mdl_df <- mdl %>%
+    broom::tidy() %>%
+    mutate(adj_r_squared = summary(mdl)$adj.r.squared,
+           aicc   = AICcmodavg::AICc(mdl), 
+           yrs    = sum(str_detect(term, 'year')),
+           rgns   = sum(str_detect(term, 'region')),
+           params = rgns + yrs + n() - 1)
+  return(mdl_df)
+}
+```
+
+1.2 Calculate regressions for all models
+
+```{r}
+calc_res_regr <- function(df, train_control) {
+  ### For a given dataframe filtered to goal and lag year, loop over all
+  ### combinations of resilience regression models (except intercept only).
+  ### For each base model, calculate fixed and random effects on region, and
+  ### for each of those, calculate with and without time effect.
+  
+  ### UPDATE: omitting models with reg_ecol, as it changes very little and then
+  ### only due to global-scale assessments rather than changes in local
+  ### species conservation status.
+  res_mdls <- list(reg  = c('res_reg'),
+                   # ecol = c('res_ecol'),
+                   soc  = c('res_soc'),
+                   # reg_ecol = c('res_reg', 'res_ecol'),
+                   reg_soc  = c('res_reg', 'res_soc'))
+                   # ecol_soc = c('res_ecol', 'res_soc'),
+                   # reg_ecol_soc = c('res_reg', 'res_ecol', 'res_soc'))
+
+  ### initialize list for this combo of goal and lag
+  res_mdl_list <- vector('list', length = length(res_mdls) + 1)
+
+  ### This loop calculates all the permutations of the resilience component
+  ### model.  
+  for(i in seq_along(res_mdls)) {
+    ### i <- 2
+    
+    ### create text versions of the regression formulas
+    mdl_text <- sprintf('d_prs ~ 1 + %s + factor(year) + factor(region_id)', paste(res_mdls[[i]], collapse = ' + '))
+
+    message('  ', i, ': ', mdl_text)
+    names(res_mdl_list)[i] <- mdl_text
+
+    ### Check that there are values for each component, otherwise devolves to different model:
+    if(any(colSums(is.na(df[ , res_mdls[[i]]])) == nrow(df))) {
+      message('Model ', mdl_text, ' has NA columns - setting to "NA model"!')
+      res_mdl_list[[i]] <- list('mdl' = 'NA model')
+      next()
+    }
+  
+    ### Check that model columns have some variation over time to avoid
+    ### degenerate models.  Compare range of each column to sqrt of machine precision
+    ### (could also just compare to a small regular number...)
+    if(any(sapply(res_mdls[[i]], 
+                  FUN = function(x) {
+                    diff(range(df[[x]], na.rm = TRUE)) < .Machine$double.eps^.5
+                    }
+                  )) & !str_detect(mdl_text, 'intercept')) {
+      message('Model ', mdl_text, ' has degenerate columns - setting to "degenerate model"!')
+      res_mdl_list[[i]] <- list('mdl' = 'degenerate model')
+      next()
+    }
+    
+    mdl_fe <- lm(as.formula(mdl_text), data = df)
+    # mdl_fe <- plm(as.formula(mdl_text), data = df, 
+    #                     index = c('rgn_code', 'year'),
+    #                     model = 'within')
+    message('...Cross validating...')
+    cross_val_mdl <- train(as.formula(mdl_text), data = df, 
+                           method = "lm",
+                           na.action = na.omit,
+                           trControl = train_control)
+    
+    res_mdl_list[[i]] <- list('mdl' = mdl_fe, 'crossval' = cross_val_mdl$results)
+  }
+  
+  ### add intercept only model; index is i+1:
+  message('  ', i + 1, ': intercept only')
+  mdl_fe <- lm(d_prs ~ 1 + factor(year) + factor(region_id), data = df)
+  cross_val_mdl <- train(d_prs ~ 1 + factor(year) + factor(region_id), data = df, 
+                         method = "lm",
+                         trControl = train_control)
+  
+  res_mdl_list[[i+1]] <- list('mdl' = mdl_fe, 'crossval' = cross_val_mdl$results)
+  
+  names(res_mdl_list)[i + 1] <- 'intercept only'
+
+  return(res_mdl_list)
+}
+```
+
+```{r}
+goal_regr_list <- vector('list', length = length(goals))
+names(goal_regr_list) <- goals
+
+# Define training control
+set.seed(123)
+train_control <- trainControl(method = "LOOCV")
+
+
+for(goalname in goals) {
+  # goalname <- 'FIS'
+  
+  yr_lag_regr_list <- vector('list', length = 6)
+  names(yr_lag_regr_list) <- paste0('lag', 1:6)
+  
+  for(yr_lag in 1:6) {
+    # yr_lag <- 5
+    d_prs_df <- calc_d_prs(goalname, scores_rgn_res, yr_lag)
+    
+    if(nrow(d_prs_df) == 0) next() ### skip degenerate case
+    
+    message('Calculating ', goalname, ' at lag ', yr_lag)
+    tmp <- calc_res_regr(d_prs_df, train_control)
+    
+    yr_lag_regr_list[[yr_lag]] <- tmp
+  }
+  
+  goal_regr_list[[goalname]] <- yr_lag_regr_list
+}
+```
+
+# 2.2 Compare all pressure ~ resilience models
+
+From the goal_regr_list list of lists: For each loop, assemble a dataframe with results by model; bind together by lag year and goal. Maybe not memory efficient but whatevs.
+
+```{r}
+### initialize dataframe over all goals, lag years, and models -
+### for models and cross validation results
+mdls_df <- data.frame()
+cv_results_df <- data.frame()
+
+for(goalname in goals) {
+  # goalname <- goals[1]
+  
+  ### initialize dataframe for this goal over all lag years and models
+  ### do this for model as well as cross val
+  mdls_goal_df <- data.frame()
+  cv_r_goal_df <- data.frame()
+  
+  for(yr_lag in 1:6) {
+    # yr_lag <- 1
+    lag_txt <- paste0('lag', yr_lag)
+    
+    ### select models list for this goal and lag year combo
+    mdls_to_test <- goal_regr_list[[goalname]][[lag_txt]]
+    
+    ### initialize dataframe for this goal and lag year over all models;
+    ### do this for model as well as cross val
+    mdls_goal_lag_df <- data.frame()
+    cv_r_goal_lag_df <- data.frame()
+    
+    for(test_mdl in names(mdls_to_test)) {
+      # test_mdl <- names(mdls_to_test)[2]
+    
+      mdl <- mdls_to_test[[test_mdl]]$mdl
+      
+      if(class(mdl) == 'character') {
+        ### test if NA model or degenerate model
+        mdl_df <- data.frame(goal  = goalname, 
+                             model = test_mdl,
+                             lag   = yr_lag, 
+                             model_error = mdl)
+      } else {
+
+        cv_results <- mdls_to_test[[test_mdl]]$crossval %>%
+          mutate(goal   = goalname,
+                 model  = test_mdl,
+                 lag    = yr_lag) %>%
+          clean_df_names()
+        cv_r_goal_lag_df <- cv_r_goal_lag_df %>%
+          bind_rows(cv_results)
+        
+        mdl_df <- tidy_model(mdl) %>%
+          mutate(goal   = goalname,
+                 model  = test_mdl,
+                 lag    = yr_lag)
+      }
+      
+      mdls_goal_lag_df <- mdls_goal_lag_df %>%
+        bind_rows(mdl_df)
+    }
+    
+    mdls_goal_df <- mdls_goal_df %>%
+      bind_rows(mdls_goal_lag_df)
+    cv_r_goal_df <- cv_r_goal_df %>%
+      bind_rows(cv_r_goal_lag_df)
+  }
+  
+  mdls_df <- mdls_df %>%
+    bind_rows(mdls_goal_df)
+  cv_results_df <- cv_results_df %>%
+    bind_rows(cv_r_goal_df)
+}
+
+write_csv(mdls_df,       'temp/prs_res_results_fixed_effects.csv')
+write_csv(cv_results_df, 'temp/prs_res_crossval_fixed_effects.csv')
+```
+
+2.3 Pretty up the outputs
+
+```{r}
+cv_results  <- read_csv('temp/prs_res_crossval_fixed_effects.csv') %>%
+  select(-intercept)
+
+prs_res_mdl <- read_csv('temp/prs_res_results_fixed_effects.csv') %>% 
+  mutate(est_text = formatC(round(estimate, 4), digits = 4, format = 'f'),
+         est_text = case_when(p.value < .001 ~ paste0(est_text, '***'),
+                              p.value <  .01 ~ paste0(est_text, '**'),
+                              p.value <  .05 ~ paste0(est_text, '*'),
+                              p.value <  .10 ~ paste0(est_text, '°'),
+                              TRUE ~ est_text)) %>%
+  select(goal, model, lag, yrs, rgns, adj_r_squared, aicc, term, est_text, model_error) %>%
+  spread(term, est_text) %>%
+  clean_df_names() %>%
+  left_join(cv_results, by = c('goal', 'model', 'lag')) %>%
+  select(-na) ### holdover from spreading NA rows
+
+write_csv(prs_res_mdl, 'prs_res_results_fixed_effects_formatted_p.csv')
+
+DT::datatable(prs_res_mdl %>% mutate_if(is.numeric, ~ round(., 4)))
+```
+
