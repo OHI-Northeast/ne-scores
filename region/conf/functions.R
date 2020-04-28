@@ -3,6 +3,15 @@
 ## The function name is the 2- or 3- letter code for each goal or subgoal;
 ## for example, FIS is the Fishing subgoal of Food Provision (FP).
 
+### function to calculate geometric mean:
+geometric.mean2 <- function (x, na.rm = TRUE) {
+  if (is.null(nrow(x))) {
+    exp(mean(log(x), na.rm = TRUE))
+  }
+  else {
+    exp(apply(log(x), 2, mean, na.rm = na.rm))
+  }
+}
 
 FIS <- function(layers) {
   scen_year <- layers$data$scenario_year
@@ -214,7 +223,7 @@ RAO <- function(layers) {
 
   #coastal access
   coast_access <- AlignDataYears(layer_nm = "tr_rao_coastal_access", layers_obj = layers)  %>%
-    select(-layer_name) %>%
+    select(-layer_name, -tr_rao_coastal_access_year) %>%
     rename(region_id = rgn_id,
            access_score = score)
 
@@ -223,9 +232,13 @@ RAO <- function(layers) {
   rao_status <- econ_access %>%
     left_join(fish_access) %>%
     left_join(coast_access) %>%
-    rowwise() %>%
-    mutate(status = mean(c(econ_score, fssi_score, access_score), na.rm = T)*100,
-           dimension = 'status')
+    pivot_longer(cols = c(econ_score, fssi_score, access_score), names_to = "layer", values_to = "score") %>%
+    group_by(region_id, scenario_year) %>%
+    summarize(status = geometric.mean2(score, na.rm = TRUE)) %>% # take geometric mean
+    mutate(status = status * 100) %>%
+    mutate(dimension = "status") %>%
+    ungroup()
+
 
   ## calculate trend
   trend_data <- rao_status %>%
@@ -305,16 +318,16 @@ TR <- function(layers) {
   ## read in tourism jobs layer
   tourism_job_growth <-
     AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
-    select(-layer_name)
+    select(-layer_name, -tr_job_growth_year, -X)
 
   ## read in beach closures layer
   beach <- AlignDataYears(layer_nm = "tr_beach_closures", layers_obj = layers) %>%
-    select(-layer_name) %>%
+    select(-layer_name, -tr_beach_closures_year) %>%
     rename(region_id = rgn_id)
 
   #coastal access
   access <- AlignDataYears(layer_nm = "tr_rao_coastal_access", layers_obj = layers) %>%
-    select(-layer_name) %>%
+    select(-layer_name, -tr_rao_coastal_access_year) %>%
     rename(region_id = rgn_id,
            access_score = score)
 
@@ -337,9 +350,12 @@ TR <- function(layers) {
     select(region_id = rgn_id, job_score, scenario_year) %>%
     left_join(beach) %>%
     left_join(access) %>%
-    rowwise() %>%
-    mutate(status = mean(c(perc_open, job_score, access_score))*100,
-           dimension = 'status')
+    pivot_longer(cols = c(job_score, perc_open, access_score), names_to = "layer", values_to = "score") %>%
+    group_by(region_id, scenario_year) %>%
+    summarize(status = geometric.mean2(score, na.rm = TRUE)) %>% # take geometric mean
+    mutate(status = status * 100) %>%
+    mutate(dimension = "status") %>%
+    ungroup()
 
   # calculate trend
   trend_data <- tr_status %>%
@@ -685,16 +701,6 @@ SP <- function(scores) {
 
 CW <- function(layers) {
   scen_year <- layers$data$scenario_year
-
-  ### function to calculate geometric mean:
-  geometric.mean2 <- function (x, na.rm = TRUE) {
-    if (is.null(nrow(x))) {
-      exp(mean(log(x), na.rm = TRUE))
-    }
-    else {
-      exp(apply(log(x), 2, mean, na.rm = na.rm))
-    }
-  }
 
   # get data together:
 
