@@ -6,6 +6,7 @@ output: html_document
 ---
 
 ```{r setup}
+library(tidyverse)
 knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
 library(caret) ### for cross validation
 
@@ -34,7 +35,7 @@ prs_no_social <- read_csv('prs_no_social.csv') %>%
 
 
 scores_rgn_res <- read_csv('scores.csv') %>%
-  filter(region_id != 0) %>%
+  #filter(region_id != 0) %>%
   spread(dimension, score) %>%
   select(goal, region_id, year, status, trend) %>%
   left_join(res_reg, by = c('goal', 'region_id', 'year')) %>%
@@ -56,9 +57,14 @@ goals <- scores_rgn_res$goal %>%
 
 
 ```{r}
+#this function creates a dataframe that include the change in pressure (d_prs) between time 0 and lag time (yr_lag)
 calc_d_prs <- function(goalname, scores_df, yr_lag) {
+  #goalname = "CW"
+  #scores_df = scores_rgn_res
+  #yr_lag = 1
   d_prs_df <- scores_df %>%
-    filter(goal == goalname) %>%
+    filter(goal == goalname,
+           !is.na(status)) %>% #this removes offshore regions for goals where they are not calculated
     mutate(obs_future_prs = dplyr::lead(pressures, yr_lag),
            d_prs = (obs_future_prs - pressures) / pressures,
            d_prs = ifelse(d_prs==Inf, NA, d_prs), #if there is an Inf in d_prs, which happens when pressures == 0, turn to NA
@@ -172,7 +178,7 @@ train_control <- trainControl(method = "LOOCV")
 
 
 for(goalname in goals) {
-  # goalname <- 'FIS'
+  # goalname <- 'CW'
   
   yr_lag_regr_list <- vector('list', length = 6)
   names(yr_lag_regr_list) <- paste0('lag', 1:6)
@@ -183,7 +189,8 @@ for(goalname in goals) {
     
     if(nrow(d_prs_df) == 0) next() ### skip degenerate case
     
-    message('Calculating ', goalname, ' at lag ', yr_lag)
+    message('Calculating ', goalname, ' at lag ', yr_lag) 
+    
     tmp <- calc_res_regr(d_prs_df, train_control)
     
     yr_lag_regr_list[[yr_lag]] <- tmp

@@ -58,7 +58,7 @@ prs_no_social <- read_csv('prs_no_social.csv') %>%
   select(goal, region_id, year, pressures = score)
 
 scores_rgn_d_status <- read_csv('scores.csv') %>%
-  filter(region_id != 0) %>%
+ # filter(region_id != 0) %>%
   spread(dimension, score) %>%
   select(goal, region_id, year, status, pressures) %>%
   left_join(prs_no_social %>% rename(prs_omit_soc = pressures), 
