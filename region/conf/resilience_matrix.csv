@@ -1,6 +1,7 @@
 goal,element,res_water_pollution,res_fishing,res_climate_change,res_alien,res_hab_destruction,res_social,res_eco_integrity
 RAO,,x,x,x,,x,x,x
-HS,,x,,x,,x,x,x
+CP,,x,,x,,x,x,x
+CS,,x,,x,,x,x,x
 CW,,x,,x,,,x,x
 ECO,,,,,,,x,x
 FIS,,,x,x,,x,x,x
