@@ -90,7 +90,7 @@ FIS <- function(layers) {
   return(scores)
 }
 
-
+#mariculture/aquaculture
 MAR <- function(layers) {
   scen_year <- layers$data$scenario_year
 
@@ -105,6 +105,7 @@ MAR <- function(layers) {
   #sustainability scores
   sustscores <-
     read_csv("~/github/ne-scores/region/layers/mar_sust_scores.csv") %>%
+    mutate(species = ifelse(species == "Atlantic Salmon (marine net pen)", "Atlantic Salmon", species)) %>%
     select(-sustainabilityscore)
 
   #calculate status from sustainability weighted production
