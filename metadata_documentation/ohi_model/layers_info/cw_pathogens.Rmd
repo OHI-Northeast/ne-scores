@@ -1,8 +1,34 @@
-*Goal: Clean Waters*
-People value marine waters that are free of pollution and debris for aesthetic and health reasons. Contamination of waters comes from oil spills, chemicals, eutrophication, algal blooms, disease pathogens (e.g., fecal coliform, viruses, and parasites from sewage outflow), floating trash, and mass kills of organisms due to pollution. People are sensitive to these phenomena occurring in areas they access for recreation or other purposes as well as for simply knowing that clean waters exist. This goal scores highest when contamination from all potential sources is zero.
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Pathogens
 
-We include four measures of pollution in the clean waters goal: pathogens, trash, water quality, and sediment quality. This decision was meant to represent a comprehensive list of the contamination categories that are commonly considered in assessments of coastal clean waters (Borja et al. 2008) and for which we could obtain data (see data layers below).
+**Layer type(s):** Pressure, Clean Waters goal layer
 
-*Pathogens*
+**Data description:** This layer is derived from the  U.S. Environmental Protection Agency (EPA)  [BEach Advisory and Closing Online Notification (BEACON) dataset](https://watersgeo.epa.gov/beacon2). The most recent version (2.0) was used. The beach action (advisory and closures) dataset from the BEACON database was downloaded for all states in the assessment (ME, NY, NH, MA, RI, CT). This data contains beach-level information for closures including the length of the closure and the reson for closure. The Beach Days dataset was also downloaded and used to get an estimate of length of swim seasons.
 
-Human-derived pathogens are found in coastal waters primarily from sewage discharge or direct human defecation. This layer is derived from EPA Beach Closure data. We use the number of days a beach is closed per year due to pathogens in the water as a proxy for the impact of pathogens in coastal waters. Data is provided at the beach level and aggregated to the region level. Our reference point is 100 days free of closures, representing the average length of the swimming season for the region.
+**Methods summary:**  We used the proportion of the swim season with beaches closed due to pathogens in the water as a proxy for the impact of pathogens in coastal waters. First we looked at the average length of swim season by state using the Beach Days dataset. The season length varied from 97 to 104 so we set a single reference point as 100 days free of closures, representing the average length of the swimming season for the region.
+
+State | Average # of beach days
+------|---------------------
+CT|98
+MA|101
+ME|99.3
+NH|97.3
+RI|97.7
+NY|104
+
+Next we looked at beach closures by region. The beach action dataset identified the reason why a beach was closed which for the Northeast included elevated bacteria, sewage or runoff from rainfall. For each beach the total number of days closed due to these reasons was calculated and then divided by the reference point of 100 days to calculate the proportion of the season each beach was closed. This was then averaged across each region and done for every year 2005 to 2017. 
+
+**Pathogens pressure layer**
+The pathogens pressure layer had values for each region and year set equal to the proportion of a regions swim season with beaches closed. A higher value indicates a higher pressure due to the presence of pathogens.
+
+**Clean Waters goal layer**
+The pathogens data layer used in the Clean Waters goal had values for each region and year set equal to the average proportion of a regions swim season with beaches open, or the inverse of the pressure layer, where higher values indicate higher score.
+
+**Gapfilling:** None needed
+
+**References:**
+U.S. Environmental Protection Agency, BEACON 2.0 (Beach Advisory and Closing Online Notification). (2019). Beach closures. Retrieved from https://watersgeo.epa.gov/beacon2/

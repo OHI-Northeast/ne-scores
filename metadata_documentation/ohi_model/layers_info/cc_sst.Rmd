@@ -1,8 +1,24 @@
-**Sea Surface Temperature**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Sea Surface Temperature
 
-Sea surface temperature (SST) data were obtained from the Coral Reef Temperature Anomaly Database (CoRTAD) version 6 (Saha et al. 2018), which is produced by the NOAA National Center for Environmental Information (NCEI) using 4.6 km (nominally 21 km^2^ at the equator) Advanced Very High Resolution Radiometer (AVHRR) Pathfinder Version 6 ([v6 data](https://data.nodc.noaa.gov/cortad/Version6/)) SST data ([http://www.nodc.noaa.gov/sog/cortad/](http://www.nodc.noaa.gov/sog/cortad/)). 
+**Layer type:** Pressure
 
-We calculated the number of times a given pixel’s weekly SST was greater than the climatological mean for that week (an anomaly defined as greater than the mean + one standard deviation) and summed the number of weekly anomalies in a single year. The maximum value a pixel could have is 52 which would mean that pixel had anomalous SST temperatures for each week of the year. The frequency of weekly anomalies was calculated for each year in the dataset.
+**Data description:** 
+The Coral Reef Temperature Anomaly Database ([CoRTAD](https://data.nodc.noaa.gov/cortad/Version6/)) Version 6 - Global, 4 km Sea Surface Temperature and Related Thermal Stress Metrics for 1982 to 2017 (Saha et al. 2018). Specifically we used the weekly-averaged SSTs and SST anomaly data products.
 
-To account for annual variation, we look at SST anomalies in 5 year periods - using the assessed year and the 4 previous. The maximum value possible per pixel is 260 anomalous weeks. To rescale the values from 0 to 1 we selected a reference point that represents a regime shift. Once a pixel is anomalous for more than 50% of a five-year period, it has shifted into a new regime. All pixels that have a value greater than 130 weeks (51% of a 5 year time period) are assigned a 1. The rest of the cells are scaled to this reference point by dividing by 130. The final pressure score for each region is equal to the mean value of all rescaled pixels within each OHI region.
+**Methods summary:**
+This same data was used for the global Ocean Health Index assessment in 2018 and therefore a lot of the pre-processing had been completed previously, but we implemented changes to how the values were rescaled. Raw data was cropped to the US Northeast region, reprojected to US Albers Equal Area Conic projection and resampled to 1km^2^ grid cells. For each cell, we calculated the number of times a given grid cell’s weekly SST was greater than the climatological mean for 1982-2017 (an anomaly defined as greater than the mean + one standard deviation) and summed the number of weekly anomalies in a single year. The maximum value a pixel could have is 52 which would mean that pixel had anomalous SST temperatures for each week of the year. The frequency of weekly anomalies was calculated for each year in the dataset.
 
+To account for annual variation, we looked at SST anomalies in 5 year periods using the assessed year and the 4 previous. The maximum value possible per pixel is 260 anomalous weeks, indicating every week in that 5 year period was anomalous compared to the climatological mean. To rescale the values from 0 to 1 we selected a reference point that represents a regime shift. Once a pixel is anomalous for more than 50% of a five-year period, it has shifted into a new regime. All grid cells with a value greater than 130 weeks (51% of a 5 year time period) were assigned a 1. The rest of the cells were scaled to this reference point by dividing by 130. 
+
+The final pressure score for each region is equal to the mean value of all rescaled pixels within each OHI region.
+
+**Gapfilling:** No gapfilling needed
+
+**References:**
+
+Saha, Korak; Zhao, Xuepeng; Zhang, Huai-min; Casey, Kenneth S.; Zhang, Dexin; Zhang, Yongsheng; Baker-Yeboah, Sheekela; Relph, John M.; Krishnan, Ajay; Ryan, Thomas (2018). The Coral Reef Temperature Anomaly Database (CoRTAD) Version 6 - Global, 4 km Sea Surface Temperature and Related Thermal Stress Metrics for 1982 to 2017. NOAA National Centers for Environmental Information. Dataset. https://doi.org/10.25921/ffw7-cs39. Accessed: August 21, 2018
