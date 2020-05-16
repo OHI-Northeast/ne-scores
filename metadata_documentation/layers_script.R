@@ -27,4 +27,4 @@ layers <- meta %>%
   dplyr::select(layer, filename, fld_value, targets, name, units, description)
 
 
-write.csv(layers, here("region/layers.csv"), row.names=FALSE)
+write.csv(layers, "~/github/ne-scores/region/layers.csv", row.names=FALSE)
