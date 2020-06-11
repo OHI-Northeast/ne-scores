@@ -1,7 +1,7 @@
 ---
 output:
-  html_document: default
   word_document: default
+  html_document: default
 ---
 ### Job growth
 
@@ -12,7 +12,7 @@ output:
 
 2. Bureau of Labor Statistics (BLS) data on national employment. Specifically, the data series with ID: ENUUS00010010, "All Employees in Total Covered Total, all industries for All establishment sizes in U.S. TOTAL." This data was accessed from R using the R package `blscrapeR`.
 
-**Methods summary:** The data was provided by county and also as state-wide totals. From the data we selected wages across "All Ocean Sectors", rather than filtering for specific sectors. We also accounted for a data collection change between 2015 and 2016 (from the NOEP website):
+**Methods summary:** The data was provided by county and also as state-wide totals. From the data we selected employment across "All Ocean Sectors", rather than filtering for specific sectors. We also accounted for a data collection change between 2015 and 2016 (from the NOEP website):
 
 > In the recent release of the ENOW series "An additional industry, Fish and Seafood Merchant Wholesalers (NAICS 424460) was added to the Living Resources sector's Seafood Market industry for data years 2016 and beyond. The industry was not applied to earlier years." The addition of this industry significantly distorts annual comparisons and timeline analysis of the Seafood Market sector and Living Resources totals.
 

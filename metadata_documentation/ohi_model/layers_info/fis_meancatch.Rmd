@@ -1,0 +1,40 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Fisheries landings
+
+**Layer type(s):** Wild-Caught Fisheries sub-goal layer
+
+**Data description:**   
+Landings by statistical area for the US Northeast were provided by the National Marine Fisheries Service (NMFS) via email request in July of 2019. Data included pounds of species caught per statistical area (as designated by NOAA/NMFS) for the years 1996 - 2017. A total of 154 species are reported to be caught within the Northeast region between 1996 and 2017. This includes names such as "CONFIDENTIAL SPECIES", "OTHER INVERTEBRATES", and "CLAM, SPECIES NOT SPECIFIED". This data came from the Vessel Trip Reporting (VTR) database. Additional landings data from the Data Matching and Imputation System (DMIS) database was provided in January of 2020 to specifically fix inaccurate catch of American lobster in the VTR database. 
+
+Note that while NOAA does maintain an online database for landings, it is presented as an aggregated landings database - to the state level. We used disaggregated landings data that is more spatially explicit to allow for higher resolution accounting of fisheries catch.
+
+**Methods summary:** 
+
+*1. Assigned landings to OHI regions*   
+In order to aggregate species landings to the 12 Ocean Health Index Northeast regions, statistical areas were intersected with the OHI regions, and the amount of catch in each statistical area was assigned to the OHI region according to the proportional area of overlap. We assumed that catch was evenly distributed across each statistical area.
+
+For example, statistical area 522 is 55% in the George's Bank region, and 45% in the Gulf of Maine. All catch reported in area 522 is split according to the 55%/45% proportion between the George's Bank and Gulf of Maine regions.
+
+*2. Calculate mean landings*  
+After aggregating landings to OHI regions, a three-year rolling mean of species landings was calculated to account for any significant year-to-year variability that may not be indicative of the average annual catch.
+
+*3. Replace lobster catch*  
+The catch figures for American lobster in this spatial NMFS dataset were significantly lower than reported landings in scientific stock assessments. Given the importance of this species both culturally and commercially, the landings figures were replaced using Lobster data from another NMFS dataset called the Data Matching and Imputation System (DMIS) database. These come with statistical areas so they can matchup with the VTR data. The VTR database is inaccurate when it comes to lobster because vessels with only a lobster permit are not required to submit a vessel trip report. The DMIS database builds off the VTR data to estimate landings by area.
+
+*4. Removing catch from bait fisheries*
+Bait fisheries are an important industry in the Northeast and make up a significant portion of total catch in the region, especially Atlantic herring. Since the Wild-Caught Fisheries sub-goal is meant to measure how well sustainable seafood is being provided for human consumption, all catch meant for non-human consumption (e.g. bait, pet food) is removed. Catch data by market was again provided via data request from the National Marine Fisheries Service.
+
+**Wild-Caught Fisheries goal layer**  
+The final goal layer includes total landings per year, species and region. This is used within the Wild-Caught Fisheries goal model to calculate the proportion that each species contributes to the region's total catch and is then used as to weight stock scores.
+
+**Gapfilling**  
+Some species had missing data and it was not clear whether they were true zeroes or missing data. We left these as missing (NA) and when a rolling mean was taken, it was dependent on those years where catch was reported.
+
+**References**  
+National Marine Fisheries Service. (2019). Landings by statistical area from the Vessel Trip Reporting database. Emailed July 5, 2019 by Alison Ferguson.
+National Marine Fisheries Service. (2020). Landgins by statistical area from the Data Matching and Imputation System. Emailed January, 2019 by Alison Ferguson.
+
