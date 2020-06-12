@@ -1,6 +1,23 @@
-*Goal: Resource Access Opportunities*
-People value the ability to access coastal and ocean resources. Isolating what allows for this type of access is difficult, but a necessary component of humans relationship with the ocean. We isolated two key components; are people able to to go out on the water, and if they can, are the resources they seek available. This goal scores well when people can access the coastline, can afford to go boating, and fish are thriving and available in the ocean. We include two measures of resource access oppportunity: the price of gas compared to wages, fish stock assessment sustainability, and frequent access points along the coast
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Fisheries resource access
 
-*Fisheries Resource Access*
+**Layer type(s):** Resource Access Opportunities goal layer  
 
-The fish resource access layer was derived from NOAA’s Fish Stock Sustainability Index (FSSI). This data combines information from stock assessments to measure stock sustainability on a 0-4 scale. We used 4, the highest possible score, as the target.
+**Data description(s)**    
+The fish resource access layer was derived from NOAA’s Fish Stock Sustainability Index (FSSI). This data combines information from stock assessments to measure stock sustainability on a 0-4 scale for 47 stocks in the Northeast for all years 2005 - 2018.
+
+**Methods summary**  
+The raw data included stock name and location. Using this information, each stock was matched to an OHI region where it is found using the fisheries landings data used in the Wild-Caught Fisheries goal. Once the stocks were matched with OHI regions, each stock FSSI score was divided by 4 to convert scores into a 0 to 1 scale.
+
+**Resource Access Opportunities layer**    
+Each region's score is equal to the mean score of all stocks in the region and year.
+
+**Gapfilling**   
+There was no gapfilling
+
+**References**  
+NOAA Fisheries Stock Sustainability Index. 2019. Emailed 29 July 2019. https://www.fisheries.noaa.gov/national/population-assessments/status-us-fisheries#fish-stock-sustainability-index.
