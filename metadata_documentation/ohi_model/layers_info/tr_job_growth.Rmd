@@ -1,0 +1,36 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Tourism job growth
+
+**Layer type(s):** Tourism & Recreation goal layer  
+
+**Data description(s):**   
+NOAA's Economics: National Ocean Watch (ENOW) data provides economic data relevant to ocean sectors at a county level for years 2005 - 2016. Ocean sectors include Living Resources, Marine Construction, Transportation, Ship & Boat Building, Tourism & Recreation, and Offshore Mineral Extraction. ENOW data on annual employment was provided by the National Ocean Economics Program (NOEP) by county and ocean sector. For this layer, the employment data was filtered to just the Tourism & Recreation sector.
+
+**Methods summary:** The data was provided by county and also as state-wide totals. From the data we selected employment numbers from the "Tourism & Recreation" sector.
+
+We compared aggregated county data to the state-wide totals and found differences between these two data series. This could be explained by suppressed data at the county level that is included in the state-wide totals. By comparing the absolute values and the temporal trends of the county-aggregated and state-wide totals we made decisions about what data series to use, either the county-level or state-wide totals. For this data series, the state level totals were used for all regions. Annual employment in the tourism and recreation sector is compared to the mean number of jobs in the tourism sector over the previous 3 years.
+
+**Tourism goal layer**  
+Each region's annual number of jobs in the tourism sector ($j$) is compared to the average number of jobs in tourism over the previous three years. If the the region shows an increase in the number of jobs compared to the previous three years, the region receives a score ($s$) of 1, otherwise the region score is scaled so that a loss of 25% of jobs in the tourism sector compared to the previous 3 years results in a score of 0. This reference point ($ref_{min}$ = 0.25) is equal to what was experienced during the Great Depression (across all sectors).
+
+$$T=\frac{j_t}{\frac{1}{3}(j_{t-1} + j_{t-2} + j_{t-3})}-1$$
+
+Where $T$ is the tourism job growth rate,
+
+$$ s_{i,t} = \begin{cases} 1 ,& T >= 0,\\
+\frac{T - ref_{min}}{0 - ref_{min}},& T < 0
+\end{cases}$$
+
+
+**Gapfilling:**  
+The first three years of the time series, 2005-2007, were gapfilled with data from 2008 since growth rate was calculated by comparing to the previous three year mean. Since the dataset ends in 2016, these values are carried forward to 2017. Connecticut was missing data for 2008. This was gapfilled using a simple linear interpolation of employment numbers between the years 2007 and 2009.
+
+**References:**
+
+National Ocean Economics Program. Ocean Economic Data by Sector & Industry., ONLINE. 2012. Available: http://www.OceanEconomics.org/Market/oceanEcon.asp [9 May 2019]
+
+National Oceanic and Atmospheric Administration (NOAA). Economics: National Ocean Watch (ENOW) Data. Based on data from the Bureau of Labor Statistics and the Bureau of Economic Analysis. Charleston, SC: NOAA Office for Coastal Management.

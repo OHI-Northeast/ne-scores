@@ -3,6 +3,15 @@
 ## The function name is the 2- or 3- letter code for each goal or subgoal;
 ## for example, FIS is the Fishing subgoal of Food Provision (FP).
 
+### function to calculate geometric mean:
+geometric.mean2 <- function (x, na.rm = TRUE) {
+  if (is.null(nrow(x))) {
+    exp(mean(log(x), na.rm = TRUE))
+  }
+  else {
+    exp(apply(log(x), 2, mean, na.rm = na.rm))
+  }
+}
 
 FIS <- function(layers) {
   scen_year <- layers$data$scenario_year
@@ -81,7 +90,7 @@ FIS <- function(layers) {
   return(scores)
 }
 
-
+#mariculture/aquaculture
 MAR <- function(layers) {
   scen_year <- layers$data$scenario_year
 
@@ -96,6 +105,7 @@ MAR <- function(layers) {
   #sustainability scores
   sustscores <-
     read_csv("~/github/ne-scores/region/layers/mar_sust_scores.csv") %>%
+    mutate(species = ifelse(species == "Atlantic Salmon (marine net pen)", "Atlantic Salmon", species)) %>%
     select(-sustainabilityscore)
 
   #calculate status from sustainability weighted production
@@ -214,7 +224,7 @@ RAO <- function(layers) {
 
   #coastal access
   coast_access <- AlignDataYears(layer_nm = "tr_rao_coastal_access", layers_obj = layers)  %>%
-    select(-layer_name) %>%
+    select(-layer_name, -tr_rao_coastal_access_year) %>%
     rename(region_id = rgn_id,
            access_score = score)
 
@@ -223,9 +233,13 @@ RAO <- function(layers) {
   rao_status <- econ_access %>%
     left_join(fish_access) %>%
     left_join(coast_access) %>%
-    rowwise() %>%
-    mutate(status = mean(c(econ_score, fssi_score, access_score), na.rm = T)*100,
-           dimension = 'status')
+    pivot_longer(cols = c(econ_score, fssi_score, access_score), names_to = "layer", values_to = "score") %>%
+    group_by(region_id, scenario_year) %>%
+    summarize(status = geometric.mean2(score, na.rm = TRUE)) %>% # take geometric mean
+    mutate(status = status * 100) %>%
+    mutate(dimension = "status") %>%
+    ungroup()
+
 
   ## calculate trend
   trend_data <- rao_status %>%
@@ -250,49 +264,82 @@ RAO <- function(layers) {
   return(scores)
 }
 
-HS <- function(layers) {
+
+HS <- function(scores) {
+
+  s <- scores %>%
+    filter(goal %in% c('CP', 'CS'),
+           dimension %in% c('status', 'trend', 'future', 'score')) %>%
+    group_by(region_id, dimension) %>%
+    summarize(score = mean(score, na.rm = TRUE)) %>%
+    ungroup() %>%
+    arrange(region_id) %>%
+    mutate(goal = "HS") %>%
+    select(region_id, goal, dimension, score) %>%
+    data.frame()
+
+  # return all scores
+  return(rbind(scores, s))
+}
+
+CP <- function(layers) {
   scen_year <- layers$data$scenario_year
 
   ## coastal protection
-  coastal_protection <- AlignManyDataYears("hs_coastal_protection") %>%
-    filter(scenario_year == scen_year) %>%
-    mutate(service = "cp") %>%
-    select(year = scenario_year, region_id = rgn_id, rgn_name, score = cp_score, service)
-
-  ## carbon storage
-  carbon_storage <- AlignManyDataYears("hs_carbon_storage") %>%
-    filter(scenario_year == scen_year) %>%
-    mutate(service = "cs") %>%
-    select(year = scenario_year, region_id = rgn_id, rgn_name, score = cs_score, service)
-
-
-  ## calculate status. eventually rbind() the other habitats here
-  hs_status <- coastal_protection %>%
-    rbind(carbon_storage) %>%
-    group_by(year, region_id, rgn_name) %>%
-    summarize(status = mean(score, na.rm = T)) %>%
-    mutate(dimension = 'status') %>%
-    ungroup()
-
+  cp_status <- AlignManyDataYears("hs_coastal_protection") %>%
+    select(year = scenario_year, region_id = rgn_id, rgn_name, status = cp_score) %>%
+    mutate(dimension = "status")
 
   ## calculate trend
-  trend_data <- hs_status %>%
+  trend_data <- cp_status %>%
     filter(!is.na(status))
 
   trend_years <- (scen_year - 4):(scen_year)
 
-  hs_trend <-
+  cp_trend <-
     CalculateTrend(status_data = trend_data, trend_years = trend_years)
 
   ## calculate scores
-  hs_score <- hs_status %>%
+  cp_score <- cp_status %>%
     filter(year == scen_year) %>%
     select(region_id, score = status, dimension) %>%
-    bind_rows(hs_trend) %>%
-    mutate(goal = "HS")
+    bind_rows(cp_trend) %>%
+    mutate(goal = "CP")
 
   ## return final scores
-  scores <- hs_score %>%
+  scores <- cp_score %>%
+    select(region_id, goal, dimension, score)
+
+  return(scores)
+}
+
+
+CS <- function(layers) {
+  scen_year <- layers$data$scenario_year
+
+  ## carbon storage
+  cs_status <- AlignManyDataYears("hs_carbon_storage") %>%
+    select(year = scenario_year, region_id = rgn_id, rgn_name, status = cs_score) %>%
+    mutate(dimension = "status")
+
+  ## calculate trend
+  trend_data <- cs_status %>%
+    filter(!is.na(status))
+
+  trend_years <- (scen_year - 4):(scen_year)
+
+  cs_trend <-
+    CalculateTrend(status_data = trend_data, trend_years = trend_years)
+
+  ## calculate scores
+  cs_score <- cs_status %>%
+    filter(year == scen_year) %>%
+    select(region_id, score = status, dimension) %>%
+    bind_rows(cs_trend) %>%
+    mutate(goal = "CS")
+
+  ## return final scores
+  scores <- cs_score %>%
     select(region_id, goal, dimension, score)
 
   return(scores)
@@ -305,16 +352,16 @@ TR <- function(layers) {
   ## read in tourism jobs layer
   tourism_job_growth <-
     AlignDataYears(layer_nm = "tr_job_growth", layers_obj = layers) %>%
-    select(-layer_name)
+    select(-layer_name, -tr_job_growth_year, -X)
 
   ## read in beach closures layer
   beach <- AlignDataYears(layer_nm = "tr_beach_closures", layers_obj = layers) %>%
-    select(-layer_name) %>%
+    select(-layer_name, -tr_beach_closures_year) %>%
     rename(region_id = rgn_id)
 
   #coastal access
   access <- AlignDataYears(layer_nm = "tr_rao_coastal_access", layers_obj = layers) %>%
-    select(-layer_name) %>%
+    select(-layer_name, -tr_rao_coastal_access_year) %>%
     rename(region_id = rgn_id,
            access_score = score)
 
@@ -337,9 +384,12 @@ TR <- function(layers) {
     select(region_id = rgn_id, job_score, scenario_year) %>%
     left_join(beach) %>%
     left_join(access) %>%
-    rowwise() %>%
-    mutate(status = mean(c(perc_open, job_score, access_score))*100,
-           dimension = 'status')
+    pivot_longer(cols = c(job_score, perc_open, access_score), names_to = "layer", values_to = "score") %>%
+    group_by(region_id, scenario_year) %>%
+    summarize(status = geometric.mean2(score, na.rm = TRUE)) %>% # take geometric mean
+    mutate(status = status * 100) %>%
+    mutate(dimension = "status") %>%
+    ungroup()
 
   # calculate trend
   trend_data <- tr_status %>%
@@ -686,16 +736,6 @@ SP <- function(scores) {
 CW <- function(layers) {
   scen_year <- layers$data$scenario_year
 
-  ### function to calculate geometric mean:
-  geometric.mean2 <- function (x, na.rm = TRUE) {
-    if (is.null(nrow(x))) {
-      exp(mean(log(x), na.rm = TRUE))
-    }
-    else {
-      exp(apply(log(x), 2, mean, na.rm = na.rm))
-    }
-  }
-
   # get data together:
 
   ## Water quality index. The higher the better
@@ -771,18 +811,15 @@ HAB <- function(layers) {
 
   ## salt marsh
   saltmarsh <- AlignManyDataYears("hab_salt_marsh") %>%
-    filter(scenario_year == scen_year) %>%
     mutate(status = ifelse(perc_loss <= 0, 100, 100-perc_loss)) %>% #this keeps the perc_loss from going negative from going above 100 for Maine
     select(year = scenario_year, region_id = rgn_id, status, habitat)
 
   ## eelgrass
   eelgrass <- AlignManyDataYears("hab_eelgrass") %>%
-    filter(scenario_year == scen_year) %>%
     select(year = scenario_year, region_id = rgn_id, status = score, habitat)
 
   ## Offshore
   offshore <- AlignManyDataYears("hab_fishing_effects") %>%
-    filter(scenario_year == scen_year) %>%
     mutate(status = score*100) %>%
     select(year = scenario_year, region_id = rgn_id, status, habitat)
 

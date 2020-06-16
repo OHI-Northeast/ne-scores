@@ -1,0 +1,33 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Coastal access
+
+**Layer type(s):** Tourism & Recreation, Resource Access Opportunities goal layer  
+
+**Data description(s):**   
+This layer is derived from NOAA's Office of Response and Restoration's Environmental Sensitivity Index data. These maps were created to identify coastal resources that could be at risk if an oil spill were to occur. These include biological resources, sensitive habitats and human-use areas, which is the category we used to measure coastal access. Tee data was manually downloaded from the ESI site (https://response.restoration.noaa.gov/esi_download) for each state in the Northeast in August of 2019. The geospatial files provide point data. The data availability varied from different time periods between 2001 and 2016, but we combine all datasets as a single representative layer, therefore the time does not play a role in the final coastal access layer.  
+
+**Methods summary:** 
+
+The spatial information for each state was filtered to only those points that were of human use/interest. The reported point types varied from state to state, but overall encompassed the following which we included as coastal access points:
+
+*Historical Site, Beach, Campground, Access Point, Boat Ramp, Marina, Ferry, Port, Access Point, Park, National Landmark, Surfing*
+
+After removing all points not within these categories, a 1 mile buffer was applied to all points, since we were interested in measuring access points every mile of the coast. The total land area covered by this buffered point layer was calculated and compared to the total area of the 1 mile inland coastal shapefile. This allowed for comparison of how much of the 1 mile coastal strip was covered by an access point.
+
+**Tourism & Recreation goal layer**   
+The score for each region was equal to the total area covered by coastal access points divided by the total area of the 1 mile inland buffer. A score of 1 indicates that there is a coastal access point every mile of the coast.
+
+**Resource Access Opportunities goal layer**  
+This was the same as the Tourism & Recreation goal layer.
+
+
+**Gapfilling:**  
+Since there was not updated temporal data, this static layer was used for all years 2005 - 2016. There was no spatial gapfilling. 
+
+**References:**
+
+National Oceanic Atmospheric Administration/Office of Response and Restoration. (2017).  Download ESI Maps and GIS Data.  NOAA/NOS Office of Response and Restoration, Seattle, WA. https://response.restoration.noaa.gov/esi_download

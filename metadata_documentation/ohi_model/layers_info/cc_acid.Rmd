@@ -1,5 +1,42 @@
-**Ocean Acidification**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Ocean Acidification
 
-Ocean acidification data were obtained from the [East Coast Ocean Acidification Product Suite](https://www.coral.noaa.gov/accrete/oaps.html) (ECOAPS)^[NOAA Coral Health and Monitoring Program, Ocean Acidification Product Suite, <https://www.coral.noaa.gov/accrete/oaps.html>], which is produced by the NOAA Coral Health and Monitoring Program. Changes in the aragonite saturation state ($\Omega_{arag}$) can be attributed to changes in the concentration of CO~2~ and thus we use this measurement as a proxy for increasing CO~2~. This layer is rescaled between 0-1 using two accepted thresholds; 1.5$\Omega_{arag}$ the level when organism show mild dissolution^[Bednaršek, Nina, et al. “Systematic Review and Meta-Analysis Toward Synthesis of Thresholds of Ocean Acidification Impacts on Calcifying Pteropods and Interactions With Warming.” Frontiers in Marine Science, vol. 6, 2019, doi:10.3389/fmars.2019.00227.] and 1$\Omega_{arag}$ the lethal saturation level^[Ries, J. B., et al. “Marine Calcifiers Exhibit Mixed Responses to CO2-Induced Ocean Acidification.” Geology, vol. 37, no. 12, 2009, pp. 1131–1134., doi:10.1130/g30210a.1.]. 
+**Layer type:** Pressure
+
+**Data description:** Ocean acidification data were obtained from the [East Coast Ocean Acidification Product Suite](https://www.coral.noaa.gov/accrete/east-coast-oaps.html) (ECOAPS)^[NOAA Coral Health and Monitoring Program, Ocean Acidification Product Suite, <https://www.coral.noaa.gov/accrete/oaps.html>], which is produced by the NOAA Coral Health and Monitoring Program. This data includes monthly aragonite saturation state ($\Omega_{arag}$) values from 2014 - 2017 along the East Coast of the United States in a gridded format with a cell resolution of 0.15 degrees. 
+
+**Methods summary:** The raw data was cropped to our region of interest, reprojected to a US Albers Equal Area Conic projection, resampled using nearest neighbor interpolation to a cell size of 1km^2^. Mean annual aragonite saturation state concentrations were calculated for each year from the monthly data and then rescaled from 0 to 1 using a step-wise conditional function based on known thresholds for calcifying organisms.
+
+- If $\Omega_{arag}$ is less than or equal to 1, the cell is assigned the highest pressure score of 1. This is a widely accepted saturation lethal threshold for calcifying marine organisms although indivdual responses vary
+
+- Cells with $\Omega_{arag}$ = 1.5 are assigned a pressure value of 0.5. This saturation level is when mild dissolution begins to occur (Bednaršek et al. 2019)
+
+- Cells with $\Omega_{arag}$ = 2.5 are assigned a pressure of 0. This is the lowest saturation level where few organims are affected (Ries et al. 2009).
+
+Functionally this method of rescaling each cell to get a pressure value ($X$) between 0 and 1 can be described by the following equation:
+
+$$ X = \begin{cases} 1,& \Omega_{arag} <= 1,\\
+-1*\Omega_{arag} + 2,& 1<\Omega_{arag} <= 1.5,\\
+-0.5*\Omega_{arag} + 1.25,&  1.5 < \Omega_{arag} <= 2.5,\\
+0,& \Omega_{arag} > 2.5
+\end{cases}$$
+
+Pressure layer scores were calculated as the mean of rescaled cell values by region and year.
+
+**Gapfilling:** Unfortunately this dataset only included the most recent 4 years of data, requiring gapfilling methods for years 2005-2013. Ideally we could have gapfilled from a global dataset used in other Ocean Health Index Assessments (WHOI 2017), but after comparisons between the two datasets for the overlapping years (2014-2017) it became clear that the differences were too significant to justify gapfilling with this dataset. Therefore all values from 2005 - 2013 are gapfilled with the 2014 scores. We recognize this introduces uncertainty to the Index for those years.
+
 **References**
+  
+Bednaršek, Nina, et al. “Systematic Review and Meta-Analysis Toward Synthesis of Thresholds of Ocean Acidification Impacts on Calcifying Pteropods and Interactions With Warming.” Frontiers in Marine Science, vol. 6, 2019, doi:10.3389/fmars.2019.00227.
 
+Ries, J. B., et al. “Marine Calcifiers Exhibit Mixed Responses to CO2-Induced Ocean Acidification.” Geology, vol. 37, no. 12, 2009, pp. 1131–1134., doi:10.1130/g30210a.1.
+
+Signorini, S. R., A. Mannino, R. G. Najjar, Jr., M. A. M. Friedrichs, W.-J. Cai, J. Salisbury, Z. Al-eck Wang, H. Thomas, and E. Shadwick (2013), Surface ocean pCO2 seasonality and sea-air CO2 flux estimates for the North American east coast, J. Geophys. Res. Oceans, 118, 5439–5460, doi:10.1002/jgrc.20369.
+
+Wang, Z. A., G. L. Lawson, C. H. Pilskaln, and A. E. Maas (2017), Seasonal controls of aragonite saturation states in the Gulf of Maine, J. Geophys. Res. Oceans, 122, doi:10.1002/2016JC012373.
+
+Woods Hole Oceanographic Institution (WHOI). 2017 update to data originally published in: Feely, R.A., S.C. Doney, and S.R. Cooley. 2009. Ocean acidification: Present conditions and future changes in a high-CO2 world. Oceanography 22(4):36–47

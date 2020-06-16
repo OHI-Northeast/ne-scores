@@ -1,0 +1,39 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Aquaculture species sustainability
+
+**Layer type(s):** Aquaculture sub-goal layer  
+
+**Data description(s):**    
+Monterey Bay Aquarium's Seafood Watch aquaculture standards were used as sustainability factors for all farmed aquaculture species in the Northeast. Seafood Watch (SW) data measures species sustainability based on multiple factors, including gear type, location, species, and more. Through direct communication with SW, we were provided with a database of farmed species for the United States specifically.
+
+**Methods summary:** 
+The Seafood Watch data provided a sustainability score for each species on a scale from 0 to 10. It was not possible to perfectly match each reported farmed species with their counterpart in the Seafood Watch data but in these cases, the nearest species was used. Below, sustainability scores for each species is discussed.
+
+*Oysters*   
+The data had *Eastern oyster* but not *American oyster* although both were reported in production. All oyster species in the database had the same score of 7.98, so this score was used for all oyster species.
+
+*Atlantic salmon*   
+Atlantic salmon farmed in marine net pens had a score of 4.82.
+
+*Scallops*  
+Both *Bay scallops* and *scallops* were reported in the production data. Seafood Watch data scores Bay scallops at 8.86. In fact, all scallops in the database had a score of 8.86, and so this score was used for all scallops in the production data.
+
+*Mussels*  
+Both *Blue mussels* and *mussels* were reported in the production data. All mussels in the Seafood Watch dataset had a score of 8.11.
+
+*Clams*  
+Both *Hard Clams/Quahogs* and *soft shell Clams* were reported in the production data. Hard Clams had a score of 8.39. Seafood Watch doesn’t have Quahog or “Clams", so those two species received the same value as Hard Clam.
+
+
+**Aquaculture sub-goal layer**  
+These were simply converted to 0 to 1 for use in the Aquaculture sub-goal.
+
+**Gapfilling:**  
+There was no gapfilling necessary.
+
+**References:**  
+Monterey Bay Aquarium Seafood Watch program. 2019. Seafood Watch Aquaculture Standards for the United States. Data provided via direct communication, 23 August 2019. 

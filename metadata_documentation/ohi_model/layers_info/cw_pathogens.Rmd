@@ -1,8 +1,0 @@
-*Goal: Clean Waters*
-People value marine waters that are free of pollution and debris for aesthetic and health reasons. Contamination of waters comes from oil spills, chemicals, eutrophication, algal blooms, disease pathogens (e.g., fecal coliform, viruses, and parasites from sewage outflow), floating trash, and mass kills of organisms due to pollution. People are sensitive to these phenomena occurring in areas they access for recreation or other purposes as well as for simply knowing that clean waters exist. This goal scores highest when contamination from all potential sources is zero.
-
-We include four measures of pollution in the clean waters goal: pathogens, trash, water quality, and sediment quality. This decision was meant to represent a comprehensive list of the contamination categories that are commonly considered in assessments of coastal clean waters (Borja et al. 2008) and for which we could obtain data (see data layers below).
-
-*Pathogens*
-
-Human-derived pathogens are found in coastal waters primarily from sewage discharge or direct human defecation. This layer is derived from EPA Beach Closure data. We use the number of days a beach is closed per year due to pathogens in the water as a proxy for the impact of pathogens in coastal waters. Data is provided at the beach level and aggregated to the region level. Our reference point is 100 days free of closures, representing the average length of the swimming season for the region.

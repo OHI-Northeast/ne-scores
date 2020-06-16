@@ -1,7 +1,38 @@
-*Goal: Livelihoods and Economies*
-Jobs and revenue produced from marine-related industries are clearly of huge value to many people, even for those people who do not directly participate in marine-related industries. People value community identity, tax revenue, and indirect economic and social impacts of a stable coastal economy. The necessity of providing for oneself and those dependent on them, generally surpasses any other needs or objectives. Without the availability of jobs with livable wages, it is likely that people will prioritize ocean health less and feel less connected to it. This goal tracks the number and quality of jobs and the amount of revenue produced across as many marine-related industries/sectors as possible through two sub-goals, Livelihoods and Economies. A score of 100 reflects productive coastal economies that avoid the loss of ocean-dependent livelihoods while maximizing livelihood quality.
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Wage growth
 
-*Subgoal: Livelihoods*
+**Layer type(s):** Livelihoods sub-goal layer  
 
-*Wages*
-Annual wages rate changes in ocean related sectors was derived from the National Ocean Economics Program data. To control for inflation/deflation, all wages are reported in 2012 US Dollars. Annual wage growth is calculated by comparing mean annual wages to the wages of the previous year. The target for mean annual wage growth is set at 3.5%, reflecting the Nominal Wage Growth Target as set by the Federal Reserve. A score of zero is set to a 40% decline in wages.
+**Data description:** NOAA's Economics: National Ocean Watch (ENOW) data provides economic data relevant to ocean sectors at a county level for years 2005 - 2016. Ocean sectors include Living Resources, Marine Construction, Transportation, Ship & Boat Building, Tourism & Recreation, and Offshore Mineral Extraction. ENOW data on annual wages in 2012 US dollars, and annual employment, was provided by the National Ocean Economics Program (NOEP) by county and ocean sector.
+
+**Methods summary:** The data was provided by county and also as state-wide totals. From the data we selected wages across "All Ocean Sectors", rather than filtering for specific sectors. We also accounted for a data collection change between 2015 and 2016 (from the NOEP website):
+
+> In the recent release of the ENOW series "An additional industry, Fish and Seafood Merchant Wholesalers (NAICS 424460) was added to the Living Resources sector's Seafood Market industry for data years 2016 and beyond. The industry was not applied to earlier years." The addition of this industry significantly distorts annual comparisons and timeline analysis of the Seafood Market sector and Living Resources totals.
+
+To account for this change, we subtracted the 2016 value for Living Resources from All Ocean Sectors, and used the 2015 value for Living instead gapfilling with 2015 data.
+
+After accounting for this, we compared aggregated county data to the state-wide totals and found differences between these two data series. This could be explained by suppressed data at the county level that is included in the state-wide totals. By comparing the absolute values and the temporal trends of the county-aggregated and state-wide totals we made decisions about what data series to use, either the county-level or state-wide totals. 
+
+The state level information was used for Rhode Island, Maine, New York and Connecticut. Since Massachusetts is split into two regions in our region, and the state level trends were similar to the county-aggregated trends, just higher values, we used the county level information. The two data series for New Hampshire differed significantly beginning in 2011 due to data suppression up until that point, where the values across all economic indicators jumps for the state data series. We assumed that if data were not suppressed pre-2011 statewide, we would also see parallel trends in New Hampshire as well. Operating under that assumption, we opted to use the county level data for New Hampshire economic indicators.
+
+Annual mean wages per job was calculated by dividing total wages by total employment for each year and region. Annual wage growth rate was then calculated by comparing each year's mean wages to the average of the previous 3 years. 
+
+**Livelihoods sub-goal layer**  
+Each region's mean wage growth rate ($g$) is compared to the target of a 3.5% annual growth ($ref_{max} = 0.035$), equal to the United States Federal Reserve Nominal wage growth target. All regions that achieved a 3.5% or greater growth rate compared to the average of the previous 3 years received a score of 1. Scores ($w$) for each region ($i$) and year ($t$) were scaled linearly so that a score of 0 would be equal to a  40% or greater annual loss in mean wages ($ref_{min} = -0.4$), equal to what was seen during the Great Depression:
+
+$$ w_{i,t} = \begin{cases} 1,& g >= ref_{max},\\
+\frac{g-ref_{min}}{ref_{max} - ref_{min}},& g < ref_{max}
+\end{cases}$$
+
+**Gapfilling:**  
+The first three years of the time series, 2005-2007, were gapfilled with data from 2008 since growth rate was calculated by comparing to the previous three year mean. Since the dataset ends in 2016, these values are carried forward to 2017. There was no spatial gapfilling.
+
+**References:**
+
+National Ocean Economics Program. Ocean Economic Data by Sector & Industry., ONLINE. 2012. Available: http://www.OceanEconomics.org/Market/oceanEcon.asp [9 May 2019]
+
+National Oceanic and Atmospheric Administration (NOAA). Economics: National Ocean Watch (ENOW) Data. Based on data from the Bureau of Labor Statistics and the Bureau of Economic Analysis. Charleston, SC: NOAA Office for Coastal Management.

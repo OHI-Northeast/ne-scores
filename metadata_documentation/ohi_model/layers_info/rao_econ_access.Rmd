@@ -1,6 +1,36 @@
-*Goal: Resource Access Opportunities*
-People value the ability to access coastal and ocean resources. Isolating what allows for this type of access is difficult, but a necessary component of humans relationship with the ocean. We isolated two key components; are people able to to go out on the water, and if they can, are the resources they seek available. This goal scores well when people can access the coastline, can afford to go boating, and fish are thriving and available in the ocean. We include two measures of resource access oppportunity: the price of gas compared to wages, fish stock assessment sustainability, and frequent access points along the coast
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Economic access
 
-*Economic Access*
+**Layer type(s):** Resource Access Opportunities goal layer  
 
-The economic access layer was derived from the US Energy Information Administration and the US Bureau of Labor Statistics data. We calculated the ratio of gas prices to the median wages every year. The target for this layer is to maintain a constant ratio each year. When no change, or a negative change indicating increased economic access occurs, this results in a perfect score. If the ratio doubles, the region scores 0.
+**Data description(s)**  
+1.  US Energy Information Administration (EIA) data on gasoline prices by county (Price data from the State Energy Data System (SEDS): 1960-2017 (complete)).
+
+2.  Bureau of Labor Statistics (BLS) data on wages. Specifically, "Statewide Average Annual Pay All establishment sizes Total Covered Total". BLS dataseries IDS: ENU0900050010, ENU2300050010, ENU2500050010, ENU3300050010, ENU3600050010, ENU4400050010. This data was accessed from R using the R package `blscrapeR` for years 2001 to 2017.
+
+**Methods summary**  
+We calculated the ratio of gas prices to median wages for each state in the region. The target for this layer is to maintain a constant ratio each year. When no change, or a negative change indicating increased economic access occurs, this results in a perfect score. If the ratio doubles, the region scores 0.
+
+*Median wages*  
+Median annual wages were provided at the state level by the Bureau of Labor Statistics. No additional processing was needed.
+
+*Gas Prices*  
+Data on gas prices was converted from $/MMBtu (Millions of British thermal units), to approximate dollars per gallon using the heat contents provided by the EIA to get prices in US Dollars per gallon for each state. 
+
+*Calculate ratio*  
+Mean dollars per gallon was divided by mean wages for each region and year, and the change in that ratio year over year was calculated.
+
+**Resource Access Opportunities layer**  
+The target for this layer is to keep the ratio constant year over year. If the change remains the same (no change) or becomes negative, indicating a drop in the ratio, a region receives a score of 100. A score of 0 is assigned to a region if they experience a doubling in the ratio, as this would quickly and dramatically reduce economic access by half.
+
+**Gapfilling**  
+There was no gapfilling
+
+**References**  
+U.S. Energy Information Administration (Oct 2008). Gasoline and Diesel Fuel Update. https://www.eia.gov/petroleum/gasdiesel/
+
+Bureau of Labor Statistics, U.S. Department of Labor, Statewide Average Annual Pay All establishment sizes Total Covered Total.

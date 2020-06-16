@@ -188,11 +188,13 @@ PlotFlower <- function(region_plot     = NA,
   olive <- c("#3D9970")
   fuscia <- c("#F012BE")
   maroon <- c("#D81B60")
+  pink <- c("#FF6595")
   teal <- c("#39CCCC")
   light_blue <- c("#3C8DBC")
   lime <- c("#00FF00")
 
-  myPalette <- c("HS" = maroon, ## habitat services
+  myPalette <- c("CP" = maroon, ## Coastal protection
+                 "CS" = pink, #carbon storage
                  "RAO" = fuscia, ## resource access opportunities
                  "MAR" = purple, ## food provision: aquaculture/mariculture
                  "FIS" = blue, ## food provision: fishing

@@ -1,8 +1,23 @@
-*Goal: Clean Waters*
-People value marine waters that are free of pollution and debris for aesthetic and health reasons. Contamination of waters comes from oil spills, chemicals, eutrophication, algal blooms, disease pathogens (e.g., fecal coliform, viruses, and parasites from sewage outflow), floating trash, and mass kills of organisms due to pollution. People are sensitive to these phenomena occurring in areas they access for recreation or other purposes as well as for simply knowing that clean waters exist. This goal scores highest when contamination from all potential sources is zero.
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Coastal trash
 
-We include four measures of pollution in the clean waters goal: pathogens, trash, water quality, and sediment quality. This decision was meant to represent a comprehensive list of the contamination categories that are commonly considered in assessments of coastal clean waters (Borja et al. 2008) and for which we could obtain data (see data layers below).
+**Layer type(s):** Pressure, Clean Waters goal layer
 
-*Trash*
+**Data description:** The data comes from the Ocean Conservancy's [International Coastal Cleanup reports](https://oceanconservancy.org/trash-free-seas/international-coastal-cleanup/annual-data-release/). The data was manually copied and pasted from the Ocean Conservancy website as it was not provided in an easy to use format. Each report table was added to an excel spreadsheet with one sheet for each year. The years included were 2005 - 2017.
 
-The status of trash pollution was estimated using data from the Coastal Conservancy on pounds of trash collected per person on each International Coastal Cleanup Day every year from 2007 to 2016. The target reference point for this goal is zero pounds of trash collected per person and the limit reference point (maximum possible which would warrant a zero score) was set to reflect the highest trash collected over the same time period across all states on the US East Coast (Maryland with 94.5 pounds of trash per person) plus a 10% buffer, as we do not think that the highest recorded historical level of trash collected necessarily reflects the highest potential trash that could be collected across the region in future years.
+**Methods summary:** The data was filtered to only those states in our regions (NY to Maine) as well as the Mid-Atlantic states for setting a reference point. The total pounds of trash collected per volunteer was calculated and used as the metric for coastal trash presence. The target reference point for this goal was zero pounds of trash collected per person and the limit reference point (maximum possible which would warrant a zero score) was set to reflect the highest amount collected over the same time period across all states on the US Mid-Atlantic and Northeast coasts (Maryland with 94.5 pounds of trash per person) plus a 10% buffer, as we did not think that the highest recorded historical level of trash collected necessarily reflects the highest potential trash that could be collected across the region in future years. 
+
+**Coastal trash pressure layer**  
+The coastal trash pressure layer was calculated as the inverse of the clean waters goal layer (1-score).
+
+**Clean Waters goal layer**  
+Each region was scored by dividing the calculated trash per person by the reference point of 104 pounds for each year.
+
+**Gapfilling:** Data was available for all years 2005 - 2017, and for each state in the region, so no gapfilling was required. The data was reported by state so both regions in Massachusetts were given the same score.
+
+**References:**
+Ocean Conservancy. 2019. International Coastal Cleanup Reports. Accessed May 15 2020. https://oceanconservancy.org/trash-free-seas/international-coastal-cleanup/annual-data-release/
