@@ -1,11 +1,51 @@
-*Goal: Biodiversity*
-People value biodiversity in particular for its existence value. The risk of species extinction generates great emotional and moral concern for many people. As such, this goal assesses the conservation status of species based on the best available global data through two sub-goals: species and habitats. Species were assessed because they are what one typically thinks of in relation to biodiversity. Because only a small proportion of marine species worldwide have been mapped and assessed, we also assessed habitats as part of this goal, and considered them a proxy for condition of the broad suite of species that depend on them. For the species sub-goal, we used species risk assessments from both NatureServe and the International Union for Conservation of Nature (IUCN 2016) for a wide range of taxa to provide a geographic snapshot of how total marine biodiversity is faring, even though it is a very small sub-sample of overall species diversity (Mora et al. 2011). For the habitats sub-goal we look to measure the status of key foundational habitats in the region: Salt Marsh, eelgrass, and Seabed Habitats (full list of habitats included below). We calculate each of these subgoals separately and weight them equally when calculating the overall goal score.
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Salt Marsh extent
 
-*Subgoal: Habitat*
-The habitat subgoal measures the average condition of marine habitats present in each region that provide critical habitat for a broad range of species (salt marsh, eelgrass, and seabed habitats). This subgoal is considered a proxy for the condition of the broad suite of marine species that rely on these habitats.
+**Layer type(s):** Biodiversity Habitats sub-goal layer, Habitat Services Carbon Storage & Coastal Protection sub-goal layer
 
-Data availability remains a major challenge for species and habitat assessments. We compiled and analyzed the best available data in both cases, but key gaps remain. Although several efforts have been made in recent years to create or compile the data necessary to look at the status and trends of marine habitats, most efforts are still hampered by limited geographical and temporal sampling (Joppa et al. 2016). In addition, most marine habitats have only been monitored since the late 1970s at the earliest, many sites were only sampled over a short period of time, and very few sites were monitored before the late 1990s so establishing reference points was difficult. eelgrasses were the most data-limited of the habitats included in the analysis.
+**Data description:**  
 
-*Saltmarsh*
+This layer used NOAA's Coastal Change Analysis Program data (C-CAP) to derive an estimate of salt marsh loss from 1996 through 2010 and a collection of historical loss estimates to estimate the overall loss of salt marsh habitat coverage since ~1850s (Table below). 
 
-For salt marsh habitats we used NOAA's Coastal Change Analysis Program data (C-CAP) to derive an estimate of salt marsh loss from 1996 through 2010 and a collection of historical loss estimates to estimate the overall loss of salt marsh habitat coverage since ~1880. The NOAA C-CAP data are land cover raster data (.img format) available for the years 1996, 2001, 2006 and 2010 for each state. To measure salt marsh habitats coverage in each of these years we included the following C-CAP land classifications: Estuarine Forested Wetland (16), Estuarine Scrub/Shrub Wetland (17), Estuarine Emergent Wetland (18), Estuarine Aquatic Bed (23). For each time step we remove all land cover cells that are not in those four categories. We then calculated the % gained or lost within each of these classifications in each time step, using a linear interpolation between all time steps. We then incorporate the historical areas lost estimates to represent the full loss of salt marsh habitat since ~1850s.
+1. NOAA's Coastal Change Analysis Program (C-CAP) land cover raster data (.img format) available for the years 1996, 2001, 2006 and 2010 for each state in the United States. To measure salt marsh habitats coverage in each of these years we included the following C-CAP land classifications: Estuarine Forested Wetland (16), Estuarine Scrub/Shrub Wetland (17), Estuarine Emergent Wetland (18), Estuarine Aquatic Bed (23).  
+ 
+2. Historical loss references came from two studies
+
+State |	Historical loss (%)	| Reference
+------|---------------------|----------
+Rhode Island|	53|	Bromberg and Bertness (2005)
+Massachusetts|	41|	Bromberg and Bertness (2005)
+New Hampshire|	18|	Bromberg and Bertness (2005)
+Maine|	0|	Bromberg and Bertness (2005)
+Connecticut|	27|	Basso et al. 2015
+New York|	48	|Basso et al. 2015
+
+
+**Methods summary:**  
+
+*Estimating recent salt marsh loss*  
+For each time step (1996, 2001, 2006 and 2010) we remove all land cover cells that are not in the four salt marsh categories. The total number of remaining cells is calculated for each time step, and then compared to the 1996 value to get a sense for percent gained or lost since 1996. These values ranged between a 2.5% loss (New York) and a roughly 3% gain (Maine). 
+
+*Incorporating historic loss*  
+There has been significant salt marsh lost in the Northeast United States since pre-industrial times. Unfortuantely, the landcover high resolution data only goes back to 1996. To account for historical loss, we looked to the literature for estimates of loss leading up to the 1990's. Both Bromberg and Bertness (2005) and Basso et al. (2015) provide state-level estimates of salt marsh loss since the 1850's. These figures were then added to the calculated habitat loss from the C-CAP data to get more accurate estimates of salt marsh habitat loss.
+
+**Biodiversity: Habitats sub-goal layer**    
+The final score for each region and year was equal to the inverse of the amount of salt marsh lost per region. If a region lost 25% of their salt marsh habitat, they would score 75.
+
+**Habitat Services: Carbon Storage sub-goal layer**   
+The final score for each region and year was equal to the inverse of the amount of salt marsh lost per region. If a region lost 25% of their salt marsh habitat, they would score 75.
+
+**Habitat Services: Coastal Protection sub-goal layer**   
+The final score for each region and year was equal to the inverse of the amount of salt marsh lost per region. If a region lost 25% of their salt marsh habitat, they would score 75.
+
+**Gapfilling**   
+The C-CAP data was of high enough resolution that we were able to calculate salt marsh loss in both North and South Massachusetts separately since 1996. But there was no data on historical loss at this scale. Each of these regions were assigned the same amount of historical loss (41%), assuming they lost the same proportion. Linear interpolation was used to gapfill missing data between 2001 and 2010, and the most recent value (2010) was carried forward to 2017.
+
+**References**  
+Basso, G., K. O'Brien, M. Albino, and V. O'Neill. "Status and trends of wetlands in the Long Island Sound Area: 130 year assessment." U.S. Department of the Interior, Fish and Wildlife Service. (2015): 37 pp.
+
+Bromberg, Keryn D., and Mark D. Bertness. (2005). "Reconstructing New England salt marsh losses using historical maps." Estuaries 28.6: 823-832.

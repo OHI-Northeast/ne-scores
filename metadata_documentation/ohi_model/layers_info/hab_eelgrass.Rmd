@@ -1,11 +1,57 @@
-*Goal: Biodiversity*
-People value biodiversity in particular for its existence value. The risk of species extinction generates great emotional and moral concern for many people. As such, this goal assesses the conservation status of species based on the best available global data through two sub-goals: species and habitats. Species were assessed because they are what one typically thinks of in relation to biodiversity. Because only a small proportion of marine species worldwide have been mapped and assessed, we also assessed habitats as part of this goal, and considered them a proxy for condition of the broad suite of species that depend on them. For the species sub-goal, we used species risk assessments from both NatureServe and the International Union for Conservation of Nature (IUCN 2016) for a wide range of taxa to provide a geographic snapshot of how total marine biodiversity is faring, even though it is a very small sub-sample of overall species diversity (Mora et al. 2011). For the habitats sub-goal we look to measure the status of key foundational habitats in the region: Salt Marsh, eelgrass, and Seabed Habitats (full list of habitats included below). We calculate each of these subgoals separately and weight them equally when calculating the overall goal score.
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Eelgrass health
 
-*Subgoal: Habitat*
-The habitat subgoal measures the average condition of marine habitats present in each region that provide critical habitat for a broad range of species (salt marsh, eelgrass, and seabed habitats). This subgoal is considered a proxy for the condition of the broad suite of marine species that rely on these habitats.
+**Layer type(s):** Biodiversity: Habitats sub-goal layer, Habitat Services: Carbon Storage & Coastal Protection sub-goal layers
 
-Data availability remains a major challenge for species and habitat assessments. We compiled and analyzed the best available data in both cases, but key gaps remain. Although several efforts have been made in recent years to create or compile the data necessary to look at the status and trends of marine habitats, most efforts are still hampered by limited geographical and temporal sampling (Joppa et al. 2016). In addition, most marine habitats have only been monitored since the late 1970s at the earliest, many sites were only sampled over a short period of time, and very few sites were monitored before the late 1990s so establishing reference points was difficult. eelgrasses were the most data-limited of the habitats included in the analysis.
+**Data description:**  
+1. Locations of current and historic eelgrass beds in the Northeast. Geospatial data was downloaded from the Northeast Ocean Data Portal Past Eelgrass Survey's database https://www.northeastoceandata.org/eelgrass/past-eelgrass-surveys/.
 
-*Eelgrass*
+2. Water Quality Index from the US Environmental Protection Agency National Coastal Condition Assessment (NCCA). This data was available for 2010, 2005/2006 and 2001. The NCCA reports include information across four indices for randomly sampled sites to represent the condition of all coastal waters: Biological Benthic Index, Water Quality Index (Phosphorus, Nitrogen, Dissolved Oxygen, Water Clarity, Chlorophyll a), Sediment Quality Index (contaminants & toxicity), Fish Quality Index. For this layer, we use only the Water Quality Index component of the report which measures Phosphorus, Nitrogen, Dissolved Oxygen, Water Clarity, and Chlorophyll a for each monitoring site. The Water Quality Index (WQI) provides data per site in categories of "Good", "Fair" and "Poor" according to thresholds established by the EPA. Some sites were assigned the category "Missing", these were removed before analysis. 
 
-Data available to measure the extent and condition of eelgrass habitats in the Northeast through time is quite limited. As such we developed a model to assess the water quality condition in areas that are home to eelgrass habitats as a proxy for the condition of eelgrasses across the region. To gauge the extent of eelgrass across all Northeast States we first used the spatial Past Eelgrass Surveys data layer from the Northeast Data Portal to identify all locations where eelgrass has been in the past (1980 forwards). We then overlaid this location information with the EPA's National Coastal Condition Assessment Water Quality Index which measures Phosphorus, Nitrogen, Dissolved Oxygen, Water Clarity, and Chlorophyll a for each site monitored by the EPA across the region. The Water Quality Index provides data in categories of "Good", "Fair" and "Poor" for each monitoring site. We assign the following scores to each of these categories: Good = 100, Fair = 50 and Poor = 0. We then intersect the Water Quality Index monitoring sites with the current and past eelgrass beds as identified in the Northeast Data Portal using a 10km buffer to determine the water quality values where eelgrass are present. We only use sites where eelgrass presence data and water quality monitoring sites overlap within our 10km buffer and take the average score based on all overlapping points.
+**Methods summary:** 
+
+Data available to measure the extent and condition of eelgrass habitats in the Northeast through time was limited. We developed a model to assess the water quality condition in areas that are known to have eelgrass beds as a proxy for the condition of eelgrass beds across the region. A report by Neckles et al. (2009) states that:
+
+> The most pervasive threat to eelgrass in the northeastern U.S. and Atlantic Canada is water quality degradation. Phil Colarusso summarized the components of water quality most relevant to eelgrass survival: nitrogen and phosphorus concentrations, chlorophyll a, suspended solids, and water clarity.
+
+Since these are all measured in the Water Quality Index by the EPA, we chose to use the full WQI status rather than individual indicators from the index.
+
+The Water Quality Index provides data in categories of "Good", "Fair" and "Poor" for each monitoring site. We assigned the following scores to each of these categories: Good = 100, Fair = 50 and Poor = 0. 
+
+*Eelgrass bed locations*  
+To gauge the extent of eelgrass across all Northeast States we first used the spatial Past Eelgrass Surveys data layer from the Northeast Data Portal to identify all locations where eelgrass has been in the past (1980 forwards).
+
+*Intersect with water quality sampling sites*  
+We then overlaid eelgrass bed location information with data from the EPA's National Coastal Condition Assessment (NCCA) Water Quality Index which measures Phosphorus, Nitrogen, Dissolved Oxygen, Water Clarity, and Chlorophyll a for each site monitored by the EPA across the region. We then intersected the Water Quality Index monitoring sites with the current and past eelgrass beds as identified in the Northeast Data Portal using a 10km buffer to determine the water quality values where eelgrass are present. We only use sites where eelgrass presence data and water quality monitoring sites overlap within our 10km buffer.
+
+*Identify Long Island Sound sites*  
+We also want to include the water quality monitoring sites in Long Island Sound (LIS). Our buffer approach still misses these sites since there are no eelgrass beds mapped from this region. But we know that historically eelgrass beds were present in LIS so we felt it important to include this region in the layer.
+
+*Get scores using spsurvey*  
+Each sampling site had an assigned weight indicating how representative of the area it is. These weights were incorporated into the scoring of each region by using the `spsurvey` R package and running a "Categorical Data Analysis for Probability Survey Data", which produced a sub-population estimate of the percent of area (e.g. 98%) for the coastal waters of a subpopulation (e.g. Maine) in a particular category of condition (e.g. Good).
+
+**Biodiversity: Habitats sub-goal layer**   
+The proportion (%) of each region that fell into the three different categories (Poor, Fair, Good) was multiplied by the categorical score (0, 50, 100 respectively), and then summed for the final score per region on a scale of 0 to 100.
+
+**Habitat Services: Carbon Storage sub-goal layer**  
+The proportion (%) of each region that fell into the three different categories (Poor, Fair, Good) was multiplied by the categorical score (0, 50, 100 respectively), and then summed for the final score per region on a scale of 0 to 100.
+
+**Habitat Services: Coastal Protection sub-goal layer**  
+The proportion (%) of each region that fell into the three different categories (Poor, Fair, Good) was multiplied by the categorical score (0, 50, 100 respectively), and then summed for the final score per region on a scale of 0 to 100.
+
+**Gapfilling**   
+Spatial gapfilling was done for Long Island Sound by including all available water quality sampling sites in that area, even though we did not have any spatial data on historical eelgrass beds in LIS. We do know that they were present there and thus should be included in the analysis. Long Island Sound is shared by Connecticut and New York, so these two regions were affected by this gapfilling.
+
+Significant temporal gapfilling was needed. With only two data points for 2006 and 2010, we gapfill 2005 data with the 2006 data and the 2010 data is carried forward through 2017.
+
+**References**  
+NROC (Northeast Regional Ocean Council). 2009. Past Eelgrass Surveys. Northeast Ocean Data Portal, https://www.northeastoceandata.org/eelgrass/past-eelgrass-surveys/. Accessed 9 May 2019.
+
+U.S. Environmental Protection Agency. 2016. National Aquatic Resource Surveys. National Coastal Condition Assessment 2010 (data and metadata files). Available from U.S. EPA web page:https://www.epa.gov/national-aquatic-resource-surveys/data-national-aquatic-resource-surveys. Data from the National Aquatic Resource Surveys. Date accessed: 2018-07-31.
+
+Neckles, H. A., A. R. Hanson, P. Colarusso, R. N. Buchsbaum, and F. T. Short (eds.). 2009. Status, Trends, and Conservation of Eelgrass in Atlantic Canada and the Northeastern United States. Report of a Workshop Held February 24-25, 2009, Portland, Maine.
+
