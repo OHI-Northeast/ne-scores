@@ -1,9 +1,26 @@
-*Goal: Sense of Place*
-A connection with the ocean is an important indicator of ocean health. While quantifying a feeling is a difficult endeavor, we feel it is an important aspect of measuring ocean health since this type of connection fosters stewardship. To do so, we try to capture the aspects of the coastal and marine system that people value as part of their cultural identity. This definition includes people living near the ocean and those who live far from it but still derive a sense of identity or value from the ocean.This goal scores highest when marine species which are valued by the community are doing well, when there are areas identified as special and needing long term protection, and when there is fishing enagement
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Coastal land protected areas
 
-We include three measures of sense of place: status of iconic species, protection of lasting special places, and fishing engagement.
+**Layer type(s):** Sense of Place: Lasting Special Places sub-goal layer
 
-*Subgoal: Lasting Special Places*
-**Land Protected Areas**
+**Data description:**   
+We use the United States Geological Survey (USGS) Protected Areas Database (PAD) for the US, Version 2.0. This spatial geodatabase contains terrestrial and marine protected areas for the United States. There are 5 layers included in the database, three of which are relevant for terrestrial protected areas (`PADUS2_0Designation`, `PADUS2_0Fee`, `PADUS2_0Easement`). The database also includes the year of establishment.
 
-The land protected areas layer was derived from the USGS Protected Areas Database. The land area designated and/or associated for year-long protection into the future were selected and the percent of protected area in each region was calculated. The target is 17% of coastal land (1 km inland from shore) protected.
+### Methods 
+
+The three PAD data layers were combined and then clipped to the 1km inland buffer so that only areas within 1km of the coast are measured. The total area protected within each OHI assessment region was calculated. The target for this layer is to have at least 17% of coastal area protected. This target reflects the Aichi Target 11 since there is no regional target.
+
+**Lasting Special Places sub-goal layer**  
+Each region is scored from 0 to 1 by comparing the amount of coastal protected areas to their total area. If 17% or more is protected within a given year, the region receives a 1. Scores linearly decrease to 0 for no protected areas.
+
+**Gapfilling**  
+No gapfilling was necessary.
+
+**References**  
+U.S. Geological Survey (USGS) Gap Analysis Project (GAP), 2018, Protected Areas Database of the United States (PAD-US): U.S. Geological Survey data release, https://doi.org/10.5066/P955KPLE. [Downloaded June 5, 2019]
+
+

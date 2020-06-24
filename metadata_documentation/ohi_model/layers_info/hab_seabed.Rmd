@@ -1,0 +1,34 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Seabed habitats
+
+**Layer type(s):** Biodiversity Habitats sub-goal layer, Pressure layer
+
+**Data description:**  
+Data comes from the New England Fishery Management Council's model on Fishing Effects. From the Northeast Ocean Data Portal: 
+
+> Fishing Effects represents the second generation of a framework that enables fishery managers to better understand the nature of fishing gear impacts on seabed habitats, the spatial distribution of seabed habitat vulnerability to particular fishing gears, and the spatial and temporal distribution of realized adverse effects from fishing activities on seabed habitats. Fishing Effects builds on the methods and results of the Swept-Area-Seabed-Impact (SASI) model developed in 2011 by the NEFMC Habitat Plan Development Team. Fishing Effects combines seafloor data (sediment type, energy regime) with parameters related to the interactions between fishing gear and seafloor habitats to generate habitat disturbance estimates in space and time.
+
+Three types of data and maps are created by the model: Sediment, Percent Seabed Habitat Disturbance, and Intrinsic Seabed Habitat Vulnerability. For the OHI assessment, we used the Percent Seabed Habitat Disturbance layer. Data came in a 5x5km^2^ gridded format and contained monthly estimates of percent seabed habitat disturbance (0 - 1, 1 being completely disturbed) for all years 1996 to 2018.
+
+Seabed habitats included in the Fishing Effects Model: Amphipods, anemones, ascidians, brachiopods, bryozoans, corals & sea pens, hydroids, macroalgae, scallops, mussels, polychaetes, sponges, sediment, biogenic burrows, biogenic depressions, bedforms, gravel, shell deposits
+
+**Methods summary:**  
+The raw data was first cropped to the OHI Northeast region. Mean annual rasters were calculated from the monthly Percent Seabed Habitat Disturbance rasters, and then overlaid with OHI regions to get the mean annual disturbance per OHI region per year.
+
+**Biodiversity: Habitats sub-goal layer**   
+The final score for each region and year was calculated as the inverse of the mean regional habitat disturbance, so that a region received a higher score for lower rates of disturbance.
+
+**Pressure layer**   
+The final score for each region and year was equal to the mean regional habitat disturbance, so that a region received a higher pressure score for higher rates of disturbance.
+
+**Gapfilling**   
+No gapfilling was necessary.
+
+**References**  
+New England Fishery Management Council. (2019). Fishing Effects Model Northeast Region. https://www.nefmc.org/library/fishing-effects-model
+
+Data was emailed to the authors for approved use on April 12, 2019
