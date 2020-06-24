@@ -1,0 +1,52 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Species conservation status
+
+**Layer type(s):** Biodiversity: Species sub-goal layer, Sense of Place: Iconic Species sub-goal layer  
+
+**Data description(s):**  
+Species conservation status data were collected from two different sources: NatureServe and the International Union for Conservation of Nature’s (IUCN). NatureServe provides conservation information for terrestrial and marine species in Canada and the United States. Their database provides status information at the state level when possible, as well as the United States status and global status from IUCN. The database was queried using the `natserv` R package (Chamberlain 2020) and a total of 328 species and their conservation status were returned. For the remainder, the IUCN global database was queried using the `rredlist` R package (Chamberlain 2020), returning information for 363 species for a total of 691 species. Very few species had revised status during our study period, but whenever that data was available it was included.
+
+**Methods summary**  
+
+Species status' were translated into scores from 0 to 1 (table below) based on the IUCN threat categories status of each species following the weighting schemes developed by Butchart et al. (2007). For the purposes of this analysis, we included only data for extant species for which sufficient data were available to conduct an assessment. We did not include the Data Deficient classification as assessed species following previously published guidelines for a mid-point approach (Schipper et al. 2008).
+
+Conservation status|	Score
+-------------------|-------
+Least Concern|	0
+Near threatened|	0.2
+Vulnerable|	0.4
+Endangered|	0.6
+Critically endangered|	0.8
+Extinct|	1
+
+Table: Conservation status scores translated into 0 (low threat) to 1 (highest threat/extinct) scale.
+
+
+**Biodiversity: Species sub-goal layer**     
+The final layer includes all species, their status score, and year. It is used in the Biodiversity: Species goal model.
+
+**Sense of Place: Iconic Species sub-goal layer**  
+The final layer includes all species, their status score, and year. In the Sense of Place: Iconic Species, this layer is subset to just the 29 iconic species.
+
+**Gapfilling:**   
+Species conservation status are rarely updated due to limited time and resources for assessments. Therefore status scores are carried forward to 2017 or backfilled through 2005.
+
+**References:**  
+NatureServe. (2019). NatureServe Explorer [web application]. NatureServe, Arlington, Virginia. https://explorer.natureserve.org/. [Accessed: July 22, 2019].
+
+IUCN. (2018). The IUCN Red List of Threatened Species. Version 2018-1. http://www.iucnredlist.org. [Accessed 2018].
+
+Butchart, Stuart HM, et al. "Improvements to the red list index." PloS one 2.1 (2007): e140.
+
+Schipper, Jan, et al. "The status of the world's land and marine mammals: diversity, threat, and knowledge." Science 322.5899 (2008): 225-230.
+
+Chamberlain, S. (2020). natserv: 'NatureServe' Interface. R package version 0.4.0. https://CRAN.R-project.org/package=natserv
+
+Chamberlain, S. (2020). rredlist: 'IUCN' Red List Client. R package version 0.6.0. https://CRAN.R-project.org/package=rredlist
+
+Schipper, J., Chanson, J. S., Chiozza, F., Cox, N. A., Hoffmann, M., Katariya, V., et al. (2008). The Status of the World’s Land and Marine Mammals: Diversity, Threat, and Knowledge. Science 322, 225–230. doi:10.1126/science.1165115.
+
