@@ -1,0 +1,46 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Species locations
+
+**Layer type(s):** Biodiversity: Species sub-goal layer, Sense of Place: Iconic Species sub-goal layer  
+
+**Data description(s):**  
+Species range maps were collected from two different sources:    
+1. Species maps provided by the Marine-life Data Analysis Team (MDAT) for the Northeast Ocean Data Portal (https://www.northeastoceandata.org/). A total of 156 species range maps including marine mammals, seabirds, and fish. Data was provided in raster format with cell values of either 1 (present) or 0 (absent).  
+
+2. The International Union for Conservation of Nature’s (IUCN)    
+Range maps from the IUCN database version 2018-1 were used to supplement the data portal maps. The IUCN data was provided via personal contact and relied on the same database used in O'Hara et al. (2020). The geospatial database contained individual shapefiles for all IUCN assessed species.
+
+When species range maps were available for the same species from both data sources we prioritized the Northeast Ocean Data Portal maps as they were developed specifically for the region.
+
+**Methods summary**  
+
+*IUCN species range maps*   
+The IUCN species shapefiles were clipped to the study region and rasterized to 1km2 grid cells with cell values of 1 (present) or NA (absent). 
+
+*Northeast Ocean Data Portal species range maps*    
+Since the species range maps provided by MDAT were already rasterized, we first clipped them to our study region and then resampled to 1km2 gride cells. Some of the fish maps were seasonal in nature (e.g. "Fall" and "Spring") and these were aggregated to give a representative picture of where the species could be found at any time of the year.
+
+In total, we had 763 species with range maps for our region. There were 92 species that have range maps in both databases.
+
+A final list of what regions each species was found in was compiled by overlaying the OHI regions on each species map and if at least one grid cell where a species is marked as present (value = 1), the species was listed to be found in that region.
+
+**Biodiversity: Species sub-goal layer**     
+The final layer includes all species and the regions where they are found.
+
+**Sense of Place: Iconic Species sub-goal layer**  
+The final layer includes all species and the regions where they are found. In the Sense of Place: Iconic Species, this layer is subset to just the 29 iconic species.
+
+**Gapfilling:**   
+Gapfilling was not relevant to this layer.
+
+**References:**  
+
+IUCN. (2018). The IUCN Red List of Threatened Species. Version 2018-1. http://www.iucnredlist.org. [Accessed 2018].
+
+Marine-life Data Analysis Team (MDAT; Patrick Halpin, Earvin Balderama, Jesse Cleary, Corrie Curtice, Michael Fogarty, Brian Kinlan, Charles Perretti, Jason Roberts, Emily Shumchenia, Arliss Winship). Marine life summary data products for Northeast ocean planning. Version 2.0. Northeast Ocean Data. http://northeastoceandata.org. Received 01/06/2019.
+
+
