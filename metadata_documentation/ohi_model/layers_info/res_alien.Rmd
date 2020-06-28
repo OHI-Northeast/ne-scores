@@ -1,3 +1,13 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
+### Alien species resilience
+
+**Layer type:** Resilience
+
+**Data description**    
 We used data/information from Coast Guard, NOAA Office of Law Enforcement (OLE), USGS Nonindigenous Aquatic Species database to calculate the species pollution resilience layer. There are a total of 4 data layers used in the species pollution resilience layer.
 
 **Presence**

@@ -1,13 +1,24 @@
-**Aquaculture Escapes**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Aquaculture Escapes
 
-There is the risk of some farmed individuals escaping into the wild stocks or spawning events introducing farmed genetic recruits into the wild gene pool from aquaculture facilities. This is generally considered detrimental to wild stocks, and that diluting the native gene pool results in lower fitness stocks^[Mcginnity, Philip, et al. “Fitness Reduction and Potential Extinction of Wild Populations of Atlantic Salmon, Salmo Salar, as a Result of Interactions with Escaped Farm Salmon.” Proceedings of the Royal Society of London. Series B: Biological Sciences, vol. 270, no. 1532, 2003, pp. 2443–2450., doi:10.1098/rspb.2003.2520.].
+**Layer type:** Pressure
 
-Sustianability scores for farmed species were obtained from the [Monterey Bay Aquarium Seafood Watch Seafood Recommendations](https://www.seafoodwatch.org/seafood-recommendations)^[Monterey Bay Aquarium Seafood Watch, avaliable at: https://www.seafoodwatch.org/seafood-recommendations]. This assessment incorportates 10 criteria: avaliablity and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, diseases (pathogen, and parasite interaction), stock source, predator and wildlife mortalities, and escapes during transit when calculating the overall sustainability score. We used the escapes during production criteria to inform contribution of aquaculture to the species pollution layer. The criteria assesses the risk level of impacts on wild stock populations's fitness and habitat caused by the aquaculture escapes of non-native or genetically distinct fish.
+**Data description:**    
+Sustainability scores for farmed species were obtained from the Monterey Bay Aquarium Seafood Watch Seafood Recommendations. This assessment incorporates 10 criteria: availability and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, disease (pathogen, and parasite interaction), stock source, predator and wildlife moralities, and escapes during transit when calculating the overall sustainability score. We used the *escapes during production* criteria to inform contribution of aquaculture to the species pollution layer. The criteria assesses the risk level of impacts on wild stock population's fitness and habitat caused by the aquaculture escapes of non-native or genetically distinct fish.
 
-To calculate the score for this layer we rescaled the criteria score from 0-10 to 0-1, scaled the production by multiplying it with the new criteria score, summed up all the scaled production in each region, and then divided it by the total area of the region to distribute the pressures. Since we know that aquculture production is in the early stages and will likely grow much larger than the current prodcution levels, we used a reference point of twice the current maxium of the scaled distributed production in each region, and then rescaled the pressure score 0-1.
+**Methods summary**     
+There is the risk of some farmed individuals escaping into the wild stocks or spawning events introducing farmed genetic recruits into the wild gene pool from aquaculture facilities. This is generally considered detrimental to wild stocks, and that diluting the native gene pool results in lower fitness stocks (McGinnity et al. 2003).
 
-**References**
+To calculate the score for this layer we rescaled the criteria score from 0-10 to 0-1, scaled the production by multiplying it with the new criteria score, summed up all the scaled production in each region, and then divided it by the total area of the region to distribute the pressures. Since we know that aquaculture production is in the early stages and will likely grow much larger than the current production levels, we used a reference point of twice the current maximum of the scaled distributed production in each region, and then rescaled the pressure score 0-1.
 
+**Gapfilling**    
+The only gapfilling used in this layer is the same that was applied for the Aquaculture Production layer since that layer was used to derive this pressure layer.
 
+**References**  
+Monterey Bay Aquarium Seafood Watch, available at: https://www.seafoodwatch.org/seafood-recommendations
 
-
+McGinnity, P., Prodöhl, P., Ferguson, A., Hynes, R., Maoiléidigh, N. ó, Baker, N., et al. (2003). Fitness reduction and potential extinction of wild populations of Atlantic salmon, Salmo salar, as a result of interactions with escaped farm salmon. Proceedings of the Royal Society of London. Series B: Biological Sciences 270, 2443–2450. doi:10.1098/rspb.2003.2520.

@@ -1,12 +1,29 @@
-**Aquaculture Development**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Aquaculture Development
 
-The effects of aquaculture facility location and production on habitats differ greatly across regions, methods, and species produced. Generally, shellfish aquaculture is the least harmful, because there is less change to the habitat, not much extra structure needs to build, and they actual clean the water through filter feeding^[Rose, Julie M., et al. “Comparative Analysis of Modeled Nitrogen Removal by Shellfish Farms.” Marine Pollution Bulletin, vol. 91, no. 1, 2015, pp. 185–190., doi:10.1016/j.marpolbul.2014.12.006.
-]. On the other hand, shrimp production in some areas require the removal of mangroves and the growing process creates poor water quality conditions^[PaEz-Osuna, Federico. “The Environmental Impact of Shrimp Aquaculture: Causes, Effects, and Mitigating Alternatives.” Environmental Management, vol. 28, no. 1, 2001, pp. 131–140., doi:10.1007/s002670010212.].
+**Layer type:** Pressure
 
-Sustainability scores for farmed species were obtained from the [Monterey Bay Aquarium Seafood Watch Seafood Recommendations](https://www.seafoodwatch.org/seafood-recommendations)^[Monterrey Bay Aquarium Seafood Watch, available at: https://www.seafoodwatch.org/seafood-recommendations]. This assessment incorporates 10 criteria: availability and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, disease (pathogen, and parasite interaction), stock source, predator and wildlife moralities, and escapes during transit when calculating the overall sustainability score. We used the effects on habitats criteria to inform aquaculture production's contribution to the habitat destruction layer. The criteria assesses the impact or risk of impact the aquaculture farm has on the "ecosystem services" provided by habitat within the farm the immediate/neighboring areas.
+**Data description:**    
+There was no specific data that measured current farm impacts on seabed habitats that was consistent region wide, so we relied on a proxy dataset instead.
 
-To calculate the score for this layer we rescaled the criteria score from 0-10 to 0-1, scaled the production by multiplying it with the new criteria score, summed up all the scaled production in each region, and then divided it by the total area of the region to distribute the pressures. Since we know that aquaculture production is in the early stages and will likely grow much larger than the current production levels, we used a reference point of twice the current maxium of the scaled distributed production in each region, and then rescaled the pressure score 0-1.
+Sustainability scores for farmed species were obtained from the Monterey Bay Aquarium Seafood Watch Seafood Recommendations. This assessment incorporates 10 criteria: availability and robustness of data, effluent discharge, effects on habitats, use of chemicals, escapes during production, disease (pathogen, and parasite interaction), stock source, predator and wildlife moralities, and escapes during transit when calculating the overall sustainability score. We used the *effects on habitats criteria* to inform aquaculture production's contribution to the habitat destruction layer. The criteria assesses the impact or risk of impact the aquaculture farm has on the "ecosystem services" provided by habitat within the farm the immediate/neighboring areas.
 
-**References**
+**Methods summary**    
+The effects of aquaculture facility location and production on habitats differ greatly across regions, methods, and species produced. Generally, shellfish aquaculture is the least harmful, because there is less change to the habitat, not much extra structure needs to build, and they actual clean the water through filter feeding (Rose et al. 2014). On the other hand, shrimp production in some areas require the removal of mangroves and the growing process creates poor water quality conditions (Paez-Osuna 2001).
 
+To calculate the score for this layer we rescaled the criteria score from 0-10 to 0-1, scaled the production by multiplying it with the new criteria score, summed up all the scaled production in each region, and then divided it by the total area of the region to distribute the pressures. Since we know that aquaculture production is in the early stages and will likely grow much larger than the current production levels, we used a reference point of twice the current maximum of the scaled distributed production in each region, and then rescaled the pressure score 0-1.
+
+**Gapfilling** 
+The only gapfilling used in this layer is the same that was applied for the Aquaculture Production layer since that layer was used to derive this pressure layer.
+
+**References**  
+Monterey Bay Aquarium Seafood Watch, available at: https://www.seafoodwatch.org/seafood-recommendations
+
+Rose, J. M., Bricker, S. B., and Ferreira, J. G. (2015). Comparative analysis of modeled nitrogen removal by shellfish farms. Marine Pollution Bulletin 91, 185–190. doi:10.1016/j.marpolbul.2014.12.006.
+
+PaEz-Osuna,F. (2001). The Environmental Impact of Shrimp Aquaculture: Causes, Effects, and Mitigating Alternatives. Environmental Management, 28(1) pp. 131–140. doi:10.1007/s002670010212.
 

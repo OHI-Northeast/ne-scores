@@ -1,7 +1,36 @@
-**Trampling**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Trampling
 
+**Layer type:** Pressure
+
+**Data description:**  
+We used 2010 United States census data downloaded from NASA's Socioeconomic Data and Applications Center (SEDAC). The GeoTiff files represent population densities in 1 km^2^ grids. 
+
+**Methods summary:**    
 Beaches and coastlines are very sensitive to disturbances, even a few individuals can cause damage. As population densities along the coastlines increases, so does the mounting pressure on intertidal habitats from the presence of humans utilizing them.
 
-We used 2010 census data downloaded from [NASA's Socioeconomic Data and Applications Center](https://sedac.ciesin.columbia.edu/data/set/usgrid-summary-file1-2010/data-download)^[“U.S. Census Grids.” Summary File 1, v1: U.S. Census Grids | SEDAC, NASA Socioeconomic Data and Applications Center (SEDAC), 2010, doi.org/10.7927/H4TB14TN.]. The GeoTiff files represent population densities in 1 km^2^ grids. To focus on populations that would contribute coastal trampling pressure, we selected areas within 25 miles of the coastline. The distribution of the population densities were very skewed, due to large cities like New York and Boston, so we log transformed the population densities, since a small number of people can have a very large effect on habitats. The 99.99^th^ quantile of raster values was used as the reference point to rescale the layer from 0 to 1, and the mean value of the raster cells within each OHI region was calculated.
+To focus on populations that would contribute coastal trampling pressure, we selected areas within 25 miles of the coastline. The distribution of the population densities were very skewed, due to large cities like New York and Boston, so we log transformed the population densities, since a small number of people can have a very large effect on habitats. The 99.99^th^ quantile of raster values was used as the reference point to rescale the layer from 0 to 1 (1 being the highest impact).
 
-**References**
+**Pressure layer**    
+The mean value of the rescaled raster cells within each OHI region was calculated.
+
+Region|Score
+------|-----
+Connecticut|0.43
+Maine|0.20
+Massachusetts-North|0.53
+Massachusetts-South|0.38
+New Hampshire|0.38
+New York|0.49
+Rhode Island|0.40
+Northeast|0.34
+
+**Gapfilling:**     
+Temporal gapfilling was needed since the data represented the 2010 US census only. The calculated pressure scores for each region were used for all years 2005-2017.
+
+**References**    
+NASA Socioeconomic Data and Applications Center (SEDAC). (2010). U.S. Census Grids. doi.org/10.7927/H4TB14TN.

@@ -1,9 +1,40 @@
-**Coastal Hardening**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Coastal Hardening
 
-Artificially hardening coastlines is a reinforcement method to protect developments and land areas along the coast from erosion^[Gittman, Rachel K, et al. “Engineering Away Our Natural Defenses: an Analysis of Shoreline Hardening in the US.” The Ecological Society of America, John Wiley &amp; Sons, Ltd, 1 Aug. 2015, esajournals.onlinelibrary.wiley.com/doi/full/10.1890/150065.]. However this is often a short sighted solution. Coastal hardening costs money to maintain and is detrimental to the habitat, such as narrowing of the intertidal zone^[Dugan, Jenifer E., et al. “Ecological Effects of Coastal Armoring on Sandy Beaches.” Wiley Online Library, John Wiley &amp; Sons, Ltd (10.1111), 3 June 2008, onlinelibrary.wiley.com/doi/full/10.1111/j.1439-0485.2008.00231.x.] or loss of salt marsh habitats. 
+**Layer type:** Pressure
 
-Data from the NOAA [Environmental Response Management Application](https://erma.noaa.gov/atlantic/erma.html#/layers=1+13763+16973+35410+491&x=-78.22196&y=38.23326&z=6&panel=layer)^[NOAA Office of Response and Restoration. Environmental Response Management Application (ERMA) available at https://erma.noaa.gov/atlantic/erma.html#/layers=1+13763+16973+35410+491&x=-78.22196&y=38.23326&z=6&panel=layer
-] portal was used to calculate the percentage of armored coastline in each of the regions. We included all man made structures such as seawalls, riprap, jetties, bulkheads, etc within a 1 km distance of the coastline. The percentage hardened in each region was used directly as the pressure score for this layer.
+**Data description:**     
+We used National Shoreline data from NOAA's Environmental Sensitivity Index (ESI) which identifies type of shoreline (armored, rocky, beaches, flats and vegetated) throughout the United States. Data was downloaded from from the NOAA Environmental Response Management Application (ERMA) portal in October, 2019. The format was a shapefile of polylines identifying shoreline and type.
 
-**References**
+**Methods summary**    
+Artificially hardening coastlines is a reinforcement method to protect developments and land areas along the coast from erosion (Gittman et al. 2015). However this is often a short sighted solution. Coastal hardening costs money to maintain and is detrimental to the habitat, such as narrowing of the intertidal zone (Dugan et al. 2008) or loss of salt marsh habitats. 
 
+The data was filtered to portions of the shoreline within the US Northeast that were labeled as "Armored" and a 1km inland buffer was applied so that all man made structures such as seawalls, riprap, jetties, bulkheads, etc within a 1 km distance of the coastline were included. The proportion of shoreline that was armored for each region was calculated.
+
+**Pressure layer**   
+Each region received a score between 0 - 1, with 1 representing 100% of the shoreline being armored. 
+
+Region | Proportion shoreline armored
+-------|-----------
+Connecticut| 0.25
+Maine |0.04
+New Hampshire|0.095
+New York|0.33
+Rhode Island|0.24
+Massachusetts-North|0.12
+Massachusetts-South|0.14
+Northeast|0.15
+
+**Gapfilling**    
+Temporal gapfilling was necessary. There was no information on changes in armoring over time so the values calculated were used for all years.
+
+**References**    
+NOAA Office of Response and Restoration. Environmental Response Management Application (ERMA) available at https://erma.noaa.gov/atlantic/erma.html#/layers=1+13763+16973+35410+491&x=-78.22196&y=38.23326&z=6&panel=layer
+
+Gittman, R. K., Fodrie, F. J., Popowich, A. M., Keller, D. A., Bruno, J. F., Currin, C. A., et al. (2015). Engineering away our natural defenses: an analysis of shoreline hardening in the US. Frontiers in Ecology and the Environment 13, 301–307. doi:10.1890/150065.
+
+Dugan, J. E., Hubbard, D. M., Rodil, I. F., Revell, D. L., and Schroeter, S. (2008). Ecological effects of coastal armoring on sandy beaches. Marine Ecology 29, 160–170. doi:10.1111/j.1439-0485.2008.00231.x.

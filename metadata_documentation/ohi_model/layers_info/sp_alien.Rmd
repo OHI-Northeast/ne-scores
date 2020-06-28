@@ -1,7 +1,21 @@
-**Nonindigenous Species**
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Nonindigenous Species
 
-The [USGS Nonindigenous Aquatic Species](http://nas.er.usgs.gov) database was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated^[Fuller, P., and Benson, A., 2016, Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov.
-]. This layer was calculated by dividing the number of species eradicated by the maximum number of occurances from 1970-2017.
+**Layer type:** Pressure    
 
-**References**
+**Data description**    
+The USGS Nonindigenous Aquatic Species database (Fuller & Benson 2016) was used to inform this layer. Locally specific occurrence data was used to calculate the total number of occurrences in each region that have become established and eradicated. The dataset includes total number of invasive species observed by state from 1700 - 2019.
+
+**Methods summary**   
+The total number of invasive species in each state per year was divided by the maximum number of occurrences in the state over the time period of 1970 - 2017.
+
+**Gapfilling**    
+Rhode Island was missing data for four years, 2008, 2011, 2012,2013. These missing data were replaced with values of 0 species occurrences recorded. Gapfilling was required for the state of Massachusetts. The dataset did not allow for differentiation between North and South so both Massachusetts regions received the same score.
+
+**References**    
+Fuller, P., and Benson, A., (2016). Nonindigenous Aquatic Species Database: U.S. Geological Survey, http://nas.er.usgs.gov. Downloaded September, 2019.
 
