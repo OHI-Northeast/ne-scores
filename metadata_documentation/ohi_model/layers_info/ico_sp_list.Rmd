@@ -1,0 +1,59 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+### Iconic species list
+
+**Layer type(s):** Sense of Place: Iconic Species sub-goal layer
+
+**Data description(s):**    
+There was no known regionally appropriate list of iconic species so the list was created for this assessment.
+
+**Methods summary**   
+Regional experts were sought out through focus groups to provide input on what species should be included in the Iconic Species list. These species should be those that are relevant to local cultural identity through a species’ relationship to one or more of the following: 1) traditional activities such as fishing, hunting or commerce; 2) local ethnic or religious practices; 3) existence value; and 4) locally-recognized aesthetic value.
+
+#### List of species:   
+
+Common name|Scientific name|Conservation status available
+-----------|---------------|--------------------
+American oyster|Crossostrea virginia|No
+Blue crab|Callinectes sapidus|No
+Horseshoe crab|Limulus polyphemus|Yes
+American lobster|Homarus americanus|Yes
+Bay scallop|Argopecten irradians|No
+Sea scallop|Placopecten magellanicus|Yes
+Bald eagle|Haliaeetus leucocephalus|Yes
+Humpback whale|Megaptera novaeangliae|Yes
+North atlantic right whale|Eubalaena glacialis|Yes
+Sperm whale|Physeter macrocephalus|Yes
+Fin whale|Balaenoptera physalus|Yes
+Bottlenose dolphin|Tursiops truncatus|Yes
+Minke whale|Balaenoptera acutorostrata|Yes
+Atlantic bluefin tuna|Thunnus thynnus|Yes
+Arctic tern|Sterna paradisaea|Yes
+Atlantic puffin|Fratercula arctica|Yes
+Atlantic surfclam|Spissula solidissima|Yes
+Soft shell clam|Mya arenaria|No
+Northern quahog|Mecenaria mercenaria|No
+Roseate tern|Sterna dougallii|Yes
+Atlantic herring|Clupea harengus|Yes
+Atlantic cod|Gadus morhua|Yes
+Haddock|Melanogrammus aeglefinus|Yes
+American shad|Alosa sapidissima|Yes
+Alewife|Alosa pseudoharengus|Yes
+Atlantic sturgeon|Acipenser oxyrhynchus oxyrhynchus|Yes
+Striped bass|Morone saxatilis|Yes
+Great white shark|Carcharodon carcharias|Yes
+Sandbar shark|Carcharhinus plumbeus|Yes
+Atlantic salmon|Salmo salar|Yes
+Piping plover|Charadrius melodus|Yes
+Common tern|Sterna hirundo|Yes
+Least tern|Sternula antillarum|Yes
+Osprey|Pandion haliaetus|Yes
+
+**Iconic Species sub-goal layer**    
+This layer is used in the Iconic Species sub-goal.
+
+**Gapfilling**    
+Not necessary

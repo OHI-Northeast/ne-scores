@@ -1,21 +1,23 @@
 ---
 output:
-  word_document: default
   html_document: default
+  word_document: default
 ---
 ### Fishing pressure
 
 **Layer type(s):** Pressure
 
 **Data description(s):**    
-Spatial fishing data from Watson & Tidd (2018) were used to represent total biomass removed through fishing from 2000 to 2015. Data was provided as tons per half-degree cell.
+Spatial fishing data from Watson & Tidd (2018) were used to represent total biomass removed through fishing. The raw data was provided in tabular format and included data on species, gear type, fishing type (industrial/non-industrial) and tons caught (bycatch, landings & discards) per half-degree cell globally for the years 1950 to 2015.
 
-**Methods summary**  
+**Methods summary**   
+The raw data on global half-degree cells was rasterized and then cropped to our region of interest, the US Northeast, to identify half-degree cells that fall within the region. This subset of cells was used to filter the data specific to our region. Data was further refined to only include catch from 2000 onwards. Both industrial and non-industrial catch (tons) across all catch types (bycatch, landings & discards) was aggregated per cell, divided by ocean area to get tons/km^2^ and rasterized for each year to create annual total catch rasters for the US Northeast. Each raster was rescaled between 0 and 1 using the 99.9th quantile across the entire region and time series (2000-2015) as our reference point, which was 43 tons/km^2^. All values greater than this were assigned a value of 1. 
 
- Data was translated into tons per km2 using provided information on Ocean Area in square kilometers. The fishing pressure layer represents the total amount of biomass removed by fishing through landings, discards and bycatch. Total biomass per half-degree cell within the Northeast is calculated for each year 2000 - 2015, then rescaled between 0 and 1 using the 99.9th quantile across the time series and region as a reference point, 43 tons/km2. All values greater than this were assigned a value of 1. Final pressure scores for each region and year were calculated by taking the average score of all cells within each region.
+**Pressure layer**    
+Final pressure scores for each region and year were calculated by taking the average value of all cells within each region.
 
+**Gapfilling**    
+They years 2016 and 2017 were gapfilled with 2015 values since the dataset stopped at 2015.
 
-**Gapfilling** 
-
-
-**References**  
+**References**    
+Watson, Reg. A., and Tidd, A. (2018). Mapping nearly a century and a half of global marine fishing: 1869–2015. 93, 171–177. doi:https://doi.org/10.1016/j.marpol.2018.04.023.
