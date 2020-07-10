@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Tourism and Recreation  
 
 People value the ability to enjoy and use coastal areas for outdoors experiences. The ability to do so can be limited by lack of tourism infrastructure, contaminated waters at beaches, and lack of coastal access points. Accessing coastal areas for non extractive purposes is important to many people, including locals who build communities around beach usage, and tourists who generally aggregate near beaches. 

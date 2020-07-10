@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Clean Waters  
 
 People value marine waters that are free of pollution and debris for aesthetic and health reasons. Contamination of waters comes from oil spills, chemicals, eutrophication, algal blooms, disease pathogens (e.g., fecal coliform, viruses, and parasites from sewage outflow), floating trash, and mass kills of organisms due to pollution. People are sensitive to these phenomena occurring in areas they access for recreation or other purposes as well as for simply knowing that clean waters exist. This goal scores highest when contamination from all potential sources is zero.

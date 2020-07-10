@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Livelihoods and Economies   
 Jobs and revenue produced from marine-related industries are clearly of huge value to many people, even for those people who do not directly participate in marine-related industries. People value community identity, tax revenue, and indirect economic and social impacts of a stable coastal economy. The necessity of providing for oneself and those dependent on them, generally surpasses any other needs or objectives. Without the availability of jobs with livable wages, it is likely that people will prioritize ocean health less and feel less connected to it. This goal tracks the number and quality of jobs and the amount of revenue produced across as many marine-related industries/sectors as possible through two sub-goals, **Livelihoods** and **Economies**. A score of 100 reflects productive coastal economies that avoid the loss of ocean-dependent livelihoods while maximizing livelihood quality.
 
@@ -105,6 +111,7 @@ The first three years of the time series, 2005-2007, were gapfilled with data fr
 ----
 
 #### References:  
+
 
 National Ocean Economics Program. Ocean Economic Data by Sector & Industry., ONLINE. 2012. Available: http://www.OceanEconomics.org/Market/oceanEcon.asp [9 May 2019]
 

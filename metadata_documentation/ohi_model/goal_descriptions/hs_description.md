@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Habitat Services
 
 This goal aims to measure the extent of habitat services in the form of the amount of protection provided by marine and coastal habitats to coastal areas that people value, and the presence of areas serving as carbon sinks. This goal contains two sub-goals, **Carbon Storage** ($CS$) and **Coastal Protection** ($CP$). Both of these sub-goals rely on two data layers that measure the extent of **salt marsh** ($sm$) and health of **eelgrass** ($eel$). Habitat Services ($HS$) status is calculated by taking the average of the Carbon Storage and Coastal Protection goals.

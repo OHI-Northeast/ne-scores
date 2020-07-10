@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Food Provision
 
 The Food Provision goal contains two sub-goals, Aquaculture ($AQ$) and Wild-Caught Fisheries ($FIS$).

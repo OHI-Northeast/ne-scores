@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Sense of Place
 
 A connection with the ocean is an important indicator of ocean health. While quantifying a feeling is a difficult endeavor, we feel it is an important aspect of measuring ocean health since this type of connection fosters stewardship. To do so, we try to capture the aspects of the coastal and marine system that people value as part of their cultural identity. This definition includes people living near the ocean and those who live far from it but still derive a sense of identity or value from the ocean. This goal scores highest when marine species which are valued by the community have minimal threats to conservation, when there are areas identified as special and have long term protection, and when coastal communities show engagement with commerical and recreation fishing activities. 
